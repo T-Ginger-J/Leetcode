@@ -1,31 +1,48 @@
 class Solution {
     public String longestPalindrome(String s) {
-        if (s == null || s.length() < 1) return "";
+        if (s == null || s.length() == 0) return "";
 
-        int start = 0, end = 0;
+        // Transform the string: add boundaries
+        StringBuilder t = new StringBuilder("^");
+        for (char c : s.toCharArray()) {
+            t.append("#").append(c);
+        }
+        t.append("#$");
+        char[] T = t.toString().toCharArray();
 
-        for (int i = 0; i < s.length(); i++) {
-            // Odd-length palindrome
-            int len1 = expandAroundCenter(s, i, i);
-            // Even-length palindrome
-            int len2 = expandAroundCenter(s, i, i + 1);
+        int n = T.length;
+        int[] P = new int[n]; // Array to store palindrome radius
+        int C = 0, R = 0;     // Current center and right boundary
 
-            int len = Math.max(len1, len2);
+        for (int i = 1; i < n - 1; i++) {
+            int mirror = 2 * C - i;  // mirror of i around center C
 
-            if (len > end - start) {
-                start = i - (len - 1) / 2;
-                end = i + len / 2;
+            if (i < R) {
+                P[i] = Math.min(R - i, P[mirror]);
+            }
+
+            // Expand palindrome centered at i
+            while (T[i + 1 + P[i]] == T[i - 1 - P[i]]) {
+                P[i]++;
+            }
+
+            // Update center if palindrome expands beyond R
+            if (i + P[i] > R) {
+                C = i;
+                R = i + P[i];
             }
         }
 
-        return s.substring(start, end + 1);
-    }
-
-    private int expandAroundCenter(String s, int left, int right) {
-        while (left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right)) {
-            left--;
-            right++;
+        // Find longest palindrome
+        int maxLen = 0, centerIndex = 0;
+        for (int i = 1; i < n - 1; i++) {
+            if (P[i] > maxLen) {
+                maxLen = P[i];
+                centerIndex = i;
+            }
         }
-        return right - left - 1; // length of palindrome
+
+        int start = (centerIndex - maxLen) / 2;  // Map back to original string
+        return s.substring(start, start + maxLen);
     }
 }
