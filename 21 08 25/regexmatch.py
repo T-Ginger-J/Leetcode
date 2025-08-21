@@ -1,5 +1,5 @@
 class Solution:
-    def isMatch(self, s, p):
+    def isMatchDP(self, s, p):
         m, n = len(s), len(p)
         
         # dp[i][j] means s[:i] matches p[:j]
@@ -23,3 +23,30 @@ class Solution:
                         dp[i][j] |= dp[i - 1][j]
 
         return dp[m][n]
+    
+    def isMatchDFS(self, s, p):
+        memo = {}
+        
+        def dfs(i, j):
+            # If already computed
+            if (i, j) in memo:
+                return memo[(i, j)]
+            
+            # If pattern is consumed, string must also be consumed
+            if j == len(p):
+                return i == len(s)
+            
+            # First match condition
+            first_match = i < len(s) and (s[i] == p[j] or p[j] == '.')
+            
+            if j + 1 < len(p) and p[j + 1] == '*':
+                # Case 1: skip x*
+                # Case 2: use x* (if first matches)
+                ans = dfs(i, j + 2) or (first_match and dfs(i + 1, j))
+            else:
+                ans = first_match and dfs(i + 1, j + 1)
+            
+            memo[(i, j)] = ans
+            return ans
+        
+        return dfs(0, 0)
