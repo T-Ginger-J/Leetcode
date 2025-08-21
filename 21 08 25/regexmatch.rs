@@ -36,7 +36,7 @@ impl Solution {
         dp[m][n]
     }
 
-    pub fn is_match(s: String, p: String) -> bool {
+    pub fn is_matchDFS(s: String, p: String) -> bool {
         fn dfs(
             i: usize,
             j: usize,
