@@ -50,3 +50,7 @@ class Solution:
             return ans
         
         return dfs(0, 0)
+
+    def isMatch(self, s, p):
+        # ^ and $ force full string match
+        return re.fullmatch(p, s) is not None
