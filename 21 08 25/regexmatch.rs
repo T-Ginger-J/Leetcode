@@ -1,5 +1,7 @@
+use std::collections::HashMap;
+
 impl Solution {
-    pub fn is_match(s: String, p: String) -> bool {
+    pub fn is_matchDP(s: String, p: String) -> bool {
         let m = s.len();
         let n = p.len();
         let s: Vec<char> = s.chars().collect();
@@ -32,5 +34,41 @@ impl Solution {
         }
 
         dp[m][n]
+    }
+
+    pub fn is_match(s: String, p: String) -> bool {
+        fn dfs(
+            i: usize,
+            j: usize,
+            s: &Vec<char>,
+            p: &Vec<char>,
+            memo: &mut HashMap<(usize, usize), bool>,
+        ) -> bool {
+            if let Some(&ans) = memo.get(&(i, j)) {
+                return ans;
+            }
+
+            // if pattern fully consumed, string must be too
+            if j == p.len() {
+                return i == s.len();
+            }
+
+            let first_match = i < s.len() && (s[i] == p[j] || p[j] == '.');
+
+            let ans = if j + 1 < p.len() && p[j + 1] == '*' {
+                // either skip x* or consume one char if it matches
+                dfs(i, j + 2, s, p, memo) || (first_match && dfs(i + 1, j, s, p, memo))
+            } else {
+                first_match && dfs(i + 1, j + 1, s, p, memo)
+            };
+
+            memo.insert((i, j), ans);
+            ans
+        }
+
+        let mut memo = HashMap::new();
+        let s_chars: Vec<char> = s.chars().collect();
+        let p_chars: Vec<char> = p.chars().collect();
+        dfs(0, 0, &s_chars, &p_chars, &mut memo)
     }
 }
