@@ -1,0 +1,42 @@
+Key Differences Between Rust and C++
+
+Struct vs Class
+
+C++: class Solution { ... };
+
+Rust: struct Solution; with impl Solution { ... } to implement methods.
+
+
+Memory Safety
+
+Rust enforces borrowing and ownership rules:
+
+&mut current vs current.push_back() in C++.
+
+Explicit lifetime control is built into the borrow checker, no raw pointers.
+
+
+Strings
+
+C++: string and char are straightforward.
+
+Rust: String (owned heap string) vs &str (borrowed slice).
+
+Need to .clone() current when pushing into result because Rust enforces ownership.
+
+
+Indexing
+
+C++: digits[index] works.
+
+Rust: strings are UTF-8, so direct indexing isn’t allowed. Must use digits.as_bytes()[index] to safely access raw bytes.
+
+
+Iteration
+
+C++: for (char c : letters) { ... }
+
+Rust: for ch in letters.chars() { ... } — explicit iterator over Unicode scalars.
+
+
+Time complexity & space complexity are identical to the C++ solution, but Rust guarantees no segmentation faults, memory leaks, or dangling pointers — at compile time.
