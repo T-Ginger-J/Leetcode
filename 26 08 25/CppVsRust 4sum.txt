@@ -1,0 +1,51 @@
+Key Differences Between Rust and C++
+
+
+Ownership & Borrowing
+
+C++: vectors are copied/passed around freely unless explicitly moved or referenced.
+
+Rust: mut nums: Vec<i32> means ownership is moved into the function.
+
+We can’t just "borrow" and then mutate — must declare mut.
+
+
+Integer Overflow Safety
+
+C++: adding two int values risks overflow.
+
+Rust: nums[i] as i64 explicitly promotes to 64-bit (i64), otherwise Rust won’t compile.
+
+Safer than C++, which silently overflows in int.
+
+
+Loop Syntax
+
+C++: for (int i = 0; i < n-3; i++)
+
+Rust: for i in 0..n-3 {} uses a range iterator. More functional style.
+
+
+Result Collection
+
+C++: vector<vector<int>> res; res.push_back(...).
+
+Rust: let mut res = Vec::new(); res.push(vec![...]);.
+
+Similar, but Rust requires explicit mutability (mut).
+
+
+String / Printing Differences
+
+C++: custom printing with cout.
+
+Rust: println!("{:?}", result); with debug formatting.
+
+
+No Null / Dangling Pointers
+
+In C++ two-pointer techniques rely on index arithmetic and can segfault if misused.
+
+Rust forces bounds safety (nums[left] is checked at runtime).
+
+Safer, but slightly slower unless optimized.
