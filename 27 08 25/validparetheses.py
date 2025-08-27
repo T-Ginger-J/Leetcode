@@ -12,3 +12,15 @@ class Solution:
                     return False
         return not stack
     
+    def isValidOneLine(self, s: str) -> bool:
+        stack = []
+        mapping = {'(': ')', '{': '}', '[': ']'}
+        return all(stack.append(mapping[c]) if c in mapping else stack.pop() == c for c in s) and not stack
+
+# Example usage
+sol = Solution()
+print(sol.isValid("()"))        # True
+print(sol.isValid("()[]{}"))    # True
+print(sol.isValid("(]"))        # False
+print(sol.isValid("([)]"))      # False
+print(sol.isValid("{[]}"))      # True
