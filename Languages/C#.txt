@@ -1,0 +1,119 @@
+# **C#**
+
+### **1. Language Basics**
+
+* **Type System:** Statically typed, strong typing. Variables must declare their type.
+* **Paradigm:** Object-oriented primarily, with support for functional and procedural programming.
+* **Syntax Overview:**
+
+  * Variables: `int x = 10;`
+  * Functions (methods):
+
+    ```csharp
+    public int Add(int a, int b) {
+        return a + b;
+    }
+    ```
+  * Classes:
+
+    ```csharp
+    class Node {
+        public int val;
+        public Node next;
+        public Node(int val) { this.val = val; this.next = null; }
+    }
+    ```
+  * Loops: `for (int i = 0; i < n; i++)`, `while (condition)`
+  * Conditionals: `if`, `else if`, `else`
+
+---
+
+### **2. Data Structures**
+
+* **Built-in:** Arrays, `List<T>`, `Dictionary<TKey,TValue>`, `HashSet<T>`, `Queue<T>`, `Stack<T>`.
+* **Custom Structures:** Classes and structs for linked lists, trees, and graphs.
+* **Immutability:** Strings are immutable; use `readonly` for variables and fields that should not change.
+* **Syntax Differences:**
+
+  * Array: `int[] arr = {1,2,3};`
+  * List: `List<int> list = new List<int>();`
+  * Dictionary: `Dictionary<string,int> dict = new Dictionary<string,int>();`
+  * Queue: `Queue<int> q = new Queue<int>();`
+
+---
+
+### **3. Algorithms & Language Support**
+
+* **Standard Library:** `System.Collections`, `System.Collections.Generic`, `System.Linq`, `Math`.
+* **Recursion:** Fully supported; no tail recursion optimization.
+* **Iteration Constructs:** `for`, `foreach`, `while`, LINQ (`Select`, `Where`, `Aggregate`).
+* **Built-in Helpers:**
+
+  * Sorting: `Array.Sort(arr)` or `list.Sort()`
+  * Searching: `Array.BinarySearch(arr, key)`
+  * Math: `Math.Max`, `Math.Min`, `Math.Pow`
+
+---
+
+### **4. Performance & Complexity**
+
+* **Time Complexity Notes:** Compiled to intermediate language (IL) and run on the CLR; generally performs similarly to Java.
+* **Memory Usage:** Managed via garbage collection; moderate overhead.
+* **Concurrency Support:** `Thread`, `Task`, `async/await`, `Parallel.For`.
+* **Compiler/Interpreter Optimizations:** JIT compilation improves runtime performance.
+
+---
+
+### **5. Syntax Specifics for LeetCode**
+
+* **Function Signature:** Usually provided inside `class Solution`; methods often `public`.
+* **Class vs Static Functions:** Both supported; LeetCode solutions commonly use instance methods.
+* **Input/Output Handling:** Arrays, lists, strings, and objects are standard. Trees and linked lists via classes.
+* **Edge Case Handling:** Null references need explicit checks; integer overflow requires `long` for large numbers.
+
+---
+
+### **6. Use Cases / Problem Type Suitability**
+
+* **Commonly Solved Problems:** Arrays, strings, dynamic programming, trees, graphs, OOP-based problems.
+* **Strengths:** Strong typing, mature libraries, easy integration with OOP concepts.
+* **Weaknesses:** Verbose syntax for simple tasks, slower to prototype than Python or JavaScript.
+
+---
+
+### **7. Language Idioms & Best Practices**
+
+* Use `List<T>` for dynamic arrays.
+* Use LINQ for concise functional-style operations:
+
+  ```csharp
+  var result = list.Where(x => x > 0).Select(x => x*2).ToList();
+  ```
+* Use `readonly` for immutable fields.
+* Check for `null` to avoid `NullReferenceException`.
+
+---
+
+### **8. Error Handling & Debugging**
+
+* **Exception Handling:**
+
+  ```csharp
+  try {
+      // code
+  } catch (Exception e) {
+      Console.WriteLine(e.Message);
+  }
+  ```
+* **Common Pitfalls:** NullReferenceException, IndexOutOfRangeException, integer overflow.
+* **Debugging Support:** `Console.WriteLine`, IDE debuggers (Visual Studio), stack traces.
+
+---
+
+### **9. Community & Resources**
+
+* **Documentation:** [Microsoft Docs - C#](https://learn.microsoft.com/en-us/dotnet/csharp/)
+* **LeetCode Tips:** C# is good for OOP-heavy problems, arrays, strings, and dynamic programming.
+* **Third-party Libraries:** Restricted on LeetCode; standard .NET libraries are sufficient.
+
+
