@@ -25,3 +25,6 @@ class Solution:
         
         return dummy.next
     
+    def mergeTwoListsRecursive(self, l1, l2):
+        return l1 if not l2 else l2 if not l1 else (l1 if l1.val < l2.val else l2).__setattr__('next', self.mergeTwoLists(l1.next if l1.val < l2.val else l1, l2 if l1.val < l2.val else l2.next)) or (l1 if l1.val < l2.val else l2)
+
