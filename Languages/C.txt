@@ -1,0 +1,105 @@
+# **C**
+
+### **1. Language Basics**
+
+* **Type System:** Statically typed, strong typing. Variables must be declared with explicit types.
+* **Paradigm:** Procedural; does not have built-in object-oriented support.
+* **Syntax Overview:**
+
+  * Variables: `int x = 10;`
+  * Functions:
+
+    ```c
+    int add(int a, int b) {
+        return a + b;
+    }
+    ```
+  * Loops: `for (int i = 0; i < n; i++)`, `while (condition)`
+  * Conditionals: `if`, `else if`, `else`
+  * No native classes; structures (`struct`) used for custom data types.
+
+---
+
+### **2. Data Structures**
+
+* **Built-in:** Arrays, `struct`, pointers.
+* **Custom Structures:** Linked lists, trees, and graphs must be implemented manually using `struct` and pointers.
+* **Immutability:** No built-in immutability; `const` can be used for read-only variables.
+* **Syntax Differences:**
+
+  * Array: `int arr[5] = {1,2,3,4,5};`
+  * Struct:
+
+    ```c
+    struct Node {
+        int val;
+        struct Node* next;
+    };
+    ```
+  * Pointers: `Node* ptr = malloc(sizeof(Node));`
+
+---
+
+### **3. Algorithms & Language Support**
+
+* **Standard Library:** `<stdio.h>`, `<stdlib.h>`, `<string.h>`, `<math.h>`
+* **Recursion:** Fully supported. Stack size limits apply depending on system.
+* **Iteration Constructs:** `for`, `while`, `do-while` loops.
+* **Built-in Helpers:**
+
+  * Sorting: `qsort()`
+  * String operations: `strlen()`, `strcpy()`, `strcmp()`
+  * Math: `abs()`, `pow()`, `sqrt()`
+
+---
+
+### **4. Performance & Complexity**
+
+* **Time Complexity Notes:** Very fast due to low-level control and compilation to machine code.
+* **Memory Usage:** Low overhead; manual memory management.
+* **Concurrency Support:** Threads via `<pthread.h>` (POSIX) or platform-specific APIs.
+* **Compiler/Interpreter Optimizations:** Fully compiled language; aggressive optimizations with GCC/Clang/MSVC.
+
+---
+
+### **5. Syntax Specifics for LeetCode**
+
+* **Function Signature:** Typically provided; C solutions use standalone functions.
+* **Class vs Static Functions:** No classes; everything is procedural with functions.
+* **Input/Output Handling:** Arrays, structs, pointers. Trees and linked lists implemented manually.
+* **Edge Case Handling:** Must manually handle `NULL` pointers; integer overflow not automatically handled.
+
+---
+
+### **6. Use Cases / Problem Type Suitability**
+
+* **Commonly Solved Problems:** Arrays, linked lists, bit manipulation, low-level memory tasks.
+* **Strengths:** Maximum performance, fine control over memory and pointers.
+* **Weaknesses:** Verbose, manual memory management increases risk of bugs, no built-in high-level data structures.
+
+---
+
+### **7. Language Idioms & Best Practices**
+
+* Use `malloc` and `free` for dynamic memory management carefully.
+* Use `struct` and pointers to implement custom data structures.
+* Avoid memory leaks and dangling pointers.
+* Modularize code with header (`.h`) and source (`.c`) files when complex.
+
+---
+
+### **8. Error Handling & Debugging**
+
+* **Exception Handling:** None; must check return codes and `NULL` pointers.
+* **Common Pitfalls:** Memory leaks, segmentation faults, buffer overflows, off-by-one errors.
+* **Debugging Support:** `printf`, gdb, Valgrind for memory issues.
+
+---
+
+### **9. Community & Resources**
+
+* **Documentation:** [C Standard Library Reference](https://en.cppreference.com/w/c)
+* **LeetCode Tips:** C is mostly used for very low-level or performance-critical problems; manual memory handling is required for linked lists and trees.
+* **Third-party Libraries:** Only standard C library allowed on LeetCode.
+
+
