@@ -1,3 +1,4 @@
+
 # **C#**
 
 ### **1. Language Basics**
@@ -115,5 +116,3 @@
 * **Documentation:** [Microsoft Docs - C#](https://learn.microsoft.com/en-us/dotnet/csharp/)
 * **LeetCode Tips:** C# is good for OOP-heavy problems, arrays, strings, and dynamic programming.
 * **Third-party Libraries:** Restricted on LeetCode; standard .NET libraries are sufficient.
-
-
