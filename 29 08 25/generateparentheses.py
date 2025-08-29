@@ -16,3 +16,5 @@ class Solution:
         backtrack("", 0, 0)
         return res
     
+    def generateParenthesisOneLine(self, n: int):
+        return n and [p[:i] + "()" + p[i:] for p in self.generateParenthesis(n-1) for i in range(len(p))] or [""]
