@@ -1,3 +1,4 @@
+
 # **C**
 
 ### **1. Language Basics**
@@ -102,4 +103,4 @@
 * **LeetCode Tips:** C is mostly used for very low-level or performance-critical problems; manual memory handling is required for linked lists and trees.
 * **Third-party Libraries:** Only standard C library allowed on LeetCode.
 
-
+---
