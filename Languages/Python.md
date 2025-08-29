@@ -1,5 +1,4 @@
 
-
 # **Python**
 
 ### **1. Language Basics**
@@ -110,5 +109,4 @@
 * **Documentation:** [Python Official Docs](https://docs.python.org/3/)
 * **LeetCode Tips:** Python is often preferred for concise, readable solutions. Commonly used in array/string/DP problems.
 * **Third-party Libraries:** Generally restricted on LeetCode; standard library is sufficient for most problems.
-
 
