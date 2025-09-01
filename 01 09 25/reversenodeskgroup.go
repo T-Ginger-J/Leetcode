@@ -13,7 +13,7 @@ func reverseKGroup(head *ListNode, k int) *ListNode {
     prev := dummy
 
     for {
-        // Find the kth node
+        // Find kth node from prev
         kth := prev
         for i := 0; i < k && kth != nil; i++ {
             kth = kth.Next
@@ -22,23 +22,28 @@ func reverseKGroup(head *ListNode, k int) *ListNode {
             break
         }
 
-        // Reverse group
         groupNext := kth.Next
-        curr := prev.Next
-        next := curr.Next
 
-        for curr != kth {
-            curr.Next = next.Next
-            next.Next = prev.Next
-            prev.Next = next
-            next = curr.Next
+        // reverse the group
+        prevCurr := groupNext
+        curr := prev.Next
+
+        for curr != groupNext {
+            tmp := curr.Next
+            curr.Next = prevCurr
+            prevCurr = curr
+            curr = tmp
         }
 
-        prev = curr
+        tmp := prev.Next
+        prev.Next = kth
+        prev = tmp
     }
 
     return dummy.Next
 }
+
+
 
 // Helper functions
 func buildList(arr []int) *ListNode {
