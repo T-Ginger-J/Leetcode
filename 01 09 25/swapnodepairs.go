@@ -31,6 +31,21 @@ func swapPairs(head *ListNode) *ListNode {
     return dummy.Next
 }
 
+func swapPairsRecursive(head *ListNode) *ListNode {
+    if head == nil || head.Next == nil {
+        return head
+    }
+
+    first := head
+    second := head.Next
+
+    // Recursively swap the rest
+    first.Next = swapPairs(second.Next)
+    second.Next = first
+
+    return second
+}
+
 // Helper functions for testing
 func buildList(arr []int) *ListNode {
     dummy := &ListNode{}
