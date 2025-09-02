@@ -15,6 +15,10 @@ impl Solution {
         -1
     }
 
+    pub fn str_str_built_in(haystack: String, needle: String) -> i32 {
+        haystack.find(&needle).map(|i| i as i32).unwrap_or(-1)
+    }
+
 fn main() {
     println!("{}", Solution::str_str("hello".to_string(), "ll".to_string())); // 2
     println!("{}", Solution::str_str("aaaaa".to_string(), "bba".to_string())); // -1
