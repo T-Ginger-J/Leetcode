@@ -7,3 +7,6 @@ class Solution:
                 k += 1
         return k
     
+    def removeElementOneLine(self, nums, val):
+        nums[:] = [x for x in nums if x != val]; return len(nums)
+
