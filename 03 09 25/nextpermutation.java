@@ -36,3 +36,18 @@ class Solution {
         }
     }
 
+    public static void main(String[] args) {
+        Solution sol = new Solution();
+        int[] nums1 = {1,2,3};
+        sol.nextPermutation(nums1);
+        System.out.println(Arrays.toString(nums1)); // [1,3,2]
+
+        int[] nums2 = {3,2,1};
+        sol.nextPermutation(nums2);
+        System.out.println(Arrays.toString(nums2)); // [1,2,3]
+
+        int[] nums3 = {1,1,5};
+        sol.nextPermutation(nums3);
+        System.out.println(Arrays.toString(nums3)); // [1,5,1]
+    }
+}
