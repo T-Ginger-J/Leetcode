@@ -31,3 +31,8 @@ impl Solution {
     }
 }
 
+fn main() {
+    println!("{}", Solution::divide(10, 3));       // 3
+    println!("{}", Solution::divide(7, -3));       // -2
+    println!("{}", Solution::divide(-2_i32.pow(31), -1)); // 2147483647
+}
