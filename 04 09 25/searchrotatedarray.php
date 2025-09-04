@@ -30,3 +30,9 @@ class Solution {
     }
 }
 
+// Example Usage
+$sol = new Solution();
+echo $sol->search([4,5,6,7,0,1,2], 0) . "\n";  // Output: 4
+echo $sol->search([4,5,6,7,0,1,2], 3) . "\n";  // Output: -1
+echo $sol->search([1], 0) . "\n";              // Output: -1
+?>
