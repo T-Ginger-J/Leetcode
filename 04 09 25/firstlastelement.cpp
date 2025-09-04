@@ -36,3 +36,12 @@ private:
     }
 };
 
+int main() {
+    Solution sol;
+    vector<int> nums = {5,7,7,8,8,10};
+    vector<int> res = sol.searchRange(nums, 8);
+    cout << "[" << res[0] << ", " << res[1] << "]\n"; // Output: [3, 4]
+
+    res = sol.searchRange(nums, 6);
+    cout << "[" << res[0] << ", " << res[1] << "]\n"; // Output: [-1, -1]
+}
