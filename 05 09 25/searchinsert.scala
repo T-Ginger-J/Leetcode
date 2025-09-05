@@ -17,3 +17,10 @@ object Solution {
         left
     }
 
+    def main(args: Array[String]): Unit = {
+        println(searchInsert(Array(1,3,5,6), 5))  // Output: 2
+        println(searchInsert(Array(1,3,5,6), 2))  // Output: 1
+        println(searchInsert(Array(1,3,5,6), 7))  // Output: 4
+        println(searchInsert(Array(1,3,5,6), 0))  // Output: 0
+    }
+}
