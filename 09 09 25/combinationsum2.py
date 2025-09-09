@@ -26,3 +26,11 @@ class Solution:
         backtrack(0, [], 0)
         return res
 
+    def combinationSum2OneLine(self, candidates, target):
+        candidates.sort()
+        return ([[]] if target == 0 else
+                [ [c] + rest
+                  for i, c in enumerate(candidates)
+                  if i == 0 or c != candidates[i-1]
+                  for rest in self.combinationSum2(candidates[i+1:], target - c)
+                  if target - c >= 0 ])
