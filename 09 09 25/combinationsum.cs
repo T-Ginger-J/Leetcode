@@ -24,3 +24,14 @@ public class Solution {
     }
 }
 
+public class Program {
+    public static void Main() {
+        var sol = new Solution();
+        int[] candidates = {2, 3, 6, 7};
+        var res = sol.CombinationSum(candidates, 7);
+
+        foreach (var combo in res) {
+            Console.WriteLine(string.Join(",", combo));
+        }
+    }
+}
