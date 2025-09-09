@@ -29,3 +29,13 @@ private:
     }
 };
 
+int main() {
+    Solution sol;
+    vector<int> candidates = {2, 3, 6, 7};
+    vector<vector<int>> res = sol.combinationSum(candidates, 7);
+
+    for (auto &combo : res) {
+        for (int num : combo) cout << num << " ";
+        cout << endl;
+    }
+}
