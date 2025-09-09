@@ -21,3 +21,5 @@ class Solution:
         backtrack(0, [], 0)
         return res
 
+    def combinationSumOneLine(self, candidates, target):
+        return [[c] + rest for i, c in enumerate(candidates) for rest in self.combinationSum(candidates[i:], target - c)] if target > 0 else ([[]] if target == 0 else [])
