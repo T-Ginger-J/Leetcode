@@ -28,3 +28,12 @@ impl Solution {
     }
 }
 
+fn main() {
+    let candidates = vec![2, 3, 6, 7];
+    let target = 7;
+    let res = Solution::combination_sum(candidates, target);
+
+    for combo in res {
+        println!("{:?}", combo);
+    }
+}
