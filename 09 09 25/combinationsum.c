@@ -35,3 +35,22 @@ int** combinationSum(int* candidates, int candidatesSize, int target, int* retur
     return res;
 }
 
+int main() {
+    int candidates[] = {2, 3, 6, 7};
+    int target = 7;
+    int returnSize;
+    int* returnColumnSizes;
+    int** res = combinationSum(candidates, 4, target, &returnSize, &returnColumnSizes);
+
+    for (int i = 0; i < returnSize; i++) {
+        for (int j = 0; j < returnColumnSizes[i]; j++) {
+            printf("%d ", res[i][j]);
+        }
+        printf("\n");
+        free(res[i]);
+    }
+    free(res);
+    free(returnColumnSizes);
+
+    return 0;
+}
