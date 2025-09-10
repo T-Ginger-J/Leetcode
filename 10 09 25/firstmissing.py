@@ -17,6 +17,11 @@ class Solution:
         
         return n + 1
     
+    def firstMissingPositiveOneLine(self, nums):
+        s = set(nums)
+        return next(i for i in range(1, len(nums)+2) if i not in s)
+
+
 sol = Solution()
 print(sol.firstMissingPositive([1,2,0]))    # 3
 print(sol.firstMissingPositive([3,4,-1,1])) # 2
