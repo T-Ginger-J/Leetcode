@@ -26,6 +26,23 @@ class Solution {
     return res;
   }
 
+  int trapStack(List<int> h) {
+    var stack = <int>[];
+    int res = 0, i = 0;
+    while (i < h.length) {
+      while (stack.isNotEmpty && h[i] > h[stack.last]) {
+        var top = stack.removeLast();
+        if (stack.isEmpty) break;
+        var distance = i - stack.last - 1;
+        var boundedHeight = (h[i] < h[stack.last] ? h[i] : h[stack.last]) - h[top];
+        res += distance * boundedHeight;
+      }
+      stack.add(i++);
+    }
+    return res;
+  }
+
+}
 
 void main() {
   var sol = Solution();
