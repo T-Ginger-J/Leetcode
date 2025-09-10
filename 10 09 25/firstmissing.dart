@@ -19,6 +19,13 @@ class Solution {
     return n + 1;
   }
 
+  int firstMissingPositiveOneLine(List<int> nums) {
+    final s = nums.toSet();
+    return List.generate(nums.length + 1, (i) => i + 1)
+               .firstWhere((x) => !s.contains(x));
+  }
+
+}
 
 void main() {
   var sol = Solution();
