@@ -26,3 +26,10 @@ class Solution {
     }
 }
 
+public class Main {
+    public static void main(String[] args) {
+        Solution sol = new Solution();
+        System.out.println(sol.multiply("123", "456")); // Output: "56088"
+        System.out.println(sol.multiply("2", "3"));     // Output: "6"
+    }
+}
