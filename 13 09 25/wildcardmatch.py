@@ -20,3 +20,9 @@ class Solution:
         return dp[m][n]
     
     
+sol = Solution()
+print(sol.isMatch("aa", "a"))      # False
+print(sol.isMatch("aa", "*"))      # True
+print(sol.isMatch("cb", "?a"))     # False
+print(sol.isMatch("adceb", "*a*b"))# True
+print(sol.isMatch("acdcb", "a*c?b")) # False
