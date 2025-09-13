@@ -14,3 +14,6 @@ class Solution:
 
         return jumps
 
+sol = Solution()
+print(sol.jump([2,3,1,1,4]))  # 2
+print(sol.jump([2,3,0,1,4]))  # 2
