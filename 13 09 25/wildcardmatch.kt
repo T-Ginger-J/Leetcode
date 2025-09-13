@@ -29,3 +29,13 @@ class Solution {
         return j == p.length
     }
 
+    fun main() {
+    val sol = Solution()
+    println(sol.isMatch("aa", "a"))        // false
+    println(sol.isMatch("aa", "*"))        // true
+    println(sol.isMatch("cb", "?a"))       // false
+    println(sol.isMatch("adceb", "*a*b"))  // true
+    println(sol.isMatch("acdcb", "a*c?b")) // false
+}
+
+}
