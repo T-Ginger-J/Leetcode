@@ -28,3 +28,10 @@ class Solution {
     }
 }
 
+fun main() {
+    val sol = Solution()
+    println(sol.multiply("123", "456"))  // Output: "56088"
+    println(sol.multiply("2", "3"))      // Output: "6"
+}
+
+
