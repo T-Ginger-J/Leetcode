@@ -18,3 +18,6 @@ class Solution:
         result = ''.join(map(str, res)).lstrip('0')
         return result or "0"
 
+sol = Solution()
+print(sol.multiply("123", "456"))  # "56088"
+print(sol.multiply("2", "3"))      # "6"
