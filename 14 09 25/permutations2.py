@@ -24,3 +24,6 @@ class Solution:
         backtrack([], [False]*len(nums))
         return res
 
+sol = Solution()
+print(sol.permuteUnique([1,1,2]))
+# [[1,1,2],[1,2,1],[2,1,1]]
