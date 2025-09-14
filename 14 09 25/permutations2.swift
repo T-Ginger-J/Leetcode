@@ -25,3 +25,6 @@ class Solution {
     }
 }
 
+let sol = Solution()
+print(sol.permuteUnique([1,1,2]))
+// [[1,1,2],[1,2,1],[2,1,1]]
