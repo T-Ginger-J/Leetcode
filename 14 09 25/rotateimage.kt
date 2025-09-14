@@ -16,4 +16,21 @@ class Solution {
             matrix[i].reverse()
         }
     }
+    fun main() {
+    val matrix = arrayOf(
+        intArrayOf(1,2,3),
+        intArrayOf(4,5,6),
+        intArrayOf(7,8,9)
+    )
+
+    val sol = Solution()
+    sol.rotate(matrix)
+
+    matrix.forEach { println(it.joinToString(",")) }
+    // Output:
+    // 7,4,1
+    // 8,5,2
+    // 9,6,3
+}
+
 }
