@@ -35,3 +35,9 @@ class Solution {
     }
 }
 
+let sol = Solution()
+let boards = sol.solveNQueens(4)
+for b in boards {
+    print(b)
+    print("---")
+}
