@@ -22,3 +22,16 @@ class Solution:
     def groupAnagramsOneLine(self, strs):
         return list({tuple(sorted(s)): [t for t in strs if sorted(t)==sorted(s)] for s in strs}.values())
 
+sol = Solution()
+
+# Example 1
+print(sol.groupAnagrams(["eat","tea","tan","ate","nat","bat"]))
+# Output: [["eat","tea","ate"],["tan","nat"],["bat"]]
+
+# Example 2
+print(sol.groupAnagrams([""]))
+# Output: [[""]]
+
+# Example 3
+print(sol.groupAnagrams(["a"]))
+# Output: [["a"]]
