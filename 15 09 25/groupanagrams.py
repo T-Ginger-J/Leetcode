@@ -19,3 +19,6 @@ class Solution:
             groups[tuple(counts)].append(s)
         return list(groups.values())
 
+    def groupAnagramsOneLine(self, strs):
+        return list({tuple(sorted(s)): [t for t in strs if sorted(t)==sorted(s)] for s in strs}.values())
+
