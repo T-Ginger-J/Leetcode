@@ -22,3 +22,10 @@ class Solution:
         backtrack(0)
         return res
 
+    def solveNQueensRecursive(self, n):
+        def f(r=0, cols=set(), d1=set(), d2=set(), board=[]):
+            if r==n: return [["".join(row) for row in board]]
+            return [res for c in range(n) if c not in cols and r-c not in d1 and r+c not in d2
+                    for res in f(r+1, cols|{c}, d1|{r-c}, d2|{r+c}, board+[["."]*c+["Q"]+["."]*(n-c-1)])]
+        return f()
+
