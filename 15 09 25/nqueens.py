@@ -29,3 +29,5 @@ class Solution:
                     for res in f(r+1, cols|{c}, d1|{r-c}, d2|{r+c}, board+[["."]*c+["Q"]+["."]*(n-c-1)])]
         return f()
 
+
+solve=lambda n:[["."*c+"Q"+"."*(n-c-1) for c in sol] for sol in __import__('itertools').permutations(range(n)) if len({i+j for i,j in enumerate(sol)})==n==len({i-j for i,j in enumerate(sol)})]
