@@ -8,3 +8,14 @@ class Solution:
             groups[key].append(s)
         return list(groups.values())
 
+    def groupAnagramsTuple(self, strs):
+        groups = defaultdict(list)
+        for s in strs:
+            key = tuple([0]*26)
+            # make a list so we can increment
+            counts = [0]*26
+            for c in s:
+                counts[ord(c)-97] += 1
+            groups[tuple(counts)].append(s)
+        return list(groups.values())
+
