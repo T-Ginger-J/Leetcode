@@ -34,6 +34,9 @@ class Solution:
         backtrack(0, 0, 0, 0)
         return self.count
     
+totalNQueens=lambda n:(f:=lambda r,c,d1,d2: r==n or sum(f(r+1,c|b,(d1|b)<<1,(d2|b)>>1) for b in [x&-x for x in [((1<<n)-1)&~(c|d1|d2)]] for _ in iter(int,1) if not (x:=x-b))) (0,0,0,0)
+
+
 
 print(Solution().totalNQueens(4))  # Output: 2
 print(Solution().totalNQueens(1))  # Output: 1
