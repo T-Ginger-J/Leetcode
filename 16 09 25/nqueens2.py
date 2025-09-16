@@ -34,3 +34,6 @@ class Solution:
         backtrack(0, 0, 0, 0)
         return self.count
     
+
+print(Solution().totalNQueens(4))  # Output: 2
+print(Solution().totalNQueens(1))  # Output: 1
