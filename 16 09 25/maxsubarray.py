@@ -8,3 +8,11 @@ class Solution:
             best = max(best, curr)
         return best
 
+    def maxSubArrayOptimized(self, nums: list[int]) -> int:
+        max_sum = float('-inf')
+        curr = 0
+        for n in nums:
+            curr = n + (curr if curr > 0 else 0)
+            if curr > max_sum:
+                max_sum = curr
+        return max_sum
