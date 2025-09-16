@@ -18,3 +18,19 @@ class Solution:
         backtrack(0)
         return count
 
+    def totalNQueensBitmask(self, n: int) -> int:
+        self.count = 0
+
+        def backtrack(r: int, cols: int, d1: int, d2: int):
+            if r == n:
+                self.count += 1
+                return
+            available = ((1 << n) - 1) & ~(cols | d1 | d2)
+            while available:
+                bit = available & -available  # pick rightmost 1
+                available -= bit
+                backtrack(r + 1, cols | bit, (d1 | bit) << 1, (d2 | bit) >> 1)
+
+        backtrack(0, 0, 0, 0)
+        return self.count
+    
