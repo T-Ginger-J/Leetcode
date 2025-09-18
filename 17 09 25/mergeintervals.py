@@ -11,6 +11,9 @@ class Solution:
                 merged.append([start, end])
         return merged
 
+    def mergeOneLine(self, intervals: list[list[int]]) -> list[list[int]]:
+        return __import__('functools').reduce(lambda m, x: m[:-1]+[[m[-1][0], max(m[-1][1], x[1])]] if x[0] <= m[-1][1] else m+[x], sorted(intervals), [sorted(intervals)[0]])
+    
 # ---- Example Usage ----
 sol = Solution()
 
