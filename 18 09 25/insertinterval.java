@@ -25,3 +25,9 @@ class Solution {
     }
 }
 
+// Example
+int[][] intervals = {{1,3},{6,9}};
+int[] newInterval = {2,5};
+int[][] merged = new Solution().insert(intervals, newInterval);
+// merged = [[1,5],[6,9]]
+
