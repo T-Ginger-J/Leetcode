@@ -18,6 +18,9 @@ class Solution:
                 goal = i
         return goal == 0
 
+    def canJumpOneLine(self, nums: list[int]) -> bool:
+        return reduce(lambda r, i_n: max(r, i_n[0]+i_n[1]) if i_n[0] <= r else -1, enumerate(nums), 0) >= len(nums)-1
+    
     # ---- Example Tests ----
 sol = Solution()
 
