@@ -18,3 +18,18 @@ class Solution:
                 goal = i
         return goal == 0
 
+    # ---- Example Tests ----
+sol = Solution()
+
+print(sol.canJump([2,3,1,1,4]))  # True
+# Explanation: You can jump 2 → index 2 (or 1) → ... → last index
+
+print(sol.canJump([3,2,1,0,4]))  # False
+# Explanation: You will get stuck at index 3 (value 0)
+
+print(sol.canJump([0]))          # True
+# Explanation: Already at the last index
+
+print(sol.canJump([1,0,2]))      # False
+# Can't get past index 1 (value 0)
+
