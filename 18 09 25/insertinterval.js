@@ -30,3 +30,4 @@ var insert = function(intervals, newInterval) {
     return result;
 };
 
+const insertOneLine = (A,I) => (A.reduce((r,x)=>(I&&I[1]<x[0]?(r.push(I),I=null):I&&I[0]<=x[1]?(I=[Math.min(I[0],x[0]),Math.max(I[1],x[1])]):r.push(x),r),[])).concat(I? [I]:[]);
