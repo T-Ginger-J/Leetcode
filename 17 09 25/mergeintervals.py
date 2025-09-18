@@ -11,3 +11,17 @@ class Solution:
                 merged.append([start, end])
         return merged
 
+# ---- Example Usage ----
+sol = Solution()
+
+print(sol.merge([[1,3],[2,6],[8,10],[15,18]]))
+# Output: [[1,6],[8,10],[15,18]]
+
+print(sol.merge([[1,4],[4,5]]))
+# Output: [[1,5]]
+
+print(sol.merge([[1,2],[3,4],[5,6]]))
+# Output: [[1,2],[3,4],[5,6]]
+
+print(sol.merge([[1,10],[2,3],[4,5],[6,7]]))
+# Output: [[1,10]]
