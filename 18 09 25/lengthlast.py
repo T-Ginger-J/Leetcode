@@ -23,3 +23,8 @@ class Solution:
     
     lengthOfLastWordOneLine = lambda s: len(s.strip().split()[-1])
 
+# Example usage:
+# sol = Solution()
+# print(sol.lengthOfLastWord("Hello World"))           # 5
+# print(sol.lengthOfLastWord("   fly me   to   the moon  ")) # 4
+# print(sol.lengthOfLastWord("a"))                     # 1
