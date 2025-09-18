@@ -31,3 +31,9 @@ var insert = function(intervals, newInterval) {
 };
 
 const insertOneLine = (A,I) => (A.reduce((r,x)=>(I&&I[1]<x[0]?(r.push(I),I=null):I&&I[0]<=x[1]?(I=[Math.min(I[0],x[0]),Math.max(I[1],x[1])]):r.push(x),r),[])).concat(I? [I]:[]);
+
+console.log(insert([[1,3],[6,9]],[2,5])); 
+// [[1,5],[6,9]]
+
+console.log(insert([[1,2],[3,5],[6,7],[8,10],[12,16]],[4,8]));
+// [[1,2],[3,10],[12,16]]
