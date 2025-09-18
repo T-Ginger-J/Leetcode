@@ -13,3 +13,9 @@ merge_sorted([{S,E}|Rest], [{LS,LE}|AccTail]) ->
         false -> merge_sorted(Rest, [{S,E},{LS,LE}|AccTail])
     end.
 
+%% ---- Example Uses ----
+demo() ->
+    io:format("~p~n", [merge([{1,3},{2,6},{8,10},{15,18}])]),
+    io:format("~p~n", [merge([{1,4},{4,5}])]),
+    io:format("~p~n", [merge([{1,2},{3,4},{5,6}])]),
+    io:format("~p~n", [merge([{1,10},{2,3},{4,5},{6,7}])]).
