@@ -25,3 +25,6 @@ var generateMatrix = function(n) {
     return matrix;
 };
 
+// Example usage:
+// console.log(generateMatrix(3));
+// console.log(generateMatrix(4));
