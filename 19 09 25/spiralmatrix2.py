@@ -1,3 +1,11 @@
+# LeetCode 59: Spiral Matrix II
+# Explanation:
+# 1. Start with an n x n matrix of zeros.
+# 2. Maintain four boundaries: top, bottom, left, right.
+# 3. Fill numbers in spiral order while shrinking boundaries inward.
+# Time Complexity: O(n^2)
+# Space Complexity: O(1) extra (besides output matrix)
+
 class Solution:
     def generateMatrix(self, n: int):
         matrix = [[0]*n for _ in range(n)]
