@@ -37,3 +37,7 @@ class Solution:
         
         return matrix
     
+# Example usage:
+# sol = Solution()
+# print(sol.generateMatrix(3))
+# print(sol.generateMatrix(1))
