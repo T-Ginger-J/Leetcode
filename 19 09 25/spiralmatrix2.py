@@ -37,6 +37,26 @@ class Solution:
         
         return matrix
     
+    def generateMatrixOptimized(self, n: int):
+        res = [[0]*n for _ in range(n)]
+        num, layer = 1, 0
+        while num <= n*n:
+            for i in range(layer, n-layer):         # top row
+                res[layer][i] = num
+                num += 1
+            for i in range(layer+1, n-layer):       # right col
+                res[i][n-layer-1] = num
+                num += 1
+            if layer != n-layer-1:
+                for i in range(n-layer-2, layer-1, -1):  # bottom row
+                    res[n-layer-1][i] = num
+                    num += 1
+                for i in range(n-layer-2, layer, -1):    # left col
+                    res[i][layer] = num
+                    num += 1
+            layer += 1
+        return res
+    
 # Example usage:
 # sol = Solution()
 # print(sol.generateMatrix(3))
