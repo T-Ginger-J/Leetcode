@@ -21,3 +21,6 @@ var getPermutation = function(n, k) {
     return res;
 };
 
+// Example usage:
+// console.log(getPermutation(3, 3)); // "213"
+// console.log(getPermutation(4, 9)); // "2314"
