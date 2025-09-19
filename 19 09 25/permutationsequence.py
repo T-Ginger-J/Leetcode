@@ -33,6 +33,8 @@ class Solution:
             k %= fact[i]
         return ''.join(res)
     
+    getPermutationOneLine=lambda s,n,k:(lambda f,n,k,r:''.join(r.pop((k:=k-1)//f[i]%(n:=n)) or r for i in range(n-1,-1,-1)))(__import__('math').factorial,n,k,[str(i) for i in range(1,n+1)])
+
 
 # Example usage:
 # sol = Solution()
