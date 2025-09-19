@@ -19,3 +19,8 @@ class Solution:
             result.append(nums.pop(index))
             k %= f
         return ''.join(result)
+
+# Example usage:
+# sol = Solution()
+# print(sol.getPermutation(3, 3))  # "213"
+# print(sol.getPermutation(4, 9))  # "2314"
