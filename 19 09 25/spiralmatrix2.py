@@ -57,6 +57,8 @@ class Solution:
             layer += 1
         return res
     
+    generateMatrixOneLine = lambda n: __import__('numpy').rot90([list(range(i*n+1, i*n+n+1)) for i in range(n)], k=-1).tolist()
+
 # Example usage:
 # sol = Solution()
 # print(sol.generateMatrix(3))
