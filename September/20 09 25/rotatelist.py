@@ -42,3 +42,13 @@ class Solution:
         new_tail.next = None
         
         return new_head
+
+# Example usage:
+# # Input: 1->2->3->4->5, k=2
+# head = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5)))))
+# sol = Solution()
+# new_head = sol.rotateRight(head, 2)
+# while new_head:
+#     print(new_head.val, end=' ')
+#     new_head = new_head.next
+# # Output: 4 5 1 2 3
