@@ -42,6 +42,28 @@ class Solution:
         new_tail.next = None
         
         return new_head
+    
+    def rotateRightTwoPass(self, head, k: int):
+        if not head or not head.next:
+            return head
+        # count length
+        n = 1
+        tail = head
+        while tail.next:
+            tail = tail.next
+            n += 1
+        k %= n
+        if k == 0:
+            return head
+        # find new head
+        cur = head
+        for _ in range(n - k - 1):
+            cur = cur.next
+        new_head = cur.next
+        cur.next = None
+        tail.next = head
+        return new_head
+    
 
 # Example usage:
 # # Input: 1->2->3->4->5, k=2
