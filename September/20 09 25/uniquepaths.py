@@ -17,6 +17,8 @@ class Solution:
     def uniquePathsBuiltIn(self, m: int, n: int) -> int:
         from math import comb
         return comb(m+n-2, m-1)
+    
+    uniquePathsOneLine=lambda s,m,n:__import__('math').comb(m+n-2,m-1)
 
 # Example usage:
 # sol = Solution()
