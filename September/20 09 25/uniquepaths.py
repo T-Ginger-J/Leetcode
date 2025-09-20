@@ -14,3 +14,8 @@ class Solution:
                 dp[i][j] = dp[i-1][j] + dp[i][j-1]
         return dp[-1][-1]
 
+
+# Example usage:
+# sol = Solution()
+# print(sol.uniquePaths(3, 7))  # 28
+# print(sol.uniquePaths(3, 2))  # 3
