@@ -18,3 +18,7 @@ public:
     }
 };
 
+// Example usage:
+// Solution sol;
+// cout << sol.uniquePaths(3, 7) << endl; // 28
+// cout << sol.uniquePaths(3, 2) << endl; // 3
