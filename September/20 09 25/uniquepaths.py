@@ -14,6 +14,9 @@ class Solution:
                 dp[i][j] = dp[i-1][j] + dp[i][j-1]
         return dp[-1][-1]
 
+    def uniquePathsBuiltIn(self, m: int, n: int) -> int:
+        from math import comb
+        return comb(m+n-2, m-1)
 
 # Example usage:
 # sol = Solution()
