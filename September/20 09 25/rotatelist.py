@@ -64,6 +64,8 @@ class Solution:
         tail.next = head
         return new_head
     
+    rotateRightOneLine=lambda s,h,k:(lambda n:(lambda t:(t.next,h:=[h])[0])((lambda x:[x.append(x.pop(0)) for _ in range(k%n)],x:=[])[1]))(sum(bool(h:=h.next)or x.append(h) for x in [[]]))(h)
+
 
 # Example usage:
 # # Input: 1->2->3->4->5, k=2
