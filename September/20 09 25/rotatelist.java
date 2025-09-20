@@ -48,3 +48,9 @@ class Solution {
     }
 }
 
+// Example usage:
+// ListNode head = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5)))));
+// Solution sol = new Solution();
+// ListNode rotated = sol.rotateRight(head, 2);
+// while (rotated != null) { System.out.print(rotated.val + " "); rotated = rotated.next; }
+// Output: 4 5 1 2 3
