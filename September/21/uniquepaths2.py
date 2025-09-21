@@ -1,3 +1,12 @@
+# LeetCode 63: Unique Paths II
+# Explanation:
+# 1. Use DP table where dp[i][j] = number of ways to reach (i,j).
+# 2. If obstacleGrid[i][j] == 1, dp[i][j] = 0.
+# 3. Otherwise, dp[i][j] = dp[i-1][j] + dp[i][j-1].
+# 4. Base case: dp[0][0] = 1 if no obstacle.
+# Time Complexity: O(m*n)
+# Space Complexity: O(m*n)
+
 class Solution:
     def uniquePathsWithObstacles(self, obstacleGrid: list[list[int]]) -> int:
         m, n = len(obstacleGrid), len(obstacleGrid[0])
