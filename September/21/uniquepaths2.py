@@ -35,3 +35,5 @@ class Solution:
                     dp[j] += dp[j-1]
         return dp[-1]
     
+    uniquePathsWithObstaclesOneLine=lambda s,g:((dp:=[0]*len(g[0]),dp.__setitem__(0,1)or[dp.__setitem__(j,0) if g[i][j] else dp.__setitem__(j,dp[j]+(dp[j-1] if j else 0)) for i in range(len(g)) for j in range(len(g[0]))]) and dp[-1])
+
