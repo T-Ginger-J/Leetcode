@@ -28,3 +28,14 @@ public class Solution {
     }
 }
 
+// Example usage:
+// var sol = new Solution();
+// Console.WriteLine(sol.UniquePathsWithObstacles(new int[][] {
+//     new int[] {0,0,0},
+//     new int[] {0,1,0},
+//     new int[] {0,0,0}
+// })); // 2
+// Console.WriteLine(sol.UniquePathsWithObstacles(new int[][] {
+//     new int[] {0,1},
+//     new int[] {0,0}
+// })); // 1
