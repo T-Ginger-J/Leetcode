@@ -1,3 +1,10 @@
+# LeetCode 64: Minimum Path Sum
+# Explanation:
+# 1. Use DP: dp[i][j] = min(dp[i-1][j], dp[i][j-1]) + grid[i][j].
+# 2. Base case: first row and first column accumulate sums.
+# Time Complexity: O(m*n)
+# Space Complexity: O(m*n)
+
 class Solution:
     def minPathSum(self, grid: list[list[int]]) -> int:
         m, n = len(grid), len(grid[0])
