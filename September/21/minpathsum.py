@@ -22,3 +22,7 @@ class Solution:
         
         return dp[-1][-1]
     
+# Example usage:
+# sol = Solution()
+# print(sol.minPathSum([[1,3,1],[1,5,1],[4,2,1]]))  # 7
+# print(sol.minPathSum([[1,2,3],[4,5,6]]))          # 12
