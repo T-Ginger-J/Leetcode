@@ -27,6 +27,9 @@ class Solution:
                 return False
         return num
 
+    def isNumberBuiltIn(self, s: str) -> bool:
+        pattern = re.compile(r'^[+-]?((\d+(\.\d*)?)|(\.\d+))(e[+-]?\d+)?$', re.I)
+        return bool(pattern.match(s.strip()))
 # Example usage:
 # sol = Solution()
 # print(sol.isNumber("0"))      # True
