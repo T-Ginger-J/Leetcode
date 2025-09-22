@@ -21,3 +21,7 @@ class Solution {
     }
 }
 
+// Example usage:
+// Solution sol = new Solution();
+// System.out.println(Arrays.toString(sol.plusOne(new int[]{1,2,3}))); // [1,2,4]
+// System.out.println(Arrays.toString(sol.plusOne(new int[]{9})));     // [1,0]
