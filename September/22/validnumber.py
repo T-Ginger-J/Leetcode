@@ -1,3 +1,10 @@
+# LeetCode 65: Valid Number
+# Explanation:
+# 1. Use a finite state machine or flags to track digit, exponent, decimal, and sign validity.
+# 2. Iterate through string and validate each character.
+# Time Complexity: O(n)
+# Space Complexity: O(1)
+
 class Solution:
     def isNumber(self, s: str) -> bool:
         s = s.strip()
