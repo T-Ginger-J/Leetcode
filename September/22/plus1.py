@@ -15,6 +15,7 @@ class Solution:
                 return digits
             digits[i] = 0
         return [1] + digits
+    plusOneOneLine=lambda s,d:[int(c) for c in str(int("".join(map(str,d)))+1)]
 
 # Example usage:
 # sol = Solution()
