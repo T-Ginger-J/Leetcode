@@ -15,3 +15,8 @@ class Solution:
                 return digits
             digits[i] = 0
         return [1] + digits
+
+# Example usage:
+# sol = Solution()
+# print(sol.plusOne([1,2,3]))  # [1,2,4]
+# print(sol.plusOne([9]))      # [1,0]
