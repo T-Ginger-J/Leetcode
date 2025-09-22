@@ -37,3 +37,8 @@ public:
     }
 };
 
+// Example usage:
+// Solution sol;
+// cout << boolalpha << sol.isNumber("0") << endl;      // true
+// cout << boolalpha << sol.isNumber("e") << endl;      // false
+// cout << boolalpha << sol.isNumber("2e10") << endl;   // true
