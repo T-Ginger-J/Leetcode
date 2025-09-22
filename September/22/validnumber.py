@@ -26,3 +26,9 @@ class Solution:
             else:
                 return False
         return num
+
+# Example usage:
+# sol = Solution()
+# print(sol.isNumber("0"))      # True
+# print(sol.isNumber("e"))      # False
+# print(sol.isNumber("2e10"))   # True
