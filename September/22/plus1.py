@@ -15,6 +15,11 @@ class Solution:
                 return digits
             digits[i] = 0
         return [1] + digits
+    
+    def plusOneBuiltIn(self, digits: list[int]) -> list[int]:
+        num = int("".join(map(str, digits))) + 1
+        return [int(ch) for ch in str(num)]
+    
     plusOneOneLine=lambda s,d:[int(c) for c in str(int("".join(map(str,d)))+1)]
 
 # Example usage:
