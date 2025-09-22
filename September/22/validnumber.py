@@ -30,6 +30,9 @@ class Solution:
     def isNumberBuiltIn(self, s: str) -> bool:
         pattern = re.compile(r'^[+-]?((\d+(\.\d*)?)|(\.\d+))(e[+-]?\d+)?$', re.I)
         return bool(pattern.match(s.strip()))
+    
+    isNumberOneLine=lambda s,bool=bool,re=__import__('re'):bool(re.match(r'^[+-]?((\d+(\.\d*)?)|(\.\d+))(e[+-]?\d+)?$',s.strip(),re.I))
+
 # Example usage:
 # sol = Solution()
 # print(sol.isNumber("0"))      # True
