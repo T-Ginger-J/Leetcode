@@ -20,3 +20,6 @@ class Solution:
             res.append(str(total % 2))
             carry = total // 2
         return "".join(reversed(res))
+    
+    def addBinaryBuiltIn(self, a: str, b: str) -> str:
+        return bin(int(a, 2) + int(b, 2))[2:]
