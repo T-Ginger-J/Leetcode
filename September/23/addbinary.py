@@ -1,3 +1,10 @@
+# LeetCode 67: Add Binary
+# Explanation:
+# 1. Simulate binary addition from right to left with carry.
+# 2. Append digits to result and reverse at the end.
+# Time Complexity: O(max(len(a), len(b)))
+# Space Complexity: O(max(len(a), len(b)))
+
 class Solution:
     def addBinary(self, a: str, b: str) -> str:
         i, j, carry = len(a)-1, len(b)-1, 0
