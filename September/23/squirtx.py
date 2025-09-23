@@ -1,3 +1,10 @@
+# LeetCode 69: Sqrt(x)
+# Explanation:
+# 1. Use binary search between 0 and x.
+# 2. Find largest mid such that mid^2 <= x.
+# Time Complexity: O(log x)
+# Space Complexity: O(1)
+
 class Solution:
     def mySqrt(self, x: int) -> int:
         if x < 2:
