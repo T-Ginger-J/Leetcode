@@ -1,3 +1,11 @@
+# LeetCode 68: Text Justification
+# Explanation:
+# 1. Greedily pick words that fit within maxWidth.
+# 2. If it's the last line or only one word, left-justify.
+# 3. Otherwise, distribute spaces evenly across gaps.
+# Time Complexity: O(n * L) where n = number of words, L = maxWidth
+# Space Complexity: O(1)
+
 class Solution:
     def fullJustify(self, words: list[str], maxWidth: int) -> list[str]:
         res, cur, num_of_letters = [], [], 0
