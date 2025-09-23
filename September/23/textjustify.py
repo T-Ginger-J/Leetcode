@@ -41,3 +41,8 @@ class Solution:
     
     fullJustifyOneLine=lambda s,w,m:[(lambda L:(L.ljust(m)if i==len(w)or len(ws)==1 else''.join(ws[k]+(' '*(m-len(''.join(ws))//(len(ws)-1)+(1 if k<(m-len(''.join(ws)))%(len(ws)-1)else 0)))for k in range(len(ws)-1))+ws[-1]))(' '.join(ws))for i in range(len(w))if not(i and sum(map(len,ws:=[w[i-1]]))+(len(ws)-1)>=m)]
 
+
+# Example usage:
+# sol = Solution()
+# print(sol.fullJustify(["This","is","an","example","of","text","justification."], 16))
+# print(sol.fullJustify(["What","must","be","acknowledgment","shall","be"], 16))
