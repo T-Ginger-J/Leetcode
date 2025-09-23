@@ -39,3 +39,5 @@ class Solution:
             i = j
         return res
     
+    fullJustifyOneLine=lambda s,w,m:[(lambda L:(L.ljust(m)if i==len(w)or len(ws)==1 else''.join(ws[k]+(' '*(m-len(''.join(ws))//(len(ws)-1)+(1 if k<(m-len(''.join(ws)))%(len(ws)-1)else 0)))for k in range(len(ws)-1))+ws[-1]))(' '.join(ws))for i in range(len(w))if not(i and sum(map(len,ws:=[w[i-1]]))+(len(ws)-1)>=m)]
+
