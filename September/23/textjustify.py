@@ -18,3 +18,24 @@ class Solution:
             cur += [w]
             num_of_letters += len(w)
         return res + [' '.join(cur).ljust(maxWidth)]
+    
+    def fullJustifyOptimized(self, words: list[str], maxWidth: int) -> list[str]:
+        res, i = [], 0
+        while i < len(words):
+            line_len, j = len(words[i]), i + 1
+            while j < len(words) and line_len + len(words[j]) + (j - i) <= maxWidth:
+                line_len += len(words[j])
+                j += 1
+            spaces, extra = maxWidth - line_len, j - i - 1
+            if j == len(words) or extra == 0:
+                res.append(" ".join(words[i:j]).ljust(maxWidth))
+            else:
+                space, rem = divmod(spaces, extra)
+                line = ""
+                for k in range(extra):
+                    line += words[i + k] + " " * (space + (1 if k < rem else 0))
+                line += words[j - 1]
+                res.append(line)
+            i = j
+        return res
+    
