@@ -19,3 +19,8 @@ class Solution:
             else:
                 right = mid - 1
         return right
+
+# Example usage:
+# sol = Solution()
+# print(sol.mySqrt(4))  # 2
+# print(sol.mySqrt(8))  # 2
