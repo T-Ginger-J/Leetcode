@@ -14,6 +14,17 @@ class Solution:
         for i in range(3, n+1):
             dp[i] = dp[i-1] + dp[i-2]
         return dp[n]
+    
+    def climbStairsFib(self, n: int) -> int:
+        if n <= 2:
+            return n
+        a, b = 1, 2
+        for _ in range(3, n+1):
+            a, b = b, a+b
+        return b
+    
+    climbStairsOneLine=lambda s,n:round((1+5**0.5)**(n+1)/(2**(n+1)*5**0.5))
+
 # Example usage:
 # sol = Solution()
 # print(sol.climbStairs(2))  # 2
