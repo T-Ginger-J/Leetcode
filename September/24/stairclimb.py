@@ -14,3 +14,7 @@ class Solution:
         for i in range(3, n+1):
             dp[i] = dp[i-1] + dp[i-2]
         return dp[n]
+# Example usage:
+# sol = Solution()
+# print(sol.climbStairs(2))  # 2
+# print(sol.climbStairs(3))  # 3
