@@ -19,6 +19,17 @@ class Solution:
             else:
                 stack.append(part)
         return "/" + "/".join(stack)
+    
+    def simplifyPathFilter(self, path: str) -> str:
+        stack = []
+        for p in [p for p in path.split("/") if p not in ["", "."]]:
+            if p == "..":
+                if stack:
+                    stack.pop()
+            else:
+                stack.append(p)
+        return "/" + "/".join(stack)
+    
 
 # Example usage:
 # sol = Solution()
