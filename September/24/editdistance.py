@@ -26,3 +26,7 @@ class Solution:
                                        dp[i-1][j-1])  # replace
         return dp[m][n]
     
+# Example usage:
+# sol = Solution()
+# print(sol.minDistance("horse", "ros"))  # 3
+# print(sol.minDistance("intention", "execution"))  # 5
