@@ -1,3 +1,10 @@
+# LeetCode 70: Climbing Stairs
+# Explanation:
+# 1. This is Fibonacci: ways(n) = ways(n-1) + ways(n-2).
+# 2. Use DP to compute result iteratively.
+# Time Complexity: O(n)
+# Space Complexity: O(n)
+
 class Solution:
     def climbStairs(self, n: int) -> int:
         if n <= 2:
