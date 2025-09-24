@@ -19,3 +19,9 @@ class Solution:
             else:
                 stack.append(part)
         return "/" + "/".join(stack)
+
+# Example usage:
+# sol = Solution()
+# print(sol.simplifyPath("/home/"))       # "/home"
+# print(sol.simplifyPath("/../"))         # "/"
+# print(sol.simplifyPath("/home//foo/"))  # "/home/foo"
