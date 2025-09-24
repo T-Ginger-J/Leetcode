@@ -1,3 +1,11 @@
+# LeetCode 72: Edit Distance
+# Explanation:
+# 1. Use dynamic programming table dp[i][j] = min edits for word1[:i], word2[:j].
+# 2. If chars match -> dp[i][j] = dp[i-1][j-1].
+# 3. Else take min of insert, delete, replace.
+# Time Complexity: O(m*n) where m = len(word1), n = len(word2)
+# Space Complexity: O(m*n)
+
 class Solution:
     def minDistance(self, word1: str, word2: str) -> int:
         m, n = len(word1), len(word2)
