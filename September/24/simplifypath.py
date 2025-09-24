@@ -30,6 +30,7 @@ class Solution:
                 stack.append(p)
         return "/" + "/".join(stack)
     
+    simplifyPathOneLine=lambda s,p:"/"+"/".join(__import__('functools').reduce(lambda st,x:st[:-1] if x==".."and st else st+[x],filter(lambda y:y not in["","."],p.split("/")),[]))
 
 # Example usage:
 # sol = Solution()
