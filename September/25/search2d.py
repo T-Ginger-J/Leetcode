@@ -20,3 +20,4 @@ class Solution:
             else:
                 right = mid - 1
         return False
+    searchMatrixOneLine=lambda s,m,t:any(t in r for r in m)
