@@ -1,3 +1,10 @@
+# LeetCode 74: Search a 2D Matrix
+# Explanation:
+# 1. Treat matrix as a flattened sorted array of length m*n.
+# 2. Perform binary search using index conversion (mid // n, mid % n).
+# Time Complexity: O(log(m*n))
+# Space Complexity: O(1)
+
 class Solution:
     def searchMatrix(self, matrix: list[list[int]], target: int) -> bool:
         m, n = len(matrix), len(matrix[0])
