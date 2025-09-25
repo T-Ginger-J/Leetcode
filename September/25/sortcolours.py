@@ -38,3 +38,8 @@ class Solution:
 
     sortColorsOneLine=lambda s,n:n.sort()
 
+# Example usage:
+# sol = Solution()
+# arr = [2,0,2,1,1,0]
+# sol.sortColors(arr)
+# print(arr)  # [0,0,1,1,2,2]
