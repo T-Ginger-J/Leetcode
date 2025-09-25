@@ -20,6 +20,8 @@ class Solution:
             for j in range(n):
                 if i in rows or j in cols:
                     matrix[i][j] = 05
+    setZeroesOneLine=lambda s,m:[m.__setitem__(i,[0]*len(m[0])) for i in range(len(m)) for j in range(len(m[0])) if not m[i][j]]        
+
 # Example usage:
 # sol = Solution()
 # mat = [[1,1,1],[1,0,1],[1,1,1]]
