@@ -1,3 +1,10 @@
+# LeetCode 75: Sort Colors
+# Explanation:
+# 1. Count number of 0s, 1s, and 2s.
+# 2. Overwrite nums array with correct counts.
+# Time Complexity: O(n)
+# Space Complexity: O(1)
+
 class Solution:
     def sortColors(self, nums: list[int]) -> None:
         count0 = count1 = count2 = 0
