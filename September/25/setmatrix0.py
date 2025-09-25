@@ -20,3 +20,8 @@ class Solution:
             for j in range(n):
                 if i in rows or j in cols:
                     matrix[i][j] = 05
+# Example usage:
+# sol = Solution()
+# mat = [[1,1,1],[1,0,1],[1,1,1]]
+# sol.setZeroes(mat)
+# print(mat)  # [[1,0,1],[0,0,0],[1,0,1]]
