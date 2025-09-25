@@ -1,3 +1,10 @@
+# LeetCode 73: Set Matrix Zeroes
+# Explanation:
+# 1. Traverse matrix and record which rows/cols must be zeroed.
+# 2. Iterate again to set corresponding rows and cols to 0.
+# Time Complexity: O(m*n)
+# Space Complexity: O(m + n)
+
 class Solution:
     def setZeroes(self, matrix: list[list[int]]) -> None:
         rows, cols = set(), set()
