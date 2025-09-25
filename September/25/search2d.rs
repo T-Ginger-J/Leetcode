@@ -28,3 +28,9 @@ impl Solution {
     }
 }
 
+// Example usage:
+// fn main() {
+//     let matrix = vec![vec![1,3,5,7], vec![10,11,16,20], vec![23,30,34,60]];
+//     println!("{}", Solution::search_matrix(matrix.clone(), 3));   // true
+//     println!("{}", Solution::search_matrix(matrix.clone(), 13));  // false
+// }
