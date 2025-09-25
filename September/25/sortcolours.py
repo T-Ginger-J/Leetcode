@@ -22,3 +22,19 @@ class Solution:
             nums[i] = 1
         for i in range(count0 + count1, len(nums)):
             nums[i] = 2
+
+    def sortColorsPointers(self, nums: list[int]) -> None:
+        low, mid, high = 0, 0, len(nums) - 1
+        while mid <= high:
+            if nums[mid] == 0:
+                nums[low], nums[mid] = nums[mid], nums[low]
+                low += 1
+                mid += 1
+            elif nums[mid] == 1:
+                mid += 1
+            else:
+                nums[mid], nums[high] = nums[high], nums[mid]
+                high -= 1
+
+    sortColorsOneLine=lambda s,n:n.sort()
+
