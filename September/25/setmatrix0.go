@@ -34,3 +34,10 @@ func (Solution) setZeroes(matrix [][]int) {
     }
 }
 
+// Example usage:
+func main() {
+    sol := Solution{}
+    mat := [][]int{{1, 1, 1}, {1, 0, 1}, {1, 1, 1}}
+    sol.setZeroes(mat)
+    fmt.Println(mat) // [[1 0 1] [0 0 0] [1 0 1]]
+}
