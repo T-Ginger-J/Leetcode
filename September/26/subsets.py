@@ -19,3 +19,8 @@ class Solution:
         
         backtrack(0, [])
         return res
+
+# Example usage:
+# sol = Solution()
+# print(sol.subsets([1,2,3]))  # [[],[1],[2],[3],[1,2],[1,3],[2,3],[1,2,3]]
+# print(sol.subsets([0]))      # [[],[0]]
