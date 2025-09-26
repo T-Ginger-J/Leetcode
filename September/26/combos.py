@@ -1,3 +1,11 @@
+# LeetCode 77: Combinations
+# Explanation:
+# 1. Use backtracking to build combinations.
+# 2. At each step, choose a number or skip it.
+# 3. Stop when we have k numbers.
+# Time Complexity: O(C(n, k) * k) because each combination requires building.
+# Space Complexity: O(k) recursion depth.
+
 class Solution:
     def combine(self, n: int, k: int) -> list[list[int]]:
         res = []
