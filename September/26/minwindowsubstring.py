@@ -34,3 +34,9 @@ class Solution:
         
         l, r = res
         return s[l:r+1] if res_len != float("inf") else ""
+
+# Example usage:
+# sol = Solution()
+# print(sol.minWindow("ADOBECODEBANC", "ABC"))  # "BANC"
+# print(sol.minWindow("a", "a"))                # "a"
+# print(sol.minWindow("a", "aa"))               # ""
