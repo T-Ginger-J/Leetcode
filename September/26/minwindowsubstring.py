@@ -1,3 +1,11 @@
+# LeetCode 76: Minimum Window Substring
+# Explanation:
+# 1. Use sliding window technique with two pointers (l, r).
+# 2. Expand r to include chars until window contains all t.
+# 3. Shrink l to minimize window while still valid.
+# Time Complexity: O(|s| + |t|)
+# Space Complexity: O(|s| + |t|)
+
 from collections import Counter
 
 class Solution:
