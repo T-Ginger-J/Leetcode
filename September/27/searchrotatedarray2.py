@@ -26,3 +26,7 @@ class Solution:
                 else:
                     r = mid - 1
         return False
+# Example usage:
+# sol = Solution()
+# print(sol.search([2,5,6,0,0,1,2], 0))  # True
+# print(sol.search([2,5,6,0,0,1,2], 3))  # False
