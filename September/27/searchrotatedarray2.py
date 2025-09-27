@@ -26,6 +26,9 @@ class Solution:
                 else:
                     r = mid - 1
         return False
+
+    searchBuiltIn=lambda s,A,t:t in A
+
 # Example usage:
 # sol = Solution()
 # print(sol.search([2,5,6,0,0,1,2], 0))  # True
