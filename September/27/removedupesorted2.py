@@ -13,3 +13,5 @@ class Solution:
                 nums[k] = num
                 k += 1
         return k
+
+    removeDuplicatesOneLine=lambda s,A:len([A.__setitem__(i,A[i])for i in range(len(A))if i<2 or A[i]!=A[i-2]])
