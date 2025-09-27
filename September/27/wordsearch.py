@@ -1,3 +1,11 @@
+# LeetCode 79: Word Search
+# Explanation:
+# 1. Use DFS + backtracking.
+# 2. At each step, check if board[r][c] matches word[idx].
+# 3. Mark visited temporarily, explore neighbors, then backtrack.
+# Time Complexity: O(m * n * 4^L) where L = len(word).
+# Space Complexity: O(L) recursion stack.
+
 class Solution:
     def exist(self, board: list[list[str]], word: str) -> bool:
         rows, cols = len(board), len(board[0])
