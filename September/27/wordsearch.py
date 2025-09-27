@@ -58,3 +58,15 @@ class Solution:
         return False
     
     existOneLine=lambda s,b,w:any(w in ''.join(r)for r in b)
+
+# Example usage:
+# sol = Solution()
+# print(sol.exist([["A","B","C","E"],
+#                  ["S","F","C","S"],
+#                  ["A","D","E","E"]], "ABCCED"))  # True
+# print(sol.exist([["A","B","C","E"],
+#                  ["S","F","C","S"],
+#                  ["A","D","E","E"]], "SEE"))     # True
+# print(sol.exist([["A","B","C","E"],
+#                  ["S","F","C","S"],
+#                  ["A","D","E","E"]], "ABCB"))    # False
