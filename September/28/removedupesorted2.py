@@ -1,3 +1,17 @@
+# LeetCode 82: Remove Duplicates from Sorted List II
+# Explanation:
+# 1. Use dummy node to handle edge cases (duplicates at head).
+# 2. Iterate with prev and current pointers.
+# 3. Skip nodes while duplicates exist.
+# 4. Attach prev.next to next distinct node.
+# Time Complexity: O(n)
+# Space Complexity: O(1)
+
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
 class Solution:
     def deleteDuplicates(self, head: ListNode) -> ListNode:
         dummy = ListNode(0, head)
