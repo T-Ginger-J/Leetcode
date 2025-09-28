@@ -26,3 +26,4 @@ class Solution:
             head = head.nex
         return dummy.next
     
+    deleteDuplicatesOneLine=lambda s,h:None if not h else h if not h.next or h.val!=h.next.val else s.deleteDuplicates(next((n for n in iter(lambda:h: (h:=h.next) and h, None),None)))
