@@ -19,3 +19,5 @@ class Solution:
                 node.next = node.next.next
             node = node.next
         return head
+
+    deleteDuplicatesOneLine=lambda s,h:h and (h.next:=s.deleteDuplicates(h.next)) or h
