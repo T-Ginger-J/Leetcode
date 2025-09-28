@@ -19,3 +19,28 @@ class Solution:
             stack.append(i)
         heights.pop()
         return max_area
+    
+    def largestRectangleAreaOptimized(self, heights: list[int]) -> int:
+        n = len(heights)
+        left, right = [-1]*n, [n]*n
+        stack = []
+        
+        # nearest smaller to left
+        for i in range(n):
+            while stack and heights[stack[-1]] >= heights[i]:
+                stack.pop()
+            left[i] = stack[-1] if stack else -1
+            stack.append(i)
+        
+        stack.clear()
+        # nearest smaller to right
+        for i in range(n-1, -1, -1):
+            while stack and heights[stack[-1]] >= heights[i]:
+                stack.pop()
+            right[i] = stack[-1] if stack else n
+            stack.append(i)
+        
+        max_area = 0
+        for i in range(n):
+            max_area = max(max_area, heights[i] * (right[i] - left[i] - 1))
+        return max_area
