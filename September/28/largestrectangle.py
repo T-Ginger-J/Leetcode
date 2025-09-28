@@ -1,3 +1,11 @@
+# LeetCode 84: Largest Rectangle in Histogram
+# Explanation:
+# 1. Use stack to store indices of increasing heights.
+# 2. When a smaller bar is found, pop from stack and calculate area.
+# 3. Continue until all bars processed.
+# Time Complexity: O(n)
+# Space Complexity: O(n)
+
 class Solution:
     def largestRectangleArea(self, heights: list[int]) -> int:
         stack = []
