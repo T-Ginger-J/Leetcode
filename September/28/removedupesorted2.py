@@ -27,3 +27,25 @@ class Solution:
         return dummy.next
     
     deleteDuplicatesOneLine=lambda s,h:None if not h else h if not h.next or h.val!=h.next.val else s.deleteDuplicates(next((n for n in iter(lambda:h: (h:=h.next) and h, None),None)))
+
+# Example usage:
+# def list_to_linked(lst):
+#     dummy = ListNode(0)
+#     curr = dummy
+#     for v in lst:
+#         curr.next = ListNode(v)
+#         curr = curr.next
+#     return dummy.next
+#
+# def linked_to_list(node):
+#     res = []
+#     while node:
+#         res.append(node.val)
+#         node = node.next
+#     return res
+#
+# sol = Solution()
+# head = list_to_linked([1,2,3,3,4,4,5])
+# print(linked_to_list(sol.deleteDuplicates(head)))  # [1,2,5]
+# head = list_to_linked([1,1,1,2,3])
+# print(linked_to_list(sol.deleteDuplicates(head)))  # [2,3]
