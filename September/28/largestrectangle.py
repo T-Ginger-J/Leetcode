@@ -46,3 +46,8 @@ class Solution:
         return max_area
     
     largestRectangleAreaOneLine=lambda s,h:max((x:=sorted([(v,i)for i,v in enumerate(h+[0])]),[max(v*(i-(x[j-1][1] if j else -1)-1)for j,(v,i) in enumerate(x))])[1])
+
+# Example usage:
+# sol = Solution()
+# print(sol.largestRectangleArea([2,1,5,6,2,3]))  # 10
+# print(sol.largestRectangleArea([2,4]))          # 4
