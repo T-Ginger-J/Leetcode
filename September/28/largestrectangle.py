@@ -44,3 +44,5 @@ class Solution:
         for i in range(n):
             max_area = max(max_area, heights[i] * (right[i] - left[i] - 1))
         return max_area
+    
+    largestRectangleAreaOneLine=lambda s,h:max((x:=sorted([(v,i)for i,v in enumerate(h+[0])]),[max(v*(i-(x[j-1][1] if j else -1)-1)for j,(v,i) in enumerate(x))])[1])
