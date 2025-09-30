@@ -28,3 +28,16 @@ class Solution:
         after.next = None
         before.next = after_head.next
         return before_head.next
+    
+    def partitionOptimized(self, head: ListNode, x: int) -> ListNode:
+        small, large = ListNode(0), ListNode(0)
+        s, l = small, large
+        while head:
+            if head.val < x:
+                s.next, s = head, head
+            else:
+                l.next, l = head, head
+            head = head.next
+        l.next = None
+        s.next = large.next
+        return small.next
