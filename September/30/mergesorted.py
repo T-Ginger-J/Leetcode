@@ -25,3 +25,5 @@ class Solution:
             j -= 1
             k -= 1
 
+    def mergeOneLine(self, nums1, m, nums2, n):
+        nums1[:] = sorted(nums1[:m] + nums2)
