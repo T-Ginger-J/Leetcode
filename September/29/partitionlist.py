@@ -1,3 +1,16 @@
+# LeetCode 86: Partition List
+# Explanation:
+# 1. Maintain two lists: one for nodes < x, one for nodes >= x.
+# 2. Traverse and append nodes to appropriate list.
+# 3. Merge the two lists at the end.
+# Time Complexity: O(n)
+# Space Complexity: O(1)
+
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
 class Solution:
     def partition(self, head: ListNode, x: int) -> ListNode:
         before = before_head = ListNode(0)
