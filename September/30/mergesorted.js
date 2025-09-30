@@ -27,3 +27,15 @@ var merge = function(nums1, m, nums2, n) {
         nums1[k--] = nums2[j--];
     }
 };
+
+// Example 1
+let nums1 = [1,2,3,0,0,0], m = 3;
+let nums2 = [2,5,6], n = 3;
+merge(nums1, m, nums2, n);
+console.log(nums1); // [1,2,2,3,5,6]
+
+// Example 2
+nums1 = [4,5,6,0,0,0]; m = 3;
+nums2 = [1,2,3]; n = 3;
+merge(nums1, m, nums2, n);
+console.log(nums1); // [1,2,3,4,5,6]
