@@ -41,3 +41,5 @@ class Solution:
         l.next = None
         s.next = large.next
         return small.next
+    
+    partitionOneLine=lambda s,h,x:(lambda a,b:(a.next:=b.next,a.next))(ListNode(0),ListNode(0))or[(lambda p,q:(p.next,q.next))(a:=ListNode(0),b:=ListNode(0))or[None]][-1]
