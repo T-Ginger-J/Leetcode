@@ -67,3 +67,9 @@ class Solution:
         return False  
 
     isScrambleOneLine=lambda s,a,b:(a==b)or(sorted(a)==sorted(b)and any(s.isScramble(a[:i],b[:i])and s.isScramble(a[i:],b[i:])or s.isScramble(a[:i],b[-i:])and s.isScramble(a[i:],b[:-i])for i in range(1,len(a))))  
+
+# Example usage:
+# sol = Solution()
+# print(sol.isScramble("great", "rgeat"))  # True
+# print(sol.isScramble("abcde", "caebd"))  # False
+# print(sol.isScramble("a", "a"))          # True
