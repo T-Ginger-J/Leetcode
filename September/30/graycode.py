@@ -17,3 +17,9 @@ class Solution:
         for i in range(n):
             res += [x | (1 << i) for x in reversed(res)]
         return res
+    
+# Example 1
+print(Solution().grayCode(2))  # [0, 1, 3, 2]
+
+# Example 2
+print(Solution().grayCode(3))  # [0, 1, 3, 2, 6, 7, 5, 4]
