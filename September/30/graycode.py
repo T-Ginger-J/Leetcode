@@ -11,3 +11,9 @@ from typing import List
 class Solution:
     def grayCode(self, n: int) -> List[int]:
         return [i ^ (i >> 1) for i in range(1 << n)]
+
+    def grayCodeOptimized(self, n: int):
+        res = [0]
+        for i in range(n):
+            res += [x | (1 << i) for x in reversed(res)]
+        return res
