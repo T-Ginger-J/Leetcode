@@ -1,3 +1,12 @@
+# LeetCode 88: Merge Sorted Array
+# Explanation:
+# 1. We have two sorted arrays: nums1 (with extra space at the end) and nums2.
+# 2. Use two pointers from the end of nums1 (excluding extra space) and nums2.
+# 3. Compare elements and place the larger one at the end of nums1.
+# 4. Continue until nums2 is exhausted (remaining nums1 elements are already sorted).
+# Time Complexity: O(m + n)
+# Space Complexity: O(1)
+
 from typing import List
 
 class Solution:
