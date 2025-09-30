@@ -27,3 +27,17 @@ class Solution:
 
     def mergeOneLine(self, nums1, m, nums2, n):
         nums1[:] = sorted(nums1[:m] + nums2)
+
+# Example 1
+nums1 = [1,2,3,0,0,0]; m = 3
+nums2 = [2,5,6]; n = 3
+Solution().merge(nums1, m, nums2, n)
+print(nums1)  # [1,2,2,3,5,6]
+
+# Example 2
+nums1 = [4,5,6,0,0,0]; m = 3
+nums2 = [1,2,3]; n = 3
+Solution().merge(nums1, m, nums2, n)
+print(nums1)  # [1,2,3,4,5,6]
+
+
