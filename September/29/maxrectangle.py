@@ -26,6 +26,8 @@ class Solution:
                 stack.append(i)
         return max_area
 
+    maximalRectangleOneLine=lambda s,m:max((a:=[0]*len(m[0]))or[max((a:=[a[j]+1 if r[j]=="1" else 0 for j in range(len(r))],*s.largestRectangleArea(a)) for r in m]or[0]))
+
 # Example usage:
 # sol = Solution()
 # print(sol.maximalRectangle([
