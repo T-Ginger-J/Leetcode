@@ -1,3 +1,11 @@
+# LeetCode 85: Maximal Rectangle
+# Explanation:
+# 1. Treat each row as histogram of consecutive 1s.
+# 2. For each row, compute largest rectangle in histogram using stack.
+# 3. Track maximum rectangle area across rows.
+# Time Complexity: O(m * n) where m=rows, n=cols
+# Space Complexity: O(n)
+
 class Solution:
     def maximalRectangle(self, matrix: list[list[str]]) -> int:
         if not matrix: return 0
