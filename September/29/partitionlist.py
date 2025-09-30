@@ -43,3 +43,23 @@ class Solution:
         return small.next
     
     partitionOneLine=lambda s,h,x:(lambda a,b:(a.next:=b.next,a.next))(ListNode(0),ListNode(0))or[(lambda p,q:(p.next,q.next))(a:=ListNode(0),b:=ListNode(0))or[None]][-1]
+
+# Example usage:
+# def list_to_linked(lst):
+#     dummy = ListNode(0)
+#     curr = dummy
+#     for v in lst:
+#         curr.next = ListNode(v)
+#         curr = curr.next
+#     return dummy.next
+#
+# def linked_to_list(node):
+#     res = []
+#     while node:
+#         res.append(node.val)
+#         node = node.next
+#     return res
+#
+# sol = Solution()
+# head = list_to_linked([1,4,3,2,5,2])
+# print(linked_to_list(sol.partition(head, 3)))  # [1,2,2,4,3,5]
