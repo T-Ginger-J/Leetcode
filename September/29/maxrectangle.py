@@ -25,3 +25,12 @@ class Solution:
                     max_area = max(max_area, height * width)
                 stack.append(i)
         return max_area
+
+# Example usage:
+# sol = Solution()
+# print(sol.maximalRectangle([
+#   ["1","0","1","0","0"],
+#   ["1","0","1","1","1"],
+#   ["1","1","1","1","1"],
+#   ["1","0","0","1","0"]
+# ]))  # 6
