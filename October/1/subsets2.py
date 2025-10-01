@@ -42,3 +42,7 @@ class Solution:
             res.extend(temp)
         return res
     
+    def subsetsWithDupOneLine(self, nums):
+        return list(map(list, set(itertools.chain.from_iterable(
+            itertools.combinations(sorted(nums), r) for r in range(len(nums)+1)
+        ))))
