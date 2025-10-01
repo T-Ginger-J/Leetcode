@@ -46,3 +46,11 @@ class Solution:
         return list(map(list, set(itertools.chain.from_iterable(
             itertools.combinations(sorted(nums), r) for r in range(len(nums)+1)
         ))))
+    
+# Example 1
+print(Solution().subsetsWithDup([1,2,2]))
+# [[], [1], [2], [1,2], [2,2], [1,2,2]]
+
+# Example 2
+print(Solution().subsetsWithDup([0]))
+# [[], [0]]
