@@ -9,6 +9,8 @@
 # Time Complexity: O(n)
 # Space Complexity: O(n) (can be optimized to O(1))
 
+from functools import lru_cache
+
 class Solution:
     def numDecodings(self, s: str) -> int:
         if not s or s[0] == "0":
@@ -24,3 +26,17 @@ class Solution:
             if 10 <= two <= 26:
                 dp[i] += dp[i-2]
         return dp[n]
+
+    def numDecodingsOptimized(self, s: str) -> int:
+        if not s or s[0] == "0":
+            return 0
+        prev, curr = 1, 1
+        for i in range(1, len(s)):
+            temp = 0
+            if s[i] != "0":
+                temp += curr
+            if 10 <= int(s[i-1:i+1]) <= 26:
+                temp += prev
+            prev, curr = curr, temp
+        return curr
+    
