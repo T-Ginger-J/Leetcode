@@ -40,3 +40,6 @@ class Solution:
             prev, curr = curr, temp
         return curr
     
+    def numDecodings(self, s: str) -> int:
+        return (f:=lru_cache(None)(lambda i: 1 if i==len(s) else 0 if s[i]=="0" else f(i+1)+(f(i+2) if i+1<=len(s)-1 and 10<=int(s[i:i+2])<=26 else 0)))(0)
+
