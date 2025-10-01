@@ -9,6 +9,9 @@
 # Time Complexity: O(2^n)
 # Space Complexity: O(2^n) (for storing results)
 
+from typing import List
+import itertools
+
 class Solution:
     def subsetsWithDup(self, nums: List[int]) -> List[List[int]]:
         res = []
@@ -25,3 +28,17 @@ class Solution:
         
         backtrack(0, [])
         return res
+
+    def subsetsWithDupIterative(self, nums: List[int]) -> List[List[int]]:
+        nums.sort()
+        res = [[]]
+        start = 0
+        for i, num in enumerate(nums):
+            if i > 0 and nums[i] == nums[i-1]:
+                temp = [curr + [num] for curr in res[start:]]
+            else:
+                temp = [curr + [num] for curr in res]
+            start = len(res)
+            res.extend(temp)
+        return res
+    
