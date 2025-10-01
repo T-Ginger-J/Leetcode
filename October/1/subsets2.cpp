@@ -31,3 +31,13 @@ public:
     }
 };
 
+// Example 1
+Solution sol;
+vector<int> nums1 = {1,2,2};
+auto res1 = sol.subsetsWithDup(nums1);
+// res1 = [[], [1], [2], [1,2], [2,2], [1,2,2]]
+
+// Example 2
+vector<int> nums2 = {0};
+auto res2 = sol.subsetsWithDup(nums2);
+// res2 = [[], [0]]
