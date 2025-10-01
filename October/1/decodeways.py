@@ -1,3 +1,14 @@
+# LeetCode 91: Decode Ways
+# Explanation:
+# 1. Each digit or pair of digits ("1" to "26") can represent a letter (A-Z).
+# 2. Use dynamic programming:
+#    - dp[i] = number of ways to decode up to index i.
+#    - Single digit valid if 1 <= s[i] <= 9.
+#    - Two digits valid if 10 <= s[i-1:i+1] <= 26.
+# 3. dp[n] gives total decoding ways.
+# Time Complexity: O(n)
+# Space Complexity: O(n) (can be optimized to O(1))
+
 class Solution:
     def numDecodings(self, s: str) -> int:
         if not s or s[0] == "0":
