@@ -43,3 +43,12 @@ class Solution:
     def numDecodings(self, s: str) -> int:
         return (f:=lru_cache(None)(lambda i: 1 if i==len(s) else 0 if s[i]=="0" else f(i+1)+(f(i+2) if i+1<=len(s)-1 and 10<=int(s[i:i+2])<=26 else 0)))(0)
 
+# Example 1
+print(Solution().numDecodings("12"))  # 2 ("AB", "L")
+
+# Example 2
+print(Solution().numDecodings("226"))  # 3 ("BZ", "VF", "BBF")
+
+# Example 3
+print(Solution().numDecodings("06"))  # 0
+
