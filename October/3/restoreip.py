@@ -52,3 +52,15 @@ class Solution:
         return [".".join(p) for i in range(1,4) for j in range(i+1,i+4) for k in range(j+1,j+4)
                 if k < len(s) for p in [(s[:i], s[i:j], s[j:k], s[k:])]
                 if all(str(int(x))==x and 0<=int(x)<=255 for x in p)]
+    
+# Example 1
+print(Solution().restoreIpAddresses("25525511135"))
+# ["255.255.11.135","255.255.111.35"]
+
+# Example 2
+print(Solution().restoreIpAddresses("0000"))
+# ["0.0.0.0"]
+
+# Example 3
+print(Solution().restoreIpAddresses("101023"))
+# ["1.0.10.23","1.0.102.3","10.1.0.23","10.10.2.3","101.0.2.3"]
