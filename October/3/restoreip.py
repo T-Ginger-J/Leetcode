@@ -48,3 +48,7 @@ class Solution:
                         res.append(".".join([a,b,c,d]))
         return res
     
+    def restoreIpAddressesOneLine(self, s: str) -> List[str]:
+        return [".".join(p) for i in range(1,4) for j in range(i+1,i+4) for k in range(j+1,j+4)
+                if k < len(s) for p in [(s[:i], s[i:j], s[j:k], s[k:])]
+                if all(str(int(x))==x and 0<=int(x)<=255 for x in p)]
