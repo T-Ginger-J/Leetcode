@@ -29,3 +29,7 @@ class Solution:
             res.append(curr.val)
             curr = curr.right
         return res
+    
+    def inorderTraversalOneLine(self, root: TreeNode):
+        return self.inorderTraversal(root.left) + [root.val] + self.inorderTraversal(root.right) if root else []
+
