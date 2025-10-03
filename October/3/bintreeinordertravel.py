@@ -1,3 +1,11 @@
+# LeetCode 94: Binary Tree Inorder Traversal
+# Explanation:
+# 1. Inorder traversal visits nodes in order: Left → Node → Right.
+# 2. Use recursion to traverse left, append current node, then traverse right.
+# 3. Alternatively, use a stack to simulate recursion iteratively.
+# Time Complexity: O(n), where n = number of nodes.
+# Space Complexity: O(n) in worst case (recursion stack or explicit stack).
+
 class Solution:
     def inorderTraversal(self, root: TreeNode):
         res = []
