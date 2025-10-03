@@ -1,3 +1,18 @@
+# LeetCode 93: Restore IP Addresses
+# Explanation:
+# 1. We must insert 3 dots in the string to form 4 valid segments.
+# 2. Each segment must be:
+#    - Between 0 and 255
+#    - No leading zeros unless the segment is exactly "0".
+# 3. Use backtracking:
+#    - At each step, choose a segment of length 1 to 3.
+#    - If valid, recurse on remaining string and segment count.
+#    - Stop when 4 segments are formed and string is consumed.
+# Time Complexity: O(3^4) = O(81) ≈ O(1) since max 12 chars.
+# Space Complexity: O(1) excluding result storage.
+
+from typing import List
+
 class Solution:
     def restoreIpAddresses(self, s: str) -> List[str]:
         res = []
