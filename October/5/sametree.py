@@ -7,6 +7,8 @@
 # Time Complexity: O(n), where n = number of nodes.
 # Space Complexity: O(h), where h = tree height (recursion stack).
 
+from collections import deque
+
 # Definition for a binary tree node.
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
@@ -21,3 +23,16 @@ class Solution:
         if not p or not q or p.val != q.val:
             return False
         return self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right)
+
+    def isSameTreeIterative(self, p: TreeNode, q: TreeNode) -> bool:
+        queue = deque([(p, q)])
+        while queue:
+            n1, n2 = queue.popleft()
+            if not n1 and not n2:
+                continue
+            if not n1 or not n2 or n1.val != n2.val:
+                return False
+            queue.append((n1.left, n2.left))
+            queue.append((n1.right, n2.right))
+        return True
+
