@@ -31,3 +31,31 @@ class Solution:
         
         inorder(root)
         self.first.val, self.second.val = self.second.val, self.first.val
+
+    def recoverTreeOptimized(self, root: TreeNode) -> None:
+        first = second = prev = None
+        cur = root
+        while cur:
+            if not cur.left:
+                if prev and prev.val > cur.val:
+                    if not first:
+                        first = prev
+                    second = cur
+                prev = cur
+                cur = cur.right
+            else:
+                pre = cur.left
+                while pre.right and pre.right != cur:
+                    pre = pre.right
+                if not pre.right:
+                    pre.right = cur
+                    cur = cur.left
+                else:
+                    pre.right = None
+                    if prev and prev.val > cur.val:
+                        if not first:
+                            first = prev
+                        second = cur
+                    prev = cur
+                    cur = cur.right
+        first.val, second.val = second.val, first.val
