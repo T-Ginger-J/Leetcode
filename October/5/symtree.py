@@ -1,3 +1,18 @@
+# LeetCode 101: Symmetric Tree
+# Explanation:
+# 1. A binary tree is symmetric if its left and right subtrees are mirror images.
+# 2. Use recursion to compare corresponding nodes in mirrored positions.
+# 3. Check that both values match and subtrees are mirrors of each other.
+# Time Complexity: O(n), where n = number of nodes.
+# Space Complexity: O(h), where h = tree height (recursion stack).
+
+# Definition for a binary tree node.
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
 class Solution:
     def isSymmetric(self, root: TreeNode) -> bool:
         def isMirror(t1, t2):
