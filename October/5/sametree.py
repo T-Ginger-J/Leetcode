@@ -36,3 +36,5 @@ class Solution:
             queue.append((n1.right, n2.right))
         return True
 
+    isSameTreeOneLine = lambda self,p,q: not p and not q or (p and q and p.val==q.val and self.isSameTree(p.left,q.left) and self.isSameTree(p.right,q.right))
+
