@@ -23,3 +23,18 @@ class Solution:
             return isMirror(t1.left, t2.right) and isMirror(t1.right, t2.left)
         return isMirror(root.left, root.right) if root else True
 
+# Example 1: Symmetric tree
+root = TreeNode(1)
+root.left = TreeNode(2, TreeNode(3), TreeNode(4))
+root.right = TreeNode(2, TreeNode(4), TreeNode(3))
+print(Solution().isSymmetric(root))  # True
+
+# Example 2: Asymmetric tree
+root = TreeNode(1)
+root.left = TreeNode(2, None, TreeNode(3))
+root.right = TreeNode(2, None, TreeNode(3))
+print(Solution().isSymmetric(root))  # False
+
+# Example 3: Single node
+root = TreeNode(1)
+print(Solution().isSymmetric(root))  # True
