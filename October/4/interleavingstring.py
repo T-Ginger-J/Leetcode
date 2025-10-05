@@ -1,3 +1,14 @@
+# LeetCode 97: Interleaving String
+# Explanation:
+# 1. We need to determine if s3 can be formed by interleaving s1 and s2.
+# 2. Interleaving means preserving the order of characters in both s1 and s2.
+# 3. Use DP where dp[i][j] = True if s3[:i+j] can be formed by s1[:i] and s2[:j].
+# 4. Transition:
+#    dp[i][j] = (dp[i-1][j] and s1[i-1]==s3[i+j-1]) or (dp[i][j-1] and s2[j-1]==s3[i+j-1])
+# 5. Base Case: dp[0][0] = True
+# Time Complexity: O(m * n)
+# Space Complexity: O(m * n)
+
 class Solution:
     def isInterleave(self, s1: str, s2: str, s3: str) -> bool:
         if len(s1) + len(s2) != len(s3):
