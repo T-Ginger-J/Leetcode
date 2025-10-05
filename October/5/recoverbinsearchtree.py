@@ -59,3 +59,20 @@ class Solution:
                     prev = cur
                     cur = cur.right
         first.val, second.val = second.val, first.val
+
+# Build invalid BST: [1,3,null,null,2]
+root = TreeNode(1)
+root.left = TreeNode(3)
+root.left.right = TreeNode(2)
+
+Solution().recoverTree(root)
+
+# Validate recovery
+def inorder(root):
+    return inorder(root.left) + [root.val] + inorder(root.right) if root else []
+print(inorder(root))  # [1,2,3]
+
+# Example 2
+root = TreeNode(3, TreeNode(1), TreeNode(4, TreeNode(2)))
+Solution().recoverTree(root)
+print(inorder(root))  # [1,2,3,4]
