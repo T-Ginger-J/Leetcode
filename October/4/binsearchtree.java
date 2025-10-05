@@ -19,3 +19,7 @@ class Solution {
     }
 }
 
+Solution sol = new Solution();
+System.out.println(sol.numTrees(3)); // 5
+System.out.println(sol.numTrees(1)); // 1
+System.out.println(sol.numTrees(5)); // 42
