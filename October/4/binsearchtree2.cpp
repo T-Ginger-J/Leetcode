@@ -47,3 +47,11 @@ private:
     }
 };
 
+// Example
+Solution sol;
+vector<TreeNode*> trees = sol.generateTrees(3);
+cout << trees.size() << endl; // Output: 5
+
+vector<TreeNode*> one = sol.generateTrees(1);
+cout << one.size() << endl;   // Output: 1
+
