@@ -24,3 +24,6 @@ class Solution:
     def numTreesOptimizedBuiltinOneLine(self, n: int) -> int:
         return math.comb(2 * n, n) // (n + 1)
     
+print(Solution().numTrees(3))  # 5
+print(Solution().numTrees(1))  # 1
+print(Solution().numTrees(5))  # 42
