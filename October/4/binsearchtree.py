@@ -10,6 +10,8 @@
 # Time Complexity: O(n^2)
 # Space Complexity: O(n)
 
+import math
+
 class Solution:
     def numTrees(self, n: int) -> int:
         dp = [0] * (n + 1)
@@ -18,3 +20,7 @@ class Solution:
             for j in range(1, i + 1):
                 dp[i] += dp[j - 1] * dp[i - j]
         return dp[n]
+
+    def numTreesOptimizedBuiltinOneLine(self, n: int) -> int:
+        return math.comb(2 * n, n) // (n + 1)
+    
