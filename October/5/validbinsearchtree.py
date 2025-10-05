@@ -38,3 +38,14 @@ class Solution:
             return inorder(node.right)
         return inorder(root)
     
+    # Example 1: Valid BST
+root = TreeNode(2, TreeNode(1), TreeNode(3))
+print(Solution().isValidBST(root))  # True
+
+# Example 2: Invalid BST
+root = TreeNode(5, TreeNode(1), TreeNode(4, TreeNode(3), TreeNode(6)))
+print(Solution().isValidBST(root))  # False
+
+# Example 3: Single Node
+root = TreeNode(1)
+print(Solution().isValidBST(root))  # True
