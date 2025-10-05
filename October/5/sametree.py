@@ -38,3 +38,17 @@ class Solution:
 
     isSameTreeOneLine = lambda self,p,q: not p and not q or (p and q and p.val==q.val and self.isSameTree(p.left,q.left) and self.isSameTree(p.right,q.right))
 
+# Example 1
+p = TreeNode(1, TreeNode(2), TreeNode(3))
+q = TreeNode(1, TreeNode(2), TreeNode(3))
+print(Solution().isSameTree(p, q))  # True
+
+# Example 2
+p = TreeNode(1, TreeNode(2))
+q = TreeNode(1, None, TreeNode(2))
+print(Solution().isSameTree(p, q))  # False
+
+# Example 3
+p = TreeNode(1, TreeNode(2, TreeNode(3)))
+q = TreeNode(1, TreeNode(2, TreeNode(4)))
+print(Solution().isSameTree(p, q))  # False
