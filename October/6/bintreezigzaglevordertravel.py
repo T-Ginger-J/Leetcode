@@ -55,3 +55,9 @@ class Solution:
             left_to_right = not left_to_right
         return result
 
+    
+    def zigzagLevelOrderOneLine(self, root):
+        r, q, f = [], [root] if root else [], 1
+        while q: r.append([n.val for n in q][::f]); q=[c for n in q for c in (n.left,n.right) if c]; f*=-1
+        return r
+    
