@@ -61,3 +61,16 @@ class Solution:
         while q: r.append([n.val for n in q][::f]); q=[c for n in q for c in (n.left,n.right) if c]; f*=-1
         return r
     
+# Example 1
+root = TreeNode(3)
+root.left = TreeNode(9)
+root.right = TreeNode(20, TreeNode(15), TreeNode(7))
+print(Solution().zigzagLevelOrder(root))  # [[3], [20, 9], [15, 7]]
+
+# Example 2
+root = TreeNode(1)
+print(Solution().zigzagLevelOrder(root))  # [[1]]
+
+# Example 3
+print(Solution().zigzagLevelOrder(None))  # []
+
