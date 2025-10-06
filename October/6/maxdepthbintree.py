@@ -20,3 +20,16 @@ class Solution:
         return 1 + max(self.maxDepth(root.left), self.maxDepth(root.right))
 
     def maxDepthOneLine(self, root): return 1 + max(self.maxDepth(root.left), self.maxDepth(root.right)) if root else 0
+
+# Example 1
+root = TreeNode(3)
+root.left = TreeNode(9)
+root.right = TreeNode(20, TreeNode(15), TreeNode(7))
+print(Solution().maxDepth(root))  # 3
+
+# Example 2
+root = TreeNode(1, None, TreeNode(2))
+print(Solution().maxDepth(root))  # 2
+
+# Example 3
+print(Solution().maxDepth(None))  # 0
