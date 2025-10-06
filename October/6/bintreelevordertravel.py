@@ -32,3 +32,15 @@ class Solution:
             result.append(level)
         return result
 
+# Example 1
+root = TreeNode(3)
+root.left = TreeNode(9)
+root.right = TreeNode(20, TreeNode(15), TreeNode(7))
+print(Solution().levelOrder(root))  # [[3], [9, 20], [15, 7]]
+
+# Example 2
+root = TreeNode(1)
+print(Solution().levelOrder(root))  # [[1]]
+
+# Example 3
+print(Solution().levelOrder(None))  # []
