@@ -32,6 +32,19 @@ class Solution:
             result.append(level)
         return result
 
+    def levelOrderDFS(self, root: TreeNode):
+        levels = []
+        def dfs(node, level):
+            if not node:
+                return
+            if len(levels) == level:
+                levels.append([])
+            levels[level].append(node.val)
+            dfs(node.left, level + 1)
+            dfs(node.right, level + 1)
+        dfs(root, 0)
+        return levels
+    
 # Example 1
 root = TreeNode(3)
 root.left = TreeNode(9)
