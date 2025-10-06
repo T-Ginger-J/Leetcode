@@ -1,3 +1,20 @@
+# LeetCode 102: Binary Tree Level Order Traversal
+# Explanation:
+# 1. Use a queue (BFS) to traverse level by level.
+# 2. For each level, collect node values before moving to the next level.
+# 3. Append each level’s list to the result.
+# Time Complexity: O(n), where n = number of nodes.
+# Space Complexity: O(n), for the queue and output list.
+
+from collections import deque
+
+# Definition for a binary tree node.
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
 class Solution:
     def levelOrder(self, root: TreeNode):
         if not root:
