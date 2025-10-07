@@ -32,3 +32,13 @@ class Solution:
                     queue.append(node.right)
             res.append(level)
         return res[::-1]
+
+root = TreeNode(3)
+root.left = TreeNode(9)
+root.right = TreeNode(20, TreeNode(15), TreeNode(7))
+print(Solution().levelOrderBottom(root))  # [[15, 7], [9, 20], [3]]
+
+root = TreeNode(1)
+print(Solution().levelOrderBottom(root))  # [[1]]
+
+print(Solution().levelOrderBottom(None))  # []
