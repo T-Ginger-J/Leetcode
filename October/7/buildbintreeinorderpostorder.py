@@ -32,3 +32,9 @@ class Solution:
             return root
 
         return helper(0, len(inorder) - 1)
+
+    def buildTreeOneLine(self, I, P):
+        if not I: return None
+        x = P.pop()
+        i = I.index(x)
+        return TreeNode(x, self.buildTree(I[:i], P), self.buildTree(I[i+1:], P))
