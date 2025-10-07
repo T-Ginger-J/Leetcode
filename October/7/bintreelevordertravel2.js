@@ -30,3 +30,11 @@ var levelOrderBottom = function(root) {
     }
     return res;
 };
+
+let root = { val: 3, left: { val: 9 }, right: { val: 20, left: { val: 15 }, right: { val: 7 } } };
+console.log(levelOrderBottom(root)); // [[15,7],[9,20],[3]]
+
+let root2 = { val: 1 };
+console.log(levelOrderBottom(root2)); // [[1]]
+
+console.log(levelOrderBottom(null)); // []
