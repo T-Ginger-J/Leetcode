@@ -1,3 +1,20 @@
+# LeetCode 106: Construct Binary Tree from Inorder and Postorder Traversal
+# Explanation:
+# 1. Postorder: [Left, Right, Root] — the last element is always the root.
+# 2. Inorder: [Left, Root, Right] — find the root’s position to divide subtrees.
+# 3. Build right subtree first (since postorder pops from end).
+# 4. Use a hashmap for O(1) root index lookup in inorder.
+# Time Complexity: O(n)
+# Space Complexity: O(n)
+
+from typing import List, Optional
+
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
 class Solution:
     def buildTree(self, inorder: List[int], postorder: List[int]) -> Optional[TreeNode]:
         index_map = {val: i for i, val in enumerate(inorder)}
