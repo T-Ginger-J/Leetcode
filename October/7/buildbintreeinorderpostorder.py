@@ -38,3 +38,15 @@ class Solution:
         x = P.pop()
         i = I.index(x)
         return TreeNode(x, self.buildTree(I[:i], P), self.buildTree(I[i+1:], P))
+    
+# Example 1
+inorder = [9, 3, 15, 20, 7]
+postorder = [9, 15, 7, 20, 3]
+root = Solution().buildTree(inorder, postorder)
+print(root.val, root.left.val, root.right.val)  # 3 9 20
+
+# Example 2
+inorder = [4, 2, 5, 1, 3]
+postorder = [4, 5, 2, 3, 1]
+root = Solution().buildTree(inorder, postorder)
+print(root.val, root.left.val, root.right.val)  # 1 2 3
