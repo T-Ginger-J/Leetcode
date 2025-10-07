@@ -52,3 +52,7 @@ class Solution:
             stack.append(node)
         return root
     
+    def buildTreeOneLine(self, P, I): 
+        if not I: return None
+        x = P.pop(0); i = I.index(x)
+        return TreeNode(x, self.buildTree(P, I[:i]), self.buildTree(P, I[i+1:]))
