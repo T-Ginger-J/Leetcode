@@ -33,3 +33,22 @@ class Solution:
             return root
         
         return helper(0, len(inorder) - 1)
+
+    def buildTreeIterative(self, preorder, inorder):
+        if not preorder:
+            return None
+        root = TreeNode(preorder[0])
+        stack = [root]
+        inorder_index = 0
+        for val in preorder[1:]:
+            node = TreeNode(val)
+            if stack[-1].val != inorder[inorder_index]:
+                stack[-1].left = node
+            else:
+                while stack and stack[-1].val == inorder[inorder_index]:
+                    last = stack.pop()
+                    inorder_index += 1
+                last.right = node
+            stack.append(node)
+        return root
+    
