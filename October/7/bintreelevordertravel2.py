@@ -1,3 +1,20 @@
+# LeetCode 107: Binary Tree Level Order Traversal II
+# Explanation:
+# 1. Perform a standard BFS level order traversal.
+# 2. Collect nodes level by level.
+# 3. Reverse the list of levels at the end to get bottom-up order.
+# Time Complexity: O(n) — each node is visited once.
+# Space Complexity: O(n) — queue and result storage.
+
+from collections import deque
+from typing import List, Optional
+
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
 class Solution:
     def levelOrderBottom(self, root: Optional[TreeNode]) -> List[List[int]]:
         if not root:
