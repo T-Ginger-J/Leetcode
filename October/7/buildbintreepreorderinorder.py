@@ -56,3 +56,15 @@ class Solution:
         if not I: return None
         x = P.pop(0); i = I.index(x)
         return TreeNode(x, self.buildTree(P, I[:i]), self.buildTree(P, I[i+1:]))
+    
+# Example 1
+preorder = [3, 9, 20, 15, 7]
+inorder = [9, 3, 15, 20, 7]
+root = Solution().buildTree(preorder, inorder)
+print(root.val, root.left.val, root.right.val)  # 3 9 20
+
+# Example 2
+preorder = [1, 2, 4, 5, 3]
+inorder = [4, 2, 5, 1, 3]
+root = Solution().buildTree(preorder, inorder)
+print(root.val, root.left.val, root.right.val)  # 1 2 3
