@@ -1,3 +1,19 @@
+# LeetCode 108: Convert Sorted Array to Binary Search Tree
+# Explanation:
+# 1. Given a sorted array, we can create a height-balanced BST by choosing the middle element as the root.
+# 2. Recursively assign the middle of the left half as the left subtree and the middle of the right half as the right subtree.
+# 3. This ensures the BST is balanced and maintains sorted order.
+# Time Complexity: O(n)
+# Space Complexity: O(log n) for recursion stack (balanced tree height).
+
+from typing import List, Optional
+
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
 class Solution:
     def sortedArrayToBST(self, nums: List[int]) -> Optional[TreeNode]:
         def helper(left, right):
