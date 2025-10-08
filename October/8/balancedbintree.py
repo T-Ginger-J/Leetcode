@@ -39,3 +39,7 @@ class Solution:
             balanced = left_bal and right_bal and abs(left_height - right_height) <= 1
             return balanced, max(left_height, right_height) + 1
         return check(root)[0]
+    
+    def isBalancedOneLine(self, r):
+        f = lambda n: (h:=0) if not n else (max(f(n.left), f(n.right)) + 1 if abs(f(n.left)-f(n.right))<=1 else -1)
+        return f(r) != -1
