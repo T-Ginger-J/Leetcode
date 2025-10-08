@@ -29,3 +29,6 @@ class Solution:
     def sortedArrayToBSTOneLine(self, A):
         return None if not A else TreeNode(A[len(A)//2], self.sortedArrayToBST(A[:len(A)//2]), self.sortedArrayToBST(A[len(A)//2+1:]))
 
+print(Solution().sortedArrayToBST([-10, -3, 0, 5, 9]).val)  # 0
+print(Solution().sortedArrayToBST([1, 3]).val)              # 3 or 1 (balanced tree)
+print(Solution().sortedArrayToBST([]))                      # None
