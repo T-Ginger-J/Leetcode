@@ -43,3 +43,11 @@ class Solution:
     def isBalancedOneLine(self, r):
         f = lambda n: (h:=0) if not n else (max(f(n.left), f(n.right)) + 1 if abs(f(n.left)-f(n.right))<=1 else -1)
         return f(r) != -1
+    
+root = TreeNode(3)
+root.left = TreeNode(9)
+root.right = TreeNode(20, TreeNode(15), TreeNode(7))
+print(Solution().isBalanced(root))  # True
+
+root.right.right = TreeNode(8, TreeNode(9, TreeNode(10)))
+print(Solution().isBalanced(root))  # False
