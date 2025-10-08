@@ -29,3 +29,13 @@ class Solution:
             return max(left, right) + 1
 
         return dfs(root) != -1
+
+    def isBalancedOnePass(self, root):
+        def check(node):
+            if not node:
+                return True, 0
+            left_bal, left_height = check(node.left)
+            right_bal, right_height = check(node.right)
+            balanced = left_bal and right_bal and abs(left_height - right_height) <= 1
+            return balanced, max(left_height, right_height) + 1
+        return check(root)[0]
