@@ -26,3 +26,6 @@ class Solution:
             return root
         return helper(0, len(nums) - 1)
 
+    def sortedArrayToBSTOneLine(self, A):
+        return None if not A else TreeNode(A[len(A)//2], self.sortedArrayToBST(A[:len(A)//2]), self.sortedArrayToBST(A[len(A)//2+1:]))
+
