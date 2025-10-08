@@ -46,3 +46,20 @@ class Solution:
         A = []
         while head: A.append(head.val); head = head.next
         return None if not A else TreeNode(A[len(A)//2], self.sortedListToBST(ListNode.from_list(A[:len(A)//2])), self.sortedListToBST(ListNode.from_list(A[len(A)//2+1:])))
+
+# Helper to build a linked list
+def build_list(arr):
+    head = ListNode(arr[0])
+    curr = head
+    for v in arr[1:]:
+        curr.next = ListNode(v)
+        curr = curr.next
+    return head
+
+head = build_list([-10, -3, 0, 5, 9])
+root = Solution().sortedListToBST(head)
+print(root.val, root.left.val, root.right.val)  # 0 -3 9
+
+head = build_list([1, 3])
+root = Solution().sortedListToBST(head)
+print(root.val, root.left.val, root.right)  # 3 1 None
