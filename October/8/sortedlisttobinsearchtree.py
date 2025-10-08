@@ -41,3 +41,8 @@ class Solution:
         root.left = self.sortedListToBST(head)
         root.right = self.sortedListToBST(slow.next)
         return root
+    
+    def sortedListToBSTOneLine(self, head):
+        A = []
+        while head: A.append(head.val); head = head.next
+        return None if not A else TreeNode(A[len(A)//2], self.sortedListToBST(ListNode.from_list(A[:len(A)//2])), self.sortedListToBST(ListNode.from_list(A[len(A)//2+1:])))
