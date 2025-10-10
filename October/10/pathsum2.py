@@ -31,3 +31,16 @@ class Solution:
         dfs(root, 0, [])
         return res
 
+    def pathSumStack(self, root, targetSum):
+        if not root:
+            return []
+        res, stack = [], [(root, [root.val], targetSum - root.val)]
+        while stack:
+            node, path, remain = stack.pop()
+            if not node.left and not node.right and remain == 0:
+                res.append(path)
+            if node.right:
+                stack.append((node.right, path + [node.right.val], remain - node.right.val))
+            if node.left:
+                stack.append((node.left, path + [node.left.val], remain - node.left.val))
+        return res
