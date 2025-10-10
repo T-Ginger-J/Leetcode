@@ -1,3 +1,22 @@
+# LeetCode 112: Path Sum
+# Explanation:
+# 1. Given a binary tree and a target sum, determine if there exists a root-to-leaf path 
+#    such that the sum of node values equals the target.
+# 2. Use DFS recursion:
+#    - Subtract the current node value from the target.
+#    - If we reach a leaf node and target == node.val, return True.
+#    - Otherwise, recurse on left and right subtrees.
+# Time Complexity: O(n) — visit each node once.
+# Space Complexity: O(h) — recursion stack height, where h is the tree height.
+
+from typing import Optional
+
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
 class Solution:
     def hasPathSum(self, root: Optional[TreeNode], targetSum: int) -> bool:
         if not root:
