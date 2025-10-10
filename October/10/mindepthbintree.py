@@ -43,3 +43,12 @@ class Solution:
     def minDepthOneLine(self, r):
         return 0 if not r else 1 + (min(self.minDepth(r.left), self.minDepth(r.right)) if r.left and r.right else self.minDepth(r.left) or self.minDepth(r.right))
     
+root = TreeNode(3)
+root.left = TreeNode(9)
+root.right = TreeNode(20, TreeNode(15), TreeNode(7))
+print(Solution().minDepth(root))  # 2
+
+root2 = TreeNode(1)
+root2.left = TreeNode(2)
+print(Solution().minDepth(root2))  # 2
+
