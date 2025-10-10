@@ -1,3 +1,20 @@
+# LeetCode 113: Path Sum II
+# Explanation:
+# 1. Find all root-to-leaf paths where each path's sum equals targetSum.
+# 2. Use DFS recursion to traverse the tree.
+# 3. Keep a running list `path` to track current nodes and a `res` list for valid paths.
+# 4. When a leaf node’s path sum equals targetSum, append a copy of the path to results.
+# Time Complexity: O(n) — every node is visited once.
+# Space Complexity: O(h) — recursion stack, where h is the height of the tree.
+
+from typing import Optional, List
+
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
 class Solution:
     def pathSum(self, root: Optional[TreeNode], targetSum: int) -> List[List[int]]:
         res = []
