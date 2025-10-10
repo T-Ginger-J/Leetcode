@@ -40,3 +40,6 @@ class Solution:
             if node.right:
                 queue.append((node.right, depth + 1))
 
+    def minDepthOneLine(self, r):
+        return 0 if not r else 1 + (min(self.minDepth(r.left), self.minDepth(r.right)) if r.left and r.right else self.minDepth(r.left) or self.minDepth(r.right))
+    
