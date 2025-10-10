@@ -44,3 +44,16 @@ class Solution:
             if node.left:
                 stack.append((node.left, path + [node.left.val], remain - node.left.val))
         return res
+
+root = TreeNode(5)
+root.left = TreeNode(4)
+root.right = TreeNode(8)
+root.left.left = TreeNode(11, TreeNode(7), TreeNode(2))
+root.right.left = TreeNode(13)
+root.right.right = TreeNode(4, TreeNode(5), TreeNode(1))
+
+print(Solution().pathSum(root, 22))
+# Output: [[5, 4, 11, 2], [5, 8, 4, 5]]
+
+print(Solution().pathSum(root, 26))
+# Output: [[5, 8, 13]]
