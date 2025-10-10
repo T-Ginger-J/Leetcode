@@ -25,3 +25,12 @@ class Solution:
             return True
         targetSum -= root.val
         return self.hasPathSum(root.left, targetSum) or self.hasPathSum(root.right, targetSum)
+
+root = TreeNode(5)
+root.left = TreeNode(4)
+root.right = TreeNode(8, TreeNode(13), TreeNode(4, None, TreeNode(1)))
+root.left.left = TreeNode(11, TreeNode(7), TreeNode(2))
+
+print(Solution().hasPathSum(root, 22))  # True (5→4→11→2)
+print(Solution().hasPathSum(root, 26))  # True (5→8→13)
+print(Solution().hasPathSum(root, 5))   # False
