@@ -1,3 +1,22 @@
+# LeetCode 114: Flatten Binary Tree to Linked List
+# Explanation:
+# 1. Transform the binary tree into a "linked list" in-place following preorder traversal.
+# 2. For each node:
+#    - Recursively flatten left and right subtrees.
+#    - Store the original right subtree.
+#    - Move the flattened left subtree to the right, set left = None.
+#    - Append the stored right subtree at the end of new right.
+# Time Complexity: O(n) — every node visited once.
+# Space Complexity: O(h) — recursion depth.
+
+from typing import Optional
+
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
 class Solution:
     def flatten(self, root: Optional[TreeNode]) -> None:
         if not root:
