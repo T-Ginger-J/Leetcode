@@ -39,3 +39,16 @@ class Solution:
         self.flatten(r.right, p); self.flatten(r.left, p)
         r.right, r.left, p[0] = p[0], None, r
 
+root = TreeNode(1)
+root.left = TreeNode(2, TreeNode(3), TreeNode(4))
+root.right = TreeNode(5, None, TreeNode(6))
+
+Solution().flatten(root)
+
+# Verify result:
+curr = root
+while curr:
+    print(curr.val, end=" -> ")
+    curr = curr.right
+# Output: 1 -> 2 -> 3 -> 4 -> 5 -> 6 ->
+    
