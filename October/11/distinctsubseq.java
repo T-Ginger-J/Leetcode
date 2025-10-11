@@ -28,3 +28,9 @@ class Solution {
     }
 }
 
+// System.out.println(new Solution().numDistinct("rabbbit", "rabbit"));
+// Output: 3
+
+// System.out.println(new Solution().numDistinct("babgbag", "bag"));
+// Output: 5
+
