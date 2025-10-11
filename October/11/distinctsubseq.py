@@ -27,3 +27,9 @@ class Solution:
                     dp[i][j] = dp[i - 1][j]
         
         return dp[m][n]
+
+print(Solution().numDistinct("rabbbit", "rabbit"))
+# Output: 3
+
+print(Solution().numDistinct("babgbag", "bag"))
+# Output: 5
