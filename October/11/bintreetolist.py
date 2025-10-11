@@ -34,3 +34,8 @@ class Solution:
             curr = curr.right
         curr.right = temp
 
+    def flattenOneLine(self, r, p=[None]):
+        if not r: return
+        self.flatten(r.right, p); self.flatten(r.left, p)
+        r.right, r.left, p[0] = p[0], None, r
+
