@@ -34,3 +34,18 @@ class Solution:
     def connectOneLine(self, r):
         if r and r.left: r.left.next, r.right.next = r.right, r.next and r.next.left and self.connect(r.left) or self.connect(r.right)
         return r
+
+root = Node(1)
+root.left = Node(2)
+root.right = Node(3)
+root.left.left = Node(4)
+root.left.right = Node(5)
+root.right.left = Node(6)
+root.right.right = Node(7)
+
+Solution().connect(root)
+
+# Checking next pointers level by level:
+print(root.left.next.val)          # Output: 3
+print(root.left.left.next.val)     # Output: 5
+print(root.left.right.next.val)    # Output: 6
