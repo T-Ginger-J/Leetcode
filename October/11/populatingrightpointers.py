@@ -30,3 +30,7 @@ class Solution:
                 head = head.next
             leftmost = leftmost.left
         return root
+
+    def connectOneLine(self, r):
+        if r and r.left: r.left.next, r.right.next = r.right, r.next and r.next.left and self.connect(r.left) or self.connect(r.right)
+        return r
