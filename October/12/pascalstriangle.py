@@ -1,3 +1,11 @@
+# LeetCode 118: Pascal’s Triangle
+# Explanation:
+# 1. Build Pascal’s Triangle up to numRows.
+# 2. Each row starts and ends with 1.
+# 3. Each interior element = sum of two elements above it: row[i] = prev[i-1] + prev[i].
+# Time Complexity: O(n^2)
+# Space Complexity: O(n^2)
+
 class Solution:
     def generate(self, numRows: int):
         triangle = []
