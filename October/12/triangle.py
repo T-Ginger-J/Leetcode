@@ -22,3 +22,19 @@ class Solution:
             for j in range(len(triangle[i])):
                 dp[j] = triangle[i][j] + min(dp[j], dp[j + 1])
         return dp[0]
+    
+triangle = [
+    [2],
+    [3, 4],
+    [6, 5, 7],
+    [4, 1, 8, 3]
+]
+print(Solution().minimumTotal(triangle))
+# Output: 11 (2 + 3 + 5 + 1)
+
+triangle2 = [
+    [-10]
+]
+print(Solution().minimumTotal(triangle2))
+# Output: -10
+
