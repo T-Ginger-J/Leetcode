@@ -19,3 +19,15 @@ class Solution:
     def generateOneLine(self, n):
         return [[1] * (i + 1) if i < 2 else [1] + [a + b for a, b in zip(r[:-1], r[1:])] + [1] for i, r in enumerate([[1]] * n)]
 
+print(Solution().generate(5))
+# Output:
+# [
+#   [1],
+#   [1, 1],
+#   [1, 2, 1],
+#   [1, 3, 3, 1],
+#   [1, 4, 6, 4, 1]
+# ]
+
+print(Solution().generate(1))
+# Output: [[1]]
