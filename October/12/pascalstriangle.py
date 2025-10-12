@@ -16,3 +16,6 @@ class Solution:
             triangle.append(row)
         return triangle
 
+    def generateOneLine(self, n):
+        return [[1] * (i + 1) if i < 2 else [1] + [a + b for a, b in zip(r[:-1], r[1:])] + [1] for i, r in enumerate([[1]] * n)]
+
