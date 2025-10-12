@@ -15,3 +15,11 @@ class Solution:
 
     def getRowOneLine(self, k): return [math.comb(k, i) for i in range(k + 1)]
 
+print(Solution().getRow(3))
+# Output: [1, 3, 3, 1]
+
+print(Solution().getRow(0))
+# Output: [1]
+
+print(Solution().getRow(5))
+# Output: [1, 5, 10, 10, 5, 1]
