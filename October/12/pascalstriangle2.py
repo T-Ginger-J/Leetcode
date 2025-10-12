@@ -12,3 +12,6 @@ class Solution:
         for _ in range(rowIndex):
             row = [1] + [row[i] + row[i + 1] for i in range(len(row) - 1)] + [1]
         return row
+
+    def getRowOneLine(self, k): return [math.comb(k, i) for i in range(k + 1)]
+
