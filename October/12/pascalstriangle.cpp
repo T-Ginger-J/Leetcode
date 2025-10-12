@@ -21,3 +21,18 @@ public:
     }
 };
 
+#include <iostream>
+int main() {
+    Solution s;
+    auto res = s.generate(5);
+    for (auto& row : res) {
+        for (auto v : row) std::cout << v << " ";
+        std::cout << std::endl;
+    }
+    // Output:
+    // 1
+    // 1 1
+    // 1 2 1
+    // 1 3 3 1
+    // 1 4 6 4 1
+}
