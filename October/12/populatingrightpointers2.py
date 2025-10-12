@@ -31,3 +31,18 @@ class Solution:
                 curr = curr.next
             curr = dummy.next
         return root
+
+root = Node(1)
+root.left = Node(2)
+root.right = Node(3)
+root.left.left = Node(4)
+root.right.right = Node(5)
+root.left.left.left = Node(7)
+root.right.right.right = Node(8)
+
+Solution().connect(root)
+
+# Check next pointers:
+print(root.left.next.val)             # Output: 3
+print(root.left.left.next.val)        # Output: 5
+print(root.left.left.left.next.val)   # Output: 8
