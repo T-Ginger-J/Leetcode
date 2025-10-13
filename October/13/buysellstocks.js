@@ -15,3 +15,5 @@ var maxProfit = function(prices) {
     return maxProfit;
 };
 
+console.log(maxProfit([7,1,5,3,6,4])); // Output: 5
+console.log(maxProfit([7,6,4,3,1]));   // Output: 0
