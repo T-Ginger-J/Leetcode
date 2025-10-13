@@ -26,3 +26,8 @@ class Solution:
                 l = r
             r += 1
         return max_profit
+
+    def maxProfitOneLine(self, p): 
+            from itertools import accumulate
+            return max(accumulate(p, lambda a, x: max(a, x - (m := min(getattr(Solution, "m", x), x))), initial:=0))
+    
