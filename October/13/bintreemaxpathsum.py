@@ -37,3 +37,22 @@ class Solution:
         dfs(root)
         return res[0]
 
+
+# Example 1
+# Input: root = [1,2,3]
+# Output: 6 (2 + 1 + 3)
+from typing import Optional
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+root = TreeNode(1, TreeNode(2), TreeNode(3))
+print(Solution().maxPathSum(root))  # Output: 6
+
+# Example 2
+# Input: root = [-10,9,20,null,null,15,7]
+# Output: 42 (15 + 20 + 7)
+root = TreeNode(-10, TreeNode(9), TreeNode(20, TreeNode(15), TreeNode(7)))
+print(Solution().maxPathSum(root))  # Output: 42
