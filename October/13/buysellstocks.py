@@ -31,3 +31,8 @@ class Solution:
             from itertools import accumulate
             return max(accumulate(p, lambda a, x: max(a, x - (m := min(getattr(Solution, "m", x), x))), initial:=0))
     
+print(Solution().maxProfit([7,1,5,3,6,4]))
+# Output: 5 (Buy at 1, sell at 6)
+
+print(Solution().maxProfit([7,6,4,3,1]))
+# Output: 0 (No profit possible)
