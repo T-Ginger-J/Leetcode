@@ -24,3 +24,16 @@ class Solution:
 
         dfs(root)
         return self.max_sum
+    
+    def maxPathSumGlobal(self, root):
+        res = [root.val]
+        def dfs(node):
+            if not node:
+                return 0
+            left = max(dfs(node.left), 0)
+            right = max(dfs(node.right), 0)
+            res[0] = max(res[0], node.val + left + right)
+            return node.val + max(left, right)
+        dfs(root)
+        return res[0]
+
