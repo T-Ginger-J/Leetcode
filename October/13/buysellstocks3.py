@@ -1,3 +1,15 @@
+# LeetCode 123: Best Time to Buy and Sell Stock III
+# Explanation:
+# 1. You may complete at most TWO transactions.
+# 2. Use DP with four states:
+#    - buy1: max profit after first buy
+#    - sell1: max profit after first sell
+#    - buy2: max profit after second buy
+#    - sell2: max profit after second sell
+# 3. For each price, update these states accordingly.
+# Time Complexity: O(n)
+# Space Complexity: O(1)
+
 class Solution:
     def maxProfit(self, prices):
         buy1, sell1 = float('-inf'), 0
