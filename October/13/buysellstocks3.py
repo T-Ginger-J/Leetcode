@@ -20,3 +20,12 @@ class Solution:
             buy2 = max(buy2, sell1 - p)  # Buy second stock
             sell2 = max(sell2, buy2 + p) # Sell second stock
         return sell2
+
+print(Solution().maxProfit([3,3,5,0,0,3,1,4]))
+# Output: 6 (Buy at 0, sell at 3; buy at 1, sell at 4)
+
+print(Solution().maxProfit([1,2,3,4,5]))
+# Output: 4 (Buy at 1, sell at 5, only one transaction needed)
+
+print(Solution().maxProfit([7,6,4,3,1]))
+# Output: 0 (No profit possible)
