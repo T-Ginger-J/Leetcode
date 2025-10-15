@@ -1,3 +1,11 @@
+# LeetCode 126: Word Ladder II
+# Explanation:
+# 1. Use BFS to build a graph of shortest transformation sequences.
+# 2. Each word differs by one letter.
+# 3. Use backtracking to reconstruct all shortest paths.
+# Time Complexity: O(n * L^2) where n = number of words, L = word length
+# Space Complexity: O(n * L)
+
 from collections import defaultdict, deque
 
 class Solution:
