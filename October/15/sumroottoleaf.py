@@ -38,3 +38,6 @@ class Solution:
             if node.right:
                 queue.append((node.right, curr * 10 + node.right.val))
         return total
+
+    def sumNumbersOneLine(self, r):
+        return 0 if not r else (r.val if not r.left and not r.right else self.sumNumbers(r.left and TreeNode(r.left.val+10*r.val,r.left.left,r.left.right))+self.sumNumbers(r.right and TreeNode(r.right.val+10*r.val,r.right.left,r.right.right)))
