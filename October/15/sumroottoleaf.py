@@ -41,3 +41,16 @@ class Solution:
 
     def sumNumbersOneLine(self, r):
         return 0 if not r else (r.val if not r.left and not r.right else self.sumNumbers(r.left and TreeNode(r.left.val+10*r.val,r.left.left,r.left.right))+self.sumNumbers(r.right and TreeNode(r.right.val+10*r.val,r.right.left,r.right.right)))
+    
+# Tree: [1, 2, 3]
+# Paths: 12 + 13 = 25
+root = TreeNode(1, TreeNode(2), TreeNode(3))
+print(Solution().sumNumbers(root))
+# Output: 25
+
+# Tree: [4, 9, 0, 5, 1]
+# Paths: 495 + 491 + 40 = 1026
+root = TreeNode(4, TreeNode(9, TreeNode(5), TreeNode(1)), TreeNode(0))
+print(Solution().sumNumbers(root))
+# Output: 1026
+
