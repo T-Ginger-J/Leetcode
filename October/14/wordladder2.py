@@ -31,3 +31,33 @@ class Solution:
             layer = new_layer
 
         return []
+    
+    def findLaddersSpaceoptimized(self, beginWord, endWord, wordList):
+        wordSet = set(wordList)
+        if endWord not in wordSet:
+            return []
+        
+        front, back = {beginWord}, {endWord}
+        parents = defaultdict(set)
+        reversed = False
+        found = False
+
+        while front and not found:
+            wordSet -= front
+            next_front = set()
+            for word in front:
+                for i in range(len(word)):
+                    for c in 'abcdefghijklmnopqrstuvwxyz':
+                        newWord = word[:i] + c + word[i+1:]
+                        if newWord not in wordSet:
+                            continue
+                        if newWord in back:
+                            found = True
+                        next_front.add(newWord)
+                        if reversed:
+                            parents[newWord].add(word)
+                        else:
+                            parents[word].add(newWord)
+            front = next_front
+            if len(front) > len(back):
+                front, back, reversed = back, front, not reversed
