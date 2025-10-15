@@ -1,3 +1,14 @@
+# LeetCode 130: Surrounded Regions
+# Explanation:
+# 1. Goal: Capture all 'O' regions completely surrounded by 'X'.
+# 2. Mark all 'O's connected to the border (not surrounded).
+# 3. Convert unmarked 'O's to 'X' and restore marked ones.
+# Steps:
+#   - DFS/BFS from all border 'O's to mark them (safe regions).
+#   - Flip remaining 'O's to 'X', and marked cells back to 'O'.
+# Time Complexity: O(m * n)
+# Space Complexity: O(m * n)
+
 class Solution:
     def solve(self, board: list[list[str]]) -> None:
         if not board or not board[0]:
