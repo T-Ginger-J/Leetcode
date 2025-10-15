@@ -1,3 +1,11 @@
+# LeetCode 127: Word Ladder
+# Explanation:
+# 1. Use BFS to find the shortest transformation from beginWord to endWord.
+# 2. Each word can change one letter at a time and must exist in wordList.
+# 3. Each level of BFS represents a transformation step.
+# Time Complexity: O(n * L^2) where n = number of words, L = length of each word
+# Space Complexity: O(n * L)
+
 from collections import deque
 
 class Solution:
