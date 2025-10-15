@@ -51,3 +51,8 @@ class Solution:
             level += 1
         return 0
 
+print(Solution().ladderLength("hit", "cog", ["hot","dot","dog","lot","log","cog"]))
+# Output: 5  (hit -> hot -> dot -> dog -> cog)
+
+print(Solution().ladderLength("hit", "cog", ["hot","dot","dog","lot","log"]))
+# Output: 0  (no valid transformation)
