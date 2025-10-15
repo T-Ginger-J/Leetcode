@@ -24,3 +24,11 @@ class Solution:
         S=set(A)
         return max(((lambda x:sum(1 for _ in iter(int,1) if x+(_:=0)in S and not S.discard(x+_)))(x) for x in S if x-1 not in S), default=0)
     
+print(Solution().longestConsecutive([100, 4, 200, 1, 3, 2]))
+# Output: 4  (sequence: 1, 2, 3, 4)
+
+print(Solution().longestConsecutive([0,3,7,2,5,8,4,6,0,1]))
+# Output: 9  (sequence: 0,1,2,3,4,5,6,7,8)
+
+print(Solution().longestConsecutive([]))
+# Output: 0
