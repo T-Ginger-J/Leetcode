@@ -61,3 +61,17 @@ class Solution:
             front = next_front
             if len(front) > len(back):
                 front, back, reversed = back, front, not reversed
+        
+        def buildPaths(word):
+            if word == endWord:
+                return [[word]]
+            return [[word] + rest for nxt in parents[word] for rest in buildPaths(nxt)]
+
+        return buildPaths(beginWord)
+
+
+print(Solution().findLadders("hit", "cog", ["hot","dot","dog","lot","log","cog"]))
+# Output: [["hit","hot","dot","dog","cog"], ["hit","hot","lot","log","cog"]]
+
+print(Solution().findLadders("hit", "cog", ["hot","dot","dog","lot","log"]))
+# Output: []
