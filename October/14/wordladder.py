@@ -26,3 +26,28 @@ class Solution:
                         wordSet.remove(nextWord)
                         queue.append((nextWord, length + 1))
         return 0
+
+    def ladderLengthOptimized(self, beginWord: str, endWord: str, wordList: list[str]) -> int:
+        wordSet = set(wordList)
+        if endWord not in wordSet:
+            return 0
+
+        front, back = {beginWord}, {endWord}
+        level = 1
+        while front and back:
+            if len(front) > len(back):
+                front, back = back, front
+            next_front = set()
+            for word in front:
+                for i in range(len(word)):
+                    for c in 'abcdefghijklmnopqrstuvwxyz':
+                        newWord = word[:i] + c + word[i+1:]
+                        if newWord in back:
+                            return level + 1
+                        if newWord in wordSet:
+                            wordSet.remove(newWord)
+                            next_front.add(newWord)
+            front = next_front
+            level += 1
+        return 0
+
