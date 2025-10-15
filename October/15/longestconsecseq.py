@@ -18,3 +18,9 @@ class Solution:
                     length += 1
                 longest = max(longest, length)
         return longest
+
+
+    def longestConsecutiveOneLine(self, A):
+        S=set(A)
+        return max(((lambda x:sum(1 for _ in iter(int,1) if x+(_:=0)in S and not S.discard(x+_)))(x) for x in S if x-1 not in S), default=0)
+    
