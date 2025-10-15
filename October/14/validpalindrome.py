@@ -23,3 +23,12 @@ class Solution:
             r -= 1
         return True
 
+print(Solution().isPalindrome("A man, a plan, a canal: Panama"))
+# Output: True
+
+print(Solution().isPalindrome("race a car"))
+# Output: False
+
+print(Solution().isPalindrome(" "))
+# Output: True
+
