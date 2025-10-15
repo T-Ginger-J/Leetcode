@@ -24,3 +24,17 @@ class Solution:
             return dfs(node.left, curr_sum) + dfs(node.right, curr_sum)
         return dfs(root, 0)
 
+    def sumNumbersIterative(self, root: TreeNode) -> int:
+        if not root:
+            return 0
+        total = 0
+        queue = deque([(root, root.val)])
+        while queue:
+            node, curr = queue.popleft()
+            if not node.left and not node.right:
+                total += curr
+            if node.left:
+                queue.append((node.left, curr * 10 + node.left.val))
+            if node.right:
+                queue.append((node.right, curr * 10 + node.right.val))
+        return total
