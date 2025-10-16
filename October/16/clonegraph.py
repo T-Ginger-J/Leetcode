@@ -46,3 +46,16 @@ class Solution:
                     queue.append(nei)
                 clones[curr].neighbors.append(clones[nei])
         return clones[node]
+
+# Graph: 1--2
+#        |  |
+#        4--3
+n1, n2, n3, n4 = Node(1), Node(2), Node(3), Node(4)
+n1.neighbors = [n2, n4]
+n2.neighbors = [n1, n3]
+n3.neighbors = [n2, n4]
+n4.neighbors = [n1, n3]
+
+clone = Solution().cloneGraph(n1)
+print(clone.val)            # Output: 1
+print([n.val for n in clone.neighbors])  # Output: [2, 4]
