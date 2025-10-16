@@ -1,3 +1,13 @@
+# LeetCode 133: Clone Graph
+# Explanation:
+# 1. Each node has neighbors, forming an undirected graph.
+# 2. We use DFS or BFS to clone every node and its neighbors.
+# 3. Maintain a hashmap mapping original nodes to cloned ones to prevent duplicates.
+# Time Complexity: O(V + E), where V = number of nodes, E = number of edges.
+# Space Complexity: O(V)
+
+from collections import deque
+
 # Definition for a Node.
 class Node:
     def __init__(self, val = 0, neighbors = None):
