@@ -22,3 +22,11 @@ class Solution:
             cuts[i] = min_cut
         return cuts[-1]
 
+print(Solution().minCut("aab"))
+# Output: 1 -> "aa" | "b"
+
+print(Solution().minCut("a"))
+# Output: 0
+
+print(Solution().minCut("abccbc"))
+# Output: 2 -> "a" | "bccb" | "c"
