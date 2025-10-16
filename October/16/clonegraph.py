@@ -31,3 +31,18 @@ class Solution:
             return clone
 
         return dfs(node)
+
+    def cloneGraphBFS(self, node: 'Node') -> 'Node':
+        if not node:
+            return None
+        clones = {node: Node(node.val)}
+        queue = deque([node])
+
+        while queue:
+            curr = queue.popleft()
+            for nei in curr.neighbors:
+                if nei not in clones:
+                    clones[nei] = Node(nei.val)
+                    queue.append(nei)
+                clones[curr].neighbors.append(clones[nei])
+        return clones[node]
