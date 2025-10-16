@@ -48,3 +48,11 @@ class Solution:
     def partitionOneLine(self, s: str) -> list[list[str]]:
         return [[s[:i]]+r for i in range(1,len(s)+1) if s[:i]==s[:i][::-1] for r in self.partition(s[i:])] or [[]]
 
+print(Solution().partition("aab"))
+# Output: [["a", "a", "b"], ["aa", "b"]]
+
+print(Solution().partition("a"))
+# Output: [["a"]]
+
+print(Solution().partition("efe"))
+# Output: [["e", "f", "e"], ["efe"]]
