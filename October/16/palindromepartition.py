@@ -45,3 +45,6 @@ class Solution:
         dfs(0, [])
         return res
     
+    def partitionOneLine(self, s: str) -> list[list[str]]:
+        return [[s[:i]]+r for i in range(1,len(s)+1) if s[:i]==s[:i][::-1] for r in self.partition(s[i:])] or [[]]
+
