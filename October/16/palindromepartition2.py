@@ -22,6 +22,27 @@ class Solution:
             cuts[i] = min_cut
         return cuts[-1]
 
+    def minCutOptimized(self, s: str) -> int:
+        n = len(s)
+        cuts = [i for i in range(n)]
+        
+        for mid in range(n):
+            # Odd-length palindrome
+            l = r = mid
+            while l >= 0 and r < n and s[l] == s[r]:
+                cuts[r] = 0 if l == 0 else min(cuts[r], cuts[l - 1] + 1)
+                l -= 1
+                r += 1
+            
+            # Even-length palindrome
+            l, r = mid, mid + 1
+            while l >= 0 and r < n and s[l] == s[r]:
+                cuts[r] = 0 if l == 0 else min(cuts[r], cuts[l - 1] + 1)
+                l -= 1
+                r += 1
+        
+        return cuts[-1]
+
 print(Solution().minCut("aab"))
 # Output: 1 -> "aa" | "b"
 
