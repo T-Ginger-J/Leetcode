@@ -31,3 +31,12 @@ class Solution:
                 start = i + 1
                 curr = 0
         return start
+    
+print(Solution().canCompleteCircuit([1,2,3,4,5], [3,4,5,1,2]))
+# Output: 3
+
+print(Solution().canCompleteCircuit([2,3,4], [3,4,3]))
+# Output: -1
+
+print(Solution().canCompleteCircuit([5,1,2,3,4], [4,4,1,5,1]))
+# Output: 4
