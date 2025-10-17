@@ -23,3 +23,13 @@ class Solution:
 
     def singleNumberOneLine(self, nums: list[int]) -> int:
         return reduce(operator.xor, nums)
+    
+print(Solution().singleNumber([2,2,1]))
+# Output: 1
+
+print(Solution().singleNumber([4,1,2,1,2]))
+# Output: 4
+
+print(Solution().singleNumber([1]))
+# Output: 1
+
