@@ -43,3 +43,13 @@ class Solution:
                 down += 1
                 candies += 1 + down - (1 if peak >= down else 0)
         return candies
+
+
+print(Solution().candy([1,0,2]))
+# Output: 5 → [2,1,2]
+
+print(Solution().candy([1,2,2]))
+# Output: 4 → [1,2,1]
+
+print(Solution().candy([1,3,4,5,2]))
+# Output: 11 → [1,2,3,4,1]
