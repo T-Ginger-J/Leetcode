@@ -31,6 +31,9 @@ class Solution:
                 start = i + 1
                 curr = 0
         return start
+
+    def canCompleteCircuitOneLine(self, g, c):
+        return -1 if sum(g)<sum(c) else next((i+1 for i,(x,y) in enumerate(zip(g,c)) if (g:=list(g[i+1:]+g[:i+1])) and sum(x-y for x,y in zip(g,c[i+1:]+c[:i+1]))<0),0)
     
 print(Solution().canCompleteCircuit([1,2,3,4,5], [3,4,5,1,2]))
 # Output: 3
