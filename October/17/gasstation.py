@@ -20,3 +20,14 @@ class Solution:
                 curr = 0
                 start = i + 1
         return start if total >= 0 else -1
+
+    def canCompleteCircuitOptimized(self, gas: list[int], cost: list[int]) -> int:
+        if sum(gas) < sum(cost):
+            return -1
+        start, curr = 0, 0
+        for i in range(len(gas)):
+            curr += gas[i] - cost[i]
+            if curr < 0:
+                start = i + 1
+                curr = 0
+        return start
