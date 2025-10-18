@@ -1,3 +1,18 @@
+# LeetCode 138: Copy List with Random Pointer
+# Explanation:
+# 1. Each node has `next` and `random` pointers.
+# 2. Step 1: Insert copied node next to each original node (interleaving).
+# 3. Step 2: Assign random pointers of copied nodes using original's random links.
+# 4. Step 3: Separate original and copied nodes into two lists.
+# Time Complexity: O(n)
+# Space Complexity: O(1)
+
+class Node:
+    def __init__(self, x: int, next: 'Node' = None, random: 'Node' = None):
+        self.val = x
+        self.next = next
+        self.random = random
+
 class Solution:
     def copyRandomList(self, head: 'Optional[Node]') -> 'Optional[Node]':
         if not head:
