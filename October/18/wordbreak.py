@@ -19,3 +19,12 @@ class Solution:
                     dp[i] = True
                     break
         return dp[-1]
+
+print(Solution().wordBreak("leetcode", ["leet", "code"]))
+# Output: True
+
+print(Solution().wordBreak("applepenapple", ["apple", "pen"]))
+# Output: True
+
+print(Solution().wordBreak("catsandog", ["cats","dog","sand","and","cat"]))
+# Output: False
