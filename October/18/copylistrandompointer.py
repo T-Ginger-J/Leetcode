@@ -42,3 +42,15 @@ class Solution:
             copy = copy.next
 
         return clone_head
+# Helper to build and test lists is complex — omitted for brevity.
+# Conceptual testing:
+# 1 -> 2 -> 3 with randoms 1->3, 2->1, 3->2
+
+node1, node2, node3 = Node(1), Node(2), Node(3)
+node1.next, node2.next = node2, node3
+node1.random, node2.random, node3.random = node3, node1, node2
+
+copy = Solution().copyRandomList(node1)
+print(copy.val, copy.next.val, copy.next.next.val)
+# Output: 1 2 3
+
