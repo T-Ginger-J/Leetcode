@@ -42,6 +42,25 @@ class Solution:
             copy = copy.next
 
         return clone_head
+
+    def copyRandomListHashMap(self, head: 'Optional[Node]') -> 'Optional[Node]':
+        if not head:
+            return None
+        
+        old_to_new = {}
+        curr = head
+        while curr:
+            old_to_new[curr] = Node(curr.val)
+            curr = curr.next
+        
+        curr = head
+        while curr:
+            old_to_new[curr].next = old_to_new.get(curr.next)
+            old_to_new[curr].random = old_to_new.get(curr.random)
+            curr = curr.next
+        
+        return old_to_new[head]
+
 # Helper to build and test lists is complex — omitted for brevity.
 # Conceptual testing:
 # 1 -> 2 -> 3 with randoms 1->3, 2->1, 3->2
