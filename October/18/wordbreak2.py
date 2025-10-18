@@ -1,3 +1,14 @@
+# LeetCode 140: Word Break II
+# Explanation:
+# 1. Goal: Return all possible sentences that can be built by segmenting s into words from wordDict.
+# 2. Use DFS + memoization:
+#    - At each index, try every word that matches a prefix.
+#    - Recursively build sentences for remaining substring.
+#    - Cache results to avoid recomputation.
+# 3. Combine valid segments with spaces.
+# Time Complexity: O(n^3) (due to substring + recursion)
+# Space Complexity: O(n^2) (for recursion and memoization)
+
 class Solution:
     def wordBreak(self, s: str, wordDict: list[str]) -> list[str]:
         wordSet = set(wordDict)
