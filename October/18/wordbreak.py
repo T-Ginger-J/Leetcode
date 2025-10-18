@@ -1,3 +1,12 @@
+# LeetCode 139: Word Break
+# Explanation:
+# 1. Use dynamic programming to check if a string can be segmented into dictionary words.
+# 2. dp[i] = True if s[:i] can be segmented using words in wordDict.
+# 3. For each index i, check every word in wordDict — if word ends at i and dp[start] is True, mark dp[i] = True.
+# 4. Return dp[n] at the end.
+# Time Complexity: O(n^2)
+# Space Complexity: O(n)
+
 class Solution:
     def wordBreak(self, s: str, wordDict: list[str]) -> bool:
         wordSet = set(wordDict)
