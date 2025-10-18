@@ -1,3 +1,16 @@
+# LeetCode 137: Single Number II
+# Explanation:
+# 1. Every element appears three times except one.
+# 2. Use bit manipulation:
+#    - Track bits appearing once (`ones`) and twice (`twos`).
+#    - For each number:
+#        ones = (ones ^ num) & ~twos
+#        twos = (twos ^ num) & ~ones
+#    - Ensures bits seen thrice are cleared from both.
+# 3. Result stored in `ones`.
+# Time Complexity: O(n)
+# Space Complexity: O(1)
+
 class Solution:
     def singleNumber(self, nums: list[int]) -> int:
         ones, twos = 0, 0
