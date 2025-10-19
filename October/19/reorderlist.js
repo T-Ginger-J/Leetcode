@@ -1,3 +1,18 @@
+// LeetCode 143: Reorder List
+// Explanation:
+// 1. Find middle using slow/fast pointers.
+// 2. Reverse second half.
+// 3. Merge halves alternatingly.
+// Time Complexity: O(n)
+// Space Complexity: O(1)
+
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val, next) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.next = (next===undefined ? null : next)
+ * }
+ */
 var reorderList = function(head) {
     if (!head || !head.next) return;
 
