@@ -24,3 +24,19 @@ public:
         return false;
     }
 };
+
+#include <iostream>
+int main() {
+    ListNode* n1 = new ListNode(3);
+    ListNode* n2 = new ListNode(2);
+    ListNode* n3 = new ListNode(0);
+    ListNode* n4 = new ListNode(-4);
+    n1->next = n2; n2->next = n3; n3->next = n4; n4->next = n2; // Cycle
+    Solution s;
+    std::cout << s.hasCycle(n1) << std::endl; // Output: 1 (True)
+
+    ListNode* a = new ListNode(1);
+    ListNode* b = new ListNode(2);
+    a->next = b; // No cycle
+    std::cout << s.hasCycle(a) << std::endl; // Output: 0 (False)
+}
