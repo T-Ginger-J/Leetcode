@@ -21,6 +21,16 @@ class Solution:
             if slow == fast:
                 return True
         return False
+    
+    def hasCycleHash(self, head: ListNode) -> bool:
+        visited = set()
+        while head:
+            if head in visited:
+                return True
+            visited.add(head)
+            head = head.next
+        return False
+
 # Example 1: Cycle exists
 node1, node2, node3, node4 = ListNode(3), ListNode(2), ListNode(0), ListNode(-4)
 node1.next, node2.next, node3.next, node4.next = node2, node3, node4, node2
