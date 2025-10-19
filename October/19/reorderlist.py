@@ -41,3 +41,22 @@ class Solution:
             first.next = second
             second.next = tmp1
             first, second = tmp1, tmp2
+
+
+# Helper to build and print list
+def printList(node):
+    vals = []
+    while node:
+        vals.append(node.val)
+        node = node.next
+    print(vals)
+
+# Build list: [1, 2, 3, 4]
+head = ListNode(1, ListNode(2, ListNode(3, ListNode(4))))
+Solution().reorderList(head)
+printList(head)  # ✅ Output: [1, 4, 2, 3]
+
+# Build list: [1, 2, 3, 4, 5]
+head = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5)))))
+Solution().reorderList(head)
+printList(head)  # ✅ Output: [1, 5, 2, 4, 3]
