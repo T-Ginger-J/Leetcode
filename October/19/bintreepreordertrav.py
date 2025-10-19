@@ -27,3 +27,15 @@ class Solution:
         dfs(root)
         return res
 
+# Build binary tree: [1, None, 2, 3]
+root = TreeNode(1)
+root.right = TreeNode(2)
+root.right.left = TreeNode(3)
+
+print(Solution().preorderTraversal(root))
+# ✅ Output: [1, 2, 3]
+
+# Build binary tree: [1, 2, 3]
+root = TreeNode(1, TreeNode(2), TreeNode(3))
+print(Solution().preorderTraversal(root))
+# ✅ Output: [1, 2, 3]
