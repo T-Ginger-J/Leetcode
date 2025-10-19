@@ -30,3 +30,21 @@ public class Solution {
         return null;
     }
 }
+
+public class Main {
+    public static void main(String[] args) {
+        ListNode n1 = new ListNode(3);
+        ListNode n2 = new ListNode(2);
+        ListNode n3 = new ListNode(0);
+        ListNode n4 = new ListNode(-4);
+        n1.next = n2; n2.next = n3; n3.next = n4; n4.next = n2;
+
+        Solution sol = new Solution();
+        System.out.println(sol.detectCycle(n1).val); // Output: 2
+
+        ListNode a = new ListNode(1);
+        ListNode b = new ListNode(2);
+        a.next = b;
+        System.out.println(sol.detectCycle(a)); // Output: null
+    }
+}
