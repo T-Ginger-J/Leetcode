@@ -23,3 +23,18 @@ class Solution:
         dfs(root)
         return res
 
+# Example 1
+root = TreeNode(1)
+root.right = TreeNode(2)
+root.right.left = TreeNode(3)
+print(Solution().postorderTraversal(root))
+# Output: [3, 2, 1]
+
+# Example 2
+root = TreeNode(1, TreeNode(2), TreeNode(3))
+print(Solution().postorderTraversal(root))
+# Output: [2, 3, 1]
+
+# Example 3
+print(Solution().postorderTraversal(None))
+# Output: []
