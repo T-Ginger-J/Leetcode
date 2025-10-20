@@ -25,3 +25,14 @@ class LRUCache:
         self.cache[key] = value
         if len(self.cache) > self.capacity:
             self.cache.popitem(last=False)
+
+lru = LRUCache(2)
+lru.put(1, 1)
+lru.put(2, 2)
+print(lru.get(1))  # Output: 1
+lru.put(3, 3)      # Removes key 2
+print(lru.get(2))  # Output: -1
+lru.put(4, 4)      # Removes key 1
+print(lru.get(1))  # Output: -1
+print(lru.get(3))  # Output: 3
+print(lru.get(4))  # Output: 4
