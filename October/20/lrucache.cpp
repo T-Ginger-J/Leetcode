@@ -1,3 +1,13 @@
+// LeetCode 146: LRU Cache
+// Explanation:
+// 1. Use unordered_map for O(1) key lookup.
+// 2. Use list for maintaining usage order (front = most recent).
+// 3. Move used items to front; evict least recent when over capacity.
+// Time Complexity: O(1)
+// Space Complexity: O(capacity)
+
+#include <unordered_map>
+#include <list>
 using namespace std;
 
 class LRUCache {
