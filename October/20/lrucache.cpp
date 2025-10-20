@@ -39,3 +39,17 @@ public:
         map[key] = cache.begin();
     }
 };
+
+#include <iostream>
+int main() {
+    LRUCache lru(2);
+    lru.put(1, 1);
+    lru.put(2, 2);
+    cout << lru.get(1) << endl; // Output: 1
+    lru.put(3, 3);
+    cout << lru.get(2) << endl; // Output: -1
+    lru.put(4, 4);
+    cout << lru.get(1) << endl; // Output: -1
+    cout << lru.get(3) << endl; // Output: 3
+    cout << lru.get(4) << endl; // Output: 4
+}
