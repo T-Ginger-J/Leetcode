@@ -23,6 +23,9 @@ class Solution:
         dfs(root)
         return res
 
+    def postorderTraversal(self, root):
+        return [] if not root else self.postorderTraversal(root.left) + self.postorderTraversal(root.right) + [root.val]
+
 # Example 1
 root = TreeNode(1)
 root.right = TreeNode(2)
