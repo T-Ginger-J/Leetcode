@@ -43,3 +43,30 @@ class Solution:
                 prev.next = curr
             curr = last_sorted.next
         return dummy.next
+
+# Helper functions
+def create_list(arr):
+    dummy = ListNode(0)
+    curr = dummy
+    for val in arr:
+        curr.next = ListNode(val)
+        curr = curr.next
+    return dummy.next
+
+def print_list(node):
+    res = []
+    while node:
+        res.append(node.val)
+        node = node.next
+    print(res)
+
+# Example 1
+head = create_list([4,2,1,3])
+print_list(Solution().insertionSortList(head))
+# Output: [1,2,3,4]
+
+# Example 2
+head = create_list([-1,5,3,4,0])
+print_list(Solution().insertionSortList(head))
+# Output: [-1,0,3,4,5]
+
