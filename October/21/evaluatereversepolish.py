@@ -21,3 +21,18 @@ class Solution:
                 else: stack.append(int(a / b))  # Truncate toward 0
         return stack[0]
 
+    def evalRPNLambdaDict(self, tokens):
+        ops = {
+            '+': lambda a,b: a+b,
+            '-': lambda a,b: a-b,
+            '*': lambda a,b: a*b,
+            '/': lambda a,b: int(a/b)
+        }
+        stack = []
+        for t in tokens:
+            if t in ops:
+                b, a = stack.pop(), stack.pop()
+                stack.append(ops[t](a,b))
+            else:
+                stack.append(int(t))
+        return stack[0]
