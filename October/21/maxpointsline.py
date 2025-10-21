@@ -25,3 +25,11 @@ class Solution:
                     slopes[slope] = slopes.get(slope, 0) + 1
             max_points = max(max_points, duplicates + max(slopes.values(), default=0))
         return max_points
+
+points = [[1,1],[2,2],[3,3]]
+print(Solution().maxPoints(points))
+# Output: 3
+
+points = [[1,1],[3,2],[5,3],[4,1],[2,3],[1,4]]
+print(Solution().maxPoints(points))
+# Output: 4
