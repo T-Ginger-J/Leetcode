@@ -48,3 +48,30 @@ class Solution {
     }
 }
 
+public class Main {
+    static ListNode createList(int[] arr) {
+        ListNode dummy = new ListNode(0), curr = dummy;
+        for (int val : arr) {
+            curr.next = new ListNode(val);
+            curr = curr.next;
+        }
+        return dummy.next;
+    }
+
+    static void printList(ListNode head) {
+        while (head != null) {
+            System.out.print(head.val + " ");
+            head = head.next;
+        }
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+        Solution sol = new Solution();
+        ListNode head1 = createList(new int[]{4,2,1,3});
+        printList(sol.sortList(head1)); // Output: 1 2 3 4
+
+        ListNode head2 = createList(new int[]{-1,5,3,4,0});
+        printList(sol.sortList(head2)); // Output: -1 0 3 4 5
+    }
+}
