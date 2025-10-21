@@ -1,3 +1,11 @@
+# LeetCode 149: Max Points on a Line (Optimized)
+# Explanation:
+# 1. Use float slope representation to simplify slope calculation.
+# 2. Handle vertical lines with "inf" and horizontal lines with slope 0.
+# 3. Faster due to simpler hashing.
+# Time Complexity: O(n²)
+# Space Complexity: O(n)
+
 class Solution:
     def maxPoints(self, points):
         if len(points) <= 2:
