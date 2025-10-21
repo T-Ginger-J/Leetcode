@@ -11,3 +11,11 @@ class Solution:
     def reverseWords(self, s: str) -> str:
         return ' '.join(s.split()[::-1])
 
+print(Solution().reverseWords("the sky is blue"))
+# Output: "blue is sky the"
+
+print(Solution().reverseWords("  hello world  "))
+# Output: "world hello"
+
+print(Solution().reverseWords("a good   example"))
+# Output: "example good a"
