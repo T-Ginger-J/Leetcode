@@ -36,3 +36,13 @@ class Solution:
             else:
                 stack.append(int(t))
         return stack[0]
+    
+print(Solution().evalRPN(["2","1","+","3","*"]))
+# Output: 9
+
+print(Solution().evalRPN(["4","13","5","/","+"]))
+# Output: 6
+
+print(Solution().evalRPN(["10","6","9","3","+","-11","*","/","*","17","+","5","+"]))
+# Output: 22
+
