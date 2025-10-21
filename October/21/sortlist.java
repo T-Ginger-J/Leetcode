@@ -1,3 +1,18 @@
+// LeetCode 148: Sort List
+// Explanation:
+// 1. Use merge sort (divide and conquer).
+// 2. Find middle using fast/slow pointers.
+// 3. Recursively sort left and right halves.
+// 4. Merge sorted halves.
+// Time Complexity: O(n log n)
+// Space Complexity: O(log n)
+
+class ListNode {
+    int val;
+    ListNode next;
+    ListNode(int x) { val = x; }
+}
+
 class Solution {
     public ListNode sortList(ListNode head) {
         if (head == null || head.next == null)
