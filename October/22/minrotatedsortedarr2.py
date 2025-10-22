@@ -19,3 +19,12 @@ class Solution:
             else:
                 right -= 1
         return nums[left]
+
+print(Solution().findMin([1,3,5]))
+# Output: 1
+
+print(Solution().findMin([2,2,2,0,1]))
+# Output: 0
+
+print(Solution().findMin([10,10,10,1,10]))
+# Output: 1
