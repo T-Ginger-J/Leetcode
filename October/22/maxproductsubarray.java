@@ -19,3 +19,12 @@ class Solution {
         return res;
     }
 }
+
+public class Main {
+    public static void main(String[] args) {
+        Solution sol = new Solution();
+        System.out.println(sol.maxProduct(new int[]{2,3,-2,4}));   // Output: 6
+        System.out.println(sol.maxProduct(new int[]{-2,0,-1}));    // Output: 0
+        System.out.println(sol.maxProduct(new int[]{-2,3,-4}));    // Output: 24
+    }
+}
