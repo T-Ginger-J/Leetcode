@@ -18,3 +18,11 @@ class Solution:
             res = max(res, cur_max)
         return res
 
+print(Solution().maxProduct([2,3,-2,4]))
+# Output: 6
+
+print(Solution().maxProduct([-2,0,-1]))
+# Output: 0
+
+print(Solution().maxProduct([-2,3,-4]))
+# Output: 24
