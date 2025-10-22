@@ -27,3 +27,12 @@ class MinStack:
 
     def getMin(self) -> int:
         return self.min_stack[-1]
+
+stack = MinStack()
+stack.push(-2)
+stack.push(0)
+stack.push(-3)
+print(stack.getMin())  # Output: -3
+stack.pop()
+print(stack.top())     # Output: 0
+print(stack.getMin())  # Output: -2
