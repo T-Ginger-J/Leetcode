@@ -1,3 +1,11 @@
+// LeetCode 152: Maximum Product Subarray
+// Explanation:
+// 1. Track both current max and min products since negatives flip signs.
+// 2. For each number, update max/min based on previous values.
+// 3. Result is global maximum of all local maximums.
+// Time Complexity: O(n)
+// Space Complexity: O(1)
+
 class Solution {
     public int maxProduct(int[] nums) {
         int res = nums[0];
