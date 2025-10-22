@@ -17,3 +17,12 @@ class Solution:
             else:
                 right = mid
         return nums[left]
+
+print(Solution().findMin([3,4,5,1,2]))
+# Output: 1
+
+print(Solution().findMin([4,5,6,7,0,1,2]))
+# Output: 0
+
+print(Solution().findMin([11,13,15,17]))
+# Output: 11
