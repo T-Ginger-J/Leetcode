@@ -28,3 +28,22 @@ public:
 #include <iostream>
 using namespace std;
 
+int main() {
+    ListNode* intersect = new ListNode(8);
+    intersect->next = new ListNode(4);
+    intersect->next->next = new ListNode(5);
+
+    ListNode* headA = new ListNode(4);
+    headA->next = new ListNode(1);
+    headA->next->next = intersect;
+
+    ListNode* headB = new ListNode(5);
+    headB->next = new ListNode(0);
+    headB->next->next = new ListNode(1);
+    headB->next->next->next = intersect;
+
+    Solution sol;
+    ListNode* res = sol.getIntersectionNode(headA, headB);
+    if (res) cout << res->val << endl;  // Output: 8
+    else cout << "No intersection" << endl;
+}
