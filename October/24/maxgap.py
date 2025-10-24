@@ -6,6 +6,8 @@
 # Time Complexity: O(n log n)
 # Space Complexity: O(1) or O(n) depending on sorting algorithm
 
+import math
+
 class Solution:
     def maximumGap(self, nums):
         if len(nums) < 2:
