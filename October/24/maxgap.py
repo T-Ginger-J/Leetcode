@@ -41,3 +41,11 @@ class Solution:
         max_gap = max(max_gap, max_val - prev)
         return max_gap
 
+print(Solution().maximumGap([3,6,9,1]))
+# Output: 3  (sorted = [1,3,6,9], gaps = [2,3,3])
+
+print(Solution().maximumGap([10]))
+# Output: 0  (only one element)
+
+print(Solution().maximumGap([1,10000000]))
+# Output: 9999999
