@@ -22,3 +22,11 @@ class Solution:
                 left += 1
             else:
                 right -= 1
+
+    def twoSumBinSearch(self, numbers, target):
+        for i, n in enumerate(numbers):
+            complement = target - n
+            j = bisect.bisect_left(numbers, complement, i + 1)
+            if j < len(numbers) and numbers[j] == complement:
+                return [i + 1, j + 1]
+            
