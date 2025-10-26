@@ -39,3 +39,13 @@ class Solution:
     def fractionToDecimalOneLine(self, n, d):
         return "0" if not n else ("-" if (n<0)^(d<0) else "") + (lambda n,d,r,s:(lambda f:f(f,n%d,n//d,s))(lambda f,r,q,s:s+str(q) if not r else (s+"."+f(f,r*10,0,{r:len(s)+1}))) if not r else s+str(n//d))(abs(n),abs(d),0,"")
 
+print(Solution().fractionToDecimal(1, 2))
+# Output: "0.5"
+
+print(Solution().fractionToDecimal(2, 3))
+# Output: "0.(6)"
+
+print(Solution().fractionToDecimal(4, 333))
+# Output: "0.(012)"
+
+
