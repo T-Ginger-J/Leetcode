@@ -35,3 +35,7 @@ class Solution:
             remainder %= denominator
 
         return ''.join(res)
+
+    def fractionToDecimalOneLine(self, n, d):
+        return "0" if not n else ("-" if (n<0)^(d<0) else "") + (lambda n,d,r,s:(lambda f:f(f,n%d,n//d,s))(lambda f,r,q,s:s+str(q) if not r else (s+"."+f(f,r*10,0,{r:len(s)+1}))) if not r else s+str(n//d))(abs(n),abs(d),0,"")
+
