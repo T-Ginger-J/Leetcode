@@ -30,3 +30,11 @@ class Solution:
             if j < len(numbers) and numbers[j] == complement:
                 return [i + 1, j + 1]
             
+print(Solution().twoSum([2,7,11,15], 9))
+# Output: [1, 2]
+
+print(Solution().twoSum([2,3,4], 6))
+# Output: [1, 3]
+
+print(Solution().twoSum([-1,0], -1))
+# Output: [1, 2]
