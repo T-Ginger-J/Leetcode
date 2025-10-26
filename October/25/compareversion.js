@@ -17,3 +17,7 @@ var compareVersion = function(version1, version2) {
     }
     return 0;
 };
+
+console.log(compareVersion("1.01", "1.001")); // Output: 0
+console.log(compareVersion("1.0", "1.0.0"));  // Output: 0
+console.log(compareVersion("0.1", "1.1"));    // Output: -1
