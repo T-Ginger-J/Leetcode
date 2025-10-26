@@ -1,3 +1,12 @@
+# LeetCode 166: Fraction to Recurring Decimal
+# Explanation:
+# 1. Divide numerator by denominator to get integer part.
+# 2. For remainder, multiply by 10 and divide again to get decimal digits.
+# 3. Use a hashmap to store each remainder’s index in the result — if a remainder repeats, that means we’ve found the repeating cycle.
+# 4. Handle sign and edge cases (negative fractions, division by 0).
+# Time Complexity: O(n) where n is the number of digits before repetition.
+# Space Complexity: O(n) for storing remainders and result digits.
+
 class Solution:
     def fractionToDecimal(self, numerator: int, denominator: int) -> str:
         if numerator == 0:
