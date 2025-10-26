@@ -42,3 +42,7 @@ class Solution:
             j += 1
         return 0
     
+    def compareVersionOneLine(self, v1, v2):
+        from itertools import zip_longest
+        return (lambda x: (x>0) - (x<0))(next((a-b for a,b in zip_longest(map(int,v1.split('.')), map(int,v2.split('.')), fillvalue=0) if a!=b), 0))
+
