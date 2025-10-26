@@ -46,3 +46,12 @@ class Solution:
         from itertools import zip_longest
         return (lambda x: (x>0) - (x<0))(next((a-b for a,b in zip_longest(map(int,v1.split('.')), map(int,v2.split('.')), fillvalue=0) if a!=b), 0))
 
+print(Solution().compareVersion("1.01", "1.001"))
+# Output: 0 (equal numerically)
+
+print(Solution().compareVersion("1.0", "1.0.0"))
+# Output: 0 (trailing zeros ignored)
+
+print(Solution().compareVersion("0.1", "1.1"))
+# Output: -1 (version2 is greater)
+
