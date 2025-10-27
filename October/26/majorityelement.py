@@ -25,3 +25,11 @@ class Solution:
     
     def majorityElementOneLine(self, nums): return max(set(nums), key=nums.count)
 
+print(Solution().majorityElement([3,2,3]))
+# Output: 3
+
+print(Solution().majorityElement([2,2,1,1,1,2,2]))
+# Output: 2
+
+print(Solution().majorityElement([1]))
+# Output: 1
