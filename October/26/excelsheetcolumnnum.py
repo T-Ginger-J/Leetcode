@@ -12,3 +12,12 @@ class Solution:
         for c in columnTitle:
             result = result * 26 + (ord(c) - ord('A') + 1)
         return result
+
+print(Solution().titleToNumber("A"))
+# Output: 1
+
+print(Solution().titleToNumber("AB"))
+# Output: 28
+
+print(Solution().titleToNumber("ZY"))
+# Output: 701
