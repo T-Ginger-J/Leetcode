@@ -15,3 +15,11 @@ class Solution:
             count += n
         return count
 
+print(Solution().trailingZeroes(3))
+# Output: 0
+
+print(Solution().trailingZeroes(5))
+# Output: 1
+
+print(Solution().trailingZeroes(100))
+# Output: 24
