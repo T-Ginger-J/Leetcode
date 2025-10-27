@@ -23,3 +23,5 @@ class Solution:
             count += (1 if num == candidate else -1)
         return candidate
     
+    def majorityElementOneLine(self, nums): return max(set(nums), key=nums.count)
+
