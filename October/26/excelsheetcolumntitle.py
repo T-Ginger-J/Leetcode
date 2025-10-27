@@ -15,3 +15,12 @@ class Solution:
             result = chr(columnNumber % 26 + ord('A')) + result
             columnNumber //= 26
         return result
+
+print(Solution().convertToTitle(1))
+# Output: "A"
+
+print(Solution().convertToTitle(28))
+# Output: "AB"
+
+print(Solution().convertToTitle(701))
+# Output: "ZY"
