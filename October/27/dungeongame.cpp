@@ -22,3 +22,14 @@ public:
         return dp[0][0];
     }
 };
+
+int main() {
+    Solution sol;
+    vector<vector<int>> dungeon1 = {{-2,-3,3},{-5,-10,1},{10,30,-5}};
+    vector<vector<int>> dungeon2 = {{0}};
+    vector<vector<int>> dungeon3 = {{1,-2,3},{2,-2,-2}};
+
+    cout << sol.calculateMinimumHP(dungeon1) << endl; // 7
+    cout << sol.calculateMinimumHP(dungeon2) << endl; // 1
+    cout << sol.calculateMinimumHP(dungeon3) << endl; // 2
+}
