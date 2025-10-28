@@ -1,3 +1,12 @@
+# LeetCode 174: Dungeon Game
+# Explanation:
+# 1. Work backwards from the bottom-right to determine the minimum health needed at each cell.
+# 2. dp[i][j] = max(1, min(dp[i+1][j], dp[i][j+1]) - dungeon[i][j])
+#    - dp[i][j] is the min HP needed to survive from that cell to the end.
+# 3. Start from bottom-right (princess cell) and move up-left.
+# Time Complexity: O(m * n)
+# Space Complexity: O(m * n)
+
 class Solution:
     def calculateMinimumHP(self, dungeon):
         m, n = len(dungeon), len(dungeon[0])
