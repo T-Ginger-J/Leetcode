@@ -1,3 +1,12 @@
+# LeetCode 173: Binary Search Tree Iterator
+# Explanation:
+# 1. Perform an in-order traversal (Left → Node → Right) to get sorted order.
+# 2. Use a stack to simulate recursion and fetch next smallest element on demand.
+# 3. `next()` pops the smallest node and explores its right subtree.
+# 4. `hasNext()` checks if more elements remain.
+# Time Complexity: O(1) amortized per operation
+# Space Complexity: O(h) where h is tree height
+
 class BSTIterator:
     def __init__(self, root):
         self.stack = []
