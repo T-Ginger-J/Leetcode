@@ -26,3 +26,16 @@ class BSTIterator:
 
     def hasNext(self):
         return len(self.stack) > 0
+
+# Assume TreeNode class is defined as usual in LeetCode.
+root = TreeNode(7, TreeNode(3), TreeNode(15, TreeNode(9), TreeNode(20)))
+iterator = BSTIterator(root)
+print(iterator.next())     # 3
+print(iterator.next())     # 7
+print(iterator.hasNext())  # True
+print(iterator.next())     # 9
+print(iterator.hasNext())  # True
+print(iterator.next())     # 15
+print(iterator.hasNext())  # True
+print(iterator.next())     # 20
+print(iterator.hasNext())  # False
