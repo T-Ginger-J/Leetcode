@@ -31,3 +31,14 @@ class BSTIterator {
     }
 }
 
+/*
+TreeNode root = new TreeNode(7, new TreeNode(3), new TreeNode(15, new TreeNode(9), new TreeNode(20)));
+BSTIterator iterator = new BSTIterator(root);
+System.out.println(iterator.next());     // 3
+System.out.println(iterator.next());     // 7
+System.out.println(iterator.hasNext());  // true
+System.out.println(iterator.next());     // 9
+System.out.println(iterator.next());     // 15
+System.out.println(iterator.next());     // 20
+System.out.println(iterator.hasNext());  // false
+ */
