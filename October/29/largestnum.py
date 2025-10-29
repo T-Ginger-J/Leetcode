@@ -19,3 +19,14 @@ class Solution:
                 return 1
             else:
                 return 0
+        
+        nums = list(map(str, nums))
+        nums.sort(key=cmp_to_key(compare))
+        result = ''.join(nums)
+        return '0' if result[0] == '0' else result
+
+    def largestNumberLambda(self, nums):
+        nums = sorted(map(str, nums), key=lambda x: x*10, reverse=True)
+        res = ''.join(nums)
+        return '0' if res[0] == '0' else res
+
