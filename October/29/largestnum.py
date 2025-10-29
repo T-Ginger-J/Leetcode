@@ -30,3 +30,4 @@ class Solution:
         res = ''.join(nums)
         return '0' if res[0] == '0' else res
 
+    largestNumberOneLine = lambda self, nums: '0' if (s:=''.join(sorted(map(str, nums), key=lambda x:x*10, reverse=True)))[0]=='0' else s
