@@ -1,3 +1,11 @@
+-- LeetCode 180: Consecutive Numbers
+-- Explanation:
+-- 1. Compare each row with its previous and next using LAG() and LEAD().
+-- 2. If all three consecutive rows have the same Num, it qualifies.
+-- 3. DISTINCT ensures we return each number only once.
+-- Time Complexity: O(n)
+-- Space Complexity: O(1)
+
 SELECT DISTINCT Num AS ConsecutiveNums
 FROM (
   SELECT Num,
