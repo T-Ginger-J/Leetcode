@@ -31,3 +31,8 @@ class Solution:
         return '0' if res[0] == '0' else res
 
     largestNumberOneLine = lambda self, nums: '0' if (s:=''.join(sorted(map(str, nums), key=lambda x:x*10, reverse=True)))[0]=='0' else s
+
+print(Solution().largestNumber([10, 2]))           # "210"
+print(Solution().largestNumber([3,30,34,5,9]))     # "9534330"
+print(Solution().largestNumber([0,0]))             # "0"
+
