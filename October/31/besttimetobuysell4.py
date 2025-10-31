@@ -1,3 +1,11 @@
+# LeetCode 188: Best Time to Buy and Sell Stock IV
+# Explanation:
+# 1. If k >= len(prices)//2, treat as infinite transactions (use greedy sum of profits).
+# 2. Otherwise, use DP where dp[i][j] = max profit using i transactions up to day j.
+# 3. Track best_buy = max(dp[i-1][m] - prices[m]) to optimize transitions.
+# Time Complexity: O(k * n)
+# Space Complexity: O(k * n)
+
 class Solution:
     def maxProfit(self, k: int, prices: list[int]) -> int:
         n = len(prices)
