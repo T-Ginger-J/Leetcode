@@ -38,3 +38,7 @@ class Solution:
                 best_buy = max(best_buy, prev[j-1] - prices[j])
             prev = curr
         return prev[-1]
+    
+    def maxProfitOneLine(self, k, p):
+        return sum(max(p[i+1]-p[i],0) for i in range(len(p)-1)) if k>=len(p)//2 else (lambda dp:[[0]*len(p) for _ in range(k+1)]) and (lambda dp:[(lambda best:[(dp[i][j-1],dp[i-1][j-1]-p[j]) for j in range(1,len(p))]) for i in range(1,k+1)]) and None
+
