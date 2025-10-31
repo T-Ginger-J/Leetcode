@@ -18,3 +18,11 @@ var findRepeatedDnaSequences = function(s) {
     return Array.from(repeated);
 };
 
+console.log(findRepeatedDnaSequences("AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT"));
+// ["AAAAACCCCC", "CCCCCAAAAA"]
+
+console.log(findRepeatedDnaSequences("AAAAAAAAAAAAA"));
+// ["AAAAAAAAAA"]
+
+console.log(findRepeatedDnaSequences("ACGTACGTAC"));
+// []
