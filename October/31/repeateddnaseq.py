@@ -18,3 +18,19 @@ class Solution:
             else:
                 seen.add(seq)
         return list(repeated)
+
+    def findRepeatedDnaSequencesBitEncoding(self, s: str) -> list[str]:
+        if len(s) < 10:
+            return []
+        mapping = {'A': 0, 'C': 1, 'G': 2, 'T': 3}
+        seen, repeated = set(), set()
+        num = 0
+        for i, ch in enumerate(s):
+            num = ((num << 2) | mapping[ch]) & ((1 << 20) - 1)
+            if i >= 9:
+                if num in seen:
+                    repeated.add(s[i-9:i+1])
+                else:
+                    seen.add(num)
+        return list(repeated)
+    
