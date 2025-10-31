@@ -35,3 +35,12 @@ public:
     }
 };
 
+#include <iostream>
+
+int main() {
+    Solution sol;
+    cout << sol.maxProfit(2, vector<int>{2,4,1}) << endl;           // 2
+    cout << sol.maxProfit(2, vector<int>{3,2,6,5,0,3}) << endl;     // 7
+    cout << sol.maxProfit(3, vector<int>{1,2,4,2,5,7,2,4,9,0}) << endl; // 15
+    return 0;
+}
