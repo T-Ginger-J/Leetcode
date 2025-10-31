@@ -37,3 +37,12 @@ class Solution:
     def findRepeatedDnaSequencesOneLine(self, s: str) -> list[str]:
         return list({s[i:i+10] for i in range(len(s)-9)} & {s[j:j+10] for j in range(1, len(s)-8)})
     
+sol = Solution()
+print(sol.findRepeatedDnaSequences("AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT"))
+# ["AAAAACCCCC", "CCCCCAAAAA"]
+
+print(sol.findRepeatedDnaSequences("AAAAAAAAAAAAA"))
+# ["AAAAAAAAAA"]
+
+print(sol.findRepeatedDnaSequences("ACGTACGTAC"))
+# []
