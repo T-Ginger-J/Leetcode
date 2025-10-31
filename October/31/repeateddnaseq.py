@@ -34,3 +34,6 @@ class Solution:
                     seen.add(num)
         return list(repeated)
     
+    def findRepeatedDnaSequencesOneLine(self, s: str) -> list[str]:
+        return list({s[i:i+10] for i in range(len(s)-9)} & {s[j:j+10] for j in range(1, len(s)-8)})
+    
