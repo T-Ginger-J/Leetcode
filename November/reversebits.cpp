@@ -21,3 +21,12 @@ public:
     }
 };
 
+#include <iostream>
+
+int main() {
+    Solution sol;
+    cout << sol.reverseBits(0b00000010100101000001111010011100) << endl; // 964176192
+    cout << sol.reverseBits(0b11111111111111111111111111111101) << endl; // 3221225471
+    cout << sol.reverseBits(0) << endl;                                   // 0
+    return 0;
+}
