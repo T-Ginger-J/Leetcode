@@ -24,3 +24,8 @@ class Solution:
         return n
 
     def reverseBits(self, n: int) -> int: return int(f"{n:032b}"[::-1], 2)
+
+sol = Solution()
+print(sol.reverseBits(0b00000010100101000001111010011100))  # 964176192
+print(sol.reverseBits(0b11111111111111111111111111111101))  # 3221225471
+print(sol.reverseBits(0))                                   # 0
