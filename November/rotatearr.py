@@ -22,3 +22,5 @@ class Solution:
         nums.reverse()
         nums[:k] = reversed(nums[:k])
         nums[k:] = reversed(nums[k:])
+
+    def rotateOneLine(self, nums: list[int], k: int) -> None: nums[:] = nums[-(k%len(nums)):] + nums[:-(k%len(nums))]
