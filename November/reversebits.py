@@ -22,3 +22,5 @@ class Solution:
         n = ((n >> 8) & 0x00ff00ff) | ((n & 0x00ff00ff) << 8)
         n = ((n >> 16) & 0x0000ffff) | ((n & 0x0000ffff) << 16)
         return n
+
+    def reverseBits(self, n: int) -> int: return int(f"{n:032b}"[::-1], 2)
