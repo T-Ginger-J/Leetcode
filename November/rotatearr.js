@@ -21,3 +21,14 @@ var rotate = function(nums, k) {
     reverse(nums, k, n - 1);
 };
 
+let nums1 = [1,2,3,4,5,6,7];
+rotate(nums1, 3);
+console.log(nums1); // [5,6,7,1,2,3,4]
+
+let nums2 = [-1,-100,3,99];
+rotate(nums2, 2);
+console.log(nums2); // [3,99,-1,-100]
+
+let nums3 = [1,2];
+rotate(nums3, 3);
+console.log(nums3); // [2,1]
