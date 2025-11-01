@@ -24,3 +24,16 @@ class Solution:
         nums[k:] = reversed(nums[k:])
 
     def rotateOneLine(self, nums: list[int], k: int) -> None: nums[:] = nums[-(k%len(nums)):] + nums[:-(k%len(nums))]
+
+sol = Solution()
+arr1 = [1,2,3,4,5,6,7]
+sol.rotate(arr1, 3)
+print(arr1)  # [5,6,7,1,2,3,4]
+
+arr2 = [-1,-100,3,99]
+sol.rotate(arr2, 2)
+print(arr2)  # [3,99,-1,-100]
+
+arr3 = [1,2]
+sol.rotate(arr3, 3)
+print(arr3)  # [2,1]
