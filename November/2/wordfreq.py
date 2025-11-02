@@ -17,3 +17,5 @@ class Solution:
         # sort by frequency descending
         sorted_items = sorted(freq.items(), key=lambda x: -x[1])
         return [(w, c) for w, c in sorted_items]
+    def wordFrequencyOneLine(self, words: str): return __import__('collections').Counter(words.split()).most_common()
+
