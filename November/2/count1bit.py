@@ -23,6 +23,8 @@ class Solution:
         return count
 
 
+    def hammingWeightOneLine(self, n: int) -> int: return bin(n).count('1')
+
 sol = Solution()
 print(sol.hammingWeight(0b00000000000000000000000000001011))  # 3
 print(sol.hammingWeight(0b00000000000000000000000010000000))  # 1
