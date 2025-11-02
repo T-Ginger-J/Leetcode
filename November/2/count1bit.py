@@ -22,3 +22,10 @@ class Solution:
             count += 1
         return count
 
+
+sol = Solution()
+print(sol.hammingWeight(0b00000000000000000000000000001011))  # 3
+print(sol.hammingWeight(0b00000000000000000000000010000000))  # 1
+print(sol.hammingWeight(0b11111111111111111111111111111101))  # 31
+
+
