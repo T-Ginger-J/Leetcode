@@ -24,3 +24,7 @@ class Solution:
     
     def wordFrequencyOneLine(self, words: str): return __import__('collections').Counter(words.split()).most_common()
 
+
+sol = Solution()
+print(sol.wordFrequency("the day is sunny the the\nthe sunny is is"))
+# [('the', 4), ('is', 3), ('sunny', 2), ('day', 1)]
