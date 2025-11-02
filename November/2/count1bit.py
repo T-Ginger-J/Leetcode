@@ -13,3 +13,12 @@ class Solution:
             count += n & 1
             n >>= 1
         return count
+
+
+    def hammingWeightOptimized(self, n: int) -> int:
+        count = 0
+        while n:
+            n &= n - 1
+            count += 1
+        return count
+
