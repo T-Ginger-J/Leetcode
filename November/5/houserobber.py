@@ -27,3 +27,7 @@ class Solution:
         return prev1
     
     def rob(self, nums: list[int]) -> int: return __import__('functools').reduce(lambda a,x:(max(a[0],a[1]+x),a[0]),nums,(0,0))[0]
+
+sol = Solution()
+print(sol.rob([1,2,3,1]))   # 4
+print(sol.rob([2,7,9,3,1])) # 12
