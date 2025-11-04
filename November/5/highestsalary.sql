@@ -1,3 +1,10 @@
+-- Explanation:
+-- Given:
+-- Employee(id, name, salary, departmentId)
+-- Department(id, name)
+-- We must find the employee(s) with the highest salary in each department.
+-- We use a subquery to match employees whose salary equals the max salary in their department.
+
 SELECT 
     d.name AS Department,
     e.name AS Employee,
