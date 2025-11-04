@@ -10,3 +10,6 @@ class Solution:
         lines = text.strip().split('\n')
         return lines[9] if len(lines) >= 10 else ''
 
+sol = Solution()
+data = "\n".join([f"Line {i}" for i in range(1, 12)])
+print(sol.tenthLine(data))  # Output: Line 10
