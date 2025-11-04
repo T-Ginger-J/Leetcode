@@ -11,3 +11,9 @@ class Solution:
         transposed = zip(*lines)
         return [' '.join(row) for row in transposed]
 
+sol = Solution()
+data = "name age\nalice 21\nryan 30"
+print('\n'.join(sol.transposeFile(data)))
+# Output:
+# name alice ryan
+# age 21 30
