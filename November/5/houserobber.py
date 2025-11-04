@@ -1,3 +1,13 @@
+# LeetCode 198: House Robber
+# Explanation:
+# 1. Use dynamic programming: dp[i] = max money robbed up to i-th house.
+# 2. For each house i, choose max of:
+#       - rob current (nums[i] + dp[i-2])
+#       - skip current (dp[i-1])
+# 3. Return dp[-1].
+# Time Complexity: O(n)
+# Space Complexity: O(n)
+
 class Solution:
     def rob(self, nums: list[int]) -> int:
         if not nums:
