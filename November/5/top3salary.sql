@@ -1,3 +1,8 @@
+-- Explanation:
+-- We need the top 3 highest distinct salaries per department.
+-- We use DENSE_RANK() partitioned by departmentId and order salaries in descending order.
+-- Then filter ranks <= 3.
+
 SELECT 
     d.name AS Department,
     e.name AS Employee,
