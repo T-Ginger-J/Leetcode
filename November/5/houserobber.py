@@ -25,3 +25,5 @@ class Solution:
         for n in nums:
             prev1, prev2 = max(prev1, prev2 + n), prev1
         return prev1
+    
+    def rob(self, nums: list[int]) -> int: return __import__('functools').reduce(lambda a,x:(max(a[0],a[1]+x),a[0]),nums,(0,0))[0]
