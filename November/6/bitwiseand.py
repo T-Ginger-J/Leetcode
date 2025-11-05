@@ -15,3 +15,7 @@ class Solution:
             shift += 1
         return left << shift
     
+    def rangeBitwiseAnd(self, left: int, right: int) -> int:
+        while right > left:
+            right &= (right - 1)
+        return right
