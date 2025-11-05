@@ -55,3 +55,19 @@ class Solution:
 
     def numIslandsOneLine(self, g): return sum(__import__('itertools').starmap(lambda i,j:(f:=lambda x,y:x in range(len(g))and y in range(len(g[0]))and g[x][y]=='1'and[g.__setitem__(x,g[x][:y]+'0'+g[x][y+1:]),[f(x+1,y),f(x-1,y),f(x,y+1),f(x,y-1)]][1])(i,j),[(i,j)for i in range(len(g))for j in range(len(g[0]))if g[i][j]=='1'])))
 
+
+sol = Solution()
+print(sol.numIslands([
+  ["1","1","0","0","0"],
+  ["1","1","0","0","0"],
+  ["0","0","1","0","0"],
+  ["0","0","0","1","1"]
+]))  # 3
+
+print(sol.numIslands([
+  ["1","1","1","1","0"],
+  ["1","1","0","1","0"],
+  ["1","1","0","0","0"],
+  ["0","0","0","0","0"]
+]))  # 1
+
