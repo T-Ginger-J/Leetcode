@@ -1,3 +1,10 @@
+# LeetCode 200: Number of Islands
+# Explanation:
+# 1. Traverse grid; when '1' found, increment count and DFS to mark all connected '1's as '0'.
+# 2. Each DFS call explores up, down, left, right.
+# Time Complexity: O(m * n)
+# Space Complexity: O(m * n) for recursion stack in worst case.
+
 class Solution:
     def numIslands(self, grid: list[list[str]]) -> int:
         if not grid:
