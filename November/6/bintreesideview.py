@@ -24,3 +24,15 @@ class Solution:
                 if i == level_size - 1:
                     result.append(node.val)
         return result
+
+    def rightSideViewDFS(self, root):
+        res = []
+        def dfs(node, depth):
+            if not node:
+                return
+            if depth == len(res):
+                res.append(node.val)
+            dfs(node.right, depth + 1)
+            dfs(node.left, depth + 1)
+        dfs(root, 0)
+        return res
