@@ -19,3 +19,6 @@ class Solution:
         while right > left:
             right &= (right - 1)
         return right
+
+    def rangeBitwiseAndOneLine(self, l, r): return r & (0 if l<r else l)
+
