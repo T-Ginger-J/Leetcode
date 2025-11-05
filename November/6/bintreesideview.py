@@ -1,3 +1,10 @@
+# LeetCode 199: Binary Tree Right Side View
+# Explanation:
+# 1. Use BFS level-order traversal.
+# 2. For each level, add the last node's value to result.
+# Time Complexity: O(n)
+# Space Complexity: O(n)
+
 from collections import deque
 
 class Solution:
