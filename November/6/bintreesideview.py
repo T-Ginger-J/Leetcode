@@ -39,3 +39,13 @@ class Solution:
 
     def rightSideViewOneLine(self, root): return [] if not root else [root.val]+self.rightSideView(root.right or root.left)
 
+# Helper tree construction
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+root = TreeNode(1, TreeNode(2, None, TreeNode(5)), TreeNode(3, None, TreeNode(4)))
+sol = Solution()
+print(sol.rightSideView(root))  # [1, 3, 4]
