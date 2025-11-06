@@ -31,3 +31,8 @@ class Solution:
                 sieve[i*i:n:i*2] = [False] * len(range(i*i, n, i*2))
         return sum(sieve) - sum(sieve[::2]) + 1  # adjust for even numbers
 
+
+sol = Solution()
+print(sol.countPrimes(10))  # 4
+print(sol.countPrimes(0))   # 0
+print(sol.countPrimes(1))   # 0
