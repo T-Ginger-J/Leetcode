@@ -27,3 +27,5 @@ class Solution:
             return None
         head.next = self.removeElements(head.next, val)
         return head.next if head.val == val else head
+    
+    def removeElementsOneLine(self, h, v): return h and (self.removeElements(h.next,v) if h.val==v else ListNode(h.val,self.removeElements(h.next,v)))
