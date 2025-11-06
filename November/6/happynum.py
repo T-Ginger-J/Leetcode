@@ -23,3 +23,5 @@ class Solution:
             slow = next_num(slow)
             fast = next_num(next_num(fast))
         return fast == 1
+
+    def isHappyOneLine(self, n): return n==1 or n>4 and self.isHappy(sum(int(d)**2 for d in str(n)))
