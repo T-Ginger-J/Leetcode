@@ -29,3 +29,23 @@ class Solution:
         return head.next if head.val == val else head
     
     def removeElementsOneLine(self, h, v): return h and (self.removeElements(h.next,v) if h.val==v else ListNode(h.val,self.removeElements(h.next,v)))
+
+# Helper to build and print linked lists
+def build_list(arr):
+    dummy = ListNode(0)
+    curr = dummy
+    for n in arr:
+        curr.next = ListNode(n)
+        curr = curr.next
+    return dummy.next
+
+def print_list(head):
+    res = []
+    while head:
+        res.append(head.val)
+        head = head.next
+    return res
+
+sol = Solution()
+head = build_list([1,2,6,3,4,5,6])
+print(print_list(sol.removeElements(head, 6)))  # [1, 2, 3, 4, 5]
