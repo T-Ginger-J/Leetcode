@@ -25,3 +25,7 @@ class Solution:
         return fast == 1
 
     def isHappyOneLine(self, n): return n==1 or n>4 and self.isHappy(sum(int(d)**2 for d in str(n)))
+
+sol = Solution()
+print(sol.isHappy(19))  # True
+print(sol.isHappy(2))   # False
