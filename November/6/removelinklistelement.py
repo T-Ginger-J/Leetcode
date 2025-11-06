@@ -1,3 +1,16 @@
+# LeetCode 203: Remove Linked List Elements
+# Explanation:
+# 1. Use a dummy node to simplify head deletion.
+# 2. Traverse list and skip nodes where node.val == val.
+# 3. Return dummy.next as new head.
+# Time Complexity: O(n)
+# Space Complexity: O(1)
+
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
 class Solution:
     def removeElements(self, head: ListNode, val: int) -> ListNode:
         dummy = ListNode(0, head)
