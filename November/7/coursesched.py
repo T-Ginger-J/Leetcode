@@ -55,3 +55,9 @@ class Solution:
                 return False
         return True
 
+sol = Solution()
+print(sol.canFinish(2, [[1,0]]))        # True
+print(sol.canFinish(2, [[1,0],[0,1]]))  # False
+print(sol.canFinish(4, [[1,0],[2,1],[3,2]]))  # True
+
+
