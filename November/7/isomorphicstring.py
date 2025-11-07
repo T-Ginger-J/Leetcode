@@ -18,3 +18,9 @@ class Solution:
 
     def isIsomorphicOneLine(self, s: str, t: str) -> bool:
         return [s.index(c) for c in s] == [t.index(c) for c in t]
+    
+sol = Solution()
+print(sol.isIsomorphic("egg", "add"))    # True
+print(sol.isIsomorphic("foo", "bar"))    # False
+print(sol.isIsomorphic("paper", "title"))# True
+
