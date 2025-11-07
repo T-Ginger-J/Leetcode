@@ -1,3 +1,11 @@
+# LeetCode 205: Isomorphic Strings
+# Explanation:
+# 1. Maintain two maps to store character mappings from s→t and t→s.
+# 2. Ensure one-to-one correspondence between both.
+# 3. If mismatch found, return False.
+# Time Complexity: O(n)
+# Space Complexity: O(n)
+
 class Solution:
     def isIsomorphic(self, s: str, t: str) -> bool:
         map_s_t, map_t_s = {}, {}
