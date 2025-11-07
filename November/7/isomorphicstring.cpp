@@ -26,3 +26,11 @@ public:
         return true;
     }
 };
+
+/*
+Solution sol;
+cout << boolalpha;
+cout << sol.isIsomorphic("egg", "add") << endl;    // true
+cout << sol.isIsomorphic("foo", "bar") << endl;    // false
+cout << sol.isIsomorphic("paper", "title") << endl;// true
+*/
