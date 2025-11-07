@@ -1,3 +1,14 @@
+# LeetCode 207: Course Schedule
+# Explanation:
+# 1. Build graph adjacency list and in-degree count.
+# 2. Start with nodes (courses) having in-degree 0.
+# 3. Remove edges iteratively while updating in-degrees.
+# 4. If all nodes processed, return True (no cycle).
+# Time Complexity: O(V + E)
+# Space Complexity: O(V + E)
+
+from collections import defaultdict, deque
+
 class Solution:
     def canFinish(self, numCourses: int, prerequisites: list[list[int]]) -> bool:
         graph = defaultdict(list)
