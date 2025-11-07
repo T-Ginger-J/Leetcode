@@ -31,3 +31,27 @@ class Solution:
 
         return visited == numCourses
     
+    def canFinishDFS(self, numCourses: int, prerequisites: list[list[int]]) -> bool:
+        graph = defaultdict(list)
+        for a, b in prerequisites:
+            graph[b].append(a)
+
+        visited = [0] * numCourses  # 0=unvisited, 1=visiting, 2=visited
+
+        def dfs(course):
+            if visited[course] == 1:  # cycle detected
+                return False
+            if visited[course] == 2:
+                return True
+            visited[course] = 1
+            for next_course in graph[course]:
+                if not dfs(next_course):
+                    return False
+            visited[course] = 2
+            return True
+
+        for c in range(numCourses):
+            if not dfs(c):
+                return False
+        return True
+
