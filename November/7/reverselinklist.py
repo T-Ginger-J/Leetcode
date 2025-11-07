@@ -33,3 +33,23 @@ class Solution:
 class Solution:
     def reverseListOneLine(self, h, p=None): return self.reverseList(h.next,h) if h else p
 
+
+def build_list(arr):
+    dummy = ListNode(0)
+    curr = dummy
+    for n in arr:
+        curr.next = ListNode(n)
+        curr = curr.next
+    return dummy.next
+
+def print_list(head):
+    res = []
+    while head:
+        res.append(head.val)
+        head = head.next
+    return res
+
+sol = Solution()
+head = build_list([1,2,3,4,5])
+print(print_list(sol.reverseList(head)))  # [5,4,3,2,1]
+
