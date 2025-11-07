@@ -29,3 +29,7 @@ class Solution:
         head.next.next = head
         head.next = None
         return p
+
+class Solution:
+    def reverseListOneLine(self, h, p=None): return self.reverseList(h.next,h) if h else p
+
