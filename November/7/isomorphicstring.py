@@ -15,3 +15,6 @@ class Solution:
             map_s_t[c1] = c2
             map_t_s[c2] = c1
         return True
+
+    def isIsomorphicOneLine(self, s: str, t: str) -> bool:
+        return [s.index(c) for c in s] == [t.index(c) for c in t]
