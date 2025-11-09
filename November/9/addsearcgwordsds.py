@@ -1,3 +1,11 @@
+# LeetCode 211: Design Add and Search Words Data Structure
+# Explanation:
+# 1. Use Trie nodes (dicts) where each node maps char -> next node.
+# 2. For addWord: traverse and create child nodes.
+# 3. For search: DFS all possible paths when '.' is found.
+# Time Complexity: O(M) for addWord, O(N * 26^d) worst for search where d = number of dots.
+# Space Complexity: O(T) total characters stored.
+
 class TrieNode:
     def __init__(self):
         self.children = {}
