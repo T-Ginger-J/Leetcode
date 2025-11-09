@@ -26,5 +26,16 @@ public:
         for (int i = 0; i < numCourses; ++i)
             if (indegree[i] == 0) q.push(i);
 
+        vector<int> order;
+        while (!q.empty()) {
+            int course = q.front(); q.pop();
+            order.push_back(course);
+            for (int next : graph[course]) {
+                if (--indegree[next] == 0)
+                    q.push(next);
+            }
+        }
+
+        return order.size() == numCourses ? order : vector<int>{};
     }
 };
