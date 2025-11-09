@@ -46,3 +46,10 @@ class Solution:
                 dfs(r, c, root)
         
         return res
+
+sol = Solution()
+board = [["o","a","a","n"],["e","t","a","e"],["i","h","k","r"],["i","f","l","v"]]
+print(sol.findWords(board, ["oath","pea","eat","rain"]))  # ["eat","oath"]
+
+board = [["a","b"],["c","d"]]
+print(sol.findWords(board, ["abcb"]))  # []
