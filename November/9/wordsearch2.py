@@ -1,3 +1,16 @@
+# LeetCode 212: Word Search II
+# Explanation:
+# 1. Build a Trie to efficiently check prefixes and complete words.
+# 2. For each board cell, perform DFS with backtracking.
+# 3. Prune search when prefix not in Trie; mark visited cells temporarily.
+# Time Complexity: O(M * N * 4^L), where L = max word length.
+# Space Complexity: O(T + M*N), where T = total chars in words.
+
+class TrieNode:
+    def __init__(self):
+        self.children = {}
+        self.word = None
+
 class Solution:
     def findWords(self, board: list[list[str]], words: list[str]) -> list[str]:
         root = TrieNode()
