@@ -1,3 +1,10 @@
+# LeetCode 209: Minimum Size Subarray Sum
+# Explanation:
+# 1. Use two pointers (start, end) to maintain a sliding window.
+# 2. Expand end to increase sum, contract start to minimize length.
+# 3. Track minimal window where sum >= target.
+# Time Complexity: O(n)
+# Space Complexity: O(1)
 
 import bisect
 
