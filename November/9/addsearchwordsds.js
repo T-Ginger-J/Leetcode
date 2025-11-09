@@ -35,3 +35,11 @@ class WordDictionary {
     }
 }
 
+let obj = new WordDictionary();
+obj.addWord("bad");
+obj.addWord("dad");
+obj.addWord("mad");
+console.log(obj.search("pad")); // false
+console.log(obj.search("bad")); // true
+console.log(obj.search(".ad")); // true
+console.log(obj.search("b..")); // true
