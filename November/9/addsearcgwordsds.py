@@ -33,3 +33,12 @@ class WordDictionary:
                 return False
             return dfs(node.children[word[i]], i+1)
         return dfs(self.root, 0)
+
+obj = WordDictionary()
+obj.addWord("bad")
+obj.addWord("dad")
+obj.addWord("mad")
+print(obj.search("pad"))  # False
+print(obj.search("bad"))  # True
+print(obj.search(".ad"))  # True
+print(obj.search("b.."))  # True
