@@ -21,6 +21,12 @@ class Solution:
 
         return max(rob_line(nums[:-1]), rob_line(nums[1:]))
 
+    def robLambda(self, nums: list[int]) -> int:
+        if len(nums) == 1:
+            return nums[0]
+        f = lambda arr: (lambda a=0,b=0:[(a:=b,b:=max(b,a+n)) for n in arr] and b)()
+        return max(f(nums[:-1]), f(nums[1:]))
+
 sol = Solution()
 print(sol.rob([2,3,2]))     # 3
 print(sol.rob([1,2,3,1]))   # 4
