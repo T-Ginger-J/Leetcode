@@ -21,3 +21,7 @@ class Solution:
 
         return max(rob_line(nums[:-1]), rob_line(nums[1:]))
 
+sol = Solution()
+print(sol.rob([2,3,2]))     # 3
+print(sol.rob([1,2,3,1]))   # 4
+print(sol.rob([1,2,3]))     # 3
