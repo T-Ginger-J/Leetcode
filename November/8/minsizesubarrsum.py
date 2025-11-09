@@ -35,3 +35,9 @@ class Solution:
 
         return 0 if min_len == float('inf') else min_len
 
+
+
+sol = Solution()
+print(sol.minSubArrayLen(7, [2,3,1,2,4,3]))  # 2
+print(sol.minSubArrayLen(4, [1,4,4]))        # 1
+print(sol.minSubArrayLen(11, [1,1,1,1,1,1])) # 0
