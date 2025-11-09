@@ -28,3 +28,9 @@ private:
     }
 };
 
+// vector<int> nums = {2,3,2};
+// Solution sol;
+// cout << sol.rob(nums); // 3
+//
+// vector<int> nums2 = {1,2,3,1};
+// cout << sol.rob(nums2); // 4
