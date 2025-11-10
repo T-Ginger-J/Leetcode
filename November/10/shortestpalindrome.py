@@ -1,3 +1,12 @@
+# LeetCode 214: Shortest Palindrome
+# Explanation:
+# 1. We want the longest prefix of s that is also a palindrome.
+# 2. Build new string "s + '#' + reversed(s)".
+# 3. Compute KMP prefix table to find longest matching prefix-suffix.
+# 4. Add the remaining reversed suffix to the front.
+# Time Complexity: O(n)
+# Space Complexity: O(n)
+
 class Solution:
     def shortestPalindrome(self, s: str) -> str:
         rev = s[::-1]
