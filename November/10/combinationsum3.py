@@ -24,3 +24,8 @@ class Solution:
         
         backtrack(1, [], 0)
         return res
+
+sol = Solution()
+print(sol.combinationSum3(3, 7))  # [[1,2,4]]
+print(sol.combinationSum3(3, 9))  # [[1,2,6],[1,3,5],[2,3,4]]
+print(sol.combinationSum3(4, 1))  # []
