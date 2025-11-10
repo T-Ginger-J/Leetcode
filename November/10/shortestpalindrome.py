@@ -34,3 +34,7 @@ class Solution:
         suffix = s[i:]
         return suffix[::-1] + self.shortestPalindrome(s[:i]) + suffix
 
+sol = Solution()
+print(sol.shortestPalindrome("aacecaaa"))  # "aaacecaaa"
+print(sol.shortestPalindrome("abcd"))      # "dcbabcd"
+print(sol.shortestPalindrome("race"))      # "ecarace"
