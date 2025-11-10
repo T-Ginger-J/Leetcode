@@ -19,3 +19,7 @@ var shortestPalindrome = function(s) {
 
     return rev.slice(0, s.length - lps[str.length - 1]) + s;
 };
+
+console.log(shortestPalindrome("aacecaaa")); // "aaacecaaa"
+console.log(shortestPalindrome("abcd"));     // "dcbabcd"
+console.log(shortestPalindrome("race"));     // "ecarace"
