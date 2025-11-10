@@ -33,3 +33,6 @@ class Solution:
             if k >= i: return quickselect(i, r)
             return nums[k]
         return quickselect(0, len(nums) - 1)
+
+    def findKthLargestOneLine(self, n,k):return sorted(n)[-k]
+
