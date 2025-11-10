@@ -36,3 +36,7 @@ class Solution:
 
     def findKthLargestOneLine(self, n,k):return sorted(n)[-k]
 
+sol = Solution()
+print(sol.findKthLargest([3,2,1,5,6,4], 2))          # 5
+print(sol.findKthLargest([3,2,3,1,2,4,5,5,6], 4))    # 4
+print(sol.findKthLargest([1], 1))                    # 1
