@@ -24,3 +24,8 @@ class Solution:
             if len(window) > k:
                 window.remove(nums[i - k])
         return False
+
+sol = Solution()
+print(sol.containsNearbyDuplicate([1,2,3,1], 3))        # True
+print(sol.containsNearbyDuplicate([1,0,1,1], 1))        # True
+print(sol.containsNearbyDuplicate([1,2,3,1,2,3], 2))    # False
