@@ -23,3 +23,8 @@ class Solution:
             if len(window) > indexDiff:
                 del window[bisect_left(window, nums[i - indexDiff])]
         return False
+
+sol = Solution()
+print(sol.containsNearbyAlmostDuplicate([1,2,3,1], 3, 0))      # True
+print(sol.containsNearbyAlmostDuplicate([1,5,9,1,5,9], 2, 3))  # False
+print(sol.containsNearbyAlmostDuplicate([1,2,3,1], 3, 1))      # True
