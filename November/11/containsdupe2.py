@@ -1,3 +1,11 @@
+# LeetCode 219: Contains Duplicate II
+# Explanation:
+# 1. Use a dictionary to store the last seen index of each number.
+# 2. If the number is seen again and |i - prev_i| <= k, return True.
+# 3. Otherwise, update index in dictionary.
+# Time Complexity: O(n)
+# Space Complexity: O(n)
+
 class Solution:
     def containsNearbyDuplicate(self, nums: list[int], k: int) -> bool:
         seen = {}
