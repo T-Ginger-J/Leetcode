@@ -1,3 +1,12 @@
+# LeetCode 218: The Skyline Problem
+# Explanation:
+# 1. Use a sweep line algorithm.
+# 2. Treat building edges as events: (x, height, start/end).
+# 3. Use max heap to track current active building heights.
+# 4. When current max height changes, add a key point to result.
+# Time Complexity: O(n log n)
+# Space Complexity: O(n)
+
 import heapq
 from collections import Counter
 
