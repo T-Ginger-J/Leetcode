@@ -1,0 +1,23 @@
+import heapq
+from collections import Counter
+
+class Solution:
+    def getSkyline(self, buildings: list[list[int]]) -> list[list[int]]:
+        events = []
+        for l, r, h in buildings:
+            events.append((l, -h, r))  # start of building
+            events.append((r, 0, 0))   # end marker
+        events.sort()
+
+        res = [[0, 0]]
+        heap = [(0, float('inf'))]
+
+        for x, neg_h, r in events:
+            while heap and heap[0][1] <= x:
+                heapq.heappop(heap)
+            if neg_h:
+                heapq.heappush(heap, (neg_h, r))
+            curr_h = -heap[0][0]
+            if res[-1][1] != curr_h:
+                res.append([x, curr_h])
+        return res[1:]
