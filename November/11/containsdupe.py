@@ -18,3 +18,7 @@ class Solution:
     def containsDuplicateSet(self, nums: list[int]) -> bool:
         return len(nums) != len(set(nums))
     
+sol = Solution()
+print(sol.containsDuplicate([1,2,3,1]))               # True
+print(sol.containsDuplicate([1,2,3,4]))               # False
+print(sol.containsDuplicate([1,1,1,3,3,4,3,2,4,2]))   # True
