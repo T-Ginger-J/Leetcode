@@ -30,3 +30,26 @@ class Solution:
             if res[-1][1] != curr_h:
                 res.append([x, curr_h])
         return res[1:]
+
+    def getSkylineLazy(self, buildings: list[list[int]]) -> list[list[int]]:
+        events = []
+        for l, r, h in buildings:
+            events.append((l, -h))
+            events.append((r, h))
+        events.sort()
+
+        res, heap, removed = [], [0], Counter()
+        prev = 0
+        for x, h in events:
+            if h < 0:
+                heapq.heappush(heap, h)
+            else:
+                removed[-h] += 1
+            while heap and removed[-heap[0]]:
+                removed[-heap[0]] -= 1
+                heapq.heappop(heap)
+            curr = -heap[0]
+            if curr != prev:
+                res.append([x, curr])
+                prev = curr
+        return res
