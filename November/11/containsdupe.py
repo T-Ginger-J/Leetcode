@@ -14,3 +14,7 @@ class Solution:
                 return True
             seen.add(n)
         return False
+
+    def containsDuplicateSet(self, nums: list[int]) -> bool:
+        return len(nums) != len(set(nums))
+    
