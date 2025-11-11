@@ -1,3 +1,12 @@
+# LeetCode 220: Contains Duplicate III
+# Explanation:
+# 1. Divide numbers into "buckets" of width = valueDiff + 1.
+# 2. If two numbers fall in the same bucket, abs(diff) <= valueDiff.
+# 3. Check neighboring buckets (adjacent values may be close).
+# 4. Maintain window of size <= indexDiff.
+# Time Complexity: O(n)
+# Space Complexity: O(n)
+
 from bisect import bisect_left, insort, bisect_right
 
 class Solution:
