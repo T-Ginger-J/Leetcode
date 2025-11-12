@@ -1,3 +1,11 @@
+# LeetCode 222: Count Complete Tree Nodes
+# Explanation:
+# 1. Compute left and right subtree heights.
+# 2. If equal, left subtree is full: count = 2^left_height - 1 + recurse on right.
+# 3. If not equal, right subtree is full: count = 2^right_height - 1 + recurse on left.
+# Time Complexity: O(log^2 n)
+# Space Complexity: O(log n)
+
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
