@@ -19,3 +19,14 @@ class Solution:
                     dp[i][j] = min(dp[i-1][j], dp[i][j-1], dp[i-1][j-1]) + 1
                     max_side = max(max_side, dp[i][j])
         return max_side * max_side
+
+sol = Solution()
+print(sol.maximalSquare([
+  ["1","0","1","0","0"],
+  ["1","0","1","1","1"],
+  ["1","1","1","1","1"],
+  ["1","0","0","1","0"]
+]))  # 4
+
+print(sol.maximalSquare([["0","1"],["1","0"]]))  # 1
+print(sol.maximalSquare([["0"]]))                # 0
