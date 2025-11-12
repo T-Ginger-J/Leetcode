@@ -1,3 +1,12 @@
+# LeetCode 223: Rectangle Area
+# Explanation:
+# 1. Compute area of each rectangle separately.
+# 2. Find overlap width = max(0, min(ax2, bx2) - max(ax1, bx1)).
+# 3. Find overlap height = max(0, min(ay2, by2) - max(ay1, by1)).
+# 4. Subtract overlapping area once.
+# Time Complexity: O(1)
+# Space Complexity: O(1)
+
 class Solution:
     def computeArea(self, ax1: int, ay1: int, ax2: int, ay2: int,
                     bx1: int, by1: int, bx2: int, by2: int) -> int:
