@@ -1,3 +1,11 @@
+# LeetCode 221: Maximal Square
+# Explanation:
+# 1. Use DP table where dp[i][j] = side length of largest square ending at (i, j).
+# 2. Recurrence: if matrix[i][j] == '1' => dp[i][j] = min(top, left, top-left) + 1.
+# 3. Keep track of the max side seen so far.
+# Time Complexity: O(m * n)
+# Space Complexity: O(m * n)
+
 class Solution:
     def maximalSquare(self, matrix: list[list[str]]) -> int:
         if not matrix:
