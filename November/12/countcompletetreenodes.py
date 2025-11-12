@@ -31,6 +31,14 @@ class Solution:
             return (1 << left_height) + self.countNodes(root.right)
         else:
             return (1 << right_height) + self.countNodes(root.left)
+
+class Solution:
+    def countNodesSmallInputs(self, root: TreeNode) -> int:
+        if not root:
+            return 0
+        return 1 + self.countNodes(root.left) + self.countNodes(root.right)
+
+
 # Construct example tree: [1,2,3,4,5,6]
 root = TreeNode(1)
 root.left = TreeNode(2)
