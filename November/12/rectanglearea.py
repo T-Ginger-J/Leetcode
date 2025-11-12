@@ -26,3 +26,7 @@ class Solution:
                overlap(ax1, ax2, bx1, bx2) * overlap(ay1, ay2, by1, by2)
 
 
+sol = Solution()
+print(sol.computeArea(-3,0,3,4,0,-1,9,2))  # 45
+print(sol.computeArea(-2,-2,2,2,-2,-2,2,2))  # 16
+print(sol.computeArea(0,0,0,0,1,1,2,2))  # 1
