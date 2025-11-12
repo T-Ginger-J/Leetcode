@@ -18,3 +18,11 @@ class Solution:
         overlap_area = overlap_width * overlap_height
 
         return area_a + area_b - overlap_area
+    
+    def computeAreaLambda(self, ax1, ay1, ax2, ay2, bx1, by1, bx2, by2):
+        area = lambda x1, y1, x2, y2: (x2 - x1) * (y2 - y1)
+        overlap = lambda a1, a2, b1, b2: max(0, min(a2, b2) - max(a1, b1))
+        return area(ax1, ay1, ax2, ay2) + area(bx1, by1, bx2, by2) - \
+               overlap(ax1, ax2, bx1, bx2) * overlap(ay1, ay2, by1, by2)
+
+
