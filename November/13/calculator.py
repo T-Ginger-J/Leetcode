@@ -32,3 +32,5 @@ class Solution:
                 res += stack.pop()  # previous result
         return res + sign * num
     
+    def calculateBuiltIn(self,s):return eval(s.replace('/','//'))
+
