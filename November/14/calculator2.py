@@ -1,3 +1,17 @@
+# LeetCode 227: Basic Calculator II
+# Explanation:
+# 1. Use a single-pass parser with a stack to handle operator precedence.
+#    - Keep current number (num) and last seen operator (op).
+#    - When we see an operator (or reach end), apply the previous operator:
+#        '+' -> push num
+#        '-' -> push -num
+#        '*' -> pop last, push last * num
+#        '/' -> pop last, push int(last / num) (truncate toward zero)
+# 2. At the end sum the stack to get result.
+#
+# Time Complexity: O(n) where n = length of string (single pass).
+# Space Complexity: O(n) in worst case for the stack (but usually less).
+
 class Solution:
     def calculate(self, s: str) -> int:
         s = s.strip()
