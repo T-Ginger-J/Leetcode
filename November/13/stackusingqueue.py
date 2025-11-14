@@ -46,3 +46,10 @@ class MyStackTwoQueue:
     def empty(self) -> bool:
         return not self.q1
 
+
+s = MyStack()
+s.push(1)
+s.push(2)
+print(s.top())   # 2
+print(s.pop())   # 2
+print(s.empty()) # False
