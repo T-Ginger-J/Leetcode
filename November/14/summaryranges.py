@@ -1,3 +1,11 @@
+# LeetCode 228: Summary Ranges
+# Explanation:
+# 1. Iterate through the numbers and detect when ranges start and end.
+# 2. When nums[i] != nums[i-1] + 1, we close a range.
+# 3. Add either "x" or "x->y" depending on length of the range.
+#
+# Time Complexity: O(n)
+# Space Complexity: O(1) besides output list.
 
 class Solution:
     def summaryRanges(self, nums: list[int]) -> list[str]:
