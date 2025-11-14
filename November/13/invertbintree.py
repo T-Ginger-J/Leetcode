@@ -29,3 +29,9 @@ def levelOrder(root):
         else:
             res.append(None)
     return res
+
+# Usage Example (TreeNode class assumed)
+# root = TreeNode(4, TreeNode(2, TreeNode(1), TreeNode(3)), TreeNode(7, TreeNode(6), TreeNode(9)))
+# sol = Solution()
+# new_root = sol.invertTree(root)
+# print(levelOrder(new_root))  # [4,7,2,9,6,3,1]
