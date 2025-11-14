@@ -13,3 +13,19 @@ class Solution:
         self.invertTree(root.left)
         self.invertTree(root.right)
         return root
+
+# Input: [4,2,7,1,3,6,9]
+# Output after invert: [4,7,2,9,6,3,1]
+from collections import deque
+
+def levelOrder(root):
+    res, q = [], deque([root])
+    while q:
+        node = q.popleft()
+        if node:
+            res.append(node.val)
+            q.append(node.left)
+            q.append(node.right)
+        else:
+            res.append(None)
+    return res
