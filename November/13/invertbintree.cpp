@@ -26,3 +26,10 @@ public:
         return root;
     }
 };
+
+// TreeNode* root = new TreeNode(4,
+//     new TreeNode(2, new TreeNode(1), new TreeNode(3)),
+//     new TreeNode(7, new TreeNode(6), new TreeNode(9)));
+// Solution sol;
+// TreeNode* newRoot = sol.invertTree(root);
+// // newRoot now represents [4,7,2,9,6,3,1]
