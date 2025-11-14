@@ -31,3 +31,7 @@ class Solution:
 
         return res
 
+# Example usage:
+# sol = Solution()
+# print(sol.summaryRanges([0,1,2,4,5,7]))  # ["0->2","4->5","7"]
+# print(sol.summaryRanges([0,2,3,4,6,8,9])) # ["0","2->4","6","8->9"]
