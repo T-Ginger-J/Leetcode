@@ -42,3 +42,9 @@ class Solution:
                 num = 0
             i += 1
         return sum(stack)
+
+sol = Solution()
+print(sol.calculate("3+2*2"))          # 7
+print(sol.calculate(" 3/2 "))          # 1   (truncate toward zero)
+print(sol.calculate(" 3+5 / 2 "))      # 5
+print(sol.calculate("14-3/2"))         # 13  (3/2 -> 1, 14-1 = 13)
