@@ -16,3 +16,8 @@ class Solution:
     def majorityElementOneLine(self, nums: list[int]) -> list[int]:
         return [x for x in set(nums) if nums.count(x) > len(nums)//3]
 
+
+# Example usage:
+# sol = Solution()
+# print(sol.majorityElement([3,2,3]))         # [3]
+# print(sol.majorityElement([1,1,1,3,3,2,2])) # [1,2]
