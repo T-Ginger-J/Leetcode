@@ -1,3 +1,11 @@
+# LeetCode 224: Basic Calculator
+# Explanation:
+# 1. Use a stack to store intermediate results.
+# 2. Keep track of current number, result, and sign.
+# 3. On '(' push current result and sign; on ')' pop and combine.
+# Time Complexity: O(n)
+# Space Complexity: O(n)
+
 class Solution:
     def calculate(self, s: str) -> int:
         stack = []
