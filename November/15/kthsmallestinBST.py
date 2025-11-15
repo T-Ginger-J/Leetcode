@@ -1,3 +1,11 @@
+# LeetCode 230: Kth Smallest Element in a BST
+# Explanation:
+# 1. A BST's inorder traversal produces values in sorted order.
+# 2. Perform an inorder traversal until we reach the k-th element.
+#
+# Time Complexity: O(h + k) where h = tree height
+# Space Complexity: O(h) for recursion stack
+
 class Solution:
     def kthSmallest(self, root: TreeNode, k: int) -> int:
         stack = []
