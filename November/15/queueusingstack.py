@@ -39,3 +39,11 @@ class MyQueue:
         if not self.out_stack:
             while self.in_stack:
                 self.out_stack.append(self.in_stack.pop())
+
+# Example usage:
+# q = MyQueue()
+# q.push(1)
+# q.push(2)
+# print(q.peek())  # 1
+# print(q.pop())   # 1
+# print(q.empty()) # False
