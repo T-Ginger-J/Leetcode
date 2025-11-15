@@ -36,3 +36,9 @@ class Solution:
         return next(gen)
 
 
+
+# Example usage:
+# sol = Solution()
+# print(sol.kthSmallest(root_from([3,1,4,null,2]), 1))   # 1
+# print(sol.kthSmallest(root_from([5,3,6,2,4,null,1]), 3)) # 3
+# print(sol.kthSmallest(build_bst([2,1,3]), 2))          # 2
