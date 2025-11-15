@@ -1,3 +1,20 @@
+# LeetCode 232: Implement Queue Using Stacks
+# Explanation:
+# Use two stacks:
+# - in_stack for pushing elements
+# - out_stack for popping/front operations
+#
+# When popping/front:
+#   If out_stack is empty, move all items from in_stack → out_stack.
+#
+# Time Complexity:
+#   - Push: O(1)
+#   - Pop: Amortized O(1)
+#   - Peek: Amortized O(1)
+#   - Empty: O(1)
+#
+# Space Complexity: O(n)
+
 class MyQueue:
 
     def __init__(self):
