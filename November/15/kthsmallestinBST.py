@@ -22,3 +22,17 @@ class Solution:
                 return curr.val
 
             curr = curr.right
+
+    def kthSmallestRecursive(self, root: TreeNode, k: int) -> int:
+        def inorder(node):
+            if node:
+                yield from inorder(node.left)
+                yield node.val
+                yield from inorder(node.right)
+
+        gen = inorder(root)
+        for _ in range(k - 1):
+            next(gen)
+        return next(gen)
+
+
