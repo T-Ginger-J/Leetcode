@@ -26,3 +26,9 @@ class Solution:
             return self.lowestCommonAncestor(root.right, p, q)
         return root
 
+
+
+# Example usage:
+# sol = Solution()
+# print(sol.lowestCommonAncestor(root, root.left, root.right).val)
+# print(sol.lowestCommonAncestor(root, node4, node7).val)
