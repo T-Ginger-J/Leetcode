@@ -35,3 +35,11 @@ class Solution:
             factor *= 10
 
         return count
+
+# Example usage:
+sol = Solution()
+print(sol.countDigitOne(13))  # 6  (1,10,11,12,13)
+print(sol.countDigitOne(100)) # 21
+print(sol.countDigitOne(20))   # 12
+print(sol.countDigitOne(111))  # 36
+
