@@ -1,3 +1,13 @@
+# LeetCode 234: Palindrome Linked List
+# Explanation:
+# 1. Use fast/slow pointers to find the middle.
+# 2. Reverse the second half of the list.
+# 3. Compare the first half with the reversed second half.
+# 4. (Optional) Restore the list.
+#
+# Time Complexity: O(n)
+# Space Complexity: O(1)
+
 class Solution:
     def isPalindrome(self, head: Optional[ListNode]) -> bool:
         if not head or not head.next:
