@@ -23,3 +23,6 @@ var countDigitOne = function(n) {
     return count;
 };
 
+// Example usage:
+// console.log(countDigitOne(13));  // 6
+// console.log(countDigitOne(100)); // 21
