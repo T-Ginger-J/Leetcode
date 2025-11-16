@@ -8,3 +8,11 @@ class Solution:
                 cur = cur.right
             else:
                 return cur
+            
+    def lowestCommonAncestorRecursive(self, root, p, q):
+        if p.val < root.val and q.val < root.val:
+            return self.lowestCommonAncestor(root.left, p, q)
+        if p.val > root.val and q.val > root.val:
+            return self.lowestCommonAncestor(root.right, p, q)
+        return root
+
