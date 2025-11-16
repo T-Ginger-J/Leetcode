@@ -36,3 +36,8 @@ class Solution:
             right = right.next
 
         return True
+
+# Example usage:
+# sol = Solution()
+# print(sol.isPalindrome(ListNode.from_list([1,2,2,1]))) # True
+# print(sol.isPalindrome(ListNode.from_list([1,2])))     # False
