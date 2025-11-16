@@ -39,3 +39,9 @@ public:
         return true;
     }
 };
+
+// ListNode* head = buildList({1,2,2,1});
+// cout << Solution().isPalindrome(head); // 1
+
+// ListNode* head2 = buildList({1,2});
+// cout << Solution().isPalindrome(head2); // 0
