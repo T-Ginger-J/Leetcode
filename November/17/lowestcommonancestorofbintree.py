@@ -21,3 +21,7 @@ class Solution:
             return root
         return left if left else right
 
+# Example usage:
+# sol = Solution()
+# print(sol.lowestCommonAncestor(root, p, q).val)
+# print(sol.lowestCommonAncestor(root, a, c).val)
