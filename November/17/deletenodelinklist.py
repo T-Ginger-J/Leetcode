@@ -13,3 +13,7 @@ class Solution:
         node.val = node.next.val
         node.next = node.next.next
 
+# Example usage:
+# head = ListNode.from_list([4,5,1,9])
+# Solution().deleteNode(head.next)   # deletes 5
+# print(head)  # [4,1,9]
