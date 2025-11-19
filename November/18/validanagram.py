@@ -21,3 +21,8 @@ class Solution:
                 return False
 
         return True
+
+# Example usage:
+# sol = Solution()
+# print(sol.isAnagram("anagram", "nagaram")) # True
+# print(sol.isAnagram("rat", "car"))         # False
