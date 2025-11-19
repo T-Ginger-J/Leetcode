@@ -1,3 +1,16 @@
+# LeetCode 241: Different Ways to Add Parentheses
+#
+# Explanation:
+# Use recursion and split the expression at each operator.
+# For each operator:
+#   - compute all results from left substring
+#   - compute all results from right substring
+#   - combine them using the operator
+#
+# Memoization speeds up repeated sub-expressions.
+#
+# Time Complexity: O(n * 2^n)
+# Space Complexity: O(2^n) recursion + memo
 
 class Solution:
     def diffWaysToCompute(self, expression: str) -> list[int]:
