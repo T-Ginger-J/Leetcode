@@ -1,3 +1,11 @@
+# LeetCode 258: Add Digits
+#
+# Explanation:
+# Repeatedly sum digits until the result is a single digit.
+#
+# Time Complexity: O(log n) per iteration, but overall small.
+# Space Complexity: O(1)
+
 class Solution:
     def addDigits(self, num: int) -> int:
         while num >= 10:
