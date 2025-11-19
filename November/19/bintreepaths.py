@@ -23,3 +23,8 @@ class Solution:
 
         dfs(root, "")
         return res
+
+# Example usage:
+# sol = Solution()
+# print(sol.binaryTreePaths(root))  # e.g. ["1->2->5","1->3"]
+
