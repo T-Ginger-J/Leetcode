@@ -1,3 +1,12 @@
+# LeetCode 242: Valid Anagram
+#
+# Explanation:
+# Two strings are anagrams if they have the same character counts.
+# Use a frequency dictionary (or array of size 26).
+#
+# Time Complexity: O(n)
+# Space Complexity: O(1) for fixed alphabet, else O(n)
+
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
         if len(s) != len(t):
