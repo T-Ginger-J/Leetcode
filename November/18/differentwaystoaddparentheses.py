@@ -42,3 +42,7 @@ class Solution:
         
         return compute(expression)
 
+# Example usage:
+# sol = Solution()
+# print(sol.diffWaysToCompute("2-1-1"))  # [0,2]
+# print(sol.diffWaysToCompute("2*3-4*5")) # [-34,-14,-10,-10,10]
