@@ -16,3 +16,7 @@ class Solution:
             num = s
         return num
 
+# Example usage:
+# sol = Solution()
+# print(sol.addDigits(38))   # 2
+# print(sol.addDigits(0))    # 0
