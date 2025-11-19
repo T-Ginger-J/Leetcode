@@ -23,3 +23,8 @@ class Solution:
             else:
                 b ^= num
         return [a, b]
+
+# Example usage:
+# sol = Solution()
+# print(sol.singleNumber([1,2,1,3,2,5]))  # Output: [3,5]
+# print(sol.singleNumber([-1,0]))         # Output: [-1,0]
