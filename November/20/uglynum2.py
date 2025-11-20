@@ -39,3 +39,9 @@ class Solution:
                     seen.add(x*factor)
                     heapq.heappush(heap, x*factor)
         return heapq.heappop(heap)
+
+
+# Example usage:
+# sol = Solution()
+# print(sol.nthUglyNumber(10))  # 12
+# print(sol.nthUglyNumber(1))   # 1
