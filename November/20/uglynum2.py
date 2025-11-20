@@ -1,3 +1,4 @@
+import heapq
 
 class Solution:
     def nthUglyNumber(self, n: int) -> int:
@@ -19,3 +20,14 @@ class Solution:
                 i5 += 1
                 next5 = ugly[i5] * 5
         return ugly[-1]
+    
+    def nthUglyNumberHeap(self, n: int) -> int:
+        seen = {1}
+        heap = [1]
+        for _ in range(n-1):
+            x = heapq.heappop(heap)
+            for factor in [2,3,5]:
+                if x*factor not in seen:
+                    seen.add(x*factor)
+                    heapq.heappush(heap, x*factor)
+        return heapq.heappop(heap)
