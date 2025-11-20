@@ -17,3 +17,7 @@ class Solution:
                 num //= p
         return num == 1
 
+# Example usage:
+# sol = Solution()
+# print(sol.isUgly(6))  # True
+# print(sol.isUgly(14)) # False
