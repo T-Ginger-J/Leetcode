@@ -1,3 +1,10 @@
+-- LeetCode 262: Trips and Users
+-- Explanation:
+-- 1. Join Trips with Users twice (client and driver)
+-- 2. Filter unbanned users
+-- 3. Group by request_at and calculate cancellation rate
+-- 4. Round to 2 decimal points
+
 SELECT
     t.request_at AS Day,
     ROUND(
