@@ -1,3 +1,11 @@
+# LeetCode 264 — Ugly Number II
+# Explanation:
+# 1. Use dynamic programming with 3 pointers for multiples of 2, 3, and 5.
+# 2. Keep track of next multiples and update pointers when used.
+# 3. Generate ugly numbers until n-th.
+# Time Complexity: O(n)
+# Space Complexity: O(n)
+
 import heapq
 
 class Solution:
