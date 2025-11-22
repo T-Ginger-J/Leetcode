@@ -12,3 +12,8 @@ var hIndex = function(citations) {
     }
     return h;
 };
+
+// Example usage:
+// console.log(hIndex([3,0,6,1,5]));  // 3
+// console.log(hIndex([1,3,1]));      // 1
+// console.log(hIndex([0,0,0]));      // 0
