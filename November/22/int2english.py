@@ -38,3 +38,9 @@ class Solution:
             i += 1
 
         return res.strip()
+
+# Example usage:
+# sol = Solution()
+# print(sol.numberToWords(123))            # "One Hundred Twenty Three"
+# print(sol.numberToWords(12345))          # "Twelve Thousand Three Hundred Forty Five"
+# print(sol.numberToWords(1234567))        # "One Million Two Hundred Thirty Four Thousand Five Hundred Sixty Seven"
