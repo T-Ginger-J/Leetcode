@@ -1,3 +1,12 @@
+# LeetCode 273: Integer to English Words
+# Explanation:
+# 1. Break the number into chunks of thousands: billions, millions, thousands, remainder.
+# 2. Convert each chunk using a helper that handles numbers < 1000.
+# 3. Combine the words with the correct scale ("Thousand", "Million", "Billion").
+#
+# Time Complexity: O(1)  -- max 10 digits
+# Space Complexity: O(1)
+
 class Solution:
     def numberToWords(self, num: int) -> str:
         if num == 0:
