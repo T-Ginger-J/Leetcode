@@ -14,3 +14,9 @@ class Solution:
             if c >= i + 1:
                 h = i + 1
         return h
+
+# Example usage:
+# sol = Solution()
+# print(sol.hIndex([3,0,6,1,5]))   # 3
+# print(sol.hIndex([1,3,1]))       # 1
+# print(sol.hIndex([0,0,0]))       # 0
