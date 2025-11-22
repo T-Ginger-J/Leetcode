@@ -11,6 +11,10 @@ class Solution:
         n = len(nums)
         return n * (n + 1) // 2 - sum(nums)
     
+    def missingNumberOneLine(self, nums: list[int]) -> int:
+        return (len(nums) * (len(nums)+1))//2 - sum(nums)
+
+
 # Example usage:
 # sol = Solution()
 # print(sol.missingNumber([3,0,1]))  # 2
