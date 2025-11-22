@@ -1,0 +1,14 @@
+// Explanation:
+// 1. Sort descending.
+// 2. Find largest i where citations[i] >= i+1.
+// Time Complexity: O(n log n)
+// Space Complexity: O(1)
+
+var hIndex = function(citations) {
+    citations.sort((a,b) => b - a);
+    let h = 0;
+    for (let i = 0; i < citations.length; i++) {
+        if (citations[i] >= i + 1) h = i + 1;
+    }
+    return h;
+};
