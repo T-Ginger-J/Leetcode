@@ -12,3 +12,7 @@ class Solution {
     }
 }
 
+// Example usage:
+// new Solution().missingNumber(new int[]{3,0,1}); // 2
+// new Solution().missingNumber(new int[]{0,1});   // 2
+// new Solution().missingNumber(new int[]{9,6,4,2,3,5,7,0,1}); // 8
