@@ -23,3 +23,9 @@ class Solution:
     def hIndexOneLine(self, c: list[int]) -> int:
         return max((len(c)-i for i,x in enumerate(c) if x>=len(c)-i), default=0)
 
+
+# Example usage:
+# sol = Solution()
+# print(sol.hIndex([0,1,3,5,6]))  # 3
+# print(sol.hIndex([1,2,100]))    # 2
+# print(sol.hIndex([0]))          # 0
