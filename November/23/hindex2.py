@@ -1,3 +1,11 @@
+# LeetCode 275: H-Index II
+# Explanation:
+# 1. We need the largest h such that citations[n - h] >= h.
+# 2. Use binary search on h from 0..n.
+# 
+# Time Complexity: O(log n)
+# Space Complexity: O(1)
+
 class Solution:
     def hIndex(self, citations: list[int]) -> int:
         n = len(citations)
