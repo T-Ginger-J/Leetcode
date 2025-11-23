@@ -36,3 +36,6 @@ class Solution:
                     visited.add(num - s)
                     queue.append((num - s, step + 1))
 
+    def numSquaresOneLine(self, n: int) -> int:
+        dp = [0] + [min([dp[i - j*j] for j in range(1,int(i**0.5)+1)]) + 1 for i in range(1, n+1)]
+        return dp[n]
