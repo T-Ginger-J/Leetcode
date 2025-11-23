@@ -39,3 +39,8 @@ class Solution:
     def numSquaresOneLine(self, n: int) -> int:
         dp = [0] + [min([dp[i - j*j] for j in range(1,int(i**0.5)+1)]) + 1 for i in range(1, n+1)]
         return dp[n]
+
+print(Solution().numSquares(12))  # Output: 3 (4+4+4)
+print(Solution().numSquares(13))  # Output: 2 (4+9)
+print(Solution().numSquares(1))   # Output: 1 (1)
+          
