@@ -22,3 +22,8 @@ public:
     }
 };
 
+// Example usage:
+// Solution sol;
+// cout << sol.hIndex(vector<int>{0,1,3,5,6}); // 3
+// cout << sol.hIndex(vector<int>{1,2,100});   // 2
+// cout << sol.hIndex(vector<int>{0});         // 0
