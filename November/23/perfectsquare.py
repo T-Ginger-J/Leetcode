@@ -10,6 +10,8 @@
 # Time Complexity: O(n * sqrt(n)) because for each i we try sqrt(i) squares.
 # Space Complexity: O(n) for the dp array.
 
+from collections import deque
+
 class Solution:
     def numSquares(self, n: int) -> int:
         dp = [float('inf')] * (n + 1)
@@ -20,3 +22,17 @@ class Solution:
                 dp[i] = min(dp[i], dp[i - j*j] + 1)
                 j += 1
         return dp[n]
+
+    def numSquaresBFS(self, n: int) -> int:
+        squares = [i*i for i in range(1, int(n**0.5)+1)]
+        queue = deque([(n, 0)])
+        visited = set()
+        while queue:
+            num, step = queue.popleft()
+            if num == 0:
+                return step
+            for s in squares:
+                if num - s >= 0 and num - s not in visited:
+                    visited.add(num - s)
+                    queue.append((num - s, step + 1))
+
