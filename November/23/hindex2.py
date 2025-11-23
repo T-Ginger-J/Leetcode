@@ -19,3 +19,7 @@ class Solution:
                 right = mid - 1
 
         return left
+    
+    def hIndexOneLine(self, c: list[int]) -> int:
+        return max((len(c)-i for i,x in enumerate(c) if x>=len(c)-i), default=0)
+
