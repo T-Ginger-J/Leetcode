@@ -1,3 +1,18 @@
+# LeetCode 278: First Bad Version
+# Explanation:
+# 1. We are given a function isBadVersion(version) which returns True if the version is bad.
+# 2. Goal: Find the first bad version.
+# 3. Use binary search since versions are sequential.
+# 4. At each step:
+#    - Check mid version.
+#    - If mid is bad, first bad is <= mid, search left half.
+#    - If mid is good, first bad is > mid, search right half.
+# Time Complexity: O(log n)
+# Space Complexity: O(1)
+
+# The isBadVersion API is already defined for you.
+# def isBadVersion(version: int) -> bool:
+
 class Solution:
     def firstBadVersion(self, n: int) -> int:
         left, right = 1, n
