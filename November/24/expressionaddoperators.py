@@ -55,3 +55,13 @@ class Solution:
 
         dfs(0, '', 0, 0)
         return res
+
+print(Solution().addOperators("123", 6))  
+# Output: ["1+2+3","1*2*3"]
+
+print(Solution().addOperators("232", 8))  
+# Output: ["2*3+2","2+3*2"]
+
+print(Solution().addOperators("105", 5))  
+# Output: ["1*0+5","10-5"]
+
