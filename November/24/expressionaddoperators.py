@@ -32,3 +32,26 @@ class Solution:
 
         dfs(0, '', 0, 0)
         return res
+
+    def addOperatorsPruning(self, num: str, target: int):
+        res = []
+        n = len(num)
+
+        def dfs(i, expr, val, last):
+            if i == n:
+                if val == target:
+                    res.append(expr)
+                return
+            for j in range(i, n):
+                if j > i and num[i] == '0':
+                    break
+                curr = int(num[i:j+1])
+                if i == 0:
+                    dfs(j+1, str(curr), curr, curr)
+                else:
+                    dfs(j+1, expr+'+'+str(curr), val+curr, curr)
+                    dfs(j+1, expr+'-'+str(curr), val-curr, -curr)
+                    dfs(j+1, expr+'*'+str(curr), val-last+last*curr, last*curr)
+
+        dfs(0, '', 0, 0)
+        return res
