@@ -17,3 +17,7 @@ class Solution:
                 slow += 1
         return nums
 
+print(Solution().moveZeroes([0,1,0,3,12]))  # Output: [1,3,12,0,0]
+print(Solution().moveZeroes([0,0,1]))        # Output: [1,0,0]
+print(Solution().moveZeroes([4,2,4,0,0,3,0,5,1,0])) # Output: [4,2,4,3,5,1,0,0,0,0]
+  
