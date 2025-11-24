@@ -23,3 +23,14 @@ class PeekingIterator:
 
     def hasNext(self):
         return self._next is not None
+
+
+nums = iter([1,2,3])
+it = PeekingIterator(nums)
+print(it.peek())   # Output: 1
+print(it.next())   # Output: 1
+print(it.peek())   # Output: 2
+print(it.next())   # Output: 2
+print(it.hasNext())# Output: True
+print(it.next())   # Output: 3
+print(it.hasNext())# Output: False
