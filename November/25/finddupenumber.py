@@ -36,3 +36,7 @@ class Solution:
                 left = mid + 1
         return left
     
+    def findDuplicateOneLine(self, nums):
+        seen = set()
+        return next(x for x in nums if x in seen or seen.add(x))
+
