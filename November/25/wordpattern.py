@@ -32,3 +32,6 @@ class Solution:
             return False
         return len(set(zip(pattern, words))) == len(set(pattern)) == len(set(words))
 
+    def wordPatternOneLine(self, pattern, s):
+        w = s.split()
+        return len(pattern) == len(w) and len(set(zip(pattern, w))) == len(set(pattern)) == len(set(w))
