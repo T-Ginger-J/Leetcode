@@ -35,3 +35,8 @@ class Solution:
     def wordPatternOneLine(self, pattern, s):
         w = s.split()
         return len(pattern) == len(w) and len(set(zip(pattern, w))) == len(set(pattern)) == len(set(w))
+
+print(Solution().wordPattern("abba", "dog cat cat dog"))  # True
+print(Solution().wordPattern("abba", "dog cat cat fish")) # False
+print(Solution().wordPattern("aaaa", "dog dog dog dog"))  # True
+print(Solution().wordPattern("abba", "dog dog dog dog"))  # False
