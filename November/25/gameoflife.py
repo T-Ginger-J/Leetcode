@@ -1,3 +1,16 @@
+# LeetCode 289: Game of Life
+# Explanation:
+# 1. Each cell has two possible states: live (1) or dead (0).
+# 2. We need to compute the next state using the current state of all cells simultaneously.
+# 3. Use in-place encoding to avoid extra space:
+#    - 0 -> 0 : dead to dead
+#    - 1 -> 1 : live to live
+#    - 2 -> 1 : live to dead
+#    - 3 -> 0 : dead to live
+# 4. Count live neighbors using current state & encoded values.
+# Time Complexity: O(m*n), visit each cell and check 8 neighbors
+# Space Complexity: O(1), in-place modification
+
 class Solution:
     def gameOfLife(self, board):
         m, n = len(board), len(board[0])
