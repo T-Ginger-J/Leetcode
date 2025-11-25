@@ -40,3 +40,6 @@ class Solution:
         seen = set()
         return next(x for x in nums if x in seen or seen.add(x))
 
+print(Solution().findDuplicate([1,3,4,2,2]))  # Output: 2
+print(Solution().findDuplicate([3,1,3,4,2]))  # Output: 3
+print(Solution().findDuplicate([1,1]))        # Output: 1
