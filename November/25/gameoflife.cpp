@@ -31,3 +31,14 @@ public:
     }
 };
 
+#include <iostream>
+int main() {
+    Solution s;
+    vector<vector<int>> board1{{0,1,0},{0,0,1},{1,1,1},{0,0,0}};
+    auto res1 = s.gameOfLife(board1);
+    for(auto row: res1){ for(int x: row) cout<<x<<" "; cout<<endl; }
+
+    vector<vector<int>> board2{{1,1},{1,0}};
+    auto res2 = s.gameOfLife(board2);
+    for(auto row: res2){ for(int x: row) cout<<x<<" "; cout<<endl; }
+}
