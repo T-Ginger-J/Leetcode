@@ -37,3 +37,10 @@ class Solution:
                 if board[i][j] == 3: board[i][j] = 1
         return board
 
+board = [[0,1,0],[0,0,1],[1,1,1],[0,0,0]]
+print(Solution().gameOfLife(board))
+# Output: [[0,0,0],[1,0,1],[0,1,1],[0,1,0]]
+
+board = [[1,1],[1,0]]
+print(Solution().gameOfLife(board))
+# Output: [[1,1],[1,1]]
