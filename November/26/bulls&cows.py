@@ -25,3 +25,16 @@ class Solution:
             cows += min(s_count[digit], g_count.get(digit, 0))
         return f"{bulls}A{cows}B"
 
+    def getHintSingleArray(self, secret: str, guess: str) -> str:
+        bulls = cows = 0
+        counts = [0]*10
+        for s, g in zip(secret, guess):
+            if s == g:
+                bulls += 1
+            else:
+                if counts[int(s)] < 0: cows += 1
+                if counts[int(g)] > 0: cows += 1
+                counts[int(s)] += 1
+                counts[int(g)] -= 1
+        return f"{bulls}A{cows}B"
+    
