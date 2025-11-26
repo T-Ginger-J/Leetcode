@@ -39,3 +39,11 @@ class MedianFinder:
         else:
             return (-self.max_heap[0] + self.min_heap[0]) / 2
 
+mf = MedianFinder()
+mf.addNum(1)
+mf.addNum(2)
+print(mf.findMedian())  # 1.5
+mf.addNum(3)
+print(mf.findMedian())  # 2
+mf.addNum(4)
+print(mf.findMedian())  # 2.5
