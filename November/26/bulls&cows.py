@@ -38,3 +38,8 @@ class Solution:
                 counts[int(g)] -= 1
         return f"{bulls}A{cows}B"
     
+print(Solution().getHint("1807", "7810"))  # "1A3B"
+print(Solution().getHint("1123", "0111"))  # "1A1B"
+print(Solution().getHint("1234", "1234"))  # "4A0B"
+print(Solution().getHint("1234", "4321"))  # "0A4B"
+
