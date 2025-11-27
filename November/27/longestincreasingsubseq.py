@@ -30,3 +30,5 @@ class Solution:
             else:
                 sub[i] = x
         return len(sub)
+    
+    lengthOfLISOneLine = lambda self, nums: functools.reduce(lambda sub,x: sub+[x] if not sub or x>sub[-1] else sub[:bisect.bisect_left(sub,x)]+[x]+sub[bisect.bisect_left(sub,x)+1:], nums, []) and len(functools.reduce(lambda sub,x: sub+[x] if not sub or x>sub[-1] else sub[:bisect.bisect_left(sub,x)]+[x]+sub[bisect.bisect_left(sub,x)+1:], nums, []))
