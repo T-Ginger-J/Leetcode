@@ -84,3 +84,11 @@ class Solution:
             if count < 0: return False
         return count == 0
     
+s = "()())()"
+print(Solution().removeInvalidParentheses(s))  # ["()()()", "(())()"]
+
+s = "(a)())()"
+print(Solution().removeInvalidParentheses(s))  # ["(a)()()", "(a())()"]
+
+s = ")("
+print(Solution().removeInvalidParentheses(s))  # [""]
