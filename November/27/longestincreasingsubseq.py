@@ -20,3 +20,13 @@ class Solution:
                 if nums[i] > nums[j]:
                     dp[i] = max(dp[i], dp[j]+1)
         return max(dp)
+
+    def lengthOfLISBinSearch(self, nums):
+        sub = []
+        for x in nums:
+            i = bisect.bisect_left(sub, x)
+            if i == len(sub):
+                sub.append(x)
+            else:
+                sub[i] = x
+        return len(sub)
