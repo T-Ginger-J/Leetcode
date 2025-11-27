@@ -1,3 +1,11 @@
+# LeetCode 301: Remove Invalid Parentheses
+# Explanation:
+# 1. Use BFS to generate all possible strings by removing one parenthesis at a time.
+# 2. Stop at the first level where we find valid strings.
+# 3. Use a set to avoid duplicates.
+# Time Complexity: O(2^n * n), generating all combinations and checking validity
+# Space Complexity: O(2^n), storing all visited strings
+
 from collections import deque
 
 class Solution:
