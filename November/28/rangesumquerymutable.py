@@ -1,3 +1,12 @@
+# LeetCode 307: Range Sum Query - Mutable
+# Explanation:
+# 1. Use a segment tree to support both update and sumRange in O(log n).
+# 2. Each tree node represents the sum of a segment.
+# 3. update(index, val): update value and propagate changes up.
+# 4. sumRange(left, right): query sum recursively using the tree.
+# Time Complexity: O(log n) per update and query
+# Space Complexity: O(n) for segment tree
+
 class NumArray:
 
     def __init__(self, nums):
