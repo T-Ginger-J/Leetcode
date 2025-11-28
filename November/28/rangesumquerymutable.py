@@ -42,3 +42,8 @@ class NumArray:
             r //= 2
         return s
 
+nums = [1, 3, 5]
+obj = NumArray(nums)
+print(obj.sumRange(0, 2)) # 9
+obj.update(1, 2)
+print(obj.sumRange(0, 2)) # 8
