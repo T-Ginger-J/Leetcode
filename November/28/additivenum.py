@@ -29,3 +29,8 @@ class Solution:
                     if dfs(num1, num2, remaining):
                         return True
         return False
+
+print(Solution().isAdditiveNumber("112358"))  # True (1,1,2,3,5,8)
+print(Solution().isAdditiveNumber("199100199")) # True (1,99,100,199)
+print(Solution().isAdditiveNumber("123"))       # True (1,2,3)
+print(Solution().isAdditiveNumber("1023"))      # False
