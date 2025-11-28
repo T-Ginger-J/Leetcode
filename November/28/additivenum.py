@@ -1,3 +1,12 @@
+# LeetCode 306: Additive Number
+# Explanation:
+# 1. An additive number sequence has at least 3 numbers where each number is the sum of the previous two.
+# 2. Use backtracking to try all splits for first two numbers.
+# 3. Avoid numbers with leading zeros unless the number is 0.
+# 4. Check if the remaining string can form a valid additive sequence recursively.
+# Time Complexity: O(n^2 * 2^n), trying all splits and recursive checks
+# Space Complexity: O(n) recursion stack
+
 class Solution:
     def isAdditiveNumber(self, num: str) -> bool:
         n = len(num)
