@@ -33,3 +33,8 @@ class Solution:
             return memo[left][right]
         
         return dp(0,n-1)
+    
+sol = Solution()
+print(sol.maxCoins([3,1,5,8]))  # 167
+print(sol.maxCoins([1,5]))      # 10
+print(sol.maxCoins([1,2,3,4,5]))# 110
