@@ -1,3 +1,12 @@
+# LeetCode 312: Burst Balloons
+# Explanation:
+# 1. Use DP with the idea of last balloon to burst in a subarray.
+# 2. nums = [1] + original + [1] to simplify boundaries.
+# 3. dp[i][j] = max coins from bursting balloons between i and j (exclusive).
+# 4. dp[i][j] = max(dp[i][k] + dp[k][j] + nums[i]*nums[k]*nums[j]) for i<k<j
+# Time Complexity: O(n^3)
+# Space Complexity: O(n^2)
+
 class Solution:
     def maxCoins(self, nums):
         nums = [1] + nums + [1]
