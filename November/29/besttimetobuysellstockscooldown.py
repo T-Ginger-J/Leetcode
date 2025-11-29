@@ -24,3 +24,8 @@ class Solution:
             hold = max(hold, rest - price)
             rest = max(rest, prev_sold)
         return max(sold, rest)
+
+print(Solution().maxProfit([1,2,3,0,2]))  # 3 (buy=1, sell=2, cooldown=0, buy=0, sell=2)
+print(Solution().maxProfit([1]))          # 0
+print(Solution().maxProfit([1,2,4]))      # 3 (buy=1, sell=4)
+print(Solution().maxProfit([1,2,3,0,2,5]))# 6
