@@ -1,3 +1,11 @@
+# LeetCode 310: Minimum Height Trees
+# Explanation:
+# 1. Use BFS to remove leaf nodes iteratively.
+# 2. The last remaining nodes are the roots of minimum height trees.
+# 3. Build an adjacency list, track leaves, remove them layer by layer.
+# Time Complexity: O(n), each edge and node processed once
+# Space Complexity: O(n), adjacency list and leaves
+
 from collections import deque, defaultdict
 
 class Solution:
