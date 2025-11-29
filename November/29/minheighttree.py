@@ -29,3 +29,8 @@ class Solution:
             leaves = new_leaves
 
         return list(leaves)
+
+sol = Solution()
+print(sol.findMinHeightTrees(4, [[1,0],[1,2],[1,3]]))  # [1]
+print(sol.findMinHeightTrees(6, [[0,3],[1,3],[2,3],[4,3],[5,4]]))  # [3,4]
+print(sol.findMinHeightTrees(1, []))  # [0]
