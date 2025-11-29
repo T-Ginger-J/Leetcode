@@ -18,3 +18,18 @@ class Solution:
                 for k in range(left+1, right):
                     dp[left][right] = max(dp[left][right], dp[left][k]+dp[k][right]+nums[left]*nums[k]*nums[right])
         return dp[0][n-1]
+
+    def maxCoinsMemoization(self, nums):
+        nums = [1]+nums+[1]
+        n = len(nums)
+        memo = [[0]*n for _ in range(n)]
+        
+        def dp(left, right):
+            if left+1 == right:
+                return 0
+            if memo[left][right] != 0:
+                return memo[left][right]
+            memo[left][right] = max(dp(left,k)+dp(k,right)+nums[left]*nums[k]*nums[right] for k in range(left+1,right))
+            return memo[left][right]
+        
+        return dp(0,n-1)
