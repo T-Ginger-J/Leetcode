@@ -35,3 +35,8 @@ class Solution:
                     idx[j] += 1
                     next_mul[j] = ugly[idx[j]] * primes[j]
         return ugly[-1]
+    
+sol = Solution()
+print(sol.nthSuperUglyNumber(12, [2,7,13,19])) # 32
+print(sol.nthSuperUglyNumber(1, [2,3,5]))      # 1
+print(sol.nthSuperUglyNumber(10, [2,3,5]))     # 12
