@@ -42,3 +42,8 @@ class Solution:
             res.append(idx)
             insort(sorted_list, num)
         return res[::-1]
+    
+sol = Solution()
+print(sol.countSmaller([5,2,6,1]))   # [2,1,1,0]
+print(sol.countSmaller([-1,-1]))     # [0,0]
+print(sol.countSmaller([3,0,1]))     # [2,0,0]
