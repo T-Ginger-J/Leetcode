@@ -1,3 +1,11 @@
+# LeetCode 313: Super Ugly Number
+# Explanation:
+# 1. Use a min-heap to generate super ugly numbers in ascending order.
+# 2. Start with 1 and multiply by each prime to generate next candidates.
+# 3. Use a set to avoid duplicates.
+# Time Complexity: O(n * log(n)), due to heap operations
+# Space Complexity: O(n)
+
 import heapq
 
 class Solution:
