@@ -28,3 +28,9 @@ class Solution {
     }
 }
 
+/*
+Solution sol = new Solution();
+System.out.println(sol.removeDuplicateLetters("bcabc"));    // "abc"
+System.out.println(sol.removeDuplicateLetters("cbacdcbc")); // "acdb"
+System.out.println(sol.removeDuplicateLetters("abacb"));    // "abc"
+*/
