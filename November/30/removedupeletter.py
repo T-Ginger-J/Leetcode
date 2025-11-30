@@ -1,3 +1,13 @@
+# LeetCode 316: Remove Duplicate Letters
+# Explanation:
+# 1. Goal: Return the smallest lexicographical string with unique letters.
+# 2. Use a stack to build result:
+#    - If current char is smaller than top and top occurs later, pop top.
+#    - Push current char if not already in stack.
+# 3. Use a counter for remaining occurrences.
+# Time Complexity: O(n), each character pushed/popped at most once
+# Space Complexity: O(26) for stack and seen set
+
 from collections import Counter
 
 class Solution:
