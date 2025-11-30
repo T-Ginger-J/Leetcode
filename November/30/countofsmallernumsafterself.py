@@ -34,3 +34,11 @@ class Solution:
             update(num + offset)
         return res[::-1]
 
+    def countSmaller(self, nums):
+        sorted_list = []
+        res = []
+        for num in reversed(nums):
+            idx = bisect_left(sorted_list, num)
+            res.append(idx)
+            insort(sorted_list, num)
+        return res[::-1]
