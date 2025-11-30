@@ -24,3 +24,8 @@ class Solution:
             stack.append(c)
             seen.add(c)
         return ''.join(stack)
+
+sol = Solution()
+print(sol.removeDuplicateLetters("bcabc"))     # "abc"
+print(sol.removeDuplicateLetters("cbacdcbc"))  # "acdb"
+print(sol.removeDuplicateLetters("abacb"))     # "abc"
