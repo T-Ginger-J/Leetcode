@@ -22,3 +22,16 @@ class Solution:
                     heapq.heappush(heap, new_val)
         return val
 
+    def nthSuperUglyNumberDP(self, n, primes):
+        size = len(primes)
+        ugly = [1]*n
+        idx = [0]*size
+        next_mul = primes[:]
+        for i in range(1,n):
+            next_ugly = min(next_mul)
+            ugly[i] = next_ugly
+            for j in range(size):
+                if next_mul[j] == next_ugly:
+                    idx[j] += 1
+                    next_mul[j] = ugly[idx[j]] * primes[j]
+        return ugly[-1]
