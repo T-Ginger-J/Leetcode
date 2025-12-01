@@ -47,3 +47,12 @@ class Codec:
             i += 1
         return root
 
+codec = Codec()
+root = TreeNode(1, TreeNode(2), TreeNode(3, TreeNode(4), TreeNode(5)))
+
+s = codec.serialize(root)
+print(s)  
+# Example output: "1,2,3,null,null,4,5,null,null,null,null"
+
+tree = codec.deserialize(s)
+print(codec.serialize(tree))  # Should match original serialization
