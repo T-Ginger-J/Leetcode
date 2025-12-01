@@ -1,3 +1,14 @@
+# LeetCode 297: Serialize and Deserialize Binary Tree
+# Explanation:
+# We use BFS for both serialization and deserialization.
+# - serialize(): Perform level-order traversal, append "null" for missing nodes.
+# - deserialize(): Reverse process by reconstructing using queue.
+#
+# Time Complexity:
+#   • serialize():  O(n)
+#   • deserialize(): O(n)
+# Space Complexity: O(n) to store serialized list and queue.
+
 from collections import deque
 
 class Codec:
