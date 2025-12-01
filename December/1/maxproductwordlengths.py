@@ -32,3 +32,13 @@ class Solution:
                 if masks[i] & masks[j] == 0:
                     ans = max(ans, len(words[i]) * len(words[j]))
         return ans
+
+print(Solution().maxProduct(["abcw","baz","foo","bar","xtfn","abcdef"])) 
+# Output: 16  ("abcw" * "xtfn")
+
+print(Solution().maxProduct(["a","ab","abc","d","cd","bcd","abcd"]))    
+# Output: 4   ("ab" * "cd")
+
+print(Solution().maxProduct(["a","aa","aaa","aaaa"]))                  
+# Output: 0   (all share 'a')
+
