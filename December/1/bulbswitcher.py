@@ -16,3 +16,6 @@ class Solution:
         from math import isqrt
         return isqrt(n)
 
+print(Solution().bulbSwitch(3))    # 1   (only bulb 1 is on)
+print(Solution().bulbSwitch(10))   # 3   (bulbs 1,4,9)
+print(Solution().bulbSwitch(9999)) # 99
