@@ -28,3 +28,13 @@ var maxProduct = function(words) {
     }
     return ans;
 };
+
+console.log(maxProduct(["abcw","baz","foo","bar","xtfn","abcdef"])); 
+// 16
+
+console.log(maxProduct(["a","ab","abc","d","cd","bcd","abcd"]));      
+// 4
+
+console.log(maxProduct(["a","aa","aaa","aaaa"]));                     
+// 0
+
