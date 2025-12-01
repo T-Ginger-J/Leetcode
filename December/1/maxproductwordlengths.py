@@ -1,3 +1,20 @@
+# LeetCode 318: Maximum Product of Word Lengths
+# Explanation:
+# Problem:
+#   Find two words without common letters whose lengths' product is maximum.
+#
+# Approach (Bitmasking):
+# 1. Convert each word into a 26-bit integer mask.
+#    - If word contains 'a', set bit 0
+#    - If contains 'b', set bit 1
+#    ...
+#    - If contains 'z', set bit 25
+# 2. Two words share NO common letters ⇔ (mask1 & mask2) == 0
+# 3. Check all word pairs and track max product.
+#
+# Time Complexity:  O(n^2)
+# Space Complexity: O(n)
+
 class Solution:
     def maxProduct(self, words):
         n = len(words)
