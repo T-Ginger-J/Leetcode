@@ -1,3 +1,20 @@
+# LeetCode 324: Wiggle Sort II
+# Explanation:
+# We want: nums[0] < nums[1] > nums[2] < nums[3] ...
+#
+# Method (O(n)):
+# 1. Find the median using nth_element / quickselect.
+# 2. 3-way partition (Dutch National Flag) around the median BUT using
+#    "virtual indexing" which maps indices as:
+#
+#       mapped(i) = (1 + 2*i) % (n | 1)
+#
+#    to place larger values in odd positions and smaller values in even positions
+#    without violating movement during partition.
+#
+# Time Complexity: O(n)
+# Space Complexity: O(1)
+
 class Solution:
     def wiggleSort(self, nums):
         import random
