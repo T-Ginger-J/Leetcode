@@ -26,3 +26,34 @@ class Solution:
 
         odd.next = even_head
         return head
+
+# Utility to build a list for testing
+def build(lst):
+    from typing import Optional
+    class ListNode:
+        def __init__(self, val=0, next=None):
+            self.val = val
+            self.next = next
+    dummy = ListNode()
+    curr = dummy
+    for x in lst:
+        curr.next = ListNode(x)
+        curr = curr.next
+    return dummy.next
+
+# Utility to print list
+def dump(head):
+    out = []
+    while head:
+        out.append(head.val)
+        head = head.next
+    return out
+
+head = build([1,2,3,4,5])
+print(dump(Solution().oddEvenList(head)))  # [1,3,5,2,4]
+
+head = build([2,1,3,5,6,4,7])
+print(dump(Solution().oddEvenList(head)))  # [2,3,6,7,1,5,4]
+
+head = build([1])
+print(dump(Solution().oddEvenList(head)))  # [1]
