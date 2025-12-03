@@ -52,3 +52,11 @@ class Solution:
         
         return best
 
+print(Solution().maxNumber([3,4,6,5], [9,1,2,5,8,3], 5))
+# Output: [9, 8, 6, 5, 3]
+
+print(Solution().maxNumber([6,7], [6,0,4], 5))
+# Output: [6,7,6,0,4]
+
+print(Solution().maxNumber([3,9], [8,9], 3))
+# Output: [9,9,8]
