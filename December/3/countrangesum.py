@@ -1,3 +1,16 @@
+# LeetCode 327: Count of Range Sum
+# Explanation:
+# 1. Build prefix sums: ps[i] = sum(nums[0:i])
+# 2. We need to count pairs (i < j) such that:
+#       lower ≤ ps[j] - ps[i] ≤ upper
+# 3. Use a modified merge sort:
+#    - During merge, count how many left-side prefix sums fall in the valid range
+#      for each right-side prefix sum.
+# 4. Sort helps maintain prefix sums in order for efficient counting.
+#
+# Time Complexity: O(n log n)
+# Space Complexity: O(n)
+
 class Solution:
     def countRangeSum(self, nums, lower, upper):
         prefix = [0]
