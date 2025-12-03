@@ -1,3 +1,22 @@
+# LeetCode 321: Create Maximum Number
+# Explanation:
+# We must create the largest possible number of length k by choosing digits
+# from nums1 and nums2 while keeping internal order of each array.
+#
+# Strategy:
+# 1. For every possible split (i digits from nums1, k-i from nums2):
+#       - Extract max subsequence from nums1 of size i
+#       - Extract max subsequence from nums2 of size k-i
+#       - Merge them greedily into the largest possible sequence
+# 2. Keep the best sequence seen.
+#
+# Key subroutines:
+#   - max_subsequence(nums, k): monotonic stack to get max length-k subsequence
+#   - merge(a, b): lexicographically merge two lists
+#
+# Time Complexity: O(k * (n1+n2)) for all splits
+# Space Complexity: O(k)
+
 class Solution:
     def maxNumber(self, nums1, nums2, k):
         
