@@ -27,3 +27,7 @@ class Solution:
                 dp[x] = min(dp[x], dp[x - coin] + 1)
         
         return dp[amount] if dp[amount] != INF else -1
+
+print(Solution().coinChange([1,2,5], 11))  # 3  (5 + 5 + 1)
+print(Solution().coinChange([2], 3))       # -1
+print(Solution().coinChange([1], 0))       # 0
