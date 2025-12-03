@@ -51,3 +51,7 @@ class Solution:
             return cnt
 
         return merge_sort(0, len(prefix))
+
+print(Solution().countRangeSum([-2,5,-1], -2, 2))  # Output: 3
+print(Solution().countRangeSum([0], 0, 0))         # Output: 1
+print(Solution().countRangeSum([1, -1, 1], 0, 1))  # Output: 5
