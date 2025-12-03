@@ -65,3 +65,14 @@ class Solution:
             else:
                 j += 1
 
+arr = [1,5,1,1,6,4]
+Solution().wiggleSort(arr)
+print(arr)  # Example: [1,6,1,5,1,4] (pattern may vary)
+
+arr = [1,3,2,2,3,1]
+Solution().wiggleSort(arr)
+print(arr)  # Valid wiggle pattern
+
+arr = [4,5,5,6]
+Solution().wiggleSort(arr)
+print(arr)  # e.g. [5,6,4,5]
