@@ -26,3 +26,18 @@ class Solution:
                 return True
 
         return False
+
+# Example 1
+nums = [1, 2, 3, 4, 5]
+# Output: True → (1,2,3)
+print(Solution().increasingTriplet(nums))
+
+# Example 2
+nums = [5, 4, 3, 2, 1]
+# Output: False
+print(Solution().increasingTriplet(nums))
+
+# Example 3
+nums = [2,1,5,0,4,6]
+# Output: True → (0,4,6)
+print(Solution().increasingTriplet(nums))
