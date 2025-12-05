@@ -1,3 +1,18 @@
+# LeetCode 330: Patching Array
+# Explanation:
+# We want to cover all numbers in the range [1, n] using:
+#   - Existing sorted nums[]
+#   - Additional "patch" numbers we add
+#
+# Key Greedy Insight:
+# If we can cover [1, miss), and the next number is x:
+#   - If x <= miss, we extend coverage to [1, miss + x)
+#   - If x > miss, we must patch with "miss"
+#       (this doubles the coverage to [1, miss + miss))
+#
+# Time Complexity: O(len(nums) + log n)
+# Space Complexity: O(1)
+
 class Solution:
     def minPatches(self, nums, n):
         miss = 1     # smallest number that cannot yet be formed
