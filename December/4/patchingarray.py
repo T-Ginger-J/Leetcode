@@ -29,3 +29,22 @@ class Solution:
                 patches += 1
 
         return patches
+
+# Example 1
+nums = [1, 3]
+n = 6
+# Output: 1 (patch with 2)
+print(Solution().minPatches(nums, n))  # 1
+
+# Example 2
+nums = [1, 5, 10]
+n = 20
+# Output: 2 (patch with 2, 4)
+print(Solution().minPatches(nums, n))  # 2
+
+# Example 3
+nums = [1, 2, 2]
+n = 5
+# Output: 0 (already covers everything)
+print(Solution().minPatches(nums, n))  # 0
+p
