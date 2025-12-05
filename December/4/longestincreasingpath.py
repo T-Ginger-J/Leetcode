@@ -37,3 +37,24 @@ class Solution:
                 longest = max(longest, dfs(i, j))
         
         return longest
+
+# Example 1
+# Input:
+matrix = [
+    [9,9,4],
+    [6,6,8],
+    [2,1,1]
+]
+# Output: 4
+# Explanation: Longest path: 1 → 2 → 6 → 9
+
+print(Solution().longestIncreasingPath(matrix))  # Output: 4
+
+# Example 2
+matrix = [
+    [3,4,5],
+    [3,2,6],
+    [2,2,1]
+]
+# Output: 4 (3 → 4 → 5 → 6)
+print(Solution().longestIncreasingPath(matrix))  # Output: 4
