@@ -24,3 +24,18 @@ class Solution:
                 slots += 2
 
         return slots == 0
+
+# Example 1
+pre = "9,3,4,#,#,1,#,#,2,#,6,#,#"
+# Output: True
+print(Solution().isValidSerialization(pre))
+
+# Example 2
+pre = "1,#"
+# Output: False
+print(Solution().isValidSerialization(pre))
+
+# Example 3
+pre = "9,#,#,1"
+# Output: False
+print(Solution().isValidSerialization(pre))
