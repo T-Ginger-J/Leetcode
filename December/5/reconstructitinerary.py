@@ -31,3 +31,13 @@ class Solution:
 
         dfs("JFK")
         return route[::-1]
+
+# Example 1
+tickets = [["MUC", "LHR"], ["JFK", "MUC"], ["SFO", "SJC"], ["LHR", "SFO"]]
+# Output: ["JFK","MUC","LHR","SFO","SJC"]
+print(Solution().findItinerary(tickets))
+
+# Example 2
+tickets = [["JFK","KUL"],["JFK","NRT"],["NRT","JFK"]]
+# Output: ["JFK","NRT","JFK","KUL"]
+print(Solution().findItinerary(tickets))
