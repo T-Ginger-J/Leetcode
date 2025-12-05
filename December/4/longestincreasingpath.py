@@ -1,3 +1,13 @@
+# LeetCode 329: Longest Increasing Path in a Matrix
+# Explanation:
+# 1. The path can move up, down, left, or right.
+# 2. Use DFS + memoization (DP) to store the longest path starting at each cell.
+# 3. For each cell, explore neighbors with strictly larger values.
+# 4. Memoize results so each cell's DFS is computed once.
+#
+# Time Complexity: O(m * n)
+# Space Complexity: O(m * n) for memo + recursion stack
+
 class Solution:
     def longestIncreasingPath(self, matrix):
         if not matrix or not matrix[0]:
