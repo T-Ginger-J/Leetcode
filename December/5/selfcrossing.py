@@ -47,3 +47,18 @@ class Solution:
                     return True
 
         return False
+
+# Example 1
+x = [2,1,1,2]
+# Output: True (crosses)
+print(Solution().isSelfCrossing(x))
+
+# Example 2
+x = [1,2,3,4]
+# Output: False
+print(Solution().isSelfCrossing(x))
+
+# Example 3
+x = [1,1,1,2,1]
+# Output: True
+print(Solution().isSelfCrossing(x))
