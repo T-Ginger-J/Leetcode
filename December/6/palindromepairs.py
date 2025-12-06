@@ -27,3 +27,10 @@ class Solution:
                     res.append([i, rev_map[prefix]])
         return res
 
+words = ["bat","tab","cat"]
+# Output: [[1,0],[0,1]] → "tab"+"bat", "bat"+"tab"
+print(Solution().palindromePairs(words))
+
+words = ["abcd","dcba","lls","s","sssll"]
+# Output: [[1,0],[0,1],[3,2],[2,4]]
+print(Solution().palindromePairs(words))
