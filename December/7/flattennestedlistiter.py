@@ -41,3 +41,13 @@ class NestedIteratorInit:
 
     def hasNext(self):
         return self.index < len(self.flat)
+    
+# Example: nestedList = [[1,1],2,[1,1]]
+# Flattened = [1,1,2,1,1]
+
+i = NestedIterator(nestedList)
+res = []
+while i.hasNext():
+    res.append(i.next())
+print(res)  # Output: [1,1,2,1,1]
+
