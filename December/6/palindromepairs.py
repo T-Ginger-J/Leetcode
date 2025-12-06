@@ -1,3 +1,14 @@
+# LeetCode 336: Palindrome Pairs
+# Explanation:
+# 1. Use a hash map to store reversed words -> index.
+# 2. For each word, try every split into prefix + suffix.
+# 3. Check:
+#    - If prefix is palindrome, and reversed(suffix) exists → add (reversed_index, current_index)
+#    - If suffix is palindrome, and reversed(prefix) exists → add (current_index, reversed_index)
+# 4. Avoid duplicates by skipping empty suffix for suffix-palindrome case.
+# Time Complexity: O(n * k^2), n = number of words, k = max word length
+# Space Complexity: O(n * k)
+
 class Solution:
     def palindromePairs(self, words):
         rev_map = {w[::-1]: i for i, w in enumerate(words)}
