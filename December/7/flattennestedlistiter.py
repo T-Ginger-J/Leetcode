@@ -1,3 +1,11 @@
+# LeetCode 341: Flatten Nested List Iterator
+# Explanation:
+# 1. Use a stack to store nested elements.
+# 2. Always expand lists in hasNext() until top is an integer.
+# 3. next() simply pops the top integer.
+# Time Complexity: O(n)
+# Space Complexity: O(n)
+
 class NestedIterator:
     def __init__(self, nestedList):
         self.stack = nestedList[::-1]
