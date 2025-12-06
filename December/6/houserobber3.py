@@ -23,3 +23,24 @@ class Solution:
 
         return max(dfs(root))
 
+# Example tree:
+#     3
+#    / \
+#   2   3
+#    \   \
+#     3   1
+
+from typing import Optional
+
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+root = TreeNode(3,
+        TreeNode(2, None, TreeNode(3)),
+        TreeNode(3, None, TreeNode(1))
+)
+
+print(Solution().rob(root))   # Output: 7
