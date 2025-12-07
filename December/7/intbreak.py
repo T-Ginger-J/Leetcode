@@ -24,3 +24,6 @@ class Solution:
             for j in range(1, i):
                 dp[i] = max(dp[i], j * (i - j), j * dp[i - j])
         return dp[n]
+
+print(Solution().integerBreak(2))  # Output: 1
+print(Solution().integerBreak(10)) # Output: 36  (3+3+4 → 3*3*4)
