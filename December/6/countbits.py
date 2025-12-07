@@ -11,3 +11,7 @@ class Solution:
         for i in range(1, n + 1):
             dp[i] = dp[i >> 1] + (i & 1)
         return dp
+
+    def countBitsBuiltIn(self, n):
+        return [bin(i).count("1") for i in range(n + 1)]
+
