@@ -38,3 +38,6 @@ class Solution:
                 heapq.heappop(heap)
 
         return [num for (count, num) in heap]
+    
+print(Solution().topKFrequent([1,1,1,2,2,3], 2))  # Output: [1, 2]
+print(Solution().topKFrequent([1], 1))            # Output: [1]
