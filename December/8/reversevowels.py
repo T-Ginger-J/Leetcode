@@ -23,3 +23,8 @@ class Solution:
             r -= 1
 
         return "".join(s)
+
+    def reverseVowelsOneLine(self, s):
+        v = [c for c in s if c.lower() in "aeiou"]
+        return "".join(c if c.lower() not in "aeiou" else v.pop() for c in s)
+
