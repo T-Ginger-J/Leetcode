@@ -1,3 +1,11 @@
+# LeetCode 347: Top K Frequent Elements (Bucket Sort)
+# Explanation:
+# 1. Count frequency of each number.
+# 2. Create buckets where index i stores numbers occurring i times.
+# 3. Traverse buckets backwards and collect k most frequent numbers.
+# Time Complexity: O(n)
+# Space Complexity: O(n)
+
 class Solution:
     def topKFrequent(self, nums, k):
         from collections import Counter
