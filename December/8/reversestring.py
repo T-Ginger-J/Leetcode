@@ -16,3 +16,7 @@ class Solution:
     def reverseStringOneLine(self, s):
         s[:] = s[::-1]
 
+arr = ["h","e","l","l","o"]
+Solution().reverseString(arr)
+print(arr)  # Output: ["o","l","l","e","h"]
+
