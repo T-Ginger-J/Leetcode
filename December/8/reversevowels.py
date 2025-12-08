@@ -28,3 +28,6 @@ class Solution:
         v = [c for c in s if c.lower() in "aeiou"]
         return "".join(c if c.lower() not in "aeiou" else v.pop() for c in s)
 
+print(Solution().reverseVowels("hello"))  # holle
+print(Solution().reverseVowels("leetcode"))  # leotcede
+
