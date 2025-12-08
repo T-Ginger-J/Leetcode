@@ -1,3 +1,11 @@
+# LeetCode 345: Reverse Vowels of a String
+# Explanation:
+# 1. Convert string to list (since Python str is immutable).
+# 2. Use two pointers to locate vowels and swap.
+# 3. Join the list back to a string.
+# Time Complexity: O(n)
+# Space Complexity: O(n)
+
 class Solution:
     def reverseVowels(self, s):
         vowels = set("aeiouAEIOU")
