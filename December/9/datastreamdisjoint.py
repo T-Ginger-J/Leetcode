@@ -1,3 +1,11 @@
+# LeetCode 352: Data Stream as Disjoint Intervals
+# Explanation:
+# 1. Use SortedDict to keep intervals sorted by start.
+# 2. When adding a number, check if it can merge with previous/next intervals.
+# 3. getIntervals() returns the current list of intervals.
+# Time Complexity: addNum O(log n), getIntervals O(n)
+# Space Complexity: O(n)
+
 from sortedcontainers import SortedDict
 
 class SummaryRanges:
