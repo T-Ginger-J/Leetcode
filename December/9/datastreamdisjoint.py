@@ -35,3 +35,13 @@ class SummaryRanges:
 
     def getIntervals(self) -> list[list[int]]:
         return [[k, v] for k, v in self.intervals.items()]
+
+sr = SummaryRanges()
+sr.addNum(1)
+print(sr.getIntervals())  # Output: [[1,1]]
+sr.addNum(3)
+print(sr.getIntervals())  # Output: [[1,1],[3,3]]
+sr.addNum(2)
+print(sr.getIntervals())  # Output: [[1,3]]
+sr.addNum(7)
+print(sr.getIntervals())  # Output: [[1,3],[7,7]]
