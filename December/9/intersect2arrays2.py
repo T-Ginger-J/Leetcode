@@ -17,3 +17,6 @@ class Solution:
                 res.append(num)
                 count1[num] -= 1
         return res
+
+print(Solution().intersect([1,2,2,1], [2,2]))      # Output: [2,2]
+print(Solution().intersect([4,9,5], [9,4,9,8,4]))  # Output: [4,9] or [9,4]
