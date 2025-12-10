@@ -1,3 +1,13 @@
+# LeetCode 355: Design Twitter
+# Explanation:
+# 1. Use dict for tweets and followers.
+# 2. Each tweet has a timestamp to order by recency.
+# 3. getNewsFeed uses heapq to efficiently get 10 most recent tweets.
+# Time Complexity:
+#   postTweet O(1)
+#   getNewsFeed O(k log u), k=10, u=# of followees
+# Space Complexity: O(n + f)
+
 import heapq
 from collections import defaultdict
 
