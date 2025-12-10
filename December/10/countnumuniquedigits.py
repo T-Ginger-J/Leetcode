@@ -14,3 +14,8 @@ class Solution:
             product *= (11 - i)
             res += product
         return res
+
+print(Solution().countNumbersWithUniqueDigits(0))  # Output: 1
+print(Solution().countNumbersWithUniqueDigits(1))  # Output: 10
+print(Solution().countNumbersWithUniqueDigits(2))  # Output: 91
+print(Solution().countNumbersWithUniqueDigits(3))  # Output: 739
