@@ -1,3 +1,10 @@
+# LeetCode 354: Russian Doll Envelopes
+# Explanation:
+# 1. Sort envelopes by width asc, height desc.
+# 2. Find LIS on heights.
+# Time Complexity: O(n log n)
+# Space Complexity: O(n)
+
 class Solution:
     def maxEnvelopes(self, envelopes):
         envelopes.sort(key=lambda x: (x[0], -x[1]))
