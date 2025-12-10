@@ -18,3 +18,8 @@ class Solution:
                 lis[idx] = h
         return len(lis)
 
+envelopes = [[5,4],[6,4],[6,7],[2,3]]
+print(Solution().maxEnvelopes(envelopes))  # Output: 3 (sequence: [2,3] -> [5,4] -> [6,7])
+
+envelopes = [[1,1],[1,1],[1,1]]
+print(Solution().maxEnvelopes(envelopes))  # Output: 1
