@@ -1,3 +1,10 @@
+# LeetCode 357: Count Numbers with Unique Digits
+# Explanation:
+# 1. Use combinatorics for each number of digits.
+# 2. Sum counts for all lengths 1..n.
+# Time Complexity: O(n)
+# Space Complexity: O(1)
+
 class Solution:
     def countNumbersWithUniqueDigits(self, n: int) -> int:
         if n == 0: return 1
