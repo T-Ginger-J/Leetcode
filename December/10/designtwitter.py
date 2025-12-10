@@ -42,3 +42,12 @@ class Twitter:
 
     def unfollow(self, followerId: int, followeeId: int) -> None:
         self.followers[followerId].discard(followeeId)
+
+twitter = Twitter()
+twitter.postTweet(1, 5)
+print(twitter.getNewsFeed(1))  # Output: [5]
+twitter.follow(1, 2)
+twitter.postTweet(2, 6)
+print(twitter.getNewsFeed(1))  # Output: [6,5]
+twitter.unfollow(1, 2)
+print(twitter.getNewsFeed(1))  # Output: [5]
