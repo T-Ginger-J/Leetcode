@@ -20,3 +20,7 @@ class Solution:
             else:
                 right = mid - 1
         return False
+
+print(Solution().isPerfectSquare(16))  # Output: True
+print(Solution().isPerfectSquare(14))  # Output: False
+print(Solution().isPerfectSquare(1))   # Output: True
