@@ -1,3 +1,10 @@
+# LeetCode 367: Valid Perfect Square
+# Explanation:
+# 1. Use binary search from 1 to num.
+# 2. Check if mid*mid == num.
+# Time Complexity: O(log n)
+# Space Complexity: O(1)
+
 class Solution:
     def isPerfectSquare(self, num: int) -> bool:
         if num < 2:
