@@ -1,3 +1,11 @@
+# LeetCode 363: Max Sum of Rectangle No Larger Than K
+# Explanation:
+# 1. Iterate over all pairs of rows.
+# 2. For each pair, compute column sums → 1D array.
+# 3. Use prefix sums + binary search to find max subarray sum ≤ k.
+# Time Complexity: O(rows^2 * cols * log(cols))
+# Space Complexity: O(cols)
+
 import bisect
 
 class Solution:
