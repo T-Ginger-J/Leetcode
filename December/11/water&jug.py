@@ -13,3 +13,7 @@ class Solution:
         if z == 0 or z == x or z == y or z == x + y:
             return True
         return z % math.gcd(x, y) == 0
+
+print(Solution().canMeasureWater(3, 5, 4))  # Output: True
+print(Solution().canMeasureWater(2, 6, 5))  # Output: False
+print(Solution().canMeasureWater(1, 2, 3))  # Output: True
