@@ -32,3 +32,10 @@ class Solution:
                     bisect.insort(prefix_sums, cur_sum)
         return res
 
+matrix = [[1,0,1],[0,-2,3]]
+k = 2
+print(Solution().maxSumSubmatrix(matrix, k))  # Output: 2
+
+matrix = [[2,2,-1]]
+k = 3
+print(Solution().maxSumSubmatrix(matrix, k))  # Output: 3
