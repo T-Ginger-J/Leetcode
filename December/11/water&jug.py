@@ -1,3 +1,9 @@
+# LeetCode 365: Water and Jug Problem
+# Explanation:
+# 1. Use gcd(x, y). Check if z % gcd == 0 and z <= x + y.
+# Time Complexity: O(log(min(x, y)))
+# Space Complexity: O(1)
+
 import math
 
 class Solution:
