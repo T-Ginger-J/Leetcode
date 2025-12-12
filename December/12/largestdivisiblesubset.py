@@ -1,3 +1,11 @@
+# LeetCode 368: Largest Divisible Subset
+# Explanation:
+# 1. Sort nums to ensure divisible property only needs to check previous numbers.
+# 2. Use dp[i] to store largest subset size ending at i.
+# 3. Use prev[i] to reconstruct the subset.
+# Time Complexity: O(n^2)
+# Space Complexity: O(n)
+
 class Solution:
     def largestDivisibleSubset(self, nums):
         if not nums:
