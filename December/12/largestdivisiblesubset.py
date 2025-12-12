@@ -30,3 +30,5 @@ class Solution:
             max_idx = prev[max_idx]
         return res[::-1]  # reverse to get increasing order
 
+print(Solution().largestDivisibleSubset([1,2,3]))      # Output: [1,2] or [1,3]
+print(Solution().largestDivisibleSubset([1,2,4,8]))    # Output: [1,2,4,8]
