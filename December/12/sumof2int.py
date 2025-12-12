@@ -15,3 +15,7 @@ class Solution:
             b = carry & MASK
         # handle negative numbers
         return a if a <= 0x7FFFFFFF else ~(a ^ MASK)
+
+print(Solution().getSum(1, 2))    # Output: 3
+print(Solution().getSum(-2, 3))   # Output: 1
+print(Solution().getSum(-1, -1))  # Output: -2
