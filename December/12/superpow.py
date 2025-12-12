@@ -1,3 +1,10 @@
+# LeetCode 372: Super Pow
+# Explanation:
+# 1. Break b into digits, recursively compute modulo.
+# 2. Use pow(a, k, mod) or helper to compute small powers.
+# Time Complexity: O(log10(b) * log(a))
+# Space Complexity: O(log10(b)) recursion
+
 class Solution:
     MOD = 1337
 
