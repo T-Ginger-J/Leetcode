@@ -15,3 +15,7 @@ class Solution:
         part1 = pow(a, last, self.MOD)
         part2 = pow(self.superPow(a, b), 10, self.MOD)
         return (part1 * part2) % self.MOD
+
+print(Solution().superPow(2, [3]))       # Output: 8 (2^3 % 1337)
+print(Solution().superPow(2, [1,0]))     # Output: 1024 (2^10 % 1337)
+print(Solution().superPow(2147483647, [2,0,0]))  # Large input example
