@@ -1,3 +1,10 @@
+# LeetCode 373: Find K Pairs with Smallest Sums
+# Explanation:
+# 1. Initialize min-heap with (nums1[i]+nums2[0], i, 0)
+# 2. Pop smallest sum, push next element in nums2.
+# Time Complexity: O(k log k)
+# Space Complexity: O(k)
+
 import heapq
 
 class Solution:
