@@ -1,3 +1,9 @@
+# LeetCode 375: Guess Number Higher or Lower II
+# Explanation:
+# 1. Use DP with recurrence dp[i][j] = min(max of choosing x in [i,j] + cost x)
+# Time Complexity: O(n^3)
+# Space Complexity: O(n^2)
+
 class Solution:
     def getMoneyAmount(self, n: int) -> int:
         dp = [[0]*(n+2) for _ in range(n+2)]  # dp[i][j] for range i..j
