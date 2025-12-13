@@ -16,3 +16,8 @@ class Solution:
                     cost = x + max(dp[start][x-1], dp[x+1][end])
                     dp[start][end] = min(dp[start][end], cost)
         return dp[1][n]
+
+sol = Solution()
+print(sol.getMoneyAmount(10))  # Output: 16
+print(sol.getMoneyAmount(1))   # Output: 0
+print(sol.getMoneyAmount(2))   # Output: 1
