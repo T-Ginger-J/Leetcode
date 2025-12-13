@@ -27,3 +27,5 @@ class Solution:
             else:
                 low = mid + 1
 
+sol = Solution()
+print(sol.guessNumber(10))  # Output: 6 (example target)
