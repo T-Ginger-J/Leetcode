@@ -21,3 +21,15 @@ class Solution:
             if j + 1 < len(nums2):
                 heapq.heappush(heap, (nums1[i]+nums2[j+1], i, j+1))
         return res
+
+nums1 = [1,7,11]
+nums2 = [2,4,6]
+k = 3
+print(Solution().kSmallestPairs(nums1, nums2, k))  
+# Output: [[1,2],[1,4],[1,6]]
+
+nums1 = [1,1,2]
+nums2 = [1,2,3]
+k = 2
+print(Solution().kSmallestPairs(nums1, nums2, k))  
+# Output: [[1,1],[1,1]]
