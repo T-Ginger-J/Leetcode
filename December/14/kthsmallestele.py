@@ -1,3 +1,10 @@
+# LeetCode 378: Kth Smallest Element in a Sorted Matrix
+# Explanation:
+# 1. Use min-heap to track next smallest element.
+# 2. Push next element in the same row after popping.
+# Time Complexity: O(k log n)
+# Space Complexity: O(n)
+
 import heapq
 
 class Solution:
