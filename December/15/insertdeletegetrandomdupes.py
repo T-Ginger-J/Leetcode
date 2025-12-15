@@ -1,3 +1,11 @@
+# LeetCode 381: Insert Delete GetRandom O(1) - Duplicates allowed
+# Explanation:
+# 1. values: list of elements
+# 2. val_to_indices: dict of val -> set of indices
+# 3. On remove, swap with last element to maintain O(1)
+# Time Complexity: O(1) average
+# Space Complexity: O(n)
+
 import random
 from collections import defaultdict
 
