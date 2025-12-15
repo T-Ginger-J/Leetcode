@@ -1,3 +1,10 @@
+# LeetCode 376: Wiggle Subsequence
+# Explanation:
+# 1. Track up and down differences.
+# 2. Count alternations between positive and negative differences.
+# Time Complexity: O(n)
+# Space Complexity: O(1)
+
 class Solution:
     def wiggleMaxLength(self, nums):
         if not nums:
