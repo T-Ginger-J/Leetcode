@@ -1,3 +1,11 @@
+# LeetCode 380: Insert Delete GetRandom O(1)
+# Explanation:
+# 1. Use list to store elements for random access.
+# 2. Use dict to map value -> index for O(1) insert/delete.
+# 3. On remove, swap with last element to maintain O(1).
+# Time Complexity: O(1) average
+# Space Complexity: O(n)
+
 import random
 
 class RandomizedSet:
