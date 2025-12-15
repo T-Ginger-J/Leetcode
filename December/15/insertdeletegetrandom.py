@@ -33,3 +33,12 @@ class RandomizedSet:
 
     def getRandom(self) -> int:
         return random.choice(self.values)
+
+rs = RandomizedSet()
+print(rs.insert(1))  # True
+print(rs.remove(2))  # False
+print(rs.insert(2))  # True
+print(rs.getRandom()) # 1 or 2 randomly
+print(rs.remove(1))  # True
+print(rs.insert(2))  # False
+print(rs.getRandom()) # 2
