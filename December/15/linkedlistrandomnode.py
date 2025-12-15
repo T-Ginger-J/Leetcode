@@ -24,3 +24,8 @@ class Solution:
             node = node.next
             i += 1
         return result
+
+head = ListNode(1, ListNode(2, ListNode(3)))
+sol = Solution(head)
+print(sol.getRandom())  # 1, 2, or 3 randomly
+print(sol.getRandom())  # 1, 2, or 3 randomly
