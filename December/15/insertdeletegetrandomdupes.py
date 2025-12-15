@@ -33,3 +33,10 @@ class RandomizedCollection:
     def getRandom(self) -> int:
         return random.choice(self.values)
 
+rc = RandomizedCollection()
+print(rc.insert(1))  # True
+print(rc.insert(1))  # False
+print(rc.insert(2))  # True
+print(rc.getRandom()) # 1 or 2 (1 has higher probability)
+print(rc.remove(1))  # True
+print(rc.getRandom()) # 1 or 2
