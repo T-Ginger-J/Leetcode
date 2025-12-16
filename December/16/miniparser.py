@@ -54,3 +54,20 @@ class Solution:
                     stack[-1].add(ni)
         return stack[0]
     
+s = "[123,[456,[789]]]"
+sol = Solution()
+ni = sol.deserialize(s)
+
+# Example function to print NestedInteger
+def printNestedInteger(ni):
+    if ni.isInteger():
+        print(ni.getInteger(), end='')
+    else:
+        print('[', end='')
+        for i, n in enumerate(ni.getList()):
+            if i > 0: print(',', end='')
+            printNestedInteger(n)
+        print(']', end='')
+
+printNestedInteger(ni)  # Output: [123,[456,[789]]]
+
