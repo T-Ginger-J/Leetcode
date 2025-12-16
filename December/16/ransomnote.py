@@ -15,3 +15,7 @@ class Solution:
                 return False
             count[ch] -= 1
         return True
+
+print(Solution().canConstruct("a", "b"))         # Output: False
+print(Solution().canConstruct("aa", "ab"))       # Output: False
+print(Solution().canConstruct("aa", "aab"))      # Output: True
