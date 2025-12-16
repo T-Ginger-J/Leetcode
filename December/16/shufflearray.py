@@ -21,3 +21,9 @@ class Solution:
             j = random.randint(0, i)
             shuffled[i], shuffled[j] = shuffled[j], shuffled[i]
         return shuffled
+
+nums = [1,2,3]
+sol = Solution(nums)
+print(sol.shuffle())  # Random permutation, e.g., [3,1,2]
+print(sol.reset())    # Original array: [1,2,3]
+print(sol.shuffle())  # Another random permutation
