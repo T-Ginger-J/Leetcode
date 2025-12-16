@@ -1,3 +1,10 @@
+# LeetCode 385: Mini Parser
+# Explanation:
+# 1. Use stack to keep track of NestedInteger objects.
+# 2. Handle digits, negative signs, '[' and ']' carefully.
+# Time Complexity: O(n)
+# Space Complexity: O(d)
+
 class NestedInteger:
     def __init__(self, val=None):
         self.integer = val
