@@ -1,3 +1,10 @@
+# LeetCode 384: Shuffle an Array
+# Explanation:
+# 1. Store original array.
+# 2. Shuffle using Fisher-Yates algorithm.
+# Time Complexity: O(n)
+# Space Complexity: O(n)
+
 import random
 
 class Solution:
