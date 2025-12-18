@@ -1,3 +1,10 @@
+# LeetCode 390: Elimination Game
+# Explanation:
+# 1. Track head, step, remaining, direction
+# 2. Update head according to rules
+# Time Complexity: O(log n)
+# Space Complexity: O(1)
+
 class Solution:
     def lastRemaining(self, n: int) -> int:
         head = 1
