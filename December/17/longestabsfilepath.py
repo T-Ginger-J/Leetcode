@@ -18,3 +18,8 @@ class Solution:
                 path_len[depth + 1] = path_len[depth] + len(name) + 1  # +1 for '/'
         return max_len
 
+input1 = "dir\n\tsubdir1\n\tsubdir2\n\t\tfile.ext"
+print(Solution().lengthLongestPath(input1))  # Output: 20 ("dir/subdir2/file.ext")
+
+input2 = "a"
+print(Solution().lengthLongestPath(input2))  # Output: 0 (no file)
