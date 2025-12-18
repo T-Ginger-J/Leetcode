@@ -1,3 +1,11 @@
+# LeetCode 391: Perfect Rectangle
+# Explanation:
+# 1. Sum areas of all small rectangles
+# 2. Track corners using a set
+# 3. Check total area and final corners
+# Time Complexity: O(n)
+# Space Complexity: O(n)
+
 class Solution:
     def isRectangleCover(self, rectangles: list[list[int]]) -> bool:
         min_x = min_y = float('inf')
