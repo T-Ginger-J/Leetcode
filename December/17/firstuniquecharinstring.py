@@ -14,3 +14,7 @@ class Solution:
             if count[ch] == 1:
                 return i
         return -1
+
+print(Solution().firstUniqChar("leetcode"))  # Output: 0 ('l' is first unique)
+print(Solution().firstUniqChar("loveleetcode"))  # Output: 2 ('v' is first unique)
+print(Solution().firstUniqChar("aabb"))  # Output: -1 (no unique char)
