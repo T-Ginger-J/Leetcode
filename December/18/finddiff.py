@@ -11,3 +11,7 @@ class Solution:
         for ch in s + t:
             res ^= ord(ch)
         return chr(res)
+
+print(Solution().findTheDifference("abcd", "abcde"))  # Output: "e"
+print(Solution().findTheDifference("", "y"))         # Output: "y"
+print(Solution().findTheDifference("a", "aa"))       # Output: "a"
