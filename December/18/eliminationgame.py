@@ -20,3 +20,8 @@ class Solution:
             left_to_right = not left_to_right
 
         return head
+
+print(Solution().lastRemaining(9))   # Output: 6
+print(Solution().lastRemaining(1))   # Output: 1
+print(Solution().lastRemaining(10))  # Output: 8
+
