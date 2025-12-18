@@ -31,3 +31,9 @@ class Solution:
             return False
 
         return total_area == (max_x - min_x) * (max_y - min_y)
+
+rectangles = [[1,1,3,3],[3,1,4,2],[3,2,4,4],[1,3,2,4],[2,3,3,4]]
+print(Solution().isRectangleCover(rectangles))  # Output: True
+
+rectangles2 = [[1,1,2,3],[1,3,2,4],[3,1,4,2],[3,2,4,4]]
+print(Solution().isRectangleCover(rectangles2))  # Output: False
