@@ -1,3 +1,9 @@
+# LeetCode 386: Lexicographical Numbers
+# Explanation:
+# 1. Use DFS to generate numbers in lex order.
+# Time Complexity: O(n)
+# Space Complexity: O(log n) recursion
+
 class Solution:
     def lexicalOrder(self, n: int) -> list[int]:
         res = []
