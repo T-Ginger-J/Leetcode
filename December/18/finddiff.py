@@ -1,3 +1,10 @@
+# LeetCode 389: Find the Difference
+# Explanation:
+# 1. XOR all characters in s and t.
+# 2. The result is the extra character.
+# Time Complexity: O(n)
+# Space Complexity: O(1)
+
 class Solution:
     def findTheDifference(self, s: str, t: str) -> str:
         res = 0
