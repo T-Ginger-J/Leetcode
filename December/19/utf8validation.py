@@ -1,3 +1,10 @@
+# LeetCode 393: UTF-8 Validation
+# Explanation:
+# 1. Use bit masks to check byte patterns
+# 2. Track number of continuation bytes needed
+# Time Complexity: O(n)
+# Space Complexity: O(1)
+
 class Solution:
     def validUtf8(self, data: list[int]) -> bool:
         remaining = 0
