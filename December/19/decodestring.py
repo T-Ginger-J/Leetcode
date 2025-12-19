@@ -1,3 +1,10 @@
+# LeetCode 394: Decode String
+# Explanation:
+# 1. Use stack to track counts and current strings
+# 2. Build decoded string iteratively
+# Time Complexity: O(n * k_max)
+# Space Complexity: O(n)
+
 class Solution:
     def decodeString(self, s: str) -> str:
         stack = []
