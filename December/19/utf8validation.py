@@ -23,3 +23,7 @@ class Solution:
                     return False
                 remaining -= 1
         return remaining == 0
+
+print(Solution().validUtf8([197,130,1]))       # Output: True ([110xxxxx 10xxxxxx 1])
+print(Solution().validUtf8([235,140,4]))       # Output: False
+print(Solution().validUtf8([0]))               # Output: True
