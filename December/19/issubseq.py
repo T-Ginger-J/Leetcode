@@ -13,3 +13,6 @@ class Solution:
                 i += 1
         return i == len(s)
 
+print(Solution().isSubsequence("abc", "ahbgdc"))  # Output: True
+print(Solution().isSubsequence("axc", "ahbgdc"))  # Output: False
+print(Solution().isSubsequence("", "ahbgdc"))     # Output: True
