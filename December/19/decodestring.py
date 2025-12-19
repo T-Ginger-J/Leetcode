@@ -24,3 +24,7 @@ class Solution:
                 curr_str += ch
         return curr_str
     
+print(Solution().decodeString("3[a]2[bc]"))       # Output: "aaabcbc"
+print(Solution().decodeString("3[a2[c]]"))        # Output: "accaccacc"
+print(Solution().decodeString("2[abc]3[cd]ef"))   # Output: "abcabccdcdcdef"
+
