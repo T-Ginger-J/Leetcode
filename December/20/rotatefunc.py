@@ -1,3 +1,11 @@
+# LeetCode 396: Rotate Function
+# Explanation:
+# 1. Compute F(0) and total sum
+# 2. Use F(k+1) = F(k) + sum - n * nums[n-k-1]
+# 3. Track max value
+# Time Complexity: O(n)
+# Space Complexity: O(1)
+
 class Solution:
     def maxRotateFunction(self, nums: list[int]) -> int:
         n = len(nums)
