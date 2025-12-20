@@ -18,3 +18,7 @@ class Solution:
                     n += 1
             steps += 1
         return steps
+
+print(Solution().integerReplacement(8))   # Output: 3
+print(Solution().integerReplacement(7))   # Output: 4
+print(Solution().integerReplacement(3))   # Output: 2
