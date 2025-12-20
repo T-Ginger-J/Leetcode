@@ -1,3 +1,10 @@
+# LeetCode 397: Integer Replacement
+# Explanation:
+# 1. Divide by 2 if even
+# 2. For odd, decide to increment or decrement based on last 2 bits
+# Time Complexity: O(log n)
+# Space Complexity: O(1)
+
 class Solution:
     def integerReplacement(self, n: int) -> int:
         steps = 0
