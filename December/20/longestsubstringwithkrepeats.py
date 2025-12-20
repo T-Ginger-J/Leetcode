@@ -17,3 +17,6 @@ class Solution:
                 return max(self.longestSubstring(sub, k) for sub in s.split(ch))
         return len(s)
 
+print(Solution().longestSubstring("aaabb", 3))       # Output: 3 ("aaa")
+print(Solution().longestSubstring("ababbc", 2))      # Output: 5 ("ababb")
+print(Solution().longestSubstring("ababacb", 3))     # Output: 0
