@@ -1,3 +1,10 @@
+# LeetCode 395: Longest Substring with At Least K Repeating Characters
+# Explanation:
+# 1. Split string at chars that appear less than k times
+# 2. Recursively find the max length in each segment
+# Time Complexity: O(n)
+# Space Complexity: O(26) recursion
+
 from collections import Counter
 
 class Solution:
