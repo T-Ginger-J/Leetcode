@@ -16,3 +16,6 @@ class Solution:
             F = F + sum_nums - n * nums[i]
             max_val = max(max_val, F)
         return max_val
+
+print(Solution().maxRotateFunction([4,3,2,6]))  # Output: 26
+print(Solution().maxRotateFunction([1,2,3,4,5])) # Output: 40
