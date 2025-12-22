@@ -21,3 +21,7 @@ class Solution:
                 if random.randint(1, count) == 1:
                     res = i
         return res
+nums = [1,2,3,3,3]
+solution = Solution(nums)
+print(solution.pick(3))  # Randomly returns 2, 3, or 4
+print(solution.pick(1))  # Returns 0
