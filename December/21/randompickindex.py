@@ -21,6 +21,17 @@ class Solution:
                 if random.randint(1, count) == 1:
                     res = i
         return res
+    
+class SolutionPreprocess:
+    def __init__(self, nums: list[int]):
+        self.indices = defaultdict(list)
+        for i, num in enumerate(nums):
+            self.indices[num].append(i)
+
+    def pick(self, target: int) -> int:
+        # pick a random index from the list
+        return random.choice(self.indices[target])
+
 nums = [1,2,3,3,3]
 solution = Solution(nums)
 print(solution.pick(3))  # Randomly returns 2, 3, or 4
