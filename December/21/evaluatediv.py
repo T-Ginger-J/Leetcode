@@ -1,3 +1,10 @@
+# LeetCode 399: Evaluate Division
+# Explanation:
+# 1. Build a graph of variables and division values
+# 2. DFS to evaluate each query
+# Time Complexity: O(Q * N)
+# Space Complexity: O(N + E)
+
 from collections import defaultdict
 
 class Solution:
