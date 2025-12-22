@@ -21,3 +21,7 @@ class Solution:
         num = start + (n - 1) // digits
         num_str = str(num)
         return int(num_str[(n - 1) % digits])
+
+print(Solution().findNthDigit(3))   # Output: 3
+print(Solution().findNthDigit(11))  # Output: 0
+print(Solution().findNthDigit(15))  # Output: 2
