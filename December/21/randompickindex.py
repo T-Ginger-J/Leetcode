@@ -1,3 +1,10 @@
+# LeetCode 398: Random Pick Index
+# Explanation:
+# 1. Use reservoir sampling to pick index of target randomly
+# 2. Iterate through array, replace answer with probability 1/count
+# Time Complexity: O(n) per pick
+# Space Complexity: O(1)
+
 import random
 from collections import defaultdict
 
