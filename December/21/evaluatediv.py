@@ -33,3 +33,9 @@ class Solution:
             results.append(dfs(X, Y, set()))
         return results
 
+equations = [["a","b"], ["b","c"]]
+values = [2.0, 3.0]
+queries = [["a","c"], ["b","a"], ["a","e"], ["a","a"], ["x","x"]]
+
+print(Solution().calcEquation(equations, values, queries))
+# Output: [6.0, 0.5, -1.0, 1.0, -1.0]
