@@ -1,3 +1,11 @@
+# LeetCode 401: Binary Watch
+# Explanation:
+# 1. Iterate over all possible hours (0-11) and minutes (0-59)
+# 2. Count the number of 1s in binary
+# 3. If total equals turnedOn, add to result
+# Time Complexity: O(12*60)
+# Space Complexity: O(1) extra
+
 class Solution:
     def readBinaryWatch(self, turnedOn: int) -> list[str]:
         res = []
