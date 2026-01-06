@@ -21,3 +21,7 @@ class Solution:
         # Build number and remove leading zeros
         result = ''.join(stack).lstrip('0')
         return result if result else "0"
+
+print(Solution().removeKdigits("1432219", 3))  # Output: "1219"
+print(Solution().removeKdigits("10200", 1))    # Output: "200"
+print(Solution().removeKdigits("10", 2))       # Output: "0"
