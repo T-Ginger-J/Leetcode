@@ -16,3 +16,9 @@ class Solution:
                     if step > 0 and (stone + step) in stone_set:
                         dp[stone + step].add(step)
         return len(dp[stones[-1]]) > 0
+
+stones1 = [0,1,3,5,6,8,12,17]
+stones2 = [0,1,2,3,4,8,9,11]
+
+print(Solution().canCross(stones1))  # Output: True
+print(Solution().canCross(stones2))  # Output: False
