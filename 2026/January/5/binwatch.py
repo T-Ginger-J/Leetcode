@@ -14,3 +14,6 @@ class Solution:
                 if (bin(h) + bin(m)).count('1') == turnedOn:
                     res.append(f"{h}:{m:02d}")
         return res
+
+print(Solution().readBinaryWatch(1))
+# Output: ['0:01','0:02','0:04','0:08','0:16','0:32','1:00','2:00','4:00','8:00']
