@@ -26,3 +26,11 @@ class Solution:
             else:
                 left = mid + 1
         return left
+
+nums = [7,2,5,10,8]
+m = 2
+print(Solution().splitArray(nums, m))  # Output: 18
+
+nums = [1,2,3,4,5]
+m = 2
+print(Solution().splitArray(nums, m))  # Output: 9
