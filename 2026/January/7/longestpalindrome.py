@@ -1,3 +1,10 @@
+# LeetCode 409: Longest Palindrome
+# Explanation:
+# 1. Count character frequencies
+# 2. Use all even counts, for odd counts use count-1
+# 3. Add 1 if any odd exists for the center
+# Time Complexity: O(n)
+# Space Complexity: O(1)
 
 from collections import Counter
 
