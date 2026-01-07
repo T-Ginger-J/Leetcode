@@ -21,3 +21,10 @@ class Solution:
         total += self.sumOfLeftLeaves(root.left)
         total += self.sumOfLeftLeaves(root.right)
         return total
+
+# Build the example tree
+root = TreeNode(3)
+root.left = TreeNode(9)
+root.right = TreeNode(20, TreeNode(15), TreeNode(7))
+
+print(Solution().sumOfLeftLeaves(root))  # Output: 24
