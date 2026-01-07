@@ -18,3 +18,7 @@ class Solution:
             res = hex_chars[num & 0xf] + res
             num >>= 4
         return res
+
+print(Solution().toHex(26))    # Output: "1a"
+print(Solution().toHex(-1))    # Output: "ffffffff"
+print(Solution().toHex(0))     # Output: "0"
