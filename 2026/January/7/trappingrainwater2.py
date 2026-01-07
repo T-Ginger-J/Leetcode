@@ -1,3 +1,11 @@
+# LeetCode 407: Trapping Rain Water II
+# Explanation:
+# 1. Use priority queue with all boundary cells
+# 2. Pop lowest height, update neighbors
+# 3. Water trapped = max(0, height_boundary - neighbor_height)
+# Time Complexity: O(m*n log(m*n))
+# Space Complexity: O(m*n)
+
 import heapq
 
 class Solution:
