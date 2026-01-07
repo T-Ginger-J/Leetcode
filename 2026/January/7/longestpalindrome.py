@@ -20,3 +20,8 @@ class Solution:
                 length += c - 1
                 odd_found = True
         return length + 1 if odd_found else length
+        
+print(Solution().longestPalindrome("abccccdd"))  # Output: 7
+print(Solution().longestPalindrome("a"))         # Output: 1
+print(Solution().longestPalindrome("bb"))        # Output: 2
+
