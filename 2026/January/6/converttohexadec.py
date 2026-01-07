@@ -1,3 +1,11 @@
+# LeetCode 405: Convert a Number to Hexadecimal
+# Explanation:
+# 1. Handle negative numbers with two's complement
+# 2. Mask last 4 bits repeatedly
+# 3. Map to hex characters
+# Time Complexity: O(1)
+# Space Complexity: O(1)
+
 class Solution:
     def toHex(self, num: int) -> str:
         if num == 0:
