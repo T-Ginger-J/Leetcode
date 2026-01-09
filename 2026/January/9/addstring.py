@@ -1,3 +1,11 @@
+# LeetCode 415: Add Strings
+# Explanation:
+# 1. Start from end of both strings
+# 2. Add digits with carry
+# 3. Reverse result at the end
+# Time Complexity: O(max(n, m))
+# Space Complexity: O(max(n, m))
+
 class Solution:
     def addStrings(self, num1: str, num2: str) -> str:
         i, j = len(num1) - 1, len(num2) - 1
