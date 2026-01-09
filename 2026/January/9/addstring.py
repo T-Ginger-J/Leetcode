@@ -20,3 +20,7 @@ class Solution:
             i -= 1
             j -= 1
         return ''.join(res[::-1])
+
+print(Solution().addStrings("11", "123"))   # Output: "134"
+print(Solution().addStrings("456", "77"))   # Output: "533"
+print(Solution().aaddStrings("0", "0"))      # Output: "0"
