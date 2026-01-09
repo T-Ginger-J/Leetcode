@@ -1,3 +1,10 @@
+# LeetCode 412: Fizz Buzz
+# Explanation:
+# 1. Iterate from 1 to n
+# 2. Check multiples of 3 and 5
+# Time Complexity: O(n)
+# Space Complexity: O(n)
+
 class Solution:
     def fizzBuzz(self, n: int) -> list[str]:
         res = []
