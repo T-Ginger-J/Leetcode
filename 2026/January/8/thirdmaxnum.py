@@ -19,3 +19,7 @@ class Solution:
             elif third is None or num > third:
                 third = num
         return third if third is not None else first
+
+print(Solution().thirdMax([3,2,1]))     # Output: 1
+print(Solution().thirdMax([1,2]))       # Output: 2
+print(Solution().thirdMax([2,2,3,1]))   # Output: 1
