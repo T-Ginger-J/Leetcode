@@ -1,3 +1,11 @@
+# LeetCode 414: Third Maximum Number
+# Explanation:
+# 1. Track first, second, third maximum distinct numbers
+# 2. Skip duplicates
+# 3. Return third if exists, else first
+# Time Complexity: O(n)
+# Space Complexity: O(1)
+
 class Solution:
     def thirdMax(self, nums: list[int]) -> int:
         first = second = third = None
