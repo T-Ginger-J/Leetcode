@@ -1,3 +1,11 @@
+# LeetCode 417: Pacific Atlantic Water Flow
+# Explanation:
+# 1. DFS from Pacific and Atlantic borders
+# 2. Mark reachable cells
+# 3. Return cells reachable by both oceans
+# Time Complexity: O(m*n)
+# Space Complexity: O(m*n)
+
 class Solution:
     def pacificAtlantic(self, heights: list[list[int]]) -> list[list[int]]:
         if not heights or not heights[0]:
