@@ -18,3 +18,9 @@ class Solution:
                     max_xor = temp
                     break
         return max_xor
+
+nums = [3,10,5,25,2,8]
+print(Solution().findMaximumXOR(nums))  # Output: 28
+
+nums = [0,1]
+print(Solution().findMaximumXOR(nums))  # Output: 1
