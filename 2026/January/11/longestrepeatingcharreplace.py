@@ -29,3 +29,14 @@ class Solution:
         
         return result
 
+# Example 1
+s = "ABAB"
+k = 2
+# Output: 4 (replace two 'A's or 'B's to make all same)
+print(Solution().characterReplacement(s, k))
+
+# Example 2
+s = "AABABBA"
+k = 1
+# Output: 4 ("ABBB" or "AABA")
+print(Solution().characterReplacement(s, k))
