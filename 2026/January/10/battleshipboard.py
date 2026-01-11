@@ -20,3 +20,10 @@ class Solution:
                         continue
                     count += 1
         return count
+
+board = [
+    ["X",".",".","X"],
+    [".",".",".","X"],
+    [".",".",".","X"]
+]
+print(Solution().countBattleships(board))  # Output: 2
