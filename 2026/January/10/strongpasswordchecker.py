@@ -63,3 +63,7 @@ class Solution:
             replace = sum(length // 3 for length in repeats)
             return (n - 20) + max(missing_types, replace)
 
+
+print(Solution().strongPasswordChecker("a"))           # Output: 5
+print(Solution().strongPasswordChecker("aA1"))         # Output: 3
+print(Solution().strongPasswordChecker("1337C0d3"))    # Output: 0
