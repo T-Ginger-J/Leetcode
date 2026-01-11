@@ -1,3 +1,9 @@
+# LeetCode 427: Construct Quad Tree
+# Explanation:
+# 1. Use recursion to build the quadtree.
+# 2. If the current grid section has all same values, create a leaf node.
+# 3. Otherwise, divide the grid into four quadrants and recursively build children.
+
 from typing import List
 
 # Definition for a QuadTree node.
