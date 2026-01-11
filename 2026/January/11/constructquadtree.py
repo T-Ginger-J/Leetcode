@@ -46,3 +46,24 @@ class Solution:
         
         n = len(grid)
         return helper(0, 0, n)
+
+# Example 1
+grid = [
+    [0,1],
+    [1,0]
+]
+# Output: QuadTree with 4 leaf nodes
+root = Solution().construct(grid)
+print(root.isLeaf)  # False
+
+# Example 2
+grid = [
+    [1,1,1,1],
+    [1,1,1,1],
+    [1,1,1,1],
+    [1,1,1,1]
+]
+# Output: Single leaf node
+root = Solution().construct(grid)
+print(root.isLeaf)  # True
+print(root.val)     # True
