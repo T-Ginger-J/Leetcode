@@ -1,3 +1,11 @@
+# LeetCode 420: Strong Password Checker
+# Explanation:
+# 1. Count missing types (lower, upper, digit)
+# 2. Count sequences of repeats and required replacements
+# 3. Handle length <6, 6-20, >20 differently
+# Time Complexity: O(n)
+# Space Complexity: O(1)
+
 class Solution:
     def strongPasswordChecker(self, password: str) -> int:
         n = len(password)
