@@ -1,3 +1,10 @@
+# LeetCode 419: Battleships in a Board
+# Explanation:
+# 1. Scan each cell
+# 2. Count 'X' only if top-left of a battleship
+# Time Complexity: O(m*n)
+# Space Complexity: O(1)
+
 class Solution:
     def countBattleships(self, board: list[list[str]]) -> int:
         if not board or not board[0]:
