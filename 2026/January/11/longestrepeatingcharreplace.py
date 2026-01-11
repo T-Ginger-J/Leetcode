@@ -1,3 +1,12 @@
+# LeetCode 424: Longest Repeating Character Replacement
+# Explanation:
+# 1. Use sliding window technique to maintain a substring where at most k characters 
+#    can be replaced to make all characters the same.
+# 2. Maintain a frequency map of characters in the current window.
+# 3. Track the count of the most frequent character in the window (`max_count`).
+# 4. If current window size minus `max_count` > k, shrink the window from left.
+# 5. Keep updating the maximum window size found.
+
 from collections import Counter
 
 class Solution:
