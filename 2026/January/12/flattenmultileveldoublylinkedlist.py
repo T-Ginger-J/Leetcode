@@ -47,3 +47,26 @@ class Solution:
         dfs(head)
         return head
 
+# Example 1
+# Input: 1 - 2 - 3
+#               |
+#               7 - 8
+# Output: 1 - 2 - 3 - 7 - 8
+n1 = Node(1)
+n2 = Node(2)
+n3 = Node(3)
+n7 = Node(7)
+n8 = Node(8)
+
+n1.next = n2; n2.prev = n1
+n2.next = n3; n3.prev = n2
+n3.child = n7
+n7.next = n8; n8.prev = n7
+
+head = Solution().flatten(n1)
+# Print flattened list
+curr = head
+while curr:
+    print(curr.val, end=" ")
+    curr = curr.next
+# Output: 1 2 3 7 8
