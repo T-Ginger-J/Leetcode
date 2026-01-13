@@ -34,3 +34,12 @@ class Solution:
         
         return result
 
+# Example 1
+root = Node(1, [Node(3, [Node(5), Node(6)]), Node(2), Node(4)])
+# Output: [[1], [3,2,4], [5,6]]
+print(Solution().levelOrder(root))
+
+# Example 2
+root = None
+# Output: []
+print(Solution().levelOrder(root))
