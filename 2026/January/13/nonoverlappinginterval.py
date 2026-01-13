@@ -1,3 +1,9 @@
+# LeetCode 435: Non-overlapping Intervals
+# Explanation:
+# 1. Sort intervals by their end times.
+# 2. Greedily select intervals that do not overlap with the previous selected interval.
+# 3. Count the number of intervals to remove = total - max non-overlapping intervals.
+
 from typing import List
 
 class Solution:
