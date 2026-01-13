@@ -1,3 +1,18 @@
+# LeetCode 432: All O`one Data Structure
+# Explanation:
+# 1. Use a doubly-linked list of buckets to keep track of counts in order.
+# 2. Each bucket contains a set of keys with the same count.
+# 3. Use a dictionary to map keys to their bucket nodes.
+# 4. Increment/decrement operations move keys between buckets.
+# 5. maxKey() and minKey() return any key from the tail or head bucket.
+
+class Bucket:
+    def __init__(self, count):
+        self.count = count
+        self.keys = set()
+        self.prev = None
+        self.next = None
+
 class AllOne:
 
     def __init__(self):
