@@ -1,3 +1,9 @@
+# LeetCode 429: N-ary Tree Level Order Traversal
+# Explanation:
+# 1. Use BFS to traverse the tree level by level.
+# 2. For each level, collect all node values into a list.
+# 3. Append each level's list to the final result.
+
 from collections import deque
 from typing import List
 
