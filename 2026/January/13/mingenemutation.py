@@ -32,3 +32,24 @@ class Solution:
                         queue.append((mutation, steps + 1))
         
         return -1
+
+# Example 1
+start = "AACCGGTT"
+end = "AACCGGTA"
+bank = ["AACCGGTA"]
+# Output: 1
+print(Solution().minMutation(start, end, bank))
+
+# Example 2
+start = "AACCGGTT"
+end = "AAACGGTA"
+bank = ["AACCGGTA", "AACCGCTA", "AAACGGTA"]
+# Output: 2
+print(Solution().minMutation(start, end, bank))
+
+# Example 3
+start = "AAAAACCC"
+end = "AACCCCCC"
+bank = ["AAAACCCC", "AAACCCCC", "AACCCCCC"]
+# Output: 3
+print(Solution().minMutation(start, end, bank))
