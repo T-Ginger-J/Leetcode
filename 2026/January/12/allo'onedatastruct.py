@@ -83,3 +83,17 @@ class AllOne:
     def getMinKey(self) -> str:
         return next(iter(self.head.next.keys)) if self.head.next != self.tail else ""
 
+# Example 1
+ao = AllOne()
+ao.inc("hello")
+ao.inc("hello")
+print(ao.getMaxKey())  # Output: "hello"
+print(ao.getMinKey())  # Output: "hello"
+
+ao.inc("leet")
+print(ao.getMaxKey())  # Output: "hello"
+print(ao.getMinKey())  # Output: "leet"
+
+ao.dec("hello")
+print(ao.getMaxKey())  # Output: "hello"
+print(ao.getMinKey())  # Output: "hello"
