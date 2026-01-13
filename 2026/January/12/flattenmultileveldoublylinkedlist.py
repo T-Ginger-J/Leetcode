@@ -1,3 +1,18 @@
+# LeetCode 430: Flatten a Multilevel Doubly Linked List
+# Explanation:
+# 1. Use DFS to traverse nodes recursively.
+# 2. If a node has a child, flatten the child list and insert it between the node and node.next.
+# 3. Keep track of the tail of the flattened child list to connect back to the main list.
+# 4. Set child pointers to None after flattening.
+
+# Definition for a Node.
+class Node:
+    def __init__(self, val, prev=None, next=None, child=None):
+        self.val = val
+        self.prev = prev
+        self.next = next
+        self.child = child
+
 class Solution:
     def flatten(self, head: 'Node') -> 'Node':
         if not head:
