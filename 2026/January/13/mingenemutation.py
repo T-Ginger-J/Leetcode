@@ -1,3 +1,9 @@
+# LeetCode 433: Minimum Genetic Mutation
+# Explanation:
+# 1. Use BFS to find the shortest path from start to end, changing one character at a time.
+# 2. Only valid mutations in the bank are allowed.
+# 3. Track visited sequences to avoid cycles.
+
 from collections import deque
 
 class Solution:
