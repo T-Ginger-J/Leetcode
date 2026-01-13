@@ -19,3 +19,19 @@ class Solution:
             elif char == ' ':
                 in_segment = False
         return count
+    
+# Example 1
+s = "Hello, my name is John"
+# Output: 5
+print(Solution().countSegments(s))
+
+# Example 2
+s = "   Hello   world  "
+# Output: 2
+print(Solution().countSegments(s))
+
+# Example 3
+s = ""
+# Output: 0
+print(Solution().countSegments(s))
+ 
