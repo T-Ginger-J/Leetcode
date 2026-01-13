@@ -1,3 +1,9 @@
+# LeetCode 434: Number of Segments in a String
+# Explanation:
+# 1. A segment is defined as a contiguous sequence of non-space characters.
+# 2. Split the string by spaces and count non-empty strings.
+# 3. Alternatively, iterate through the string and count transitions from space to non-space.
+
 class Solution:
     def countSegments(self, s: str) -> int:
         # Split by spaces and filter out empty strings
