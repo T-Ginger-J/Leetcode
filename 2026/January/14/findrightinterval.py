@@ -21,3 +21,18 @@ class Solution:
                 result[i] = starts[idx][1]
         
         return result
+
+# Example 1
+intervals = [[1,2]]
+# Output: [-1] (no interval with start >= 2)
+print(Solution().findRightInterval(intervals))
+
+# Example 2
+intervals = [[3,4],[2,3],[1,2]]
+# Output: [-1, 0, 1]
+print(Solution().findRightInterval(intervals))
+
+# Example 3
+intervals = [[1,4],[2,3],[3,4]]
+# Output: [-1, 2, -1]
+print(Solution().findRightInterval(intervals))
