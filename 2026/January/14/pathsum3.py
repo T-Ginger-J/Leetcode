@@ -1,3 +1,9 @@
+# LeetCode 437: Path Sum III
+# Explanation:
+# 1. Count the number of paths in a binary tree that sum to a target value.
+# 2. Paths must go downward but can start and end anywhere.
+# 3. Use DFS with a prefix sum hash map to track cumulative sums efficiently.
+
 from typing import Optional
 from collections import defaultdict
 
