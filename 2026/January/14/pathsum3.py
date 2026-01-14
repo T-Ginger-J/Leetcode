@@ -34,3 +34,16 @@ class Solution:
         dfs(root, 0)
         return count
 
+# Example 1
+root = TreeNode(10, 
+                TreeNode(5, TreeNode(3, TreeNode(3), TreeNode(-2)), TreeNode(2, None, TreeNode(1))),
+                TreeNode(-3, None, TreeNode(11)))
+target = 8
+# Output: 3
+print(Solution().pathSum(root, target))
+
+# Example 2
+root = TreeNode(1)
+target = 0
+# Output: 0
+print(Solution().pathSum(root, target))
