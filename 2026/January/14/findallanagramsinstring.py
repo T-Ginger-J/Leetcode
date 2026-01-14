@@ -33,3 +33,14 @@ class Solution:
         
         return result
 
+# Example 1
+s = "cbaebabacd"
+p = "abc"
+# Output: [0, 6]
+print(Solution().findAnagrams(s, p))
+
+# Example 2
+s = "abab"
+p = "ab"
+# Output: [0, 1, 2]
+print(Solution().findAnagrams(s, p))
