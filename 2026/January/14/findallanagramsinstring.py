@@ -1,3 +1,9 @@
+# LeetCode 438: Find All Anagrams in a String
+# Explanation:
+# 1. Use sliding window of length equal to the pattern `p`.
+# 2. Maintain frequency counts of characters in the window.
+# 3. Compare window frequency with pattern frequency to find anagrams.
+
 from typing import List
 from collections import Counter
 
