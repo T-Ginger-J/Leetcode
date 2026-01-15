@@ -32,3 +32,21 @@ private:
         return steps;
     }
 };
+
+int main() {
+    Solution sol;
+
+    // Example 1: Small n, small k
+    cout << sol.findKthNumber(13, 2) << endl;
+    // Expected output: 10
+
+    // Example 2: k points to the last element
+    cout << sol.findKthNumber(20, 20) << endl;
+    // Expected output: 9
+
+    // Example 3: n crosses a power-of-10 boundary
+    cout << sol.findKthNumber(100, 90) << endl;
+    // Expected output: 9
+
+    return 0;
+}
