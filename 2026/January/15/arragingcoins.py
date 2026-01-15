@@ -45,3 +45,15 @@ class Solution:
             else:
                 right = mid - 1
         return right
+
+
+# Additional Examples (Edge Cases and Non-LeetCode Examples)
+
+# Example 1: No coins
+print(Solution().arrangeCoins(0))   # Expected: 0
+
+# Example 2: Exact triangular number
+print(Solution().arrangeCoins(6))   # Expected: 3
+
+# Example 3: Large n with leftover coins
+print(Solution().arrangeCoins(8))   # Expected: 3
