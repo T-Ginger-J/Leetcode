@@ -36,3 +36,30 @@ public:
         return res;
     }
 };
+
+int main() {
+    Solution sol;
+
+    // Example 1: Multiple duplicates
+    vector<int> nums1 = {4,3,2,7,8,2,3,1};
+    vector<int> res1 = sol.findDuplicates(nums1);
+    for(int x : res1) cout << x << " "; 
+    cout << endl;
+    // Expected output: 2 3
+
+    // Example 2: Single duplicate
+    vector<int> nums2 = {1,1,2};
+    vector<int> res2 = sol.findDuplicates(nums2);
+    for(int x : res2) cout << x << " ";
+    cout << endl;
+    // Expected output: 1
+
+    // Example 3: No duplicates
+    vector<int> nums3 = {1,2,3,4,5};
+    vector<int> res3 = sol.findDuplicates(nums3);
+    for(int x : res3) cout << x << " ";
+    cout << endl;
+    // Expected output: (empty)
+    
+    return 0;
+}
