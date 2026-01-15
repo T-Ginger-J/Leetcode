@@ -50,3 +50,14 @@ class Solution:
 
         return curr
 
+
+# Additional Examples (Edge Cases and Non-LeetCode Examples)
+
+# Example 1: Small n, small k
+print(Solution().findKthNumber(13, 2))   # Expected: 10
+
+# Example 2: k points to last element
+print(Solution().findKthNumber(20, 20))  # Expected: 9
+
+# Example 3: n is a power of 10 boundary
+print(Solution().findKthNumber(100, 90)) # Expected: 9
