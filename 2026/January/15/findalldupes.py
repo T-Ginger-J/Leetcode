@@ -23,3 +23,19 @@ class Solution:
             else:
                 nums[index] = -nums[index]
         return res
+
+# Additional Examples (Edge Cases and Non-LeetCode Examples)
+
+sol = Solution()
+
+# Example 1: Multiple duplicates
+print(sol.findDuplicates([4,3,2,7,8,2,3,1]))  
+# Expected output: [2, 3]
+
+# Example 2: Single duplicate
+print(sol.findDuplicates([1,1,2]))  
+# Expected output: [1]
+
+# Example 3: No duplicates
+print(sol.findDuplicates([1,2,3,4,5]))  
+# Expected output: []
