@@ -1,3 +1,22 @@
+# LeetCode 445: Add Two Numbers II
+# Explanation:
+# Given two non-empty linked lists representing two non-negative integers,
+# digits are stored in **forward order** (most significant digit first).
+# Return a linked list representing their sum, also in forward order.
+#
+# Method 1: Stack-Based (Optimal)
+# - Push all digits of both lists onto stacks.
+# - Pop from stacks to add digits from least significant to most significant.
+# - Handle carry and build the result list from head.
+#
+# Time Complexity: O(max(m, n)), where m and n are lengths of the lists
+# Space Complexity: O(m + n) (for stacks)
+
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
 class Solution:
     def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
         stack1, stack2 = [], []
