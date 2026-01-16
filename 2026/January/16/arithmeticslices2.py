@@ -33,3 +33,24 @@ class Solution:
                 total += count  # Only subsequences of length >= 3 are counted
         
         return total
+
+# Additional Examples (Edge Cases and Non-LeetCode Examples)
+
+sol = Solution()
+
+# Example 1: Simple arithmetic sequence
+nums1 = [2,4,6,8,10]
+print(sol.numberOfArithmeticSlices(nums1))  
+# Expected output: 7
+# (subsequences: [2,4,6], [4,6,8], [6,8,10], [2,4,6,8], [4,6,8,10], [2,4,6,8,10], [2,6,10])
+
+# Example 2: No arithmetic subsequences
+nums2 = [1,2,4]
+print(sol.numberOfArithmeticSlices(nums2))  
+# Expected output: 0
+
+# Example 3: Negative differences
+nums3 = [7,4,1,-2]
+print(sol.numberOfArithmeticSlices(nums3))  
+# Expected output: 3
+# ([7,4,1], [4,1,-2], [7,4,1,-2])
