@@ -1,3 +1,21 @@
+# LeetCode 446: Arithmetic Slices II - Subsequence
+# Explanation:
+# Given an integer array nums, count the number of **arithmetic subsequences** of length >= 3.
+# - A subsequence can be non-contiguous.
+# - An arithmetic subsequence has a constant difference between consecutive elements.
+#
+# Method 1: Dynamic Programming with Hashmaps (Optimal)
+# - For each index i, keep a hashmap dp[i] mapping:
+#     difference -> count of subsequences ending at i with this difference (length >= 2)
+# - For each pair (i, j) with j < i:
+#     - diff = nums[i] - nums[j]
+#     - If dp[j] has sequences with this diff, extend them by nums[i]
+#     - Update dp[i][diff] accordingly
+# - Only count sequences of length >= 3 (subtract sequences of length 2)
+#
+# Time Complexity: O(n^2)
+# Space Complexity: O(n^2)
+
 from typing import List
 from collections import defaultdict
 
