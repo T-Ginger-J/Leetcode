@@ -39,3 +39,35 @@ class Solution:
             head = node
         return head
 
+# Helper function to print linked list
+def print_list(node):
+    res = []
+    while node:
+        res.append(node.val)
+        node = node.next
+    print(res)
+
+# Additional Examples (Edge Cases and Non-LeetCode Examples)
+
+sol = Solution()
+
+# Example 1: Same length
+l1 = ListNode(7, ListNode(2, ListNode(4, ListNode(3))))
+l2 = ListNode(5, ListNode(6, ListNode(4)))
+res1 = sol.addTwoNumbers(l1, l2)
+print_list(res1)
+# Expected output: [7, 8, 0, 7]  (7243 + 564 = 7807)
+
+# Example 2: Different lengths, with carry
+l3 = ListNode(9, ListNode(9))
+l4 = ListNode(1)
+res2 = sol.addTwoNumbers(l3, l4)
+print_list(res2)
+# Expected output: [1, 0, 0]  (99 + 1 = 100)
+
+# Example 3: Single node lists
+l5 = ListNode(0)
+l6 = ListNode(0)
+res3 = sol.addTwoNumbers(l5, l6)
+print_list(res3)
+# Expected output: [0]
