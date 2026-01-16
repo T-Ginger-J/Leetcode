@@ -39,3 +39,25 @@ class Solution:
                     write += 1
                     
         return write
+
+# Additional Examples (Edge Cases and Non-LeetCode Examples)
+
+sol = Solution()
+
+# Example 1: Simple repeat
+chars1 = ["a","a","b","b","c","c","c"]
+length1 = sol.compress(chars1)
+print(length1, chars1[:length1])  
+# Expected output: 6, ["a","2","b","2","c","3"]
+
+# Example 2: Single characters only
+chars2 = ["a","b","c"]
+length2 = sol.compress(chars2)
+print(length2, chars2[:length2])  
+# Expected output: 3, ["a","b","c"]
+
+# Example 3: Long repeat count
+chars3 = ["a"] * 12
+length3 = sol.compress(chars3)
+print(length3, chars3[:length3])  
+# Expected output: 3, ["a","1","2"]
