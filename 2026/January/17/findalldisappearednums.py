@@ -20,3 +20,23 @@ class Solution:
             index = abs(nums[i]) - 1
             nums[index] = -abs(nums[index])
         return [i + 1 for i, num in enumerate(nums) if num > 0]
+
+# Additional Examples (Edge Cases and Non-LeetCode Examples)
+
+sol = Solution()
+
+# Example 1: Missing multiple numbers
+nums1 = [4,3,2,7,8,2,3,1]
+print(sol.findDisappearedNumbers(nums1))
+# Expected output: [5,6]
+
+# Example 2: No missing numbers
+nums2 = [1,2,3,4,5]
+print(sol.findDisappearedNumbers(nums2))
+# Expected output: []
+
+# Example 3: All numbers missing except one
+nums3 = [2,2,2,2]
+print(sol.findDisappearedNumbers(nums3))
+# Expected output: [1,3,4]
+
