@@ -33,3 +33,23 @@ public:
     }
 };
 
+int main() {
+    Solution sol;
+
+    // Example 1: Simple line
+    vector<vector<int>> points1 = {{0,0},{1,0},{2,0}};
+    cout << sol.numberOfBoomerangs(points1) << endl;  
+    // Expected output: 2
+
+    // Example 2: Square points
+    vector<vector<int>> points2 = {{0,0},{1,0},{0,1},{1,1}};
+    cout << sol.numberOfBoomerangs(points2) << endl;  
+    // Expected output: 8
+
+    // Example 3: Single point
+    vector<vector<int>> points3 = {{0,0}};
+    cout << sol.numberOfBoomerangs(points3) << endl;  
+    // Expected output: 0
+
+    return 0;
+}
