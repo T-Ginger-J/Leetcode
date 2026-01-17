@@ -1,4 +1,23 @@
+# LeetCode 449: Serialize and Deserialize BST
+# Explanation:
+# Implement a codec to serialize and deserialize a Binary Search Tree (BST).
+# - Serialization: convert BST to a string
+# - Deserialization: reconstruct BST from the string
+#
+# Method 1: Preorder Traversal with Bounds (Optimal for BST)
+# - Serialize: preorder traversal with space-separated values
+# - Deserialize: use BST property with min/max bounds for placement
+#
+# Time Complexity: O(n)
+# Space Complexity: O(n) (recursion stack + string storage)
+
 from typing import Optional
+
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
 
 class Codec:
     def serialize(self, root: Optional[TreeNode]) -> str:
