@@ -32,3 +32,23 @@ class Solution:
             for count in dist_count.values():
                 res += count * (count - 1)
         return res
+
+# Additional Examples (Edge Cases and Non-LeetCode Examples)
+
+sol = Solution()
+
+# Example 1: Simple square
+points1 = [[0,0],[1,0],[2,0]]
+print(sol.numberOfBoomerangs(points1))  
+# Expected output: 2
+# (Boomerangs: (1,0,2) and (1,2,0))
+
+# Example 2: All points at same distance
+points2 = [[0,0],[1,0],[0,1],[1,1]]
+print(sol.numberOfBoomerangs(points2))  
+# Expected output: 8
+
+# Example 3: Only one point
+points3 = [[0,0]]
+print(sol.numberOfBoomerangs(points3))  
+# Expected output: 0
