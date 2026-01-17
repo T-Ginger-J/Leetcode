@@ -1,3 +1,19 @@
+# LeetCode 447: Number of Boomerangs
+# Explanation:
+# Given n points in the plane, a "boomerang" is a tuple (i, j, k)
+# such that distance(i, j) == distance(i, k) and i, j, k are distinct.
+# Goal: count all boomerangs.
+#
+# Method 1: Hashmap Counting (Optimal)
+# - For each point i:
+#     1. Compute distances to all other points j.
+#     2. Use a hashmap to count how many points are at each distance.
+#     3. For each distance with count c, it contributes c * (c - 1) boomerangs
+#        (permutations of j and k)
+#
+# Time Complexity: O(n^2)
+# Space Complexity: O(n) (for hashmap per point)
+
 from typing import List
 from collections import defaultdict
 
