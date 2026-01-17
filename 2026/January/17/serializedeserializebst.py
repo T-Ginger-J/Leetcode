@@ -51,3 +51,21 @@ class Codec:
             return node
         
         return build(float('-inf'), float('inf'))
+
+# Helper function to print inorder traversal
+def inorder(node):
+    return inorder(node.left) + [node.val] + inorder(node.right) if node else []
+
+# Additional Examples (Edge Cases and Non-LeetCode Examples)
+
+codec = Codec()
+
+# Example 1: Simple BST
+root1 = TreeNode(2, TreeNode(1), TreeNode(3))
+data1 = codec.serialize(root1)
+print(data1)               # Expected output: "2 1 3"
+print(inorder(codec.deserialize(data1)))  # Expected: [1,2,3]
+
+# Example 2: BST with only left children
+root2 = TreeNode(3, TreeNode(2, TreeNode(1)))
+dat
