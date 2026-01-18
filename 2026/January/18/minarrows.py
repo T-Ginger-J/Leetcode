@@ -33,3 +33,23 @@ class Solution:
                 curr_end = end
 
         return arrows
+
+
+# Additional Examples (Edge Cases and Non-LeetCode Examples)
+
+sol = Solution()
+
+# Example 1: Overlapping intervals
+points1 = [[10,16],[2,8],[1,6],[7,12]]
+print(sol.findMinArrowShots(points1))
+# Expected output: 2
+
+# Example 2: No overlaps
+points2 = [[1,2],[3,4],[5,6]]
+print(sol.findMinArrowShots(points2))
+# Expected output: 3
+
+# Example 3: All balloons overlap at one point
+points3 = [[1,10],[2,9],[3,8],[4,7]]
+print(sol.findMinArrowShots(points3))
+# Expected output: 1
