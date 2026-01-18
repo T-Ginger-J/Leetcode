@@ -43,3 +43,37 @@ class Solution:
             root.val = successor.val
             root.right = self.deleteNode(root.right, successor.val)
         return root
+
+# Helper function: inorder traversal
+def inorder(node):
+    return inorder(node.left) + [node.val] + inorder(node.right) if node else []
+
+# Additional Examples (Edge Cases and Non-LeetCode Examples)
+
+sol = Solution()
+
+# Example 1: Delete leaf node
+root1 = TreeNode(5, TreeNode(3), TreeNode(6))
+root1.left.left = TreeNode(2)
+root1.left.right = TreeNode(4)
+root1.right.right = TreeNode(7)
+root1 = sol.deleteNode(root1, 2)
+print(inorder(root1))  
+# Expected: [3,4,5,6,7]
+
+# Example 2: Delete node with one child
+root2 = TreeNode(5, TreeNode(3), TreeNode(6))
+root2.left.left = TreeNode(2)
+root2.left.right = TreeNode(4)
+root2 = sol.deleteNode(root2, 3)
+print(inorder(root2))  
+# Expected: [2,4,5,6]
+
+# Example 3: Delete node with two children
+root3 = TreeNode(5, TreeNode(3), TreeNode(6))
+root3.left.left = TreeNode(2)
+root3.left.right = TreeNode(4)
+root3.right.right = TreeNode(7)
+root3 = sol.deleteNode(root3, 5)
+print(inorder(root3))  
+# Expected: [2,3,4,6,7]
