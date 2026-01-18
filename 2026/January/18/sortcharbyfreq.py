@@ -45,3 +45,19 @@ class Solution:
             f, ch = heapq.heappop(heap)
             res.append(ch * (-f))
         return "".join(res)
+
+# Additional Examples (Edge Cases and Non-LeetCode Examples)
+
+sol = Solution()
+
+# Example 1: Mixed characters
+print(sol.frequencySort("tree"))
+# Expected output: "eert" or "eetr"
+
+# Example 2: All characters same
+print(sol.frequencySort("aaaa"))
+# Expected output: "aaaa"
+
+# Example 3: Includes numbers and symbols
+print(sol.frequencySort("Aabb!!"))
+# Expected output: "bb!!Aa" or "!!bbAa"
