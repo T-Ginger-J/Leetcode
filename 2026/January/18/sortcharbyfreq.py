@@ -10,8 +10,15 @@
 # Time Complexity: O(n)
 # Space Complexity: O(n)
 #
+# Method 2: Heap (Alternative)
+# - Use a max-heap based on frequency.
+#
+# Time Complexity: O(n log k), k = number of unique characters
+# Space Complexity: O(k)
+
 from typing import Dict
 from collections import Counter
+import heapq
 
 class Solution:
     # Method 1: Bucket Sort
@@ -27,3 +34,14 @@ class Solution:
                 res.append(ch * f)
         return "".join(res)
 
+    # Method 2: Heap
+    def frequencySortHeap(self, s: str) -> str:
+        freq = Counter(s)
+        heap = [(-f, ch) for ch, f in freq.items()]
+        heapq.heapify(heap)
+
+        res = []
+        while heap:
+            f, ch = heapq.heappop(heap)
+            res.append(ch * (-f))
+        return "".join(res)
