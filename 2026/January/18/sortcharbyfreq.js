@@ -23,3 +23,16 @@ var frequencySort = function(s) {
     return res;
 };
 
+// Additional Examples
+
+// Example 1: Mixed characters
+console.log(frequencySort("tree"));
+// Expected output: "eert" or "eetr"
+
+// Example 2: All characters same
+console.log(frequencySort("aaaa"));
+// Expected output: "aaaa"
+
+// Example 3: Includes numbers and symbols
+console.log(frequencySort("Aabb!!"));
+// Expected output: "bb!!Aa" or "!!bbAa"
