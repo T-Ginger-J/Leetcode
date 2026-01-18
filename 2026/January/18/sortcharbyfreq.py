@@ -1,3 +1,15 @@
+# LeetCode 451: Sort Characters By Frequency
+# Explanation:
+# Given a string s, sort it in decreasing order based on the frequency of characters.
+#
+# Method 1: Bucket Sort by Frequency (Optimal)
+# - Count frequency of each character.
+# - Create buckets where index = frequency.
+# - Place characters into buckets and build result from high to low frequency.
+#
+# Time Complexity: O(n)
+# Space Complexity: O(n)
+#
 from typing import Dict
 from collections import Counter
 
