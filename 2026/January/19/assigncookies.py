@@ -33,3 +33,19 @@ class Solution:
 
         return content
 
+
+# Additional Examples (Edge Cases and Non-LeetCode Examples)
+
+sol = Solution()
+
+# Example 1: More cookies than children
+print(sol.findContentChildren([1,2], [1,2,3]))
+# Expected output: 2
+
+# Example 2: Not enough cookie sizes
+print(sol.findContentChildren([1,2,3], [1]))
+# Expected output: 1
+
+# Example 3: Exact matches required
+print(sol.findContentChildren([2,3,4], [1,2,3]))
+# Expected output: 2
