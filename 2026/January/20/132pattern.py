@@ -27,3 +27,20 @@ class Solution:
             stack.append(nums[i])
 
         return False
+
+
+# Additional Examples (Edge Cases and Non-LeetCode Examples)
+
+sol = Solution()
+
+# Example 1: Simple 132 pattern
+print(sol.find132pattern([3,1,4,2]))
+# Expected output: True (1,4,2)
+
+# Example 2: Strictly increasing
+print(sol.find132pattern([1,2,3,4]))
+# Expected output: False
+
+# Example 3: Pattern with negative numbers
+print(sol.find132pattern([-1,3,2,0]))
+# Expected output: True
