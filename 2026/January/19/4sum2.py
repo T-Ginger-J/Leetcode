@@ -66,3 +66,32 @@ class Solution:
                 j -= 1
 
         return count
+
+
+# Additional Examples (Edge Cases and Non-LeetCode Examples)
+
+sol = Solution()
+
+# Example 1: Simple balanced arrays
+A1 = [1, 2]
+B1 = [-2, -1]
+C1 = [-1, 2]
+D1 = [0, 2]
+print(sol.fourSumCount(A1, B1, C1, D1))
+# Expected output: 2
+
+# Example 2: All zeros
+A2 = [0, 0]
+B2 = [0, 0]
+C2 = [0, 0]
+D2 = [0, 0]
+print(sol.fourSumCount(A2, B2, C2, D2))
+# Expected output: 16
+
+# Example 3: No valid tuples
+A3 = [1]
+B3 = [1]
+C3 = [1]
+D3 = [1]
+print(sol.fourSumCount(A3, B3, C3, D3))
+# Expected output: 0
