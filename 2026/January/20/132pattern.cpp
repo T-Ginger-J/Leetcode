@@ -26,3 +26,23 @@ public:
     }
 };
 
+int main() {
+    Solution sol;
+
+    // Example 1: Simple 132 pattern
+    vector<int> nums1 = {3,1,4,2};
+    cout << sol.find132pattern(nums1) << endl;
+    // Expected output: 1 (true)
+
+    // Example 2: Strictly increasing
+    vector<int> nums2 = {1,2,3,4};
+    cout << sol.find132pattern(nums2) << endl;
+    // Expected output: 0 (false)
+
+    // Example 3: Pattern with negative numbers
+    vector<int> nums3 = {-1,3,2,0};
+    cout << sol.find132pattern(nums3) << endl;
+    // Expected output: 1 (true)
+
+    return 0;
+}
