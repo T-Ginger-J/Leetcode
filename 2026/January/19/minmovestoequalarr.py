@@ -29,3 +29,13 @@ class Solution:
     def minMoves(self, nums: List[int]) -> int:
         min_val = min(nums)
         return sum(nums) - min_val * len(nums)
+
+    # Method 2: Sorting-Based
+    def minMovesSort(self, nums: List[int]) -> int:
+        nums.sort()
+        moves = 0
+        base = nums[0]
+        for num in nums:
+            moves += num - base
+        return moves
+
