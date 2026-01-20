@@ -39,3 +39,21 @@ class Solution:
             moves += num - base
         return moves
 
+
+# Additional Examples (Edge Cases and Non-LeetCode Examples)
+
+sol = Solution()
+
+# Example 1: Already equal
+print(sol.minMoves([5,5,5]))
+# Expected output: 0
+
+# Example 2: Simple case
+print(sol.minMoves([1,2,3]))
+# Expected output: 3
+# Explanation: Reduce 3->1 (2 moves), 2->1 (1 move)
+
+# Example 3: Negative numbers
+print(sol.minMoves([-1,0,2]))
+# Expected output: 4
+# Explanation: Reduce 2->-1 (3 moves), 0->-1 (1 move)
