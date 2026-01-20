@@ -50,3 +50,19 @@ class Solution:
 
         return False
 
+
+# Additional Examples (Edge Cases and Non-LeetCode Examples)
+
+sol = Solution()
+
+# Example 1: Valid positive cycle
+print(sol.circularArrayLoop([2, -1, 1, 2, 2]))
+# Expected output: True
+
+# Example 2: Direction conflict
+print(sol.circularArrayLoop([-1, 2]))
+# Expected output: False
+
+# Example 3: Self-loop only (invalid)
+print(sol.circularArrayLoop([1, -1, 1, -1]))
+# Expected output: False
