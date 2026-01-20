@@ -1,3 +1,17 @@
+# LeetCode 457: Circular Array Loop
+# Explanation:
+# Given a circular array nums, determine if there exists a cycle:
+# - Cycle length > 1
+# - All steps in the cycle move in the same direction (all positive or all negative)
+#
+# Method 1: Fast & Slow Pointers (Floyd’s Cycle Detection)
+# - For each index, treat nums[i] as a jump length.
+# - Use slow and fast pointers to detect cycles.
+# - Invalidate visited paths that do not form valid cycles.
+#
+# Time Complexity: O(n)
+# Space Complexity: O(1)
+
 from typing import List
 
 class Solution:
