@@ -22,3 +22,20 @@ public:
     }
 };
 
+int main() {
+    Solution sol;
+
+    // Example 1: Simple repeat
+    cout << sol.repeatedSubstringPattern("abab") << endl; // Expected: 1 (true)
+
+    // Example 2: Single character repeated
+    cout << sol.repeatedSubstringPattern("aaaa") << endl; // Expected: 1 (true)
+
+    // Example 3: No repeat
+    cout << sol.repeatedSubstringPattern("abc") << endl; // Expected: 0 (false)
+
+    // Example 4: Two repeats but not complete
+    cout << sol.repeatedSubstringPattern("aba") << endl; // Expected: 0 (false)
+
+    return 0;
+}
