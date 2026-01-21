@@ -20,3 +20,23 @@ class Solution:
         while rounds ** pigs < buckets:
             pigs += 1
         return pigs
+
+
+# Additional Examples (Edge Cases and Non-LeetCode Examples)
+
+sol = Solution()
+
+# Example 1: Simple case
+print(sol.poorPigs(1000, 15, 60))
+# Expected output: 5
+# Explanation: 4 rounds per pig (60/15+1), 4^5=1024 >= 1000
+
+# Example 2: Minimum buckets
+print(sol.poorPigs(1, 15, 60))
+# Expected output: 0
+# Explanation: Only one bucket, no pigs needed
+
+# Example 3: Just enough rounds
+print(sol.poorPigs(4, 15, 15))
+# Expected output: 2
+# Explanation: Only 1 round per pig (15/15+1=2), 2^2=4
