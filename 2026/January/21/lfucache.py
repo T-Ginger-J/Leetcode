@@ -1,3 +1,19 @@
+# LeetCode 460: LFU Cache
+# Explanation:
+# Implement an LFU (Least Frequently Used) cache:
+# - get(key): return value and update frequency
+# - put(key, value): insert/update value, evict least frequently used if capacity exceeded
+#
+# Method 1: Hash + Doubly Linked List (Optimal)
+# - Use:
+#   1. key -> (value, freq) mapping
+#   2. freq -> ordered dict (keys in order of use)
+#   3. Track min frequency
+# - On get/put, update frequency, move key to new freq list
+#
+# Time Complexity: O(1) per operation
+# Space Complexity: O(capacity)
+
 from collections import defaultdict, OrderedDict
 
 class LFUCache:
