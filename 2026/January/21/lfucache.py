@@ -52,3 +52,29 @@ class LFUCache:
         self.freq_to_keys[1][key] = None
         self.min_freq = 1
 
+
+# Additional Examples
+
+# Example 1: Basic operations
+lfu = LFUCache(2)
+lfu.put(1,1)
+lfu.put(2,2)
+print(lfu.get(1))  # Expected 1
+lfu.put(3,3)       # Evicts key 2
+print(lfu.get(2))  # Expected -1
+print(lfu.get(3))  # Expected 3
+
+# Example 2: Update frequency
+lfu2 = LFUCache(2)
+lfu2.put(1,1)
+lfu2.put(2,2)
+lfu2.get(1)        # freq of 1 becomes 2
+lfu2.put(3,3)      # Evicts key 2 (freq=1)
+print(lfu2.get(1)) # Expected 1
+print(lfu2.get(2)) # Expected -1
+print(lfu2.get(3)) # Expected 3
+
+# Example 3: Capacity zero
+lfu3 = LFUCache(0)
+lfu3.put(1,1)
+print(lfu3.get(1)) # Expected -1
