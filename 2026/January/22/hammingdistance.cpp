@@ -19,3 +19,20 @@ public:
     }
 };
 
+int main() {
+    Solution sol;
+
+    // Example 1: Same numbers
+    cout << sol.hammingDistance(5, 5) << endl;
+    // Expected output: 0
+
+    // Example 2: Completely different bits
+    cout << sol.hammingDistance(0, 15) << endl;
+    // Expected output: 4
+
+    // Example 3: One-bit difference
+    cout << sol.hammingDistance(1, 3) << endl;
+    // Expected output: 1
+
+    return 0;
+}
