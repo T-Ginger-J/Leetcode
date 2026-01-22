@@ -22,3 +22,20 @@ class Solution:
         nums.sort()
         median = nums[len(nums) // 2]
         return sum(abs(x - median) for x in nums)
+
+
+# Additional Examples (Edge Cases and Non-LeetCode Examples)
+
+sol = Solution()
+
+# Example 1: Odd length
+print(sol.minMoves2([1, 2, 3]))
+# Expected output: 2
+
+# Example 2: Even length
+print(sol.minMoves2([1, 10, 2, 9]))
+# Expected output: 16
+
+# Example 3: All elements equal
+print(sol.minMoves2([5, 5, 5, 5]))
+# Expected output: 0
