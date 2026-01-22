@@ -27,3 +27,22 @@ class Solution:
                         perimeter -= 2
         return perimeter
 
+
+# Additional Examples (Edge Cases and Non-LeetCode Examples)
+
+sol = Solution()
+
+# Example 1: Single land cell
+print(sol.islandPerimeter([[1]]))
+# Expected output: 4
+
+# Example 2: Straight horizontal line
+print(sol.islandPerimeter([[1,1,1,1]]))
+# Expected output: 10
+
+# Example 3: Rectangle island
+print(sol.islandPerimeter([
+    [1,1,1],
+    [1,1,1]
+]))
+# Expected output: 10
