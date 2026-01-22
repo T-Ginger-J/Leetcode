@@ -13,3 +13,20 @@
 class Solution:
     def hammingDistance(self, x: int, y: int) -> int:
         return bin(x ^ y).count("1")
+
+
+# Additional Examples (Edge Cases and Non-LeetCode Examples)
+
+sol = Solution()
+
+# Example 1: Same numbers
+print(sol.hammingDistance(5, 5))
+# Expected output: 0
+
+# Example 2: Completely different bits
+print(sol.hammingDistance(0, 15))
+# Expected output: 4
+
+# Example 3: One-bit difference
+print(sol.hammingDistance(1, 3))
+# Expected output: 1
