@@ -1,3 +1,15 @@
+# LeetCode 463: Island Perimeter
+# Explanation:
+# Given a grid where 1 represents land and 0 represents water,
+# compute the perimeter of the island.
+#
+# Method 1: Count Land and Shared Edges (Optimal)
+# - Each land cell contributes 4 edges.
+# - For each adjacent land neighbor, subtract 2 (shared edge).
+#
+# Time Complexity: O(rows * cols)
+# Space Complexity: O(1)
+
 from typing import List
 
 class Solution:
