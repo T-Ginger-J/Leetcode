@@ -39,3 +39,19 @@ class Solution:
 
         return dfs(0, desiredTotal)
 
+
+# Additional Examples (Edge Cases and Non-LeetCode Examples)
+
+sol = Solution()
+
+# Example 1: Immediate win possible
+print(sol.canIWin(10, 1))
+# Expected output: True
+
+# Example 2: Impossible to reach desired total
+print(sol.canIWin(5, 50))
+# Expected output: False
+
+# Example 3: Tight strategic game
+print(sol.canIWin(6, 10))
+# Expected output: True
