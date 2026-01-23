@@ -48,3 +48,20 @@ class Solution:
                 index_map[s2_index] = (s1_count, s2_count)
 
         return s2_count // n2
+
+
+# Additional Examples (Edge Cases and Non-LeetCode Examples)
+
+sol = Solution()
+
+# Example 1: Simple repetition
+print(sol.getMaxRepetitions("acb", 4, "ab", 2))
+# Expected output: 1
+
+# Example 2: No possible subsequence
+print(sol.getMaxRepetitions("abc", 2, "d", 1))
+# Expected output: 0
+
+# Example 3: Exact fit
+print(sol.getMaxRepetitions("aaa", 3, "aa", 1))
+# Expected output: 4
