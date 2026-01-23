@@ -1,3 +1,21 @@
+# LeetCode 464: Can I Win
+# Explanation:
+# Two players take turns choosing numbers from 1 to maxChoosableInteger (each used once).
+# The running total increases by the chosen number.
+# The player who reaches or exceeds desiredTotal wins.
+#
+# Method 1: DFS + Bitmask DP (Optimal)
+# - Use a bitmask to represent which numbers are already used.
+# - Memoize game states: can the current player force a win from this state?
+# - Try all unused numbers; if choosing one forces the opponent into a losing state,
+#   current player can win.
+#
+# Key Pruning:
+# - If sum(1..maxChoosableInteger) < desiredTotal → impossible to win.
+#
+# Time Complexity: O(2^n * n)
+# Space Complexity: O(2^n)
+
 from functools import lru_cache
 
 class Solution:
