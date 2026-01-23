@@ -31,3 +31,22 @@ class Solution:
             dp[idx] = max(dp[idx], curr_len)
 
         return sum(dp)
+
+
+# Additional Examples (Edge Cases and Non-LeetCode Examples)
+
+sol = Solution()
+
+# Example 1: Straight wraparound
+print(sol.findSubstringInWraproundString("zab"))
+# Expected output: 6
+# Substrings: z, a, b, za, ab, zab
+
+# Example 2: Repeated same character
+print(sol.findSubstringInWraproundString("aaaa"))
+# Expected output: 1
+# Only "a" counts uniquely
+
+# Example 3: Full alphabet
+print(sol.findSubstringInWraproundString("abcdefghijklmnopqrstuvwxyz"))
+# Expected output: 351
