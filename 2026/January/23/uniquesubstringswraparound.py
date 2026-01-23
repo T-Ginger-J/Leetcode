@@ -1,3 +1,21 @@
+# LeetCode 467: Unique Substrings in Wraparound String
+# Explanation:
+# The wraparound string is the infinite string:
+#   "...abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz..."
+#
+# We are given a string p and must count how many unique non-empty substrings of p
+# exist in the wraparound string.
+#
+# Method 1: Dynamic Programming on Characters (Optimal)
+# - Let dp[c] be the length of the longest valid wraparound substring ending with char c.
+# - Traverse p and keep track of the current consecutive wraparound length.
+# - If p[i] follows p[i-1] in wraparound order, increment length; else reset to 1.
+# - Update dp for the current character.
+# - The answer is sum(dp.values()).
+#
+# Time Complexity: O(n)
+# Space Complexity: O(1) (fixed alphabet size)
+
 class Solution:
     def findSubstringInWraproundString(self, p: str) -> int:
         dp = [0] * 26
