@@ -53,3 +53,25 @@ class SolutionOptimized:
             idx = (idx - 1) * 7 + b  # 1..21
             if idx <= 20:
                 return (idx - 1) % 10 + 1
+
+
+# Additional Examples (Non-LeetCode, Statistical Sanity Checks)
+
+sol = Solution()
+
+# Example 1: Single call range check
+x = sol.rand10()
+print(1 <= x <= 10)
+# Expected output: True
+
+# Example 2: Multiple calls distribution sanity
+samples = [sol.rand10() for _ in range(1000)]
+print(min(samples), max(samples))
+# Expected output: 1 10
+
+# Example 3: Frequency check (approximate uniformity)
+freq = [0] * 11
+for _ in range(10000):
+    freq[sol.rand10()] += 1
+print(freq[1:])
+# Expected output: Roughly uniform counts
