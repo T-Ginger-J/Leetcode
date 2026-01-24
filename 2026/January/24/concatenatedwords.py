@@ -1,3 +1,19 @@
+# LeetCode 472: Concatenated Words
+# Explanation:
+# Given a list of words, return all words that are formed by concatenating
+# at least two shorter words from the same list.
+#
+# Method 1: DFS + Memoization (Optimal)
+# - Insert all words into a set for O(1) lookup.
+# - For each word, try to split it into prefix + suffix.
+# - If prefix is a word and suffix is either a word or can be recursively formed,
+#   then the word is a concatenated word.
+# - Use memoization to avoid recomputation.
+#
+# Time Complexity: O(N * L^2)
+#   where N = number of words, L = max word length
+# Space Complexity: O(N * L)
+
 from typing import List
 from functools import lru_cache
 
