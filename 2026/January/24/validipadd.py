@@ -48,3 +48,19 @@ class Solution:
 
         return "Neither"
 
+
+# Additional Examples (Edge Cases and Non-LeetCode Examples)
+
+sol = Solution()
+
+# Example 1: Valid IPv4
+print(sol.validIPAddress("192.168.1.1"))
+# Expected output: IPv4
+
+# Example 2: Leading zero invalid
+print(sol.validIPAddress("192.168.01.1"))
+# Expected output: Neither
+
+# Example 3: Valid IPv6
+print(sol.validIPAddress("2001:0db8:85a3:0000:0000:8a2e:0370:7334"))
+# Expected output: IPv6
