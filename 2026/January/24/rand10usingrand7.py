@@ -28,3 +28,28 @@ class Solution:
             if num <= 40:
                 return (num - 1) % 10 + 1
 
+
+# Alternate Python Solution: Multi-Stage Rejection (Uses leftover entropy)
+# - Reduce wasted samples by reusing rejected values.
+# - Improves expected number of rand7() calls.
+
+class SolutionOptimized:
+    def rand10(self) -> int:
+        while True:
+            a = rand7()
+            b = rand7()
+            idx = (a - 1) * 7 + b  # 1..49
+            if idx <= 40:
+                return (idx - 1) % 10 + 1
+
+            idx = idx - 40  # 1..9
+            b = rand7()
+            idx = (idx - 1) * 7 + b  # 1..63
+            if idx <= 60:
+                return (idx - 1) % 10 + 1
+
+            idx = idx - 60  # 1..3
+            b = rand7()
+            idx = (idx - 1) * 7 + b  # 1..21
+            if idx <= 20:
+                return (idx - 1) % 10 + 1
