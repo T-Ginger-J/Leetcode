@@ -66,3 +66,25 @@ class SolutionDP:
 
         return res
 
+
+# Additional Examples (Edge Cases and Non-LeetCode Examples)
+
+sol = Solution()
+
+# Example 1: Simple concatenation
+print(sol.findAllConcatenatedWordsInADict(
+    ["cat", "cats", "dog", "catsdog"]
+))
+# Expected output: ["catsdog"]
+
+# Example 2: Multiple levels of concatenation
+print(sol.findAllConcatenatedWordsInADict(
+    ["a", "aa", "aaa", "aaaa", "aaaaa", "aaaaaa"]
+))
+# Expected output: ["aa", "aaa", "aaaa", "aaaaa", "aaaaaa"]
+
+# Example 3: No concatenated words
+print(sol.findAllConcatenatedWordsInADict(
+    ["apple", "banana", "orange"]
+))
+# Expected output: []
