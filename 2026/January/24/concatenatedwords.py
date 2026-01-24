@@ -36,3 +36,33 @@ class Solution:
                 result.append(w)
         return result
 
+
+# Alternate Python Solution: DP Word Break Style
+# - For each word, use DP where dp[i] means word[:i] can be formed.
+# - Ensure at least two words are used by disallowing the whole word as a single piece.
+
+class SolutionDP:
+    def findAllConcatenatedWordsInADict(self, words: List[str]) -> List[str]:
+        word_set = set(words)
+        res = []
+
+        for word in words:
+            if not word:
+                continue
+            n = len(word)
+            dp = [False] * (n + 1)
+            dp[0] = True
+
+            for i in range(1, n + 1):
+                for j in range(i):
+                    if not dp[j]:
+                        continue
+                    if word[j:i] in word_set and not (j == 0 and i == n):
+                        dp[i] = True
+                        break
+
+            if dp[n]:
+                res.append(word)
+
+        return res
+
