@@ -57,3 +57,18 @@ class SolutionTwoPointers:
         return res
 
 
+# Additional Examples (Edge Cases and Non-LeetCode Examples)
+
+sol = Solution()
+
+# Example 1: Single heater covers all
+print(sol.findRadius([1, 2, 3], [2]))
+# Expected output: 1
+
+# Example 2: Heater on one side only
+print(sol.findRadius([1, 5], [10]))
+# Expected output: 9
+
+# Example 3: Houses and heaters overlap
+print(sol.findRadius([1, 2, 3, 4], [1, 4]))
+# Expected output: 1
