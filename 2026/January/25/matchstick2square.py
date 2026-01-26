@@ -44,3 +44,31 @@ class Solution:
 
         return backtrack(0)
 
+
+# Alternate Python Solution: Bitmask DP
+# - dp[mask] = current side length modulo target
+# - If dp[mask] == 0 and mask != 0, one side is completed.
+#
+# Time Complexity: O(n * 2^n)
+# Space Complexity: O(2^n)
+
+class SolutionDP:
+    def makesquare(self, matchsticks: List[int]) -> bool:
+        total = sum(matchsticks)
+        if total % 4 != 0:
+            return False
+
+        target = total // 4
+        n = len(matchsticks)
+        dp = [-1] * (1 << n)
+        dp[0] = 0
+
+        for mask in range(1 << n):
+            if dp[mask] == -1:
+                continue
+            for i in range(n):
+                if not (mask & (1 << i)):
+                    if dp[mask] + matchsticks[i] <= target:
+                        nxt = mask | (1 << i)
+                        dp[nxt] = (dp[mask] + matchsticks[i]) % target
+        return dp[(1 << n) - 1] == 0
