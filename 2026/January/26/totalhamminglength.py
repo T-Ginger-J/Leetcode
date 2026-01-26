@@ -45,3 +45,20 @@ class SolutionBitLength:
             total += ones * (n - ones)
 
         return total
+
+
+# Additional Examples (Edge Cases and Non-LeetCode Examples)
+
+sol = Solution()
+
+# Example 1: All numbers same
+print(sol.totalHammingDistance([5, 5, 5]))
+# Expected output: 0
+
+# Example 2: Single element
+print(sol.totalHammingDistance([7]))
+# Expected output: 0
+
+# Example 3: Powers of two
+print(sol.totalHammingDistance([1, 2, 4, 8]))
+# Expected output: 12
