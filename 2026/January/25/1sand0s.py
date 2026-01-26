@@ -50,3 +50,19 @@ class Solution3D:
                         )
         return dp[length][m][n]
 
+
+# Additional Examples (Edge Cases and Non-LeetCode Examples)
+
+sol = Solution()
+
+# Example 1: Exact fit
+print(sol.findMaxForm(["10", "0", "1"], 1, 1))
+# Expected output: 2  ("0", "1")
+
+# Example 2: Zero capacity
+print(sol.findMaxForm(["0", "00", "1"], 0, 1))
+# Expected output: 1  ("1")
+
+# Example 3: Large budget, small set
+print(sol.findMaxForm(["01", "10", "001"], 5, 5))
+# Expected output: 3
