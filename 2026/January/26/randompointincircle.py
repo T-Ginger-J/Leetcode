@@ -1,3 +1,18 @@
+# LeetCode 478: Generate Random Point in a Circle
+# Explanation:
+# Given the radius and center of a circle, generate a random point uniformly
+# inside the circle.
+#
+# Method 1: Polar Coordinates (Optimal)
+# - Uniform angle: theta ∈ [0, 2π)
+# - Uniform radius requires sqrt(rand) scaling:
+#     r = R * sqrt(u), where u ∈ [0,1)
+# - Convert to Cartesian:
+#     x = x_center + r * cos(theta)
+#     y = y_center + r * sin(theta)
+#
+# Time Complexity: O(1) per call
+# Space Complexity: O(1)
 
 import random
 import math
