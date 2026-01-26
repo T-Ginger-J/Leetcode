@@ -1,3 +1,17 @@
+# LeetCode 474: Ones and Zeroes
+# Explanation:
+# Given an array of binary strings strs and two integers m and n,
+# return the size of the largest subset such that there are at most
+# m zeros and n ones in the subset.
+#
+# Method 1: 0/1 Knapsack DP (2D)
+# - Treat zeros as one cost dimension and ones as another.
+# - dp[i][j] = max subset size with i zeros and j ones.
+# - Iterate strings and update dp backwards to avoid reuse.
+#
+# Time Complexity: O(len(strs) * m * n)
+# Space Complexity: O(m * n)
+
 from typing import List
 
 class Solution:
