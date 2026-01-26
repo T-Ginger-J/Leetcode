@@ -28,3 +28,20 @@ class Solution:
             total += ones * (n - ones)
 
         return total
+
+
+# Alternate Python Solution: Built-in Bit Operations
+# - Iterate bits until max bit length.
+# - Slightly cleaner for smaller inputs.
+
+class SolutionBitLength:
+    def totalHammingDistance(self, nums: List[int]) -> int:
+        total = 0
+        n = len(nums)
+        max_bits = max(nums).bit_length()
+
+        for bit in range(max_bits):
+            ones = sum((num >> bit) & 1 for num in nums)
+            total += ones * (n - ones)
+
+        return total
