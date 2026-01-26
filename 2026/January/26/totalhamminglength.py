@@ -1,3 +1,19 @@
+# LeetCode 477: Total Hamming Distance
+# Explanation:
+# Given an integer array nums, return the sum of Hamming distances
+# between all pairs of the integers.
+#
+# Key Insight:
+# - Hamming distance depends on differing bits.
+# - For each bit position (0..31), count how many numbers have bit=1.
+# - If count = ones, zeros = n - ones
+# - Contribution = ones * zeros
+#
+# Method 1: Bit Counting (Optimal)
+#
+# Time Complexity: O(32 * n)
+# Space Complexity: O(1)
+
 from typing import List
 
 class Solution:
