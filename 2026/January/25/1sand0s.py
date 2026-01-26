@@ -26,3 +26,27 @@ class Solution:
                     dp[i][j] = max(dp[i][j], dp[i - zeros][j - ones] + 1)
 
         return dp[m][n]
+
+
+# Alternate Python Solution: 3D DP (More Explicit State)
+# - dp[k][i][j]: using first k strings, max subset size with i zeros and j ones.
+# - Easier to reason about but worse space complexity.
+
+class Solution3D:
+    def findMaxForm(self, strs: List[str], m: int, n: int) -> int:
+        length = len(strs)
+        dp = [[[0] * (n + 1) for _ in range(m + 1)] for _ in range(length + 1)]
+
+        for k in range(1, length + 1):
+            zeros = strs[k - 1].count('0')
+            ones = strs[k - 1].count('1')
+            for i in range(m + 1):
+                for j in range(n + 1):
+                    dp[k][i][j] = dp[k - 1][i][j]
+                    if i >= zeros and j >= ones:
+                        dp[k][i][j] = max(
+                            dp[k][i][j],
+                            dp[k - 1][i - zeros][j - ones] + 1
+                        )
+        return dp[length][m][n]
+
