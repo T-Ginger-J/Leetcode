@@ -72,3 +72,20 @@ class SolutionDP:
                         nxt = mask | (1 << i)
                         dp[nxt] = (dp[mask] + matchsticks[i]) % target
         return dp[(1 << n) - 1] == 0
+
+
+# Additional Examples (Edge Cases and Non-LeetCode Examples)
+
+sol = Solution()
+
+# Example 1: Simple square
+print(sol.makesquare([1,1,2,2,2]))
+# Expected output: True
+
+# Example 2: Cannot form square
+print(sol.makesquare([3,3,3,3,4]))
+# Expected output: False
+
+# Example 3: Too few sticks
+print(sol.makesquare([1,1,1]))
+# Expected output: False
