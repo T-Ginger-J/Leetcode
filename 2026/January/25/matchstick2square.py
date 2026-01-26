@@ -1,3 +1,21 @@
+# LeetCode 473: Matchsticks to Square
+# Explanation:
+# Given an array matchsticks, determine if you can form a square
+# using all matchsticks exactly once.
+#
+# Conditions:
+# - All 4 sides must have equal length.
+# - Total length must be divisible by 4.
+#
+# Method 1: Backtracking with Pruning (Optimal)
+# - Compute target side length = sum(matchsticks) / 4.
+# - Sort matchsticks in descending order (pruning optimization).
+# - Try to assign each matchstick to one of the 4 sides.
+# - If any side exceeds target, backtrack.
+#
+# Time Complexity: O(4^n) in worst case
+# Space Complexity: O(n) recursion stack
+
 from typing import List
 
 class Solution:
