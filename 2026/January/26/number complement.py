@@ -27,3 +27,19 @@ class SolutionBitLength:
     def findComplement(self, num: int) -> int:
         return ((1 << num.bit_length()) - 1) ^ num
 
+
+# Additional Examples (Edge Cases and Non-LeetCode Examples)
+
+sol = Solution()
+
+# Example 1: Single bit
+print(sol.findComplement(1))
+# Expected output: 0
+
+# Example 2: Power of two
+print(sol.findComplement(8))
+# Expected output: 7
+
+# Example 3: Mixed bits
+print(sol.findComplement(21))
+# Expected output: 10
