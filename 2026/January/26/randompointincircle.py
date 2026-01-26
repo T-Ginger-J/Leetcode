@@ -29,3 +29,25 @@ class Solution:
         x = self.xc + r * math.cos(theta)
         y = self.yc + r * math.sin(theta)
         return [x, y]
+
+
+# Alternate Python Solution: Rejection Sampling
+# - Sample uniformly in the bounding square.
+# - Reject points outside the circle.
+#
+# Time Complexity: Expected O(1)
+# Space Complexity: O(1)
+
+class SolutionRejection:
+    def __init__(self, radius: float, x_center: float, y_center: float):
+        self.R = radius
+        self.xc = x_center
+        self.yc = y_center
+
+    def randPoint(self):
+        while True:
+            x = random.uniform(-self.R, self.R)
+            y = random.uniform(-self.R, self.R)
+            if x * x + y * y <= self.R * self.R:
+                return [self.xc + x, self.yc + y]
+
