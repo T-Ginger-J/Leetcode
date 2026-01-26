@@ -51,3 +51,23 @@ class SolutionRejection:
             if x * x + y * y <= self.R * self.R:
                 return [self.xc + x, self.yc + y]
 
+
+# Additional Examples (Non-LeetCode, Edge-Oriented)
+
+sol = Solution(1.0, 0.0, 0.0)
+
+# Example 1: Single call inside unit circle
+p = sol.randPoint()
+print(p[0] * p[0] + p[1] * p[1] <= 1.0)
+# Expected output: True
+
+# Example 2: Shifted center
+sol2 = Solution(2.0, 5.0, -3.0)
+p2 = sol2.randPoint()
+print((p2[0] - 5.0)**2 + (p2[1] + 3.0)**2 <= 4.0)
+# Expected output: True
+
+# Example 3: Multiple samples bounds check
+pts = [sol.randPoint() for _ in range(1000)]
+print(all(x*x + y*y <= 1.0 for x, y in pts))
+# Expected output: True
