@@ -18,3 +18,12 @@ class Solution:
             mask <<= 1
         return (mask - 1) ^ num
 
+
+# Alternate Python Solution: Using bit_length()
+# - bit_length gives number of bits needed to represent num.
+# - Build mask directly using (1 << bit_length) - 1
+
+class SolutionBitLength:
+    def findComplement(self, num: int) -> int:
+        return ((1 << num.bit_length()) - 1) ^ num
+
