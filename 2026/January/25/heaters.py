@@ -1,3 +1,16 @@
+# LeetCode 475: Heaters
+# Explanation:
+# Given positions of houses and heaters on a line, find the minimum radius
+# required so that every house is within range of at least one heater.
+#
+# Method 1: Binary Search on Heaters (Optimal)
+# - Sort both houses and heaters.
+# - For each house, find the nearest heater using binary search.
+# - Track the maximum distance needed across all houses.
+#
+# Time Complexity: O(n log m)
+# Space Complexity: O(1) extra (excluding sorting)
+
 from typing import List
 import bisect
 
