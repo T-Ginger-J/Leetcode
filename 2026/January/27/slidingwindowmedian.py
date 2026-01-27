@@ -79,3 +79,32 @@ class Solution:
             balance()
 
         return res
+
+
+# Alternate Python Solution: Sorted List (Simpler, Slower)
+# - Maintain a sorted window using bisect.
+# - Much simpler but O(k) removal/insertion.
+#
+# Time Complexity: O(n * k)
+# Space Complexity: O(k)
+
+import bisect
+
+class SolutionSortedList:
+    def medianSlidingWindow(self, nums: List[int], k: int) -> List[float]:
+        window = sorted(nums[:k])
+        res = []
+
+        for i in range(k, len(nums) + 1):
+            if k % 2:
+                res.append(float(window[k // 2]))
+            else:
+                res.append((window[k // 2 - 1] + window[k // 2]) / 2.0)
+
+            if i == len(nums):
+                break
+
+            bisect.insort(window, nums[i])
+            window.pop(bisect.bisect_left(window, nums[i - k]))
+
+        return res
