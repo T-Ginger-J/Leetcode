@@ -36,3 +36,30 @@ class Solution:
         return s[:n].count(1)
 
 
+# Alternate Python Solution: Optimized Counting (No Full Count at End)
+# - Count '1's while building the string.
+# - Avoids slicing at the end.
+
+class SolutionOptimized:
+    def magicalString(self, n: int) -> int:
+        if n <= 0:
+            return 0
+        if n <= 3:
+            return 1
+
+        s = [1, 2, 2]
+        i = 2
+        num = 1
+        ones = 1
+
+        while len(s) < n:
+            count = s[i]
+            for _ in range(count):
+                s.append(num)
+                if num == 1 and len(s) <= n:
+                    ones += 1
+            num = 3 - num
+            i += 1
+
+        return ones
+
