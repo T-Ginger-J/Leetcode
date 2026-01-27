@@ -63,3 +63,19 @@ class SolutionOptimized:
 
         return ones
 
+
+# Additional Examples (Edge Cases and Non-LeetCode Examples)
+
+sol = Solution()
+
+# Example 1: Small n
+print(sol.magicalString(1))
+# Expected output: 1
+
+# Example 2: First few characters
+print(sol.magicalString(6))
+# Expected output: 3
+
+# Example 3: Larger n
+print(sol.magicalString(15))
+# Expected output: 7
