@@ -33,3 +33,26 @@ class Solution:
                         return pal % 1337
         return 0
 
+
+# Alternate Python Solution: Early Pruning with Divisibility
+# - Same palindrome generation
+# - Skip factor checks when divisor too small early
+
+class SolutionOptimized:
+    def largestPalindrome(self, n: int) -> int:
+        if n == 1:
+            return 9
+
+        upper = 10**n - 1
+        lower = 10**(n - 1)
+
+        for left in range(upper, lower - 1, -1):
+            pal = int(str(left) + str(left)[::-1])
+            for x in range(upper, lower - 1, -1):
+                if x * x < pal:
+                    break
+                if pal % x == 0:
+                    return pal % 1337
+        return 0
+
+
