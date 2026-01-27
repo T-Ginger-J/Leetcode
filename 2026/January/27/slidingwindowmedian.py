@@ -1,3 +1,21 @@
+# LeetCode 480: Sliding Window Median
+# Explanation:
+# Given an array nums and an integer k, return the median of each sliding window.
+#
+# Method 1: Two Heaps with Lazy Deletion (Optimal)
+# - Max-heap (small): stores the smaller half
+# - Min-heap (large): stores the larger half
+# - Balance heaps so that:
+#     len(small) == len(large) OR len(small) == len(large) + 1
+# - Use a hashmap to lazily delete elements leaving the window.
+#
+# Median:
+# - If k is odd: top of max-heap
+# - If k is even: average of tops
+#
+# Time Complexity: O(n log k)
+# Space Complexity: O(k)
+
 from typing import List
 import heapq
 from collections import defaultdict
