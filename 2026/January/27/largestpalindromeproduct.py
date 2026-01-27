@@ -1,3 +1,21 @@
+# LeetCode 479: Largest Palindrome Product
+# Explanation:
+# Given an integer n, return the largest palindrome made from the product
+# of two n-digit numbers. Since the result can be large, return it modulo 1337.
+#
+# Key Insight:
+# - The largest palindrome is likely formed by large numbers.
+# - Instead of brute forcing all products, generate palindromes directly
+#   from the first half and check if they can be factored into two n-digit numbers.
+#
+# Method 1: Palindrome Construction + Factor Check (Optimal)
+# - Iterate left half from largest to smallest.
+# - Construct palindrome by mirroring.
+# - Check if palindrome can be factored into two n-digit numbers.
+#
+# Time Complexity: O(10^n) in practice much faster due to early stopping
+# Space Complexity: O(1)
+
 class Solution:
     def largestPalindrome(self, n: int) -> int:
         if n == 1:
