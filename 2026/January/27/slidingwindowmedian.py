@@ -108,3 +108,12 @@ class SolutionSortedList:
             window.pop(bisect.bisect_left(window, nums[i - k]))
 
         return res
+
+
+# Additional Examples (Edge Cases and Non-LeetCode Examples)
+
+sol = Solution()
+
+# Example 1: Window size 1
+print(sol.medianSlidingWindow([1, 3, -1], 1))
+# Expect
