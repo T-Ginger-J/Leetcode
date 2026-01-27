@@ -56,3 +56,18 @@ class SolutionOptimized:
         return 0
 
 
+# Additional Examples (Edge Cases and Non-LeetCode Examples)
+
+sol = Solution()
+
+# Example 1: n = 1
+print(sol.largestPalindrome(1))
+# Expected output: 9
+
+# Example 2: n = 2
+print(sol.largestPalindrome(2))
+# Expected output: 987
+
+# Example 3: n = 3
+print(sol.largestPalindrome(3))
+# Expected output: 123
