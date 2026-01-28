@@ -23,3 +23,15 @@ class Solution:
                 count = 0
         return max_count
 
+
+# Alternate Python Solution: Using split()
+# - Convert list to string and split by '0'.
+# - Count the length of consecutive '1's substrings.
+# - Slightly less efficient but concise.
+
+class SolutionSplit:
+    def findMaxConsecutiveOnes(self, nums: List[int]) -> int:
+        s = ''.join(map(str, nums))
+        return max(map(len, s.split('0'))) if s else 0
+
+
