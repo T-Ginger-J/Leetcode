@@ -30,3 +30,24 @@ class Solution:
         return "".join(reversed(res))
 
 
+# Alternate Python Solution: Chunking from the Front
+# - Clean and uppercase first.
+# - Compute first group size.
+# - Append remaining groups of size k.
+#
+# Time Complexity: O(n)
+# Space Complexity: O(n)
+
+class SolutionChunking:
+    def licenseKeyFormatting(self, s: str, k: int) -> str:
+        s = s.replace("-", "").upper()
+        if not s:
+            return ""
+
+        first = len(s) % k or k
+        parts = [s[:first]]
+
+        for i in range(first, len(s), k):
+            parts.append(s[i:i+k])
+
+        return "-".join(parts)
