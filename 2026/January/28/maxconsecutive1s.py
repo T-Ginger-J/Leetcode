@@ -35,3 +35,18 @@ class SolutionSplit:
         return max(map(len, s.split('0'))) if s else 0
 
 
+# Additional Examples (Edge Cases and Non-LeetCode Examples)
+
+sol = Solution()
+
+# Example 1: Single 1
+print(sol.findMaxConsecutiveOnes([1]))
+# Expected output: 1
+
+# Example 2: Single 0
+print(sol.findMaxConsecutiveOnes([0]))
+# Expected output: 0
+
+# Example 3: Mixed sequence
+print(sol.findMaxConsecutiveOnes([1,1,0,1,1,1,0,1]))
+# Expected output: 3
