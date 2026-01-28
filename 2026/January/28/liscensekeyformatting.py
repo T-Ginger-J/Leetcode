@@ -51,3 +51,20 @@ class SolutionChunking:
             parts.append(s[i:i+k])
 
         return "-".join(parts)
+
+
+# Additional Examples (Edge Cases and Non-LeetCode Examples)
+
+sol = Solution()
+
+# Example 1: Mixed case with dashes
+print(sol.licenseKeyFormatting("2-5g-3-J", 2))
+# Expected output: "2-5G-3J"
+
+# Example 2: Single group
+print(sol.licenseKeyFormatting("---abc---", 4))
+# Expected output: "ABC"
+
+# Example 3: Empty after cleanup
+print(sol.licenseKeyFormatting("--", 3))
+# Expected output: ""
