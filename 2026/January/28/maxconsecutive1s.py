@@ -1,3 +1,14 @@
+# LeetCode 485: Max Consecutive Ones
+# Explanation:
+# Given a binary array, return the maximum number of consecutive 1s.
+#
+# Method 1: Linear Scan (Optimal)
+# - Traverse the array keeping a current count of consecutive 1s.
+# - Update the maximum whenever a 0 is encountered.
+#
+# Time Complexity: O(n)
+# Space Complexity: O(1)
+
 from typing import List
 
 class Solution:
