@@ -31,3 +31,18 @@ class Solution:
 
         return str(n - 1)  # default base for 1+1+...+1 representation
 
+
+# Alternate Python Solution: Direct Formula for k
+# - Use floating point approximation for k, round and check integer solution.
+
+class SolutionApprox:
+    def smallestGoodBase(self, n: str) -> str:
+        n = int(n)
+        max_m = n.bit_length() - 1
+
+        for m in range(max_m, 1, -1):
+            k = int(n ** (1/m))
+            if (k ** (m + 1) - 1) // (k - 1) == n:
+                return str(k)
+
+        return str(n - 1)
