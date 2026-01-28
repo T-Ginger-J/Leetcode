@@ -46,3 +46,20 @@ class SolutionApprox:
                 return str(k)
 
         return str(n - 1)
+
+
+# Additional Examples (Edge Cases and Non-LeetCode Examples)
+
+sol = Solution()
+
+# Example 1: Small number
+print(sol.smallestGoodBase("13"))
+# Expected output: "3"  (13 = 1 + 3 + 9)
+
+# Example 2: Power of 2
+print(sol.smallestGoodBase("31"))
+# Expected output: "2"  (31 = 1 + 2 + 4 + 8 + 16)
+
+# Example 3: Prime number
+print(sol.smallestGoodBase("17"))
+# Expected output: "16" (17 = 1 + 16)
