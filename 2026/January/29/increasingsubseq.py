@@ -47,3 +47,19 @@ class SolutionOptimized:
         dfs(0, [])
         return res
 
+
+# Additional Examples (Edge Cases and Non-LeetCode Examples)
+
+sol = Solution()
+
+# Example 1: Simple increasing
+print(sol.findSubsequences([4,6,7]))
+# Expected output: [[4,6],[4,7],[6,7],[4,6,7]]
+
+# Example 2: Contains duplicates
+print(sol.findSubsequences([4,4,3,2,1]))
+# Expected output: [[4,4]]
+
+# Example 3: All decreasing
+print(sol.findSubsequences([5,4,3,2,1]))
+# Expected output: []
