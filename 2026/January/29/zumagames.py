@@ -60,3 +60,50 @@ class Solution:
         ans = dfs(board, hand)
         return ans if ans != float('inf') else -1
 
+
+# Alternate Python Solution: DFS with Counter from collections
+# - Precompute hand counts
+# - Simplify insertion simulation
+
+from collections import Counter
+
+class SolutionCounter:
+    def findMinStep(self, board: str, hand: str) -> int:
+        hand_count = Counter(hand)
+
+        @lru_cache(None)
+        def dfs(b):
+            if not b:
+                return 0
+            res = float('inf')
+            i = 0
+            while i < len(b):
+                j = i
+                while j < len(b) and b[j] == b[i]:
+                    j += 1
+                need = max(0, 3 - (j - i))
+                if hand_count[b[i]] >= need:
+                    hand_count[b[i]] -= need
+                    res = min(res, need + dfs(clear(b[:i] + b[j:])))
+                    hand_count[b[i]] += need
+                i = j
+            return res
+
+        def clear(s):
+            i = 0
+            n = len(s)
+            while i < n:
+                j = i
+                while j < n and s[j] == s[i]:
+                    j += 1
+                if j - i >= 3:
+                    s = s[:i] + s[j:]
+                    n = len(s)
+                    i = 0
+                else:
+                    i += 1
+            return s
+
+        ans = dfs(board)
+        return ans if ans != float('inf') else -1
+
