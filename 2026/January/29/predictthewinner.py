@@ -51,3 +51,18 @@ class SolutionDP:
         return dp[0][n-1] >= 0
 
 
+# Additional Examples (Edge Cases and Non-LeetCode Examples)
+
+sol = Solution()
+
+# Example 1: Two elements, player1 wins
+print(sol.PredictTheWinner([1,5]))
+# Expected output: False
+
+# Example 2: Equal numbers
+print(sol.PredictTheWinner([1,5,2]))
+# Expected output: False
+
+# Example 3: Player1 can win
+print(sol.PredictTheWinner([1,5,233,7]))
+# Expected output: True
