@@ -107,3 +107,19 @@ class SolutionCounter:
         ans = dfs(board)
         return ans if ans != float('inf') else -1
 
+
+# Additional Examples (Edge Cases and Non-LeetCode Examples)
+
+sol = Solution()
+
+# Example 1: Simple insertion clears
+print(sol.findMinStep("WRRBBW", "RB"))
+# Expected output: -1
+
+# Example 2: Need to insert multiple balls
+print(sol.findMinStep("WWRRBBWW", "WRBRW"))
+# Expected output: 2
+
+# Example 3: Already cleared
+print(sol.findMinStep("G", "G"))
+# Expected output: 1
