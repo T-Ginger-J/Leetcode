@@ -1,3 +1,15 @@
+# LeetCode 491: Increasing Subsequences
+# Explanation:
+# Given an integer array, return all different possible increasing subsequences
+# of length at least 2.
+#
+# Method 1: Backtracking + Set to avoid duplicates
+# - Use recursion to try including each number if it keeps the sequence increasing.
+# - Use a set to store sequences as tuples to avoid duplicates.
+#
+# Time Complexity: O(2^n) worst case
+# Space Complexity: O(2^n) for result storage
+
 from typing import List
 
 class Solution:
