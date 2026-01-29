@@ -25,3 +25,25 @@ class Solution:
         
         dfs(0, [])
         return list(map(list, res))
+
+
+# Alternate Python Solution: Backtracking without extra tuple conversion
+# - Use a local set per recursion to avoid duplicates at the same level
+# - Slightly more memory efficient
+
+class SolutionOptimized:
+    def findSubsequences(self, nums: List[int]) -> List[List[int]]:
+        res = []
+        
+        def dfs(start, path):
+            if len(path) >= 2:
+                res.append(path[:])
+            used = set()
+            for i in range(start, len(nums)):
+                if (not path or nums[i] >= path[-1]) and nums[i] not in used:
+                    used.add(nums[i])
+                    dfs(i + 1, path + [nums[i]])
+        
+        dfs(0, [])
+        return res
+
