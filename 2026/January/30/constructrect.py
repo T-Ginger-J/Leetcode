@@ -22,3 +22,17 @@ class Solution:
             w -= 1
         return [area // w, w]
 
+
+# Alternate Python Solution: Brute Force Up to sqrt(area)
+# - Same as above, written slightly differently.
+
+class SolutionBrute:
+    def constructRectangle(self, area: int) -> List[int]:
+        for w in range(int(area ** 0.5), 0, -1):
+            if area % w == 0:
+                return [area // w, w]
+        return [area,1]  # fallback, though unreachable
+
+
+# Additional Examples (Edge Cases and Non-LeetCode Examples)
+
