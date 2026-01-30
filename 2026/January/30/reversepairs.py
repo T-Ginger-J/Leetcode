@@ -1,3 +1,15 @@
+# LeetCode 493: Reverse Pairs
+# Explanation:
+# Given an array, count the number of reverse pairs (i, j) such that
+# i < j and nums[i] > 2 * nums[j].
+#
+# Method 1: Merge Sort with Counting (Optimal)
+# - Similar to counting inversions.
+# - During merge, count pairs across left and right halves satisfying nums[i] > 2*nums[j].
+#
+# Time Complexity: O(n log n)
+# Space Complexity: O(n) for merge
+
 from typing import List
 
 class Solution:
