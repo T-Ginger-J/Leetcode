@@ -36,3 +36,16 @@ class SolutionBrute:
 
 # Additional Examples (Edge Cases and Non-LeetCode Examples)
 
+sol = Solution()
+
+# Example 1: Perfect square
+print(sol.constructRectangle(16))
+# Expected output: [4,4]
+
+# Example 2: Prime area
+print(sol.constructRectangle(13))
+# Expected output: [13,1]
+
+# Example 3: Non-square composite
+print(sol.constructRectangle(20))
+# Expected output: [5,4]
