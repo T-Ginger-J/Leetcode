@@ -45,3 +45,24 @@ class Solution:
         
         return merge_sort(0, len(nums) - 1)
 
+
+# Alternate Python Solution: Binary Indexed Tree (BIT)
+# - Map values to ranks after sorting unique elements.
+# - Count using BIT while iterating from right to left.
+# - Less straightforward but also O(n log n)
+
+# Additional Examples (Edge Cases and Non-LeetCode Examples)
+
+sol = Solution()
+
+# Example 1: Simple reverse pair
+print(sol.reversePairs([1,3,2,3,1]))
+# Expected output: 2
+
+# Example 2: No reverse pair
+print(sol.reversePairs([1,2,3,4,5]))
+# Expected output: 0
+
+# Example 3: All same elements
+print(sol.reversePairs([2,2,2,2]))
+# Expected output: 0
