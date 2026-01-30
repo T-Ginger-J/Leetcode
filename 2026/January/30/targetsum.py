@@ -23,3 +23,20 @@ class Solution:
         
         return dfs(0, 0)
 
+
+# Alternate Python Solution: Dynamic Programming (Subset Sum Transformation)
+# - Transform problem into finding subsets with sum = (S + sum(nums)) / 2
+# - Classic 0/1 knapsack problem
+
+class SolutionDP:
+    def findTargetSumWays(self, nums: List[int], S: int) -> int:
+        total = sum(nums)
+        if (S + total) % 2 != 0 or S > total:
+            return 0
+        target = (S + total) // 2
+        dp = [0] * (target + 1)
+        dp[0] = 1
+        for num in nums:
+            for t in range(target, num - 1, -1):
+                dp[t] += dp[t - num]
+        return dp[target]
