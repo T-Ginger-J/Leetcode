@@ -40,3 +40,20 @@ class SolutionDP:
             for t in range(target, num - 1, -1):
                 dp[t] += dp[t - num]
         return dp[target]
+
+
+# Additional Examples (Edge Cases and Non-LeetCode Examples)
+
+sol = Solution()
+
+# Example 1: Simple case
+print(sol.findTargetSumWays([1,1,1,1,1], 3))
+# Expected output: 5
+
+# Example 2: Single element
+print(sol.findTargetSumWays([1], 1))
+# Expected output: 1
+
+# Example 3: Impossible target
+print(sol.findTargetSumWays([1,2,3], 7))
+# Expected output: 0
