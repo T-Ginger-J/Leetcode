@@ -1,3 +1,17 @@
+# LeetCode 497: Random Point in Non-overlapping Rectangles
+# Explanation:
+# Given a list of non-overlapping axis-aligned rectangles, randomly pick
+# an integer point inside the rectangles uniformly.
+#
+# Method 1: Prefix Sum of Area + Binary Search
+# - Compute the number of integer points in each rectangle.
+# - Build prefix sum array of point counts.
+# - Pick a random integer r in total points, use binary search to find rectangle.
+# - Randomly pick a point inside that rectangle.
+#
+# Time Complexity: O(log n) per pick
+# Space Complexity: O(n)
+
 from typing import List
 import random
 import bisect
