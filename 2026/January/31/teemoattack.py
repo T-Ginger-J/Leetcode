@@ -22,3 +22,20 @@ class Solution:
         total += duration  # last attack
         return total
 
+
+# Alternate Python Solution: Using max and previous end time
+# - Keep track of when poison ends
+# - Add non-overlapping duration
+
+class SolutionAlt:
+    def findPoisonedDuration(self, timeSeries: List[int], duration: int) -> int:
+        total = 0
+        prev_end = 0
+        for t in timeSeries:
+            if t >= prev_end:
+                total += duration
+            else:
+                total += t + duration - prev_end
+            prev_end = t + duration
+        return total
+
