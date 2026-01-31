@@ -39,3 +39,19 @@ class SolutionAlt:
             prev_end = t + duration
         return total
 
+
+# Additional Examples (Edge Cases and Non-LeetCode Examples)
+
+sol = Solution()
+
+# Example 1: No attacks
+print(sol.findPoisonedDuration([], 5))
+# Expected output: 0
+
+# Example 2: Single attack
+print(sol.findPoisonedDuration([10], 5))
+# Expected output: 5
+
+# Example 3: Overlapping attacks
+print(sol.findPoisonedDuration([1,4,5], 3))
+# Expected output: 6 (1-4,4-7,5-8 => total poisoned 1-8 with overlap)
