@@ -1,3 +1,15 @@
+# LeetCode 495: Teemo Attacking
+# Explanation:
+# Teemo attacks Ashe, dealing poison for a duration. Overlapping attacks
+# extend the poison, but do not stack. Return total poisoned time.
+#
+# Method 1: Linear Scan (Optimal)
+# - Iterate through attacks.
+# - For each attack, add min(duration, time to next attack) to total.
+#
+# Time Complexity: O(n)
+# Space Complexity: O(1)
+
 from typing import List
 
 class Solution:
