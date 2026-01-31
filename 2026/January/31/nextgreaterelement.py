@@ -45,3 +45,19 @@ class SolutionBrute:
             res.append(next_val)
         return res
 
+
+# Additional Examples (Edge Cases and Non-LeetCode Examples)
+
+sol = Solution()
+
+# Example 1: Normal case
+print(sol.nextGreaterElement([4,1,2], [1,3,4,2]))
+# Expected output: [-1,3,-1]
+
+# Example 2: Single element
+print(sol.nextGreaterElement([2], [1,2,3]))
+# Expected output: [3]
+
+# Example 3: All elements decreasing
+print(sol.nextGreaterElement([3,2,1], [3,2,1]))
+# Expected output: [-1,-1,-1]
