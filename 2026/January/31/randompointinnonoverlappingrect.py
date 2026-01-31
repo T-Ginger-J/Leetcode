@@ -50,3 +50,17 @@ class SolutionBrute:
     def pick(self) -> List[int]:
         return random.choice(self.points)
 
+
+# Additional Examples (Edge Cases and Non-LeetCode Examples)
+
+# Example 1: Single rectangle
+sol = Solution([[1,1,2,2]])
+print(sol.pick())  # Expected: any point [1,1],[1,2],[2,1],[2,2]
+
+# Example 2: Multiple rectangles
+sol2 = Solution([[1,1,1,1],[2,2,3,3]])
+print(sol2.pick())  # Expected: points in either rectangle
+
+# Example 3: Rectangles with one row/column
+sol3 = Solution([[0,0,0,5],[2,2,2,2]])
+print(sol3.pick())  # Expected: points along vertical line or single point
