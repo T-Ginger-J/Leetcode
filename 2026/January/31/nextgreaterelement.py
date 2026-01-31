@@ -1,3 +1,16 @@
+# LeetCode 496: Next Greater Element I
+# Explanation:
+# Given two arrays nums1 and nums2, find the next greater element of each
+# element in nums1 within nums2.
+#
+# Method 1: Monotonic Stack + Hash Map (Optimal)
+# - Iterate nums2 and use a stack to keep track of decreasing elements.
+# - When a larger element appears, pop from stack and record next greater.
+# - Lookup for nums1 in the hashmap for results.
+#
+# Time Complexity: O(n + m), n = len(nums1), m = len(nums2)
+# Space Complexity: O(m)
+
 from typing import List
 
 class Solution:
