@@ -34,3 +34,19 @@ class Solution:
         y = random.randint(y1, y2)
         return [x, y]
 
+
+# Alternate Python Solution: Flatten Points (not space efficient)
+# - Store all points in a list and pick randomly
+# - Only useful for small rectangles
+
+class SolutionBrute:
+    def __init__(self, rects: List[List[int]]):
+        self.points = []
+        for x1, y1, x2, y2 in rects:
+            for x in range(x1, x2+1):
+                for y in range(y1, y2+1):
+                    self.points.append([x, y])
+
+    def pick(self) -> List[int]:
+        return random.choice(self.points)
+
