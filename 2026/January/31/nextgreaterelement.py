@@ -27,3 +27,21 @@ class Solution:
             next_greater[num] = -1
         return [next_greater[num] for num in nums1]
 
+
+# Alternate Python Solution: Brute Force
+# - For each element in nums1, scan nums2 to find next greater element
+# - Less efficient but simple
+
+class SolutionBrute:
+    def nextGreaterElement(self, nums1: List[int], nums2: List[int]) -> List[int]:
+        res = []
+        for x in nums1:
+            index = nums2.index(x)
+            next_val = -1
+            for i in range(index + 1, len(nums2)):
+                if nums2[i] > x:
+                    next_val = nums2[i]
+                    break
+            res.append(next_val)
+        return res
+
