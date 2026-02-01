@@ -48,3 +48,47 @@ class Solution:
 
         inorder(root)
         return self.res
+
+
+# Alternate Python Solution: Two-Pass In-order Traversal
+# - First pass computes max frequency
+# - Second pass collects values with that frequency
+
+class SolutionTwoPass:
+    def findMode(self, root: Optional[TreeNode]) -> List[int]:
+        prev = None
+        count = max_count = 0
+
+        def inorder1(node):
+            nonlocal prev, count, max_count
+            if not node:
+                return
+            inorder1(node.left)
+            if prev == node.val:
+                count += 1
+            else:
+                count = 1
+            max_count = max(max_count, count)
+            prev = node.val
+            inorder1(node.right)
+
+        def inorder2(node):
+            nonlocal prev, count
+            if not node:
+                return
+            inorder2(node.left)
+            if prev == node.val:
+                count += 1
+            else:
+                count = 1
+            if count == max_count:
+                res.append(node.val)
+            prev = node.val
+            inorder2(node.right)
+
+        inorder1(root)
+        prev = None
+        count = 0
+        res = []
+        inorder2(root)
+        return res
