@@ -46,3 +46,20 @@ class SolutionMap:
             if len(rows) == 1:
                 res.append(word)
         return res
+
+
+# Additional Examples (Edge Cases and Non-LeetCode Examples)
+
+sol = Solution()
+
+# Example 1: Mixed valid and invalid
+print(sol.findWords(["Hello", "Alaska", "Dad", "Peace"]))
+# Expected output: ["Alaska", "Dad"]
+
+# Example 2: Single-letter words
+print(sol.findWords(["a", "Q", "z"]))
+# Expected output: ["a", "Q", "z"]
+
+# Example 3: No valid words
+print(sol.findWords(["type", "row", "mix"]))
+# Expected output: []
