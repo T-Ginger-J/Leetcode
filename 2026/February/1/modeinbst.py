@@ -92,3 +92,36 @@ class SolutionTwoPass:
         res = []
         inorder2(root)
         return res
+
+
+# Additional Examples (Edge Cases and Non-LeetCode Examples)
+
+# Helper to build tree
+def build_tree(vals):
+    if not vals:
+        return None
+    nodes = [None if v is None else TreeNode(v) for v in vals]
+    kids = nodes[::-1]
+    root = kids.pop()
+    for node in nodes:
+        if node:
+            if kids: node.left = kids.pop()
+            if kids: node.right = kids.pop()
+    return root
+
+sol = Solution()
+
+# Example 1: Single node
+root1 = build_tree([1])
+print(sol.findMode(root1))
+# Expected output: [1]
+
+# Example 2: Multiple modes
+root2 = build_tree([1,None,2,2])
+print(sol.findMode(root2))
+# Expected output: [2]
+
+# Example 3: All values same
+root3 = build_tree([2,2,2])
+print(sol.findMode(root3))
+# Expected output: [2]
