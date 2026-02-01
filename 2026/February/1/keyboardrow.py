@@ -25,3 +25,24 @@ class Solution:
                 res.append(word)
         return res
 
+
+# Alternate Python Solution: Character-to-Row Mapping
+# - Map each character to its keyboard row index.
+# - Check that all characters in a word map to the same row.
+
+class SolutionMap:
+    def findWords(self, words: List[str]) -> List[str]:
+        row_map = {}
+        for c in "qwertyuiop":
+            row_map[c] = 1
+        for c in "asdfghjkl":
+            row_map[c] = 2
+        for c in "zxcvbnm":
+            row_map[c] = 3
+
+        res = []
+        for word in words:
+            rows = {row_map[c] for c in word.lower()}
+            if len(rows) == 1:
+                res.append(word)
+        return res
