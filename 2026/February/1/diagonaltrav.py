@@ -1,3 +1,15 @@
+# LeetCode 498: Diagonal Traverse
+# Explanation:
+# Given an m x n matrix, return all elements in diagonal order.
+# Diagonal order alternates between moving up-right and down-left.
+#
+# Method 1: Simulation
+# - Use a loop to traverse diagonals using row+col = k.
+# - Reverse elements of every other diagonal to get correct order.
+#
+# Time Complexity: O(m*n)
+# Space Complexity: O(m*n)
+
 from typing import List
 
 class Solution:
