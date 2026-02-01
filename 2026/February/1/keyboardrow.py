@@ -1,3 +1,15 @@
+# LeetCode 500: Keyboard Row
+# Explanation:
+# Given an array of strings words, return the words that can be typed using
+# letters of only one row on the American keyboard.
+#
+# Method 1: Set Membership (Optimal)
+# - Define sets for each keyboard row.
+# - A word is valid if all its characters belong to the same row.
+#
+# Time Complexity: O(total_characters)
+# Space Complexity: O(1)
+
 from typing import List
 
 class Solution:
