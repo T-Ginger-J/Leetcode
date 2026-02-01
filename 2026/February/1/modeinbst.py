@@ -1,3 +1,18 @@
+# LeetCode 501: Find Mode in Binary Search Tree
+# Explanation:
+# Given the root of a Binary Search Tree (BST), return all the mode(s)
+# (the most frequently occurring element(s)).
+#
+# Key BST Property:
+# - In-order traversal of BST yields values in non-decreasing order.
+#
+# Method 1: In-order Traversal with Frequency Tracking (Optimal)
+# - Track current value count, max frequency, and result list.
+# - Update modes when a new max frequency is found.
+#
+# Time Complexity: O(n)
+# Space Complexity: O(h) for recursion stack (h = tree height)
+
 from typing import Optional, List
 
 class TreeNode:
