@@ -66,3 +66,19 @@ class SolutionToggle:
                     j -= 1
         return res
 
+
+# Additional Examples (Edge Cases and Non-LeetCode Examples)
+
+sol = Solution()
+
+# Example 1: Square matrix
+print(sol.findDiagonalOrder([[1,2],[3,4]]))
+# Expected output: [1,2,3,4]
+
+# Example 2: Single row
+print(sol.findDiagonalOrder([[1,2,3]]))
+# Expected output: [1,2,3]
+
+# Example 3: Single column
+print(sol.findDiagonalOrder([[1],[2],[3]]))
+# Expected output: [1,2,3]
