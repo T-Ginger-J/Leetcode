@@ -40,3 +40,18 @@ class SolutionRecursive:
         return self.convertToBase7(num // 7) + str(num % 7)
 
 
+# Additional Examples (Edge Cases and Non-LeetCode Examples)
+
+sol = Solution()
+
+# Example 1: Zero
+print(sol.convertToBase7(0))
+# Expected output: "0"
+
+# Example 2: Negative number
+print(sol.convertToBase7(-49))
+# Expected output: "-100"
+
+# Example 3: Large number
+print(sol.convertToBase7(343))
+# Expected output: "1000"
