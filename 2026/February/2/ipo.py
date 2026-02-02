@@ -30,3 +30,22 @@ class Solution:
             W += -heapq.heappop(max_heap)
         return W
 
+
+# Alternate Python Solution: Brute Force Selection
+# - For each iteration, scan all projects to find the best affordable one.
+# - Useful for understanding logic but not optimal.
+
+class SolutionBrute:
+    def findMaximizedCapital(self, k: int, W: int, profits: List[int], capital: List[int]) -> int:
+        used = [False] * len(profits)
+        for _ in range(k):
+            best = -1
+            for i in range(len(profits)):
+                if not used[i] and capital[i] <= W:
+                    if best == -1 or profits[i] > profits[best]:
+                        best = i
+            if best == -1:
+                break
+            used[best] = True
+            W += profits[best]
+        return W
