@@ -49,3 +49,20 @@ class SolutionBrute:
             used[best] = True
             W += profits[best]
         return W
+
+
+# Additional Examples (Edge Cases and Non-LeetCode Examples)
+
+sol = Solution()
+
+# Example 1: Enough capital for all projects
+print(sol.findMaximizedCapital(3, 10, [1,2,3], [0,1,2]))
+# Expected output: 16
+
+# Example 2: Cannot afford any project
+print(sol.findMaximizedCapital(2, 0, [1,2,3], [1,1,1]))
+# Expected output: 0
+
+# Example 3: Limited k
+print(sol.findMaximizedCapital(1, 2, [1,5,3], [0,2,1]))
+# Expected output: 7
