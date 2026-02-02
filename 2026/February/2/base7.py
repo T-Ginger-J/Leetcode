@@ -1,3 +1,15 @@
+# LeetCode 504: Base 7
+# Explanation:
+# Given an integer num, return its base 7 representation as a string.
+#
+# Method 1: Repeated Division (Optimal)
+# - Handle zero and negative numbers.
+# - Repeatedly divide by 7 and record remainders.
+# - Reverse the collected digits.
+#
+# Time Complexity: O(log_7 n)
+# Space Complexity: O(log_7 n)
+
 class Solution:
     def convertToBase7(self, num: int) -> str:
         if num == 0:
