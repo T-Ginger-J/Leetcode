@@ -26,3 +26,21 @@ class Solution:
             if i < n:
                 stack.append(i)
         return res
+
+
+# Alternate Python Solution: Brute Force (Educational)
+# - For each element, scan forward up to n steps.
+# - Useful for understanding but not optimal.
+
+class SolutionBrute:
+    def nextGreaterElements(self, nums: List[int]) -> List[int]:
+        n = len(nums)
+        res = []
+        for i in range(n):
+            found = -1
+            for j in range(1, n + 1):
+                if nums[(i + j) % n] > nums[i]:
+                    found = nums[(i + j) % n]
+                    break
+            res.append(found)
+        return res
