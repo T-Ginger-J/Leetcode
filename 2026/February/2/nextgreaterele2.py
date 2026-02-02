@@ -44,3 +44,20 @@ class SolutionBrute:
                     break
             res.append(found)
         return res
+
+
+# Additional Examples (Edge Cases and Non-LeetCode Examples)
+
+sol = Solution()
+
+# Example 1: Circular needed
+print(sol.nextGreaterElements([1,2,1]))
+# Expected output: [2,-1,2]
+
+# Example 2: All equal elements
+print(sol.nextGreaterElements([3,3,3]))
+# Expected output: [-1,-1,-1]
+
+# Example 3: Strictly decreasing
+print(sol.nextGreaterElements([5,4,3,2,1]))
+# Expected output: [-1,5,5,5,5]
