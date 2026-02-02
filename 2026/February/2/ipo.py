@@ -1,3 +1,16 @@
+# LeetCode 502: IPO
+# Explanation:
+# Given k projects, each with a profit and a required capital,
+# choose at most k projects to maximize final capital W.
+#
+# Method 1: Greedy + Heaps (Optimal)
+# - Sort projects by required capital.
+# - Use a max-heap to store profits of projects whose capital requirement <= current W.
+# - Repeatedly select the most profitable available project.
+#
+# Time Complexity: O(n log n)
+# Space Complexity: O(n)
+
 from typing import List
 import heapq
 
