@@ -1,3 +1,16 @@
+# LeetCode 509: Fibonacci Number
+# Explanation:
+# Compute the nth Fibonacci number where:
+# F(0) = 0, F(1) = 1
+# F(n) = F(n-1) + F(n-2)
+#
+# Method 1: Iterative Dynamic Programming (Optimal)
+# - Use two variables to keep track of the last two Fibonacci numbers.
+# - Avoid recursion overhead.
+#
+# Time Complexity: O(n)
+# Space Complexity: O(1)
+
 class Solution:
     def fib(self, n: int) -> int:
         if n <= 1:
