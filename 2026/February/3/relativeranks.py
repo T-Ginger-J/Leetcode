@@ -31,3 +31,33 @@ class Solution:
             else:
                 res[idx] = str(rank)
         return res
+
+
+# Alternate Python Solution: Heap-Based Ranking
+# - Push all scores into a max-heap with indices.
+# - Pop in rank order.
+# - Same complexity, different approach.
+
+import heapq
+
+class SolutionHeap:
+    def findRelativeRanks(self, score: List[int]) -> List[str]:
+        n = len(score)
+        res = [""] * n
+        heap = [(-score[i], i) for i in range(n)]
+        heapq.heapify(heap)
+
+        rank = 1
+        while heap:
+            _, idx = heapq.heappop(heap)
+            if rank == 1:
+                res[idx] = "Gold Medal"
+            elif rank == 2:
+                res[idx] = "Silver Medal"
+            elif rank == 3:
+                res[idx] = "Bronze Medal"
+            else:
+                res[idx] = str(rank)
+            rank += 1
+        return res
+
