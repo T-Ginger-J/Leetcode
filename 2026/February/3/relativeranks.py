@@ -61,3 +61,19 @@ class SolutionHeap:
             rank += 1
         return res
 
+
+# Additional Examples (Edge Cases and Non-LeetCode Examples)
+
+sol = Solution()
+
+# Example 1: Single athlete
+print(sol.findRelativeRanks([10]))
+# Expected output: ["Gold Medal"]
+
+# Example 2: Two athletes
+print(sol.findRelativeRanks([5, 10]))
+# Expected output: ["Silver Medal", "Gold Medal"]
+
+# Example 3: Already sorted ascending
+print(sol.findRelativeRanks([1, 2, 3, 4]))
+# Expected output: ["4", "Bronze Medal", "Silver Medal", "Gold Medal"]
