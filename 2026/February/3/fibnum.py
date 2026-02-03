@@ -37,3 +37,18 @@ class SolutionMemo:
         return dfs(n)
 
 
+# Additional Examples (Edge Cases and Non-LeetCode Examples)
+
+sol = Solution()
+
+# Example 1: Zero
+print(sol.fib(0))
+# Expected output: 0
+
+# Example 2: One
+print(sol.fib(1))
+# Expected output: 1
+
+# Example 3: Larger n
+print(sol.fib(10))
+# Expected output: 55
