@@ -1,3 +1,18 @@
+# LeetCode 506: Relative Ranks
+# Explanation:
+# Given an array of unique scores, assign ranks:
+# - Highest score -> "Gold Medal"
+# - 2nd highest -> "Silver Medal"
+# - 3rd highest -> "Bronze Medal"
+# - Others -> their rank number as a string
+#
+# Method 1: Sorting with Index Mapping (Optimal)
+# - Sort indices by score descending.
+# - Assign medals/ranks based on sorted order.
+#
+# Time Complexity: O(n log n)
+# Space Complexity: O(n)
+
 from typing import List
 
 class Solution:
