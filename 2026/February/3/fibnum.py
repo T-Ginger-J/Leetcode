@@ -20,3 +20,20 @@ class Solution:
             a, b = b, a + b
         return b
 
+
+# Alternate Python Solution: Top-Down Memoization
+# - Uses recursion with caching.
+# - Clear and intuitive.
+
+from functools import lru_cache
+
+class SolutionMemo:
+    def fib(self, n: int) -> int:
+        @lru_cache(None)
+        def dfs(k):
+            if k <= 1:
+                return k
+            return dfs(k - 1) + dfs(k - 2)
+        return dfs(n)
+
+
