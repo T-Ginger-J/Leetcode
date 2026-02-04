@@ -62,3 +62,39 @@ class Solution:
             return res
 
         return dfs(0, 0)
+
+    # -------------------------------------------------------
+    # Method 2: Bottom-Up DP
+    # -------------------------------------------------------
+    def findRotateStepsDP(self, ring: str, key: str) -> int:
+
+        n = len(ring)
+        m = len(key)
+
+        pos = defaultdict(list)
+        for i, ch in enumerate(ring):
+            pos[ch].append(i)
+
+        # dp[i][j] = min cost to spell key[i:] when ring at j
+        dp = [[float("inf")] * n for _ in range(m + 1)]
+
+        # Base case
+        for j in range(n):
+            dp[m][j] = 0
+
+        for i in range(m - 1, -1, -1):
+
+            for j in range(n):
+
+                for p in pos[key[i]]:
+
+                    dist = abs(p - j)
+                    step = min(dist, n - dist)
+
+                    dp[i][j] = min(
+                        dp[i][j],
+                        step + 1 + dp[i + 1][p]
+                    )
+
+        return dp[0][0]
+
