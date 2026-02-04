@@ -98,3 +98,32 @@ class Solution:
 
         return dp[0][0]
 
+
+# -------------------------------------------------------
+# Examples (Including Edge Cases)
+# -------------------------------------------------------
+
+# Example 1
+# ring = "godding", key = "gd"
+# Steps: g->g (press), rotate to d (1), press
+print(Solution().findRotateSteps("godding", "gd"))  # 4
+
+
+# Example 2
+# Multiple rotations
+print(Solution().findRotateSteps("abcde", "ade"))  # 6
+
+
+# Example 3 (Repeated Characters)
+# ring = "aaa", key = "aa"
+# Always aligned, just press twice
+print(Solution().findRotateSteps("aaa", "aa"))  # 2
+
+
+# Example 4 (Single Character Ring)
+# Only presses
+print(Solution().findRotateSteps("a", "aaaa"))  # 4
+
+
+# Example 5 (Full Rotation Needed)
+print(Solution().findRotateSteps("ab", "ba"))  # 4
