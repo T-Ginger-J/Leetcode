@@ -58,3 +58,29 @@ class Solution:
                     queue.append(node.right)
 
         return leftmost
+
+    # -------------------------------------------------------
+    # Method 2: DFS (Preorder with Depth Tracking)
+    # -------------------------------------------------------
+    def findBottomLeftValueDFS(self, root: Optional[TreeNode]) -> int:
+
+        self.max_depth = -1
+        self.answer = 0
+
+        def dfs(node, depth):
+
+            if not node:
+                return
+
+            # Visit left first to ensure leftmost priority
+            if depth > self.max_depth:
+                self.max_depth = depth
+                self.answer = node.val
+
+            dfs(node.left, depth + 1)
+            dfs(node.right, depth + 1)
+
+        dfs(root, 0)
+
+        return self.answer
+
