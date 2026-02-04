@@ -84,3 +84,56 @@ class Solution:
 
         return self.answer
 
+    # -------------------------------------------------------
+    # Default Method (BFS)
+    # -------------------------------------------------------
+    def findBottomLeftValue(self, root: Optional[TreeNode]) -> int:
+        return self.findBottomLeftValueBFS(root)
+
+
+# -------------------------------------------------------
+# Examples (Including Edge Cases)
+# -------------------------------------------------------
+
+# Example 1:
+#       2
+#      / \
+#     1   3
+# Bottom-left = 1
+root1 = TreeNode(2, TreeNode(1), TreeNode(3))
+print(Solution().findBottomLeftValue(root1))  # 1
+
+
+# Example 2:
+#        1
+#       / \
+#      2   3
+#     /   / \
+#    4   5   6
+#       /
+#      7
+# Bottom-left = 7
+root2 = TreeNode(
+    1,
+    TreeNode(2, TreeNode(4)),
+    TreeNode(3, TreeNode(5, TreeNode(7)), TreeNode(6))
+)
+print(Solution().findBottomLeftValue(root2))  # 7
+
+
+# Example 3 (Single Node)
+#      10
+# Bottom-left = 10
+root3 = TreeNode(10)
+print(Solution().findBottomLeftValue(root3))  # 10
+
+
+# Example 4 (Left-Skewed Tree)
+#    1
+#   /
+#  2
+# /
+#3
+# Bottom-left = 3
+root4 = TreeNode(1, TreeNode(2, TreeNode(3)))
+print(Solution().findBottomLeftValue(root4))  # 3
