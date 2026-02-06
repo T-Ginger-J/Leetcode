@@ -62,3 +62,36 @@ class Solution:
         self.remaining = self.total
         self.map.clear()
 
+
+# -------------------------------------------------------
+# Examples (Including Edge Cases)
+# -------------------------------------------------------
+
+# Example 1
+obj = Solution(2, 3)
+
+print(obj.flip())   # Random free cell
+print(obj.flip())   # Random free cell
+print(obj.flip())   # Random free cell
+
+obj.reset()
+
+print(obj.flip())   # Random free cell after reset
+
+
+# Example 2 (Single Cell)
+obj2 = Solution(1, 1)
+
+print(obj2.flip())  # [0, 0]
+obj2.reset()
+print(obj2.flip())  # [0, 0]
+
+
+# Example 3 (Large Matrix Simulation)
+obj3 = Solution(3, 3)
+
+res = set()
+for _ in range(9):
+    res.add(tuple(obj3.flip()))
+
+print(len(res))     # 9 (all unique)
