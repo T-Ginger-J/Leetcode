@@ -1,3 +1,22 @@
+# LeetCode 516: Longest Palindromic Subsequence
+# Explanation:
+# 1. Given a string s, find the length of the longest subsequence that is a palindrome.
+# 2. A subsequence does not need to be contiguous.
+# 3. We use Dynamic Programming on intervals.
+
+# Methods Used:
+# - Bottom-Up DP on Substrings
+# - Top-Down DP with Memoization
+# - LCS Reduction (LPS = LCS(s, reverse(s)))
+
+# Time Complexity:
+# - All methods: O(n^2)
+
+# Space Complexity:
+# - Interval DP: O(n^2)
+# - Optimized LCS: O(n)
+
+
 from functools import lru_cache
 
 
