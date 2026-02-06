@@ -88,3 +88,39 @@ class Solution:
     def largestValues(self, root: Optional[TreeNode]) -> List[int]:
         return self.largestValuesBFS(root)
 
+
+# -------------------------------------------------------
+# Examples (Including Edge Cases)
+# -------------------------------------------------------
+
+# Example 1:
+#       1
+#      / \
+#     3   2
+#    / \   \
+#   5   3   9
+# Expected: [1, 3, 9]
+root1 = TreeNode(1, TreeNode(3, TreeNode(5), TreeNode(3)), TreeNode(2, None, TreeNode(9)))
+print(Solution().largestValues(root1))  # [1, 3, 9]
+
+# Example 2 (Single Node)
+root2 = TreeNode(10)
+print(Solution().largestValues(root2))  # [10]
+
+# Example 3 (Left-Skewed)
+# 1 -> 2 -> 3
+root3 = TreeNode(1, TreeNode(2, TreeNode(3)))
+print(Solution().largestValues(root3))  # [1, 2, 3]
+
+# Example 4 (Right-Skewed)
+# 1 -> 2 -> 3
+root4 = TreeNode(1, None, TreeNode(2, None, TreeNode(3)))
+print(Solution().largestValues(root4))  # [1, 2, 3]
+
+# Example 5 (Negative Values)
+#       -1
+#      /  \
+#    -2   -3
+# Expected: [-1, -2]
+root5 = TreeNode(-1, TreeNode(-2), TreeNode(-3))
+print(Solution().largestValues(root5))  # [-1, -2]
