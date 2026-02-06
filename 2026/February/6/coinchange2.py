@@ -86,3 +86,31 @@ class Solution:
 
         return dfs(0, amount)
 
+    # -------------------------------------------------------
+    # Default Method
+    # -------------------------------------------------------
+    def change(self, amount: int, coins: List[int]) -> int:
+        return self.change1D(amount, coins)
+
+
+# -------------------------------------------------------
+# Examples (Including Edge Cases)
+# -------------------------------------------------------
+
+# Example 1
+# Combinations: [5], [2+2+1], [2+1+1+1], [1+1+1+1+1]
+print(Solution().change(5, [1, 2, 5]))  # 4
+
+# Example 2
+# No way to form 3 with only 2
+print(Solution().change(3, [2]))        # 0
+
+# Example 3
+# One way: choose nothing
+print(Solution().change(0, [1, 2, 3]))  # 1
+
+# Example 4 (Single Coin)
+print(Solution().change(10, [10]))      # 1
+
+# Example 5 (Unsorted Coins)
+print(Solution().change(4, [3, 1, 2]))  # 4
