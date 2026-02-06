@@ -1,3 +1,28 @@
+# LeetCode 519: Random Flip Matrix
+# Explanation:
+# 1. We have an m x n binary matrix initially filled with 0.
+# 2. Each call to flip() randomly chooses a cell with value 0 and sets it to 1.
+# 3. All zero cells must have equal probability of being chosen.
+# 4. reset() restores the matrix to all zeros.
+
+# Methods Used:
+# - Hash Map + Fisher-Yates Shuffle Simulation
+# - Virtual 1D Index Mapping
+
+# Key Idea:
+# - Treat the matrix as a flattened array of size m*n.
+# - Maintain a shrinking range [0, total-1].
+# - Randomly pick an index in this range.
+# - Use a map to simulate swaps.
+
+# Time Complexity:
+# - flip(): O(1) average
+# - reset(): O(1)
+
+# Space Complexity:
+# - O(k), k = number of flipped cells
+
+
 import random
 
 
