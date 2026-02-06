@@ -59,3 +59,32 @@ class Solution:
 
         return res
 
+    # -------------------------------------------------------
+    # Method 2: DFS
+    # -------------------------------------------------------
+    def largestValuesDFS(self, root: Optional[TreeNode]) -> List[int]:
+
+        res = []
+
+        def dfs(node, depth):
+
+            if not node:
+                return
+
+            if depth == len(res):
+                res.append(node.val)
+            else:
+                res[depth] = max(res[depth], node.val)
+
+            dfs(node.left, depth + 1)
+            dfs(node.right, depth + 1)
+
+        dfs(root, 0)
+        return res
+
+    # -------------------------------------------------------
+    # Default Method (BFS)
+    # -------------------------------------------------------
+    def largestValues(self, root: Optional[TreeNode]) -> List[int]:
+        return self.largestValuesBFS(root)
+
