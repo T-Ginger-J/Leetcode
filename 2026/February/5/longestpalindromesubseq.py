@@ -83,3 +83,34 @@ class Solution:
 
         return dfs(0, len(s) - 1)
 
+    # -------------------------------------------------------
+    # Method 3: LCS Reduction (Space Optimized)
+    # -------------------------------------------------------
+    def longestPalindromeSubseqLCS(self, s: str) -> int:
+
+        t = s[::-1]
+        n = len(s)
+
+        prev = [0] * (n + 1)
+
+        for i in range(1, n + 1):
+
+            curr = [0] * (n + 1)
+
+            for j in range(1, n + 1):
+
+                if s[i - 1] == t[j - 1]:
+                    curr[j] = prev[j - 1] + 1
+                else:
+                    curr[j] = max(prev[j], curr[j - 1])
+
+            prev = curr
+
+        return prev[n]
+
+    # -------------------------------------------------------
+    # Default Method
+    # -------------------------------------------------------
+    def longestPalindromeSubseq(self, s: str) -> int:
+        return self.longestPalindromeSubseqDP(s)
+
