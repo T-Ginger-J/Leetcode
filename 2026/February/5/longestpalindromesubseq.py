@@ -114,3 +114,25 @@ class Solution:
     def longestPalindromeSubseq(self, s: str) -> int:
         return self.longestPalindromeSubseqDP(s)
 
+
+# -------------------------------------------------------
+# Examples (Including Edge Cases)
+# -------------------------------------------------------
+
+# Example 1
+# "bbbab" -> "bbbb"
+print(Solution().longestPalindromeSubseq("bbbab"))  # 4
+
+# Example 2
+# "cbbd" -> "bb"
+print(Solution().longestPalindromeSubseq("cbbd"))   # 2
+
+# Example 3 (Single Character)
+print(Solution().longestPalindromeSubseq("a"))      # 1
+
+# Example 4 (All Unique)
+# Only single characters are palindromes
+print(Solution().longestPalindromeSubseq("abcd"))   # 1
+
+# Example 5 (Already Palindrome)
+print(Solution().longestPalindromeSubseq("racecar"))  # 7
