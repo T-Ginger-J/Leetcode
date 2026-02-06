@@ -64,3 +64,25 @@ class Solution:
                     dp[i][j] += dp[i][j - coins[i - 1]]
 
         return dp[n][amount]
+
+    # -------------------------------------------------------
+    # Method 3: Top-Down DP (Memoization)
+    # -------------------------------------------------------
+    def changeMemo(self, amount: int, coins: List[int]) -> int:
+
+        n = len(coins)
+
+        @lru_cache(None)
+        def dfs(i, remain):
+
+            if remain == 0:
+                return 1
+
+            if remain < 0 or i == n:
+                return 0
+
+            # Choose or skip current coin
+            return dfs(i, remain - coins[i]) + dfs(i + 1, remain)
+
+        return dfs(0, amount)
+
