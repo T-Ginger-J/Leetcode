@@ -1,3 +1,26 @@
+# LeetCode 523: Continuous Subarray Sum
+# Explanation:
+# 1. We are given an integer array nums and an integer k.
+# 2. We must check if there exists a subarray of length at least 2
+#    whose sum is a multiple of k.
+# 3. Use prefix sums and modular arithmetic.
+
+# Methods Used:
+# - Prefix Sum + Hash Map (Remainder Tracking)
+# - Brute Force (For Comparison)
+
+# Key Idea:
+# - If two prefix sums have the same remainder mod k,
+#   their difference is divisible by k.
+
+# Time Complexity:
+# - Hash Map Method: O(n)
+# - Brute Force: O(n^2)
+
+# Space Complexity:
+# - O(min(n, k))
+
+
 from typing import List
 
 
