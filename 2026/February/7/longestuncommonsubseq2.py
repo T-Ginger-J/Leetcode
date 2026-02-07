@@ -105,3 +105,22 @@ class Solution:
 
         return -1
 
+
+# -------------------------------------------------------
+# Examples (Including Edge Cases)
+# -------------------------------------------------------
+
+# Example 1
+print(Solution().findLUSlength(["aba", "cdc", "eae"]))  # 3
+
+# Example 2
+print(Solution().findLUSlength(["aaa", "aaa", "aa"]))  # -1
+
+# Example 3 (Single String)
+print(Solution().findLUSlength(["abcd"]))              # 4
+
+# Example 4 (All Duplicates)
+print(Solution().findLUSlength(["a", "a", "a"]))       # -1
+
+# Example 5 (Mixed Lengths)
+print(Solution().findLUSlength(["a", "ab", "abc"]))    # 3
