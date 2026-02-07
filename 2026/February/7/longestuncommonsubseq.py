@@ -56,3 +56,28 @@ class Solution:
 
         return -1
 
+    # -------------------------------------------------------
+    # Default Method
+    # -------------------------------------------------------
+    def findLUSlength(self, a: str, b: str) -> int:
+        return self.findLUSlength(a, b)
+
+
+# -------------------------------------------------------
+# Examples (Including Edge Cases)
+# -------------------------------------------------------
+
+# Example 1
+print(Solution().findLUSlength("aba", "cdc"))   # 3
+
+# Example 2
+print(Solution().findLUSlength("aaa", "aaa"))   # -1
+
+# Example 3 (Different Lengths)
+print(Solution().findLUSlength("abcd", "ab"))   # 4
+
+# Example 4 (One Empty String)
+print(Solution().findLUSlength("", "abc"))      # 3
+
+# Example 5 (Single Character)
+print(Solution().findLUSlength("a", "b"))       # 1
