@@ -52,3 +52,26 @@ class Solution:
 
         return False
 
+    # -------------------------------------------------------
+    # Method 2: Brute Force (For Understanding)
+    # -------------------------------------------------------
+    def checkSubarraySumBrute(self, nums: List[int], k: int) -> bool:
+
+        n = len(nums)
+
+        for i in range(n):
+            total = nums[i]
+
+            for j in range(i + 1, n):
+
+                total += nums[j]
+
+                if k == 0:
+                    if total == 0:
+                        return True
+                else:
+                    if total % k == 0:
+                        return True
+
+        return False
+
