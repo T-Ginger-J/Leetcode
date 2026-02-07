@@ -33,3 +33,26 @@ class Solution:
 
         return max(len(a), len(b))
 
+    # -------------------------------------------------------
+    # Method 2: Explicit Subsequence Check (Educational)
+    # -------------------------------------------------------
+    def findLUSlengthCheck(self, a: str, b: str) -> int:
+
+        def isSubseq(s, t):
+            i = 0
+            for ch in t:
+                if i < len(s) and s[i] == ch:
+                    i += 1
+            return i == len(s)
+
+        if a == b:
+            return -1
+
+        if not isSubseq(a, b):
+            return len(a)
+
+        if not isSubseq(b, a):
+            return len(b)
+
+        return -1
+
