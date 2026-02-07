@@ -75,3 +75,22 @@ class Solution:
 
         return False
 
+
+# -------------------------------------------------------
+# Examples (Including Edge Cases)
+# -------------------------------------------------------
+
+# Example 1
+print(Solution().checkSubarraySum([23, 2, 4, 6, 7], 6))   # True
+
+# Example 2
+print(Solution().checkSubarraySum([23, 2, 6, 4, 7], 6))   # True
+
+# Example 3 (k = 0, valid zero-sum)
+print(Solution().checkSubarraySum([0, 0], 0))            # True
+
+# Example 4 (k = 0, invalid)
+print(Solution().checkSubarraySum([1, 0], 0))            # False
+
+# Example 5 (No Valid Subarray)
+print(Solution().checkSubarraySum([1, 2, 3], 7))          # False
