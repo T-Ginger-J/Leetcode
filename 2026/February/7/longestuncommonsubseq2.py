@@ -1,3 +1,27 @@
+# LeetCode 522: Longest Uncommon Subsequence II
+# Explanation:
+# 1. We are given a list of strings.
+# 2. The longest uncommon subsequence is the longest string that is NOT
+#    a subsequence of any other string in the list.
+# 3. We must find the maximum length among all such valid strings.
+
+# Methods Used:
+# - Brute Force + Subsequence Checking
+# - Sorting by Length (Greedy Pruning)
+
+# Key Idea:
+# - Sort strings by descending length.
+# - For each string, check if it is a subsequence of any other string.
+# - First valid one is the answer.
+
+# Time Complexity:
+# - O(n^2 * L)
+#   n = number of strings, L = max string length
+
+# Space Complexity:
+# - O(1) (ignoring input storage)
+
+
 from typing import List
 
 
