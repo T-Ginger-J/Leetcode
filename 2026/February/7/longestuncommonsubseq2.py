@@ -65,3 +65,43 @@ class Solution:
                 return len(strs[i])
 
         return -1
+
+    # -------------------------------------------------------
+    # Method 2: Frequency Optimization
+    # -------------------------------------------------------
+    def findLUSlengthFreq(self, strs: List[str]) -> int:
+
+        from collections import Counter
+
+        freq = Counter(strs)
+
+        # Unique strings only
+        unique = [s for s in strs if freq[s] == 1]
+
+        unique.sort(key=len, reverse=True)
+
+        def isSubseq(s, t):
+            i = 0
+            for ch in t:
+                if i < len(s) and s[i] == ch:
+                    i += 1
+            return i == len(s)
+
+        for s in unique:
+
+            ok = True
+
+            for t in strs:
+
+                if len(t) < len(s):
+                    continue
+
+                if s != t and isSubseq(s, t):
+                    ok = False
+                    break
+
+            if ok:
+                return len(s)
+
+        return -1
+
