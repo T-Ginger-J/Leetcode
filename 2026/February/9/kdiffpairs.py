@@ -46,3 +46,33 @@ class Solution:
                     count += 1
 
         return count
+
+    # -------------------------------------------------------
+    # Method 2: Sorting + Two Pointers
+    # -------------------------------------------------------
+    def findPairsTwoPointers(self, nums: List[int], k: int) -> int:
+
+        if k < 0:
+            return 0
+
+        nums.sort()
+        n = len(nums)
+        count = 0
+        i, j = 0, 1
+
+        while i < n and j < n:
+            if i == j or nums[j] - nums[i] < k:
+                j += 1
+            elif nums[j] - nums[i] > k:
+                i += 1
+            else:
+                count += 1
+                i += 1
+                j += 1
+                while j < n and nums[j] == nums[j - 1]:
+                    j += 1
+                while i < n and nums[i] == nums[i - 1]:
+                    i += 1
+
+        return count
+
