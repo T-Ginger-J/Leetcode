@@ -1,3 +1,26 @@
+# LeetCode 532: K-diff Pairs in an Array
+# Explanation:
+# 1. Given an integer array nums and integer k, find the number of unique k-diff pairs.
+#    A k-diff pair is (nums[i], nums[j]) where i != j and |nums[i]-nums[j]| == k.
+# 2. Use a hashmap or set to track numbers and count pairs.
+
+# Methods Used:
+# - Hash Map Counting
+# - Set for Unique Pairs
+# - Sorting + Two Pointers Alternative
+
+# Time Complexity:
+# - O(n) for hashmap method
+# - O(n log n) for sorting + two pointers
+
+# Space Complexity:
+# - O(n) for hashmap or set
+
+
+from typing import List
+from collections import Counter
+
+
 class Solution:
 
     # -------------------------------------------------------
