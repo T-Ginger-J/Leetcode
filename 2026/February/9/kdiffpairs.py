@@ -76,3 +76,32 @@ class Solution:
 
         return count
 
+
+# -------------------------------------------------------
+# Examples (Including Edge Cases)
+# -------------------------------------------------------
+
+# Example 1
+nums1 = [3,1,4,1,5]
+k1 = 2
+print(Solution().findPairs(nums1, k1))  # 2 ([1,3],[3,5])
+
+# Example 2
+nums2 = [1,2,3,4,5]
+k2 = 1
+print(Solution().findPairs(nums2, k2))  # 4 ([1,2],[2,3],[3,4],[4,5])
+
+# Example 3 (k=0)
+nums3 = [1,3,1,5,4]
+k3 = 0
+print(Solution().findPairs(nums3, k3))  # 1 ([1,1])
+
+# Example 4 (No pairs)
+nums4 = [1,2,3]
+k4 = 5
+print(Solution().findPairs(nums4, k4))  # 0
+
+# Example 5 (Negative k, invalid)
+nums5 = [1,2,3]
+k5 = -1
+print(Solution().findPairs(nums5, k5))  # 0
