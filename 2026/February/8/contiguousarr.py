@@ -1,3 +1,27 @@
+# LeetCode 525: Contiguous Array
+# Explanation:
+# 1. Given a binary array, find the length of the longest contiguous subarray
+#    with equal number of 0s and 1s.
+# 2. Transform 0s to -1s. Then the problem reduces to finding the longest subarray
+#    with sum 0.
+# 3. Use prefix sum + hashmap to store earliest occurrence of each sum.
+
+# Methods Used:
+# - Prefix Sum + Hash Map (Optimal)
+# - Brute Force (O(n^2), for understanding)
+
+# Time Complexity:
+# - Hash Map: O(n)
+# - Brute Force: O(n^2)
+
+# Space Complexity:
+# - O(n) for Hash Map
+
+
+from typing import List
+
+
+class Solution:
 
     # -------------------------------------------------------
     # Method 1: Prefix Sum + Hash Map (Optimal)
