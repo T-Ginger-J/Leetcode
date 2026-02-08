@@ -44,3 +44,27 @@ class Solution:
 
         return max_len
 
+    # -------------------------------------------------------
+    # Method 2: Brute Force (For Understanding)
+    # -------------------------------------------------------
+    def findMaxLengthBrute(self, nums: List[int]) -> int:
+
+        n = len(nums)
+        max_len = 0
+
+        for i in range(n):
+            count0 = 0
+            count1 = 0
+
+            for j in range(i, n):
+                if nums[j] == 0:
+                    count0 += 1
+                else:
+                    count1 += 1
+
+                if count0 == count1:
+                    max_len = max(max_len, j - i + 1)
+
+        return max_len
+
+
