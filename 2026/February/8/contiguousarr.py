@@ -68,3 +68,21 @@ class Solution:
         return max_len
 
 
+# -------------------------------------------------------
+# Examples (Including Edge Cases)
+# -------------------------------------------------------
+
+# Example 1
+print(Solution().findMaxLength([0, 1]))                   # 2
+
+# Example 2
+print(Solution().findMaxLength([0, 1, 0]))                # 2
+
+# Example 3 (All zeros)
+print(Solution().findMaxLength([0, 0, 0, 0]))             # 0
+
+# Example 4 (All ones)
+print(Solution().findMaxLength([1, 1, 1, 1]))             # 0
+
+# Example 5 (Long Mixed)
+print(Solution().findMaxLength([0, 1, 1, 0, 1, 0, 0]))    # 6
