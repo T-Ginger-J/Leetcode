@@ -96,3 +96,27 @@ class Solution:
 
         return best
 
+
+# -------------------------------------------------------
+# Examples (Including Edge Cases)
+# -------------------------------------------------------
+
+# Example 1
+print(Solution().findLongestWord("abpcplea", ["ale", "apple", "monkey", "plea"]))  
+# "apple"
+
+# Example 2
+print(Solution().findLongestWord("abpcplea", ["a", "b", "c"]))  
+# "a"
+
+# Example 3 (No Match)
+print(Solution().findLongestWord("abc", ["d", "e", "f"]))  
+# ""
+
+# Example 4 (Lex Order Tie)
+print(Solution().findLongestWord("bab", ["ba", "ab"]))  
+# "ab"
+
+# Example 5 (Empty Dictionary)
+print(Solution().findLongestWord("abc", []))  
+# ""
