@@ -41,3 +41,14 @@ class Solution:
         idx = bisect.bisect_left(self.prefix, target)
         return idx
 
+
+# -------------------------------------------------------
+# Examples (Including Edge Cases)
+# -------------------------------------------------------
+
+# Example 1
+w = [1, 3]
+obj = Solution(w)
+# Probabilities: index 0 -> 1/4, index 1 -> 3/4
+results = [obj.pickIndex() for _ in range(10000)]
+# Check approximate di
