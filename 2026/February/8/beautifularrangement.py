@@ -43,3 +43,26 @@ class Solution:
         return backtrack(1, used)
 
 
+# -------------------------------------------------------
+# Examples (Including Edge Cases)
+# -------------------------------------------------------
+
+# Example 1
+# n = 2, arrangements: [1,2], [2,1]
+print(Solution().countArrangement(2))  # 2
+
+# Example 2
+# n = 1, only [1]
+print(Solution().countArrangement(1))  # 1
+
+# Example 3
+# n = 3
+# Valid arrangements: [1,2,3], [3,2,1]
+print(Solution().countArrangement(3))  # 3
+
+# Example 4
+# n = 4
+print(Solution().countArrangement(4))  # 8
+
+# Example 5 (Edge Case: Larger n)
+print(Solution().countArrangement(5))  # 10
