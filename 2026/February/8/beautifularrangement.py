@@ -1,3 +1,21 @@
+# LeetCode 526: Beautiful Arrangement
+# Explanation:
+# 1. We need to count the number of beautiful arrangements of numbers 1..n.
+# 2. A beautiful arrangement satisfies: at position i (1-indexed), either
+#    - number % i == 0 or i % number == 0
+# 3. Use backtracking (DFS) to generate all valid permutations.
+
+# Methods Used:
+# - Backtracking with Visited Array
+# - Pruning Invalid Choices
+
+# Time Complexity:
+# - O(n!), n <= 15, but pruning reduces search space significantly
+
+# Space Complexity:
+# - O(n) for visited array and recursion stack
+
+
 class Solution:
 
     # -------------------------------------------------------
