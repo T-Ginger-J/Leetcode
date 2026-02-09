@@ -1,3 +1,22 @@
+# LeetCode 528: Random Pick with Weight
+# Explanation:
+# 1. We are given a list of positive weights w.
+# 2. We need to pick an index randomly, where the probability of each index
+#    is proportional to its weight.
+# 3. Use prefix sum and binary search to achieve weighted random pick.
+
+# Methods Used:
+# - Prefix Sum Array + Binary Search
+# - Random Selection within Total Weight
+
+# Time Complexity:
+# - Initialization: O(n)
+# - pickIndex(): O(log n)
+
+# Space Complexity:
+# - O(n) for prefix sum array
+
+
 from typing import List
 import random
 import bisect
