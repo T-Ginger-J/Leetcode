@@ -64,3 +64,48 @@ class Solution:
             dfs(x, y)
 
         return board
+
+
+# -------------------------------------------------------
+# Examples (Including Edge Cases)
+# -------------------------------------------------------
+
+# Example 1
+board1 = [['E','E','E','E','E'],
+          ['E','E','M','E','E'],
+          ['E','E','E','E','E'],
+          ['E','E','E','E','E']]
+click1 = [3,0]
+res1 = Solution().updateBoard(board1, click1)
+for row in res1:
+    print(row)
+# Expected: reveal area around click with counts
+
+# Example 2
+board2 = [['B','1','E','1','B'],
+          ['B','1','M','1','B'],
+          ['B','1','1','1','B'],
+          ['B','B','B','B','B']]
+click2 = [1,2]
+res2 = Solution().updateBoard(board2, click2)
+for row in res2:
+    print(row)
+# Expected: clicked on mine -> 'X'
+
+# Example 3 (Single cell mine)
+board3 = [['M']]
+click3 = [0,0]
+print(Solution().updateBoard(board3, click3))
+# [['X']]
+
+# Example 4 (Single empty cell)
+board4 = [['E']]
+click4 = [0,0]
+print(Solution().updateBoard(board4, click4))
+# [['B']]
+
+# Example 5 (Empty board)
+board5 = []
+click5 = [0,0]
+print(Solution().updateBoard(board5, click5))
+# []
