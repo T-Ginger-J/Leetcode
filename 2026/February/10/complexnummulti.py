@@ -35,3 +35,28 @@ class Solution:
         imag = a_real * b_imag + a_imag * b_real
 
         return f"{real}+{imag}i"
+
+
+# -------------------------------------------------------
+# Examples (Including Edge Cases)
+# -------------------------------------------------------
+
+# Example 1
+a1, b1 = "1+1i", "1+1i"
+print(Solution().complexNumberMultiply(a1, b1))  # "0+2i"
+
+# Example 2
+a2, b2 = "1+-1i", "1+-1i"
+print(Solution().complexNumberMultiply(a2, b2))  # "0+-2i"
+
+# Example 3 (Zero multiplication)
+a3, b3 = "0+0i", "3+4i"
+print(Solution().complexNumberMultiply(a3, b3))  # "0+0i"
+
+# Example 4 (Negative numbers)
+a4, b4 = "-1+-1i", "1+-1i"
+print(Solution().complexNumberMultiply(a4, b4))  # "0+2i"
+
+# Example 5 (Large numbers)
+a5, b5 = "123+456i", "789+987i"
+print(Solution().complexNumberMultiply(a5, b5))  # "-357345+1011153i"
