@@ -52,3 +52,32 @@ class Solution:
 
         return dist
 
+
+# -------------------------------------------------------
+# Examples (Including Edge Cases)
+# -------------------------------------------------------
+
+# Example 1
+mat1 = [[0,0,0],[0,1,0],[0,0,0]]
+print(Solution().updateMatrix(mat1))
+# [[0,0,0],[0,1,0],[0,0,0]]
+
+# Example 2
+mat2 = [[0,0,0],[0,1,0],[1,1,1]]
+print(Solution().updateMatrix(mat2))
+# [[0,0,0],[0,1,0],[1,2,1]]
+
+# Example 3 (All zeros)
+mat3 = [[0,0],[0,0]]
+print(Solution().updateMatrix(mat3))
+# [[0,0],[0,0]]
+
+# Example 4 (All ones with single zero)
+mat4 = [[1,1,1],[1,0,1],[1,1,1]]
+print(Solution().updateMatrix(mat4))
+# [[2,1,2],[1,0,1],[2,1,2]]
+
+# Example 5 (Empty matrix)
+mat5 = []
+print(Solution().updateMatrix(mat5))
+# []
