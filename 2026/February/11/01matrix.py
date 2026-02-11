@@ -1,3 +1,20 @@
+# LeetCode 542: 01 Matrix
+# Explanation:
+# 1. Given a matrix with 0s and 1s, update each cell with the distance to the nearest 0.
+# 2. Distance is measured in number of steps (Manhattan distance).
+# 3. Use BFS starting from all 0s simultaneously to fill distances.
+
+# Methods Used:
+# - Multi-source BFS (Optimal)
+# - Alternative: DP pass (top-left & bottom-right)
+
+# Time Complexity:
+# - O(m*n), m = rows, n = cols
+
+# Space Complexity:
+# - O(m*n) for BFS queue
+
+
 from typing import List
 from collections import deque
 
