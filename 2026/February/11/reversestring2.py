@@ -31,3 +31,27 @@ class Solution:
 
         return ''.join(s)
 
+
+# -------------------------------------------------------
+# Examples (Including Edge Cases)
+# -------------------------------------------------------
+
+# Example 1
+s1, k1 = "abcdefg", 2
+print(Solution().reverseStr(s1, k1))  # "bacdfeg"
+
+# Example 2
+s2, k2 = "abcd", 2
+print(Solution().reverseStr(s2, k2))  # "bacd"
+
+# Example 3 (k > len(s))
+s3, k3 = "abc", 5
+print(Solution().reverseStr(s3, k3))  # "cba"
+
+# Example 4 (k = 1)
+s4, k4 = "abcdef"
+print(Solution().reverseStr(s4, k4))  # "abcdef" (every 1 char reversed -> same)
+
+# Example 5 (Empty string)
+s5, k5 = ""
+print(Solution().reverseStr(s5, k5))  # ""
