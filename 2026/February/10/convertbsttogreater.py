@@ -46,3 +46,40 @@ class Solution:
         return root
 
 
+# -------------------------------------------------------
+# Examples (Including Edge Cases)
+# -------------------------------------------------------
+
+# Helper function: In-order traversal
+def inorder(node):
+    if not node:
+        return []
+    return inorder(node.left) + [node.val] + inorder(node.right)
+
+# Example 1
+#      5
+#     / \
+#    2   13
+root1 = TreeNode(5, TreeNode(2), TreeNode(13))
+new_root1 = Solution().convertBST(root1)
+print(inorder(new_root1))  # [20,18,13]
+
+# Example 2 (Single node)
+root2 = TreeNode(10)
+new_root2 = Solution().convertBST(root2)
+print(inorder(new_root2))  # [10]
+
+# Example 3 (Left skewed)
+root3 = TreeNode(3, TreeNode(2, TreeNode(1)))
+new_root3 = Solution().convertBST(root3)
+print(inorder(new_root3))  # [6,5,3]
+
+# Example 4 (Right skewed)
+root4 = TreeNode(1, None, TreeNode(2, None, TreeNode(3)))
+new_root4 = Solution().convertBST(root4)
+print(inorder(new_root4))  # [6,5,3]
+
+# Example 5 (Empty tree)
+root5 = None
+new_root5 = Solution().convertBST(root5)
+print(inorder(new_root5))  # []
