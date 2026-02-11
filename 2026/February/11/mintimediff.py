@@ -1,3 +1,20 @@
+# LeetCode 539: Minimum Time Difference
+# Explanation:
+# 1. Given a list of 24-hour time points (HH:MM), find the minimum difference in minutes between any two.
+# 2. Convert times to minutes, sort, and compare consecutive times including circular difference across midnight.
+
+# Methods Used:
+# - Convert to minutes
+# - Sort and compare consecutive differences
+# - Handle wrap-around (last and first)
+
+# Time Complexity:
+# - O(n log n), n = number of time points
+
+# Space Complexity:
+# - O(n) for minutes list
+
+
 from typing import List
 
 
