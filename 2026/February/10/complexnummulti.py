@@ -1,3 +1,22 @@
+# LeetCode 537: Complex Number Multiplication
+# Explanation:
+# 1. Complex numbers are given as strings "a+bi".
+# 2. To multiply (a+bi)*(c+di), use formula:
+#    real = a*c - b*d
+#    imag = a*d + b*c
+# 3. Return result in "x+yi" format.
+
+# Methods Used:
+# - String Parsing
+# - Arithmetic Multiplication
+
+# Time Complexity:
+# - O(1), strings are short
+
+# Space Complexity:
+# - O(1)
+
+
 class Solution:
 
     # -------------------------------------------------------
