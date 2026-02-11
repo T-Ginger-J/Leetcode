@@ -44,3 +44,26 @@ class Solution:
         return min_diff
 
 
+# -------------------------------------------------------
+# Examples (Including Edge Cases)
+# -------------------------------------------------------
+
+# Example 1
+timePoints1 = ["23:59","00:00"]
+print(Solution().findMinDifference(timePoints1))  # 1
+
+# Example 2
+timePoints2 = ["00:00","23:59","12:30"]
+print(Solution().findMinDifference(timePoints2))  # 1
+
+# Example 3 (Multiple same times)
+timePoints3 = ["01:01","01:01","02:01"]
+print(Solution().findMinDifference(timePoints3))  # 0
+
+# Example 4 (Single minute difference)
+timePoints4 = ["05:31","22:08","00:35"]
+print(Solution().findMinDifference(timePoints4))  # 147 (min between 22:08 and 00:35)
+
+# Example 5 (Wrap-around case)
+timePoints5 = ["23:59","00:01","12:00"]
+print(Solution().findMinDifference(timePoints5))  # 2
