@@ -33,3 +33,34 @@ class Codec:
     def decode(self, shortUrl: str) -> str:
         return self.url_map.get(shortUrl, "")
 
+
+# -------------------------------------------------------
+# Examples (Including Edge Cases)
+# -------------------------------------------------------
+
+codec = Codec()
+
+# Example 1
+url1 = "https://leetcode.com/problems/design-tinyurl"
+short1 = codec.encode(url1)
+print(short1)                  # http://tinyurl.com/1
+print(codec.decode(short1))    # original URL
+
+# Example 2 (Multiple URLs)
+url2 = "https://openai.com/research"
+short2 = codec.encode(url2)
+print(short2)                  # http://tinyurl.com/2
+print(codec.decode(short2))    # original URL
+
+# Example 3 (Repeated URL)
+short3 = codec.encode(url1)
+print(short3)                  # http://tinyurl.com/3
+print(codec.decode(short3))    # url1
+
+# Example 4 (Invalid decode)
+print(codec.decode("http://tinyurl.com/999"))  # ""
+
+# Example 5 (Empty URL)
+short5 = codec.encode("")
+print(short5)                  # http://tinyurl.com/4
+print(codec.decode(short5))    # ""
