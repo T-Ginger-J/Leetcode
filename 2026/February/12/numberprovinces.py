@@ -42,3 +42,27 @@ class Solution:
 
         return provinces
 
+    # -------------------------------------------------------
+    # Method 2: Union-Find
+    # -------------------------------------------------------
+    def findCircleNumUF(self, isConnected: List[List[int]]) -> int:
+
+        n = len(isConnected)
+        parent = list(range(n))
+
+        def find(x):
+            if parent[x] != x:
+                parent[x] = find(parent[x])
+            return parent[x]
+
+        def union(x, y):
+            parent[find(x)] = find(y)
+
+        for i in range(n):
+            for j in range(i+1, n):
+                if isConnected[i][j] == 1:
+                    union(i, j)
+
+        return sum(1 for i in range(n) if parent[i] == i)
+
+
