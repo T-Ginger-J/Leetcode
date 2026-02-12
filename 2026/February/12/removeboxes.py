@@ -48,3 +48,28 @@ class Solution:
             return res
 
         return dp(0, n-1, 0)
+
+
+# -------------------------------------------------------
+# Examples (Including Edge Cases)
+# -------------------------------------------------------
+
+# Example 1
+boxes1 = [1,3,2,2,2,3,4,3,1]
+print(Solution().removeBoxes(boxes1))  # 23
+
+# Example 2 (All same)
+boxes2 = [1,1,1,1]
+print(Solution().removeBoxes(boxes2))  # 16 (4*4)
+
+# Example 3 (All unique)
+boxes3 = [1,2,3,4]
+print(Solution().removeBoxes(boxes3))  # 4 (1*1 + 1*1 + 1*1 + 1*1)
+
+# Example 4 (Empty)
+boxes4 = []
+print(Solution().removeBoxes(boxes4))  # 0
+
+# Example 5 (Two colors alternating)
+boxes5 = [1,2,1,2,1]
+print(Solution().removeBoxes(boxes5))
