@@ -1,3 +1,21 @@
+# LeetCode 546: Remove Boxes
+# Explanation:
+# 1. Given an array of boxes with colors represented by numbers, remove them to maximize points.
+# 2. Removing k consecutive boxes of the same color gives k*k points.
+# 3. After removal, remaining boxes shift to fill the gap.
+# 4. Use DP with memoization: dp(l, r, k) = max points for boxes[l:r+1] with k boxes of same color as boxes[r] contiguous to the right.
+
+# Methods Used:
+# - 3D DP with memoization (l, r, k)
+# - Recursively try removing last boxes or merging same-color boxes
+
+# Time Complexity:
+# - O(n^3) in worst case, n = len(boxes)
+
+# Space Complexity:
+# - O(n^3) for memoization
+
+
 from typing import List
 from functools import lru_cache
 
