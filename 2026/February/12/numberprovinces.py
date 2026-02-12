@@ -66,3 +66,26 @@ class Solution:
         return sum(1 for i in range(n) if parent[i] == i)
 
 
+# -------------------------------------------------------
+# Examples (Including Edge Cases)
+# -------------------------------------------------------
+
+# Example 1
+isConnected1 = [[1,1,0],[1,1,0],[0,0,1]]
+print(Solution().findCircleNum(isConnected1))  # 2
+
+# Example 2
+isConnected2 = [[1,0,0],[0,1,0],[0,0,1]]
+print(Solution().findCircleNum(isConnected2))  # 3
+
+# Example 3 (All connected)
+isConnected3 = [[1,1,1],[1,1,1],[1,1,1]]
+print(Solution().findCircleNum(isConnected3))  # 1
+
+# Example 4 (Empty matrix)
+isConnected4 = []
+print(Solution().findCircleNum(isConnected4))  # 0
+
+# Example 5 (Single city)
+isConnected5 = [[1]]
+print(Solution().findCircleNum(isConnected5))  # 1
