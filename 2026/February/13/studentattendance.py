@@ -37,3 +37,34 @@ class Solution:
             else:
                 consecutive_l = 0
         return True
+
+
+# -------------------------------------------------------
+# Examples & Edge Cases
+# -------------------------------------------------------
+
+# Example 1
+s1 = "PPALLP"
+print(Solution().checkRecord(s1))           # True
+print(Solution().checkRecordIterative(s1))  # True
+
+# Example 2
+s2 = "PPALLL"
+print(Solution().checkRecord(s2))           # False
+print(Solution().checkRecordIterative(s2))  # False
+
+# Example 3: Exactly one absence, no late streak
+s3 = "PAPPP"
+print(Solution().checkRecord(s3))           # True
+
+# Example 4: Two absences
+s4 = "PAAPP"
+print(Solution().checkRecord(s4))           # False
+
+# Example 5: Three consecutive lates
+s5 = "PLPLLLP"
+print(Solution().checkRecord(s5))           # False
+
+# Example 6: Empty string
+s6 = ""
+print(Solution().checkRecord(s6))           # True
