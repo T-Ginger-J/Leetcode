@@ -1,0 +1,15 @@
+from typing import List
+
+class Solution:
+
+    # -------------------------------------------------------
+    # Method 1: Direct construction
+    # -------------------------------------------------------
+    def optimalDivision(self, nums: List[int]) -> str:
+        if not nums:
+            return ""
+        if len(nums) == 1:
+            return str(nums[0])
+        if len(nums) == 2:
+            return f"{nums[0]}/{nums[1]}"
+        return f"{nums[0]}/({'/'.join(map(str, nums[1:]))})"
