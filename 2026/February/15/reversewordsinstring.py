@@ -15,3 +15,20 @@ class Solution:
     # -------------------------------------------------------
     def reverseWords(self, s: str) -> str:
         return ' '.join(word[::-1] for word in s.split(' '))
+
+    # -------------------------------------------------------
+    # Method 2: In-place character list manipulation
+    # -------------------------------------------------------
+    def reverseWordsInPlace(self, s: str) -> str:
+        chars = list(s)
+        start = 0
+        n = len(chars)
+        for i in range(n+1):
+            if i == n or chars[i] == ' ':
+                l, r = start, i-1
+                while l < r:
+                    chars[l], chars[r] = chars[r], chars[l]
+                    l += 1
+                    r -= 1
+                start = i+1
+        return ''.join(chars)
