@@ -65,3 +65,27 @@ class Solution:
         return sum(curr) % MOD
 
 
+# -------------------------------------------------------
+# Examples & Edge Cases
+# -------------------------------------------------------
+
+sol = Solution()
+
+# Example 1: n = 1
+print(sol.checkRecordII(1))           # 3 ("P","L","A")
+print(sol.checkRecordIIOptimized(1))  # 3
+
+# Example 2: n = 2
+print(sol.checkRecordII(2))           # 8
+print(sol.checkRecordIIOptimized(2))  # 8
+
+# Example 3: n = 3
+print(sol.checkRecordII(3))           # 19
+print(sol.checkRecordIIOptimized(3))  # 19
+
+# Example 4: n = 0
+print(sol.checkRecordII(0))           # 1 (empty string)
+print(sol.checkRecordIIOptimized(0))  # 1
+
+# Example 5: Large n
+print(sol.checkRecordIIOptimized(10)) # 3536
