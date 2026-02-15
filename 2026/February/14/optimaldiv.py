@@ -39,3 +39,31 @@ class Solution:
         if len(nums) == 2:
             return f"{nums[0]}/{nums[1]}"
         return f"{nums[0]}/({self.optimalDivisionRecursive(nums[1:])})"
+
+
+# -------------------------------------------------------
+# Examples & Edge Cases
+# -------------------------------------------------------
+
+sol = Solution()
+
+# Example 1
+nums1 = [1000,100,10,2]
+print(sol.optimalDivision(nums1))           # "1000/(100/10/2)"
+print(sol.optimalDivisionRecursive(nums1))  # "1000/(100/10/2)"
+
+# Example 2: two numbers
+nums2 = [2,3]
+print(sol.optimalDivision(nums2))           # "2/3"
+
+# Example 3: single number
+nums3 = [5]
+print(sol.optimalDivision(nums3))           # "5"
+
+# Example 4: empty
+nums4 = []
+print(sol.optimalDivision(nums4))           # ""
+
+# Example 5: larger numbers
+nums5 = [6,2,3,4]
+print(sol.optimalDivision(nums5))           # "6/(2/3/4)"
