@@ -28,3 +28,18 @@ class Solution:
             return 1
         return 1 + max(self.maxDepth(child) for child in root.children)
 
+    # -------------------------------------------------------
+    # Method 2: BFS (iterative)
+    # -------------------------------------------------------
+    def maxDepthBFS(self, root: Optional[Node]) -> int:
+        if not root:
+            return 0
+        q = deque([root])
+        depth = 0
+        while q:
+            for _ in range(len(q)):
+                node = q.popleft()
+                for child in node.children:
+                    q.append(child)
+            depth += 1
+        return depth
