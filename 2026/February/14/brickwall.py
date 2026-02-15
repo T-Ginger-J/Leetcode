@@ -41,3 +41,36 @@ class Solution:
                 s += brick
                 count[s] = count.get(s,0)+1
         return len(wall) - max(count.values(), default=0)
+
+
+# -------------------------------------------------------
+# Examples & Edge Cases
+# -------------------------------------------------------
+
+sol = Solution()
+
+# Example 1
+wall1 = [[1,2,2,1],
+         [3,1,2],
+         [1,3,2],
+         [2,4],
+         [3,1,2],
+         [1,3,1,1]]
+print(sol.leastBricks(wall1))           # 2
+print(sol.leastBricksOptimized(wall1))  # 2
+
+# Example 2: Single row
+wall2 = [[1,2,2,1]]
+print(sol.leastBricks(wall2))           # 0
+
+# Example 3: All rows same, no shared edges
+wall3 = [[1,1,1],[1,1,1],[1,1,1]]
+print(sol.leastBricks(wall3))           # 3
+
+# Example 4: Empty wall
+wall4 = []
+print(sol.leastBricks(wall4))           # 0
+
+# Example 5: Only one brick per row
+wall5 = [[5],[5],[5]]
+print(sol.leastBricks(wall5))           # 3
