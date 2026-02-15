@@ -1,4 +1,30 @@
+# LeetCode 558: Logical OR of Two Quad-Trees
+# Explanation:
+# 1. Given two Quad-Trees representing n*n binary matrices, compute a Quad-Tree for the matrix resulting
+#    from bitwise OR of the two matrices.
+# 2. Approach:
+#    - If either node is a leaf and its value is True (1), the result is True.
+#    - If one node is leaf with False (0), result is the other node.
+#    - If both are non-leaf, recursively compute OR for all four children.
+#    - After recursion, check if all four children are leaf and have same value → merge into a leaf.
+# 3. Time Complexity: O(n), n = number of nodes in the trees (each node visited once)
+# 4. Space Complexity: O(h), h = height of the tree (recursive stack)
+
 from typing import Optional
+
+# Definition for a QuadTree node.
+class Node:
+    def __init__(self, val: bool, isLeaf: bool, 
+                 topLeft: Optional['Node']=None, 
+                 topRight: Optional['Node']=None, 
+                 bottomLeft: Optional['Node']=None, 
+                 bottomRight: Optional['Node']=None):
+        self.val = val
+        self.isLeaf = isLeaf
+        self.topLeft = topLeft
+        self.topRight = topRight
+        self.bottomLeft = bottomLeft
+        self.bottomRight = bottomRight
 
 class Solution:
 
