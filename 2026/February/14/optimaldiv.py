@@ -29,3 +29,13 @@ class Solution:
         if len(nums) == 2:
             return f"{nums[0]}/{nums[1]}"
         return f"{nums[0]}/({'/'.join(map(str, nums[1:]))})"
+
+    # -------------------------------------------------------
+    # Method 2: Recursive (not needed but alternative)
+    # -------------------------------------------------------
+    def optimalDivisionRecursive(self, nums: List[int]) -> str:
+        if len(nums) == 1:
+            return str(nums[0])
+        if len(nums) == 2:
+            return f"{nums[0]}/{nums[1]}"
+        return f"{nums[0]}/({self.optimalDivisionRecursive(nums[1:])})"
