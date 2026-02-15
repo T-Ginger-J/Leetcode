@@ -43,3 +43,27 @@ class Solution:
                     q.append(child)
             depth += 1
         return depth
+
+
+# -------------------------------------------------------
+# Examples & Edge Cases
+# -------------------------------------------------------
+
+sol = Solution()
+
+# Example 1
+root1 = Node(1, [Node(3, [Node(5), Node(6)]), Node(2), Node(4)])
+print(sol.maxDepth(root1))     # 3
+print(sol.maxDepthBFS(root1))  # 3
+
+# Example 2: Single node
+root2 = Node(1)
+print(sol.maxDepth(root2))     # 1
+
+# Example 3: Empty tree
+root3 = None
+print(sol.maxDepth(root3))     # 0
+
+# Example 4: Deep tree
+root4 = Node(1, [Node(2, [Node(3, [Node(4)])])])
+print(sol.maxDepth(root4))     # 4
