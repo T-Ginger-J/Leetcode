@@ -1,3 +1,19 @@
+# LeetCode 552: Student Attendance Record II
+# Explanation:
+# 1. Count the number of attendance records of length n that are eligible for an award.
+# 2. Conditions:
+#    - Fewer than 2 'A's in the string.
+#    - No more than 2 consecutive 'L's.
+# 3. Approach:
+#    - Use Dynamic Programming to track states:
+#       dp[i][a][l] = number of strings of length i with 'a' absences and ending with l consecutive L's.
+#    - Transition:
+#       - Add 'P': dp[i][a][0] += sum(dp[i-1][a][0..2])
+#       - Add 'L': dp[i][a][l+1] += dp[i-1][a][l] (only if l<2)
+#       - Add 'A': dp[i][1][0] += sum(dp[i-1][0][0..2]) (only if a=0)
+# 4. Time Complexity: O(n)
+# 5. Space Complexity: O(n*2*3) = O(n)
+
 class Solution:
 
     # -------------------------------------------------------
