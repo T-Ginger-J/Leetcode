@@ -49,3 +49,43 @@ class Solution:
             return Node(topLeft.val, True)
         return Node(True, False, topLeft, topRight, bottomLeft, bottomRight)
 
+
+# -------------------------------------------------------
+# Examples & Edge Cases
+# -------------------------------------------------------
+
+sol = Solution()
+
+# Helper function to construct leaf nodes quickly
+def leaf(val):
+    return Node(val, True)
+
+# Example 1: simple 2x2 trees
+quadTree1 = Node(False, False, leaf(True), leaf(True), leaf(False), leaf(False))
+quadTree2 = Node(False, False, leaf(True), leaf(False), leaf(True), leaf(False))
+res1 = sol.intersect(quadTree1, quadTree2)
+# Expected: a quad tree representing OR, i.e., topLeft True, topRight True, bottomLeft True, bottomRight False
+
+# Example 2: both single leaf nodes
+quadTree3 = leaf(False)
+quadTree4 = leaf(False)
+res2 = sol.intersect(quadTree3, quadTree4)
+# Expected: leaf(False)
+
+# Example 3: one leaf True, one non-leaf
+quadTree5 = leaf(True)
+quadTree6 = Node(False, False, leaf(False), leaf(False), leaf(False), leaf(False))
+res3 = sol.intersect(quadTree5, quadTree6)
+# Expected: leaf(True)
+
+# Example 4: one leaf False, one non-leaf
+quadTree7 = leaf(False)
+quadTree8 = Node(False, False, leaf(False), leaf(True), leaf(True), leaf(False))
+res4 = sol.intersect(quadTree7, quadTree8)
+# Expected: same as quadTree8
+
+# Example 5: all children mergeable after OR
+quadTree9 = Node(False, False, leaf(False), leaf(False), leaf(False), leaf(False))
+quadTree10 = Node(False, False, leaf(False), leaf(False), leaf(False), leaf(False))
+res5 = sol.intersect(quadTree9, quadTree10)
+# Expected: leaf(False)
