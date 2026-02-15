@@ -31,3 +31,15 @@ class Solution:
         res = int(''.join(digits))
         return res if res <= 2**31 - 1 else -1
 
+    # -------------------------------------------------------
+    # Method 2: Using itertools.permutations (inefficient, only for small numbers)
+    # -------------------------------------------------------
+    def nextGreaterElementBrute(self, n: int) -> int:
+        from itertools import permutations
+        s = str(n)
+        next_nums = sorted(set(int(''.join(p)) for p in permutations(s)))
+        for num in next_nums:
+            if num > n:
+                return num
+        return -1
+
