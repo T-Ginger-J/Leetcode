@@ -40,3 +40,28 @@ class Solution:
 
         return sum(dp[n][a][l] for a in range(2) for l in range(3)) % MOD
 
+    # -------------------------------------------------------
+    # Method 2: Optimized DP with 1D arrays (space O(6))
+    # -------------------------------------------------------
+    def checkRecordIIOptimized(self, n: int) -> int:
+        MOD = 10**9 + 7
+        # states: (a, l) -> total 2*3 = 6 states
+        curr = [0]*6
+        curr[0] = 1  # (0A,0L)
+        for _ in range(1, n+1):
+            next_dp = [0]*6
+            for state in range(6):
+                a = state // 3
+                l = state % 3
+                # Add P
+                next_dp[a*3+0] = (next_dp[a*3+0] + curr[state]) % MOD
+                # Add L
+                if l < 2:
+                    next_dp[a*3+(l+1)] = (next_dp[a*3+(l+1)] + curr[state]) % MOD
+                # Add A
+                if a == 0:
+                    next_dp[1*3+0] = (next_dp[1*3+0] + curr[state]) % MOD
+            curr = next_dp
+        return sum(curr) % MOD
+
+
