@@ -29,3 +29,15 @@ class Solution:
                 edge_counts[edge] += 1
         max_edges = max(edge_counts.values(), default=0)
         return len(wall) - max_edges
+
+    # -------------------------------------------------------
+    # Method 2: Optimized single pass
+    # -------------------------------------------------------
+    def leastBricksOptimized(self, wall: List[List[int]]) -> int:
+        count = {}
+        for row in wall:
+            s = 0
+            for brick in row[:-1]:
+                s += brick
+                count[s] = count.get(s,0)+1
+        return len(wall) - max(count.values(), default=0)
