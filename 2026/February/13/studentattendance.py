@@ -18,3 +18,22 @@ class Solution:
     def checkRecord(self, s: str) -> bool:
         return s.count('A') < 2 and 'LLL' not in s
 
+    # -------------------------------------------------------
+    # Method 2: Iterative check (without built-in count / substring)
+    # -------------------------------------------------------
+    def checkRecordIterative(self, s: str) -> bool:
+        absences = 0
+        consecutive_l = 0
+        for c in s:
+            if c == 'A':
+                absences += 1
+                if absences >= 2:
+                    return False
+                consecutive_l = 0
+            elif c == 'L':
+                consecutive_l += 1
+                if consecutive_l >= 3:
+                    return False
+            else:
+                consecutive_l = 0
+        return True
