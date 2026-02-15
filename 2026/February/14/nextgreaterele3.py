@@ -43,3 +43,30 @@ class Solution:
                 return num
         return -1
 
+
+# -------------------------------------------------------
+# Examples & Edge Cases
+# -------------------------------------------------------
+
+sol = Solution()
+
+# Example 1
+n1 = 12
+print(sol.nextGreaterElement(n1))           # 21
+print(sol.nextGreaterElementBrute(n1))     # 21
+
+# Example 2
+n2 = 21
+print(sol.nextGreaterElement(n2))           # -1
+
+# Example 3
+n3 = 1234
+print(sol.nextGreaterElement(n3))           # 1243
+
+# Example 4: Largest 32-bit integer
+n4 = 2147483476
+print(sol.nextGreaterElement(n4))           # 2147483647
+
+# Example 5: Single digit
+n5 = 7
+print(sol.nextGreaterElement(n5))           # -1
