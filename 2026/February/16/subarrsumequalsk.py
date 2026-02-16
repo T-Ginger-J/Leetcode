@@ -42,3 +42,35 @@ class Solution:
                     count += 1
         return count
 
+
+# -------------------------------------------------------
+# Examples & Edge Cases
+# -------------------------------------------------------
+
+sol = Solution()
+
+# Example 1
+nums1 = [1,1,1]
+k1 = 2
+print(sol.subarraySum(nums1, k1))          # 2
+print(sol.subarraySumBrute(nums1, k1))     # 2
+
+# Example 2
+nums2 = [1,2,3]
+k2 = 3
+print(sol.subarraySum(nums2, k2))          # 2 ([1,2], [3])
+
+# Example 3: negative numbers
+nums3 = [1,-1,0]
+k3 = 0
+print(sol.subarraySum(nums3, k3))          # 3 ([1,-1],[0],[1,-1,0])
+
+# Example 4: single element equals k
+nums4 = [5]
+k4 = 5
+print(sol.subarraySum(nums4, k4))          # 1
+
+# Example 5: empty array
+nums5 = []
+k5 = 0
+print(sol.subarraySum(nums5, k5))          # 0
