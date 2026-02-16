@@ -35,3 +35,33 @@ class Solution:
                 take = not take
                 count[i] -= 1
         return sum_min
+
+
+# -------------------------------------------------------
+# Examples & Edge Cases
+# -------------------------------------------------------
+
+sol = Solution()
+
+# Example 1
+nums1 = [1,4,3,2]
+print(sol.arrayPairSum(nums1))          # 4 (pairs: [1,2],[3,4], sum min = 1+3=4)
+print(sol.arrayPairSumCounting(nums1))  # 4
+
+# Example 2: negative numbers
+nums2 = [-1,-2,-3,-4]
+print(sol.arrayPairSum(nums2))          # -4 (pairs: [-4,-3],[-2,-1], sum min=-4+-2=-6? actually min sum=-4+-3=-7) let's compute
+# Actually after sorting: [-4,-3,-2,-1], sum nums[::2] = -4 + -2 = -6
+print(sol.arrayPairSum(nums2))          # -6
+
+# Example 3: single pair
+nums3 = [10,5]
+print(sol.arrayPairSum(nums3))          # 5
+
+# Example 4: already sorted
+nums4 = [1,2,3,4,5,6]
+print(sol.arrayPairSum(nums4))          # 9 (1+3+5)
+
+# Example 5: repeated numbers
+nums5 = [1,1,1,1]
+print(sol.arrayPairSum(nums5))          # 2 (1+1)
