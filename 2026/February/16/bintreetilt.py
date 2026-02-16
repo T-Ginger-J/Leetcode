@@ -62,3 +62,26 @@ class Solution:
         return total_tilt
 
 
+# -------------------------------------------------------
+# Examples & Edge Cases
+# -------------------------------------------------------
+
+sol = Solution()
+
+# Example 1
+root1 = TreeNode(1, TreeNode(2), TreeNode(3))
+print(sol.findTilt(root1))           # 1 (tilt: |2-3|=1)
+print(sol.findTiltIterative(root1))  # 1
+
+# Example 2: unbalanced tree
+root2 = TreeNode(4, TreeNode(2, TreeNode(3), TreeNode(5)), TreeNode(9, None, TreeNode(7)))
+print(sol.findTilt(root2))           # 15
+print(sol.findTiltIterative(root2))  # 15
+
+# Example 3: single node
+root3 = TreeNode(1)
+print(sol.findTilt(root3))           # 0
+
+# Example 4: empty tree
+root4 = None
+print(sol.findTilt(root4))           # 0
