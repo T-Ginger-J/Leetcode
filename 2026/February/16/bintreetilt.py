@@ -34,3 +34,31 @@ class Solution:
 
         dfs(root)
         return self.total_tilt
+
+    # -------------------------------------------------------
+    # Method 2: Iterative post-order using stack
+    # -------------------------------------------------------
+    def findTiltIterative(self, root: Optional[TreeNode]) -> int:
+        if not root:
+            return 0
+        total_tilt = 0
+        stack = [(root, False)]
+        sums = {}
+
+        while stack:
+            node, visited = stack.pop()
+            if node is None:
+                continue
+            if visited:
+                left_sum = sums.get(node.left, 0)
+                right_sum = sums.get(node.right, 0)
+                total_tilt += abs(left_sum - right_sum)
+                sums[node] = node.val + left_sum + right_sum
+            else:
+                stack.append((node, True))
+                stack.append((node.right, False))
+                stack.append((node.left, False))
+
+        return total_tilt
+
+
