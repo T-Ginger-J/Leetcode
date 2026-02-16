@@ -28,3 +28,17 @@ class Solution:
             sums[cum_sum] += 1
         return count
 
+    # -------------------------------------------------------
+    # Method 2: Brute-force (inefficient)
+    # -------------------------------------------------------
+    def subarraySumBrute(self, nums: List[int], k: int) -> int:
+        count = 0
+        n = len(nums)
+        for i in range(n):
+            s = 0
+            for j in range(i, n):
+                s += nums[j]
+                if s == k:
+                    count += 1
+        return count
+
