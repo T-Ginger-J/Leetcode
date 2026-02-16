@@ -18,3 +18,20 @@ class Solution:
         nums.sort()
         return sum(nums[::2])
 
+    # -------------------------------------------------------
+    # Method 2: Counting sort optimization (for known value range)
+    # -------------------------------------------------------
+    def arrayPairSumCounting(self, nums: List[int]) -> int:
+        offset = 10000  # nums[i] range: [-10000,10000]
+        count = [0]*20001
+        for num in nums:
+            count[num + offset] += 1
+        sum_min = 0
+        take = True
+        for i in range(20001):
+            while count[i] > 0:
+                if take:
+                    sum_min += i - offset
+                take = not take
+                count[i] -= 1
+        return sum_min
