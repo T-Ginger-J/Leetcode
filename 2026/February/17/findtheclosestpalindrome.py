@@ -1,3 +1,16 @@
+# LeetCode 564: Find the Closest Palindrome
+# Explanation:
+# 1. Given a string n representing an integer, find the closest integer (as string) that is a palindrome and not equal to n.
+# 2. Approach:
+#    - Generate candidates by:
+#       a) Using the first half of n and mirroring it to form a palindrome.
+#       b) Incrementing or decrementing the first half and mirroring.
+#       c) Edge cases: 10^k + 1 or 10^(k-1) - 1 (like 100...001 or 99...9)
+#    - Choose the candidate with minimum absolute difference to n.
+#    - If tie, choose the smaller one.
+# 3. Time Complexity: O(k), k = length of n
+# 4. Space Complexity: O(k)
+
 class Solution:
 
     # -------------------------------------------------------
