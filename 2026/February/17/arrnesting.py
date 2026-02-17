@@ -1,3 +1,14 @@
+# LeetCode 565: Array Nesting
+# Explanation:
+# 1. Given an array nums where 0 ≤ nums[i] < n and all elements are unique, define S[i] = {nums[i], nums[nums[i]], ...} until a duplicate is found.
+# 2. Task: Find the size of the largest set S[i].
+# 3. Approach:
+#    - For each unvisited index, traverse the sequence using nums[i] until a cycle is detected.
+#    - Keep track of visited indices to avoid recomputation.
+#    - Update maximum length encountered.
+# 4. Time Complexity: O(n), each index visited at most once
+# 5. Space Complexity: O(n) for visited set (can also modify nums in-place)
+
 from typing import List
 
 class Solution:
