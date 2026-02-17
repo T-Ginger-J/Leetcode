@@ -46,3 +46,30 @@ class Solution:
             max_len = max(max_len, count)
         return max_len
 
+
+# -------------------------------------------------------
+# Examples & Edge Cases
+# -------------------------------------------------------
+
+sol = Solution()
+
+# Example 1
+nums1 = [5,4,0,3,1,6,2]
+print(sol.arrayNesting(nums1[:]))           # 4 (sequence: 0->5->6->2->0)
+print(sol.arrayNestingInPlace(nums1[:]))    # 4
+
+# Example 2: single element
+nums2 = [0]
+print(sol.arrayNesting(nums2[:]))           # 1
+
+# Example 3: two elements
+nums3 = [1,0]
+print(sol.arrayNesting(nums3[:]))           # 2
+
+# Example 4: sequential cycle
+nums4 = [0,1,2,3,4]
+print(sol.arrayNesting(nums4[:]))           # 1
+
+# Example 5: large cycle
+nums5 = [1,2,3,4,0]
+print(sol.arrayNesting(nums5[:]))           # 5
