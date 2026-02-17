@@ -59,3 +59,30 @@ class Solution:
                 return str(num + offset)
             offset +=1
 
+
+# -------------------------------------------------------
+# Examples & Edge Cases
+# -------------------------------------------------------
+
+sol = Solution()
+
+# Example 1
+n1 = "123"
+print(sol.nearestPalindromic(n1))           # "121"
+print(sol.nearestPalindromicBrute(n1))      # "121"
+
+# Example 2: palindrome number
+n2 = "1"
+print(sol.nearestPalindromic(n2))           # "0"
+
+# Example 3: edge 1000
+n3 = "1000"
+print(sol.nearestPalindromic(n3))           # "999"
+
+# Example 4: tie (choose smaller)
+n4 = "10"
+print(sol.nearestPalindromic(n4))           # "9"
+
+# Example 5: even length
+n5 = "1234"
+print(sol.nearestPalindromic(n5))           # "1221"
