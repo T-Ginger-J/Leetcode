@@ -46,3 +46,16 @@ class Solution:
                 closest = cand
         return closest
 
+    # -------------------------------------------------------
+    # Method 2: Brute-force (inefficient)
+    # -------------------------------------------------------
+    def nearestPalindromicBrute(self, n: str) -> str:
+        num = int(n)
+        offset = 1
+        while True:
+            if str(num - offset) == str(num - offset)[::-1] and num - offset != num:
+                return str(num - offset)
+            if str(num + offset) == str(num + offset)[::-1] and num + offset != num:
+                return str(num + offset)
+            offset +=1
+
