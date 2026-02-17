@@ -30,3 +30,19 @@ class Solution:
                 max_len = max(max_len, count)
         return max_len
 
+    # -------------------------------------------------------
+    # Method 2: Modify nums in-place to mark visited
+    # -------------------------------------------------------
+    def arrayNestingInPlace(self, nums: List[int]) -> int:
+        max_len = 0
+        for i in range(len(nums)):
+            count = 0
+            start = i
+            while nums[start] != -1:
+                temp = start
+                start = nums[start]
+                nums[temp] = -1
+                count += 1
+            max_len = max(max_len, count)
+        return max_len
+
