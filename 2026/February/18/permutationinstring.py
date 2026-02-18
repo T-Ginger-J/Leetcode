@@ -1,3 +1,13 @@
+# LeetCode 567: Permutation in String
+# Explanation:
+# 1. Given two strings s1 and s2, check if s2 contains a permutation of s1 as a substring.
+# 2. Approach:
+#    - Use sliding window of length len(s1) over s2.
+#    - Maintain frequency count of s1 and current window in s2.
+#    - If counts match, return True.
+# 3. Time Complexity: O(n), n = len(s2)
+# 4. Space Complexity: O(1) (fixed size array of 26 for lowercase letters)
+
 from collections import Counter
 
 class Solution:
