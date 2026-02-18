@@ -1,3 +1,13 @@
+# LeetCode 575: Distribute Candies
+# Explanation:
+# 1. Given an integer array candies representing different kinds of candies, distribute them equally to a brother and sister.
+# 2. Task: Return the maximum number of unique candy kinds the sister could get.
+# 3. Approach:
+#    - Sister gets half of the total candies.
+#    - Maximum unique kinds she can get = min(number of unique candies, total_candies // 2)
+# 4. Time Complexity: O(n)
+# 5. Space Complexity: O(n) for set of unique candies
+
 from typing import List
 
 class Solution:
