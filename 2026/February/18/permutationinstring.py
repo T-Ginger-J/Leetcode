@@ -53,3 +53,36 @@ class Solution:
             if freq1 == freq2:
                 return True
         return False
+
+
+# -------------------------------------------------------
+# Examples & Edge Cases
+# -------------------------------------------------------
+
+sol = Solution()
+
+# Example 1
+s1 = "ab"
+s2 = "eidbaooo"
+print(sol.checkInclusion(s1, s2))          # True ("ba" in s2)
+print(sol.checkInclusionArray(s1, s2))     # True
+
+# Example 2
+s1 = "ab"
+s2 = "eidboaoo"
+print(sol.checkInclusion(s1, s2))          # False
+
+# Example 3: identical strings
+s1 = "abc"
+s2 = "abc"
+print(sol.checkInclusion(s1, s2))          # True
+
+# Example 4: s1 longer than s2
+s1 = "abcd"
+s2 = "abc"
+print(sol.checkInclusion(s1, s2))          # False
+
+# Example 5: repeated letters
+s1 = "aabc"
+s2 = "caaab"
+print(sol.checkInclusion(s1, s2))          # True ("aabc" permutation exists)
