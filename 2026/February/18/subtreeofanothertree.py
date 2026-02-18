@@ -35,3 +35,14 @@ class Solution:
         if isSame(s, t):
             return True
         return self.isSubtree(s.left, t) or self.isSubtree(s.right, t)
+
+    # -------------------------------------------------------
+    # Method 2: Serialize trees (preorder) and use substring check
+    # -------------------------------------------------------
+    def isSubtreeSerialized(self, s: Optional[TreeNode], t: Optional[TreeNode]) -> bool:
+        def preorder(node: Optional[TreeNode]) -> str:
+            if not node:
+                return "#"
+            return f",{node.val},{preorder(node.left)},{preorder(node.right)}"
+        return preorder(str(t)) in preorder(str(s))
+
