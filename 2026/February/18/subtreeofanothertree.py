@@ -46,3 +46,34 @@ class Solution:
             return f",{node.val},{preorder(node.left)},{preorder(node.right)}"
         return preorder(str(t)) in preorder(str(s))
 
+
+# -------------------------------------------------------
+# Examples & Edge Cases
+# -------------------------------------------------------
+
+sol = Solution()
+
+# Example 1
+s1 = TreeNode(3, TreeNode(4, TreeNode(1), TreeNode(2)), TreeNode(5))
+t1 = TreeNode(4, TreeNode(1), TreeNode(2))
+print(sol.isSubtree(s1, t1))           # True
+
+# Example 2: not a subtree
+s2 = TreeNode(3, TreeNode(4, TreeNode(1), TreeNode(2, TreeNode(0))), TreeNode(5))
+t2 = TreeNode(4, TreeNode(1), TreeNode(2))
+print(sol.isSubtree(s2, t2))           # False
+
+# Example 3: identical trees
+s3 = TreeNode(1)
+t3 = TreeNode(1)
+print(sol.isSubtree(s3, t3))           # True
+
+# Example 4: t is None
+s4 = TreeNode(1)
+t4 = None
+print(sol.isSubtree(s4, t4))           # False
+
+# Example 5: s is None
+s5 = None
+t5 = TreeNode(1)
+print(sol.isSubtree(s5, t5))           # False
