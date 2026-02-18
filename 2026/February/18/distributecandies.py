@@ -27,3 +27,30 @@ class Solution:
         counter = Counter(candies)
         return min(len(counter), len(candies)//2)
 
+
+# -------------------------------------------------------
+# Examples & Edge Cases
+# -------------------------------------------------------
+
+sol = Solution()
+
+# Example 1
+candies1 = [1,1,2,2,3,3]
+print(sol.distributeCandies(candies1))          # 3
+print(sol.distributeCandiesCounter(candies1))   # 3
+
+# Example 2: all same
+candies2 = [1,1,1,1]
+print(sol.distributeCandies(candies2))          # 1
+
+# Example 3: all unique
+candies3 = [1,2,3,4]
+print(sol.distributeCandies(candies3))          # 2 (half total)
+
+# Example 4: one candy
+candies4 = [5]
+print(sol.distributeCandies(candies4))          # 1
+
+# Example 5: empty list
+candies5 = []
+print(sol.distributeCandies(candies5))          # 0
