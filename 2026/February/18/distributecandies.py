@@ -18,3 +18,12 @@ class Solution:
     def distributeCandies(self, candies: List[int]) -> int:
         unique_candies = len(set(candies))
         return min(unique_candies, len(candies)//2)
+
+    # -------------------------------------------------------
+    # Method 2: Using dictionary counter
+    # -------------------------------------------------------
+    def distributeCandiesCounter(self, candies: List[int]) -> int:
+        from collections import Counter
+        counter = Counter(candies)
+        return min(len(counter), len(candies)//2)
+
