@@ -27,3 +27,24 @@ class Solution:
             right -= 1
         return 0 if left > right else right - left + 1
 
+    # -------------------------------------------------------
+    # Method 2: One-pass without extra space
+    # -------------------------------------------------------
+    def findUnsortedSubarrayOptimized(self, nums: List[int]) -> int:
+        n = len(nums)
+        left, right = 0, -1
+        max_seen = float('-inf')
+        min_seen = float('inf')
+
+        for i in range(n):
+            max_seen = max(max_seen, nums[i])
+            if nums[i] < max_seen:
+                right = i
+
+        for i in range(n-1, -1, -1):
+            min_seen = min(min_seen, nums[i])
+            if nums[i] > min_seen:
+                left = i
+
+        return 0 if right == -1 else right - left + 1
+
