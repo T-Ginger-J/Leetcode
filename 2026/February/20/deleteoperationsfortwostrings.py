@@ -46,3 +46,35 @@ class Solution:
         lcs = prev[n]
         return m + n - 2*lcs
 
+
+# -------------------------------------------------------
+# Examples & Edge Cases
+# -------------------------------------------------------
+
+sol = Solution()
+
+# Example 1
+word1 = "sea"
+word2 = "eat"
+print(sol.minDistance(word1, word2))                # 2 ("s" and "t" deleted)
+print(sol.minDistanceOptimized(word1, word2))      # 2
+
+# Example 2: identical strings
+word3 = "abc"
+word4 = "abc"
+print(sol.minDistance(word3, word4))               # 0
+
+# Example 3: no common letters
+word5 = "abc"
+word6 = "def"
+print(sol.minDistanceOptimized(word5, word6))      # 6
+
+# Example 4: empty string
+word7 = ""
+word8 = "abc"
+print(sol.minDistance(word7, word8))               # 3
+
+# Example 5: single letters
+word9 = "a"
+word10 = "b"
+print(sol.minDistance(word9, word10))             # 2
