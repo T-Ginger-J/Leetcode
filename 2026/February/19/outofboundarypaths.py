@@ -57,3 +57,25 @@ class Solution:
         return total
 
 
+# -------------------------------------------------------
+# Examples & Edge Cases
+# -------------------------------------------------------
+
+sol = Solution()
+
+# Example 1
+m1, n1, N1, i1, j1 = 2, 2, 2, 0, 0
+print(sol.findPaths(m1,n1,N1,i1,j1))      # 6
+print(sol.findPathsDP(m1,n1,N1,i1,j1))   # 6
+
+# Example 2: single cell, 1 move
+m2, n2, N2, i2, j2 = 1,1,1,0,0
+print(sol.findPaths(m2,n2,N2,i2,j2))      # 4
+
+# Example 3: zero moves
+m3, n3, N3, i3, j3 = 3,3,0,1,1
+print(sol.findPaths(m3,n3,N3,i3,j3))      # 0
+
+# Example 4: larger grid
+m4, n4, N4, i4, j4 = 3,3,3,0,0
+print(sol.findPathsDP(m4,n4,N4,i4,j4))   # 22
