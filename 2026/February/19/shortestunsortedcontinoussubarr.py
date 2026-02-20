@@ -48,3 +48,30 @@ class Solution:
 
         return 0 if right == -1 else right - left + 1
 
+
+# -------------------------------------------------------
+# Examples & Edge Cases
+# -------------------------------------------------------
+
+sol = Solution()
+
+# Example 1
+nums1 = [2,6,4,8,10,9,15]
+print(sol.findUnsortedSubarray(nums1))                 # 5 ([6,4,8,10,9])
+print(sol.findUnsortedSubarrayOptimized(nums1))        # 5
+
+# Example 2: already sorted
+nums2 = [1,2,3,4]
+print(sol.findUnsortedSubarray(nums2))                 # 0
+
+# Example 3: reverse sorted
+nums3 = [5,4,3,2,1]
+print(sol.findUnsortedSubarray(nums3))                 # 5
+
+# Example 4: single element
+nums4 = [1]
+print(sol.findUnsortedSubarray(nums4))                 # 0
+
+# Example 5: two elements swapped
+nums5 = [1,3,2,4,5]
+print(sol.findUnsortedSubarrayOptimized(nums5))        # 2 ([3,2])
