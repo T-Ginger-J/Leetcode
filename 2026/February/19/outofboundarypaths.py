@@ -32,3 +32,28 @@ class Solution:
             return total
 
         return dfs(i,j,N)
+
+    # -------------------------------------------------------
+    # Method 2: Bottom-up DP
+    # -------------------------------------------------------
+    def findPathsDP(self, m: int, n: int, N: int, i: int, j: int) -> int:
+        MOD = 10**9 + 7
+        dp = [[0]*n for _ in range(m)]
+        dp[i][j] = 1
+        total = 0
+        dirs = [(0,1),(0,-1),(1,0),(-1,0)]
+        for move in range(1, N+1):
+            temp = [[0]*n for _ in range(m)]
+            for r in range(m):
+                for c in range(n):
+                    if dp[r][c] > 0:
+                        for dr, dc in dirs:
+                            nr, nc = r+dr, c+dc
+                            if 0 <= nr < m and 0 <= nc < n:
+                                temp[nr][nc] = (temp[nr][nc] + dp[r][c]) % MOD
+                            else:
+                                total = (total + dp[r][c]) % MOD
+            dp = temp
+        return total
+
+
