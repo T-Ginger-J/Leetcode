@@ -1,3 +1,12 @@
+# LeetCode 583: Delete Operation for Two Strings
+# Explanation:
+# 1. Given two strings word1 and word2, return the minimum number of steps to make them the same by deleting characters.
+# 2. Approach:
+#    - Use dynamic programming to find the length of the Longest Common Subsequence (LCS).
+#    - Minimum deletions = len(word1) + len(word2) - 2 * LCS
+# 3. Time Complexity: O(m * n), m = len(word1), n = len(word2)
+# 4. Space Complexity: O(m * n), can be optimized to O(n)
+
 from typing import List
 
 class Solution:
