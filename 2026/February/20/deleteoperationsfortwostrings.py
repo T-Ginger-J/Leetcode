@@ -26,3 +26,23 @@ class Solution:
                     dp[i+1][j+1] = max(dp[i][j+1], dp[i+1][j])
         lcs = dp[m][n]
         return m + n - 2*lcs
+
+    # -------------------------------------------------------
+    # Method 2: Space optimized
+    # -------------------------------------------------------
+    def minDistanceOptimized(self, word1: str, word2: str) -> int:
+        if len(word1) < len(word2):
+            word1, word2 = word2, word1
+        m, n = len(word1), len(word2)
+        prev = [0]*(n+1)
+        for i in range(m):
+            curr = [0]*(n+1)
+            for j in range(n):
+                if word1[i] == word2[j]:
+                    curr[j+1] = prev[j]+1
+                else:
+                    curr[j+1] = max(prev[j+1], curr[j])
+            prev = curr
+        lcs = prev[n]
+        return m + n - 2*lcs
+
