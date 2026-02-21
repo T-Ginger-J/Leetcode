@@ -30,3 +30,19 @@ class Solution:
                 dfs(child)
         dfs(root)
         return res
+
+    # -------------------------------------------------------
+    # Method 2: Iterative stack
+    # -------------------------------------------------------
+    def preorderIterative(self, root: 'Node') -> List[int]:
+        if not root:
+            return []
+        res = []
+        stack = [root]
+        while stack:
+            node = stack.pop()
+            res.append(node.val)
+            # add children in reverse order to visit left to right
+            stack.extend(reversed(node.children))
+        return res
+
