@@ -47,3 +47,25 @@ class Solution:
         unique_hull = list(map(list, set(map(tuple, full_hull))))
         return unique_hull
 
+
+# -------------------------------------------------------
+# Examples & Edge Cases
+# -------------------------------------------------------
+
+sol = Solution()
+
+# Example 1: simple square
+points1 = [[0,0],[0,1],[1,0],[1,1],[0.5,0.5]]
+print(sol.outerTrees(points1))   # [[0,0],[0,1],[1,0],[1,1]] (order may vary)
+
+# Example 2: collinear points on edges
+points2 = [[0,0],[1,1],[2,2],[3,3],[0,3],[3,0]]
+print(sol.outerTrees(points2))   # all boundary points including collinear points
+
+# Example 3: all points same
+points3 = [[1,1],[1,1],[1,1]]
+print(sol.outerTrees(points3))   # [[1,1]]
+
+# Example 4: triangle
+points4 = [[0,0],[1,1],[2,0]]
+print(sol.outerTrees(points4))   # [[0,0],[1,1],[2,0]]
