@@ -46,3 +46,26 @@ class Solution:
             stack.extend(reversed(node.children))
         return res
 
+
+# -------------------------------------------------------
+# Examples & Edge Cases
+# -------------------------------------------------------
+
+sol = Solution()
+
+# Example 1: simple tree
+root1 = Node(1, [Node(3,[Node(5),Node(6)]), Node(2), Node(4)])
+print(sol.preorder(root1))           # [1,3,5,6,2,4]
+print(sol.preorderIterative(root1))  # [1,3,5,6,2,4]
+
+# Example 2: single node
+root2 = Node(10)
+print(sol.preorder(root2))           # [10]
+
+# Example 3: empty tree
+root3 = None
+print(sol.preorder(root3))           # []
+
+# Example 4: deeper tree
+root4 = Node(1, [Node(2,[Node(3,[Node(4)])])])
+print(sol.preorderIterative(root4))  # [1,2,3,4]
