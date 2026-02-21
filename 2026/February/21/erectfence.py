@@ -1,3 +1,17 @@
+# LeetCode 587: Erect the Fence (Convex Hull)
+# Explanation:
+# 1. Given points in 2D, return the smallest convex polygon (fence) enclosing all points.
+# 2. Approach:
+#    - Use the Monotone Chain algorithm (variant of Graham Scan):
+#       a. Sort points lexicographically by x then y.
+#       b. Build upper hull from left to right:
+#          - Keep popping last point if new point makes a clockwise turn.
+#       c. Build lower hull from right to left using same logic.
+#       d. Merge hulls and remove duplicates.
+#    - This approach handles collinear points on the boundary.
+# 3. Time Complexity: O(n log n) due to sorting
+# 4. Space Complexity: O(n) for storing hull points
+
 from typing import List
 
 class Solution:
