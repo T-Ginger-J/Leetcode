@@ -106,3 +106,30 @@ class Solution:
             result += Fraction(num, den)
 
         return f"{result.numerator}/{result.denominator}"
+
+
+# -------------------------------------------------------
+# Examples & Edge Cases
+# -------------------------------------------------------
+
+sol = Solution()
+
+# Example 1: Basic addition
+expr1 = "-1/2+1/2"
+print(sol.fractionAddition(expr1))   # 0/1
+
+# Example 2: Multiple operations
+expr2 = "-1/2+1/2+1/3"
+print(sol.fractionAddition(expr2))   # 1/3
+
+# Example 3: Negative result
+expr3 = "1/3-1/2"
+print(sol.fractionAddition(expr3))   # -1/6
+
+# Example 4: Large numbers
+expr4 = "5/3+1/3"
+print(sol.fractionAddition(expr4))   # 2/1
+
+# Example 5: Single fraction
+expr5 = "-7/4"
+print(sol.fractionAddition(expr5))   # -7/4
