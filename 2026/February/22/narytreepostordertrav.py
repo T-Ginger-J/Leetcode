@@ -57,3 +57,26 @@ class Solution:
         # Reverse to get postorder
         return res[::-1]
 
+
+# -------------------------------------------------------
+# Examples & Edge Cases
+# -------------------------------------------------------
+
+sol = Solution()
+
+# Example 1: Standard tree
+root1 = Node(1, [Node(3, [Node(5), Node(6)]), Node(2), Node(4)])
+print(sol.postorder(root1))           # [5,6,3,2,4,1]
+print(sol.postorderIterative(root1))  # [5,6,3,2,4,1]
+
+# Example 2: Single node
+root2 = Node(10)
+print(sol.postorder(root2))           # [10]
+
+# Example 3: Empty tree
+root3 = None
+print(sol.postorder(root3))           # []
+
+# Example 4: Deep chain
+root4 = Node(1, [Node(2, [Node(3, [Node(4)])])])
+print(sol.postorderIterative(root4))  # [4,3,2,1]
