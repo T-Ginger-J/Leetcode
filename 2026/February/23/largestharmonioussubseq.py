@@ -30,3 +30,24 @@ class Solution:
 
         return ans
 
+
+# -------------------------------------------------------
+# Examples & Edge Cases
+# -------------------------------------------------------
+
+sol = Solution()
+
+# Example 1
+print(sol.findLHS([1,3,2,2,5,2,3,7]))   # 5  (2,2,2,3,3)
+
+# Example 2
+print(sol.findLHS([1,2,3,4]))          # 2
+
+# Example 3
+print(sol.findLHS([1,1,1,1]))          # 0
+
+# Example 4: Negative numbers
+print(sol.findLHS([-1,-2,-3,-2,-1]))   # 4  (-2,-2,-1,-1)
+
+# Example 5: Single element
+print(sol.findLHS([10]))              # 0
