@@ -1,3 +1,19 @@
+# LeetCode 592: Fraction Addition and Subtraction
+# Explanation:
+# 1. We are given a string expression containing fractions with '+' and '-' operators.
+#    Example: "-1/2+1/2+1/3"
+# 2. We need to compute the result and return it in simplest form.
+# 3. Approach:
+#    - Parse the expression term by term.
+#    - Keep a running numerator and denominator.
+#    - For each fraction a/b:
+#        new_num = cur_num * b + a * cur_den
+#        new_den = cur_den * b
+#    - Reduce by GCD after each addition.
+# 4. Use math.gcd to simplify.
+# 5. Time Complexity: O(n), n = length of expression
+# 6. Space Complexity: O(1), only variables used
+
 import math
 
 
