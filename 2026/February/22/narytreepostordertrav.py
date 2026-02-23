@@ -37,3 +37,23 @@ class Solution:
         dfs(root)
         return res
 
+    # -------------------------------------------------------
+    # Method 2: Iterative (Reverse Preorder)
+    # -------------------------------------------------------
+    def postorderIterative(self, root: 'Node') -> List[int]:
+        if not root:
+            return []
+
+        res = []
+        stack = [root]
+
+        while stack:
+            node = stack.pop()
+            res.append(node.val)
+
+            for child in node.children:
+                stack.append(child)
+
+        # Reverse to get postorder
+        return res[::-1]
+
