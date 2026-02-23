@@ -80,3 +80,18 @@ class Solution:
         return not stack
 
 
+# -------------------------------------------------------
+# Examples & Edge Cases
+# -------------------------------------------------------
+
+sol = Solution()
+
+# Valid
+print(sol.isValid("<A><B></B></A>"))            # True
+print(sol.isValid("<A><![CDATA[ABC]]></A>"))   # True
+
+# Invalid
+print(sol.isValid("<A<></A<>"))                # False
+print(sol.isValid("<A><B></A></B>"))            # False
+print(sol.isValid("ABC"))                      # False
+print(sol.isValid("<a></a>"))                  # False
