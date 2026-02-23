@@ -48,3 +48,24 @@ class Solution:
             dists[4] == dists[5]
         )
 
+
+# -------------------------------------------------------
+# Examples & Edge Cases
+# -------------------------------------------------------
+
+sol = Solution()
+
+# Example 1: Valid square
+print(sol.validSquare([0, 0], [1, 1], [1, 0], [0, 1]))   # True
+
+# Example 2: Rectangle (not square)
+print(sol.validSquare([0, 0], [2, 0], [2, 1], [0, 1]))   # False
+
+# Example 3: Overlapping points
+print(sol.validSquare([0, 0], [0, 0], [1, 1], [1, 0]))   # False
+
+# Example 4: Rotated square
+print(sol.validSquare([1, 1], [2, 2], [3, 1], [2, 0]))   # True
+
+# Example 5: Random points
+print(sol.validSquare([0, 0], [1, 2], [2, 1], [3, 3]))   # False
