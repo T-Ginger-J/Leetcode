@@ -68,3 +68,41 @@ class Solution:
 
         return f"{num}/{den}"
 
+    # -------------------------------------------------------
+    # Method 2: Using Python Fractions (Alternative)
+    # -------------------------------------------------------
+    def fractionAdditionUsingLibrary(self, expression: str) -> str:
+
+        from fractions import Fraction
+
+        i = 0
+        n = len(expression)
+        result = Fraction(0, 1)
+
+        while i < n:
+
+            sign = 1
+            if expression[i] == "+":
+                i += 1
+            elif expression[i] == "-":
+                sign = -1
+                i += 1
+
+            # numerator
+            num = 0
+            while i < n and expression[i].isdigit():
+                num = num * 10 + int(expression[i])
+                i += 1
+
+            num *= sign
+            i += 1  # skip '/'
+
+            # denominator
+            den = 0
+            while i < n and expression[i].isdigit():
+                den = den * 10 + int(expression[i])
+                i += 1
+
+            result += Fraction(num, den)
+
+        return f"{result.numerator}/{result.denominator}"
