@@ -1,3 +1,18 @@
+# LeetCode 591: Tag Validator
+# Explanation:
+# 1. Use a stack to track open tags.
+# 2. Parse from left to right.
+# 3. Handle three valid patterns:
+#    - Opening tag: <TAG>
+#    - Closing tag: </TAG>
+#    - CDATA: <![CDATA[...]]>
+# 4. TAG must be 1–9 uppercase letters only.
+# 5. Any invalid format immediately returns False.
+# 6. All content must be inside one root tag.
+#
+# Time Complexity: O(n)
+# Space Complexity: O(n)
+
 class Solution:
     def isValid(self, code: str) -> bool:
 
