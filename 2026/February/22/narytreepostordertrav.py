@@ -1,4 +1,23 @@
+# LeetCode 590: N-ary Tree Postorder Traversal
+# Explanation:
+# 1. Given an n-ary tree, return its nodes' values in postorder (children -> root).
+# 2. Postorder traversal visits:
+#    - All children from left to right
+#    - Then the current node.
+# 3. We use two approaches:
+#    - Recursive DFS
+#    - Iterative using stack (reverse preorder technique)
+# 4. Time Complexity: O(n), where n is the number of nodes
+# 5. Space Complexity: O(n) for recursion stack or explicit stack
+
 from typing import List
+
+# Definition for a Node.
+class Node:
+    def __init__(self, val=None, children=None):
+        self.val = val
+        self.children = children if children else []
+
 
 class Solution:
 
