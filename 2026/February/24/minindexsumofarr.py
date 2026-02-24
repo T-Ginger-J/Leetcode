@@ -42,3 +42,33 @@ class Solution:
 
         return res
 
+
+# -------------------------------------------------------
+# Examples & Edge Cases
+# -------------------------------------------------------
+
+sol = Solution()
+
+# Example 1
+print(sol.findRestaurant(
+    ["Shogun","Tapioca Express","Burger King","KFC"],
+    ["Piatti","The Grill at Torrey Pines","Hungry Hunter Steakhouse","Shogun"]
+))  # ["Shogun"]
+
+# Example 2
+print(sol.findRestaurant(
+    ["Shogun","Tapioca Express","Burger King","KFC"],
+    ["KFC","Shogun","Burger King"]
+))  # ["Shogun"]
+
+# Example 3: Multiple answers
+print(sol.findRestaurant(
+    ["A","B","C"],
+    ["C","B","A"]
+))  # ["A","B","C"]
+
+# Example 4: No common
+print(sol.findRestaurant(
+    ["A","B"],
+    ["C","D"]
+))  # []
