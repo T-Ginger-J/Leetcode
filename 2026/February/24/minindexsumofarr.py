@@ -1,3 +1,15 @@
+# LeetCode 599: Minimum Index Sum of Two Lists
+# Explanation:
+# 1. We are given two lists of strings.
+# 2. We want common strings with the smallest index sum.
+# 3. Approach:
+#    - Store list1 elements with their indices in a hash map.
+#    - Traverse list2 and check if element exists in map.
+#    - Track minimum index sum.
+#    - Collect all strings with that minimum sum.
+# 4. Time Complexity: O(n + m)
+# 5. Space Complexity: O(n)
+
 from typing import List
 
 
