@@ -32,3 +32,24 @@ class Solution:
 
         return min_row * min_col
 
+
+# -------------------------------------------------------
+# Examples & Edge Cases
+# -------------------------------------------------------
+
+sol = Solution()
+
+# Example 1
+print(sol.maxCount(3, 3, [[2,2],[3,3]]))   # 4
+
+# Example 2: No ops
+print(sol.maxCount(3, 3, []))             # 9
+
+# Example 3: Single op
+print(sol.maxCount(4, 5, [[2,3]]))         # 6
+
+# Example 4: Full matrix
+print(sol.maxCount(5, 5, [[5,5]]))         # 25
+
+# Example 5: Different overlaps
+print(sol.maxCount(5, 5, [[4,4],[3,5],[5,3]]))  # 9
