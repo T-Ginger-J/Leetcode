@@ -1,3 +1,17 @@
+# LeetCode 600: Non-negative Integers without Consecutive Ones
+# Explanation:
+# 1. Given a number n, count all non-negative integers <= n
+#    whose binary representation does NOT contain consecutive 1's.
+# 2. Approach (Dynamic Programming + Bit Manipulation):
+#    - Let fib[i] = number of valid binary strings of length i
+#      without consecutive 1's.
+#    - fib[i] = fib[i-1] + fib[i-2] (similar to Fibonacci)
+#    - Convert n to binary, traverse from MSB to LSB
+#      and count valid numbers smaller than n.
+#    - Stop if consecutive 1's appear.
+# 3. Time Complexity: O(log n)
+# 4. Space Complexity: O(log n) for binary representation
+
 class Solution:
 
     def findIntegers(self, n: int) -> int:
