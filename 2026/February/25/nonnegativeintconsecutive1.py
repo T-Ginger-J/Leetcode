@@ -46,3 +46,24 @@ class Solution:
 
         return ans + 1  # Include n itself if valid
 
+
+# -------------------------------------------------------
+# Examples & Edge Cases
+# -------------------------------------------------------
+
+sol = Solution()
+
+# Example 1
+print(sol.findIntegers(5))   # 5 (0,1,2,4,5)
+
+# Example 2
+print(sol.findIntegers(1))   # 2 (0,1)
+
+# Example 3
+print(sol.findIntegers(2))   # 3 (0,1,2)
+
+# Example 4: Larger number
+print(sol.findIntegers(20))  # 13
+
+# Example 5: Consecutive 1s edge
+print(sol.findIntegers(3))   # 3 (0,1,2)
