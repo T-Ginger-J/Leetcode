@@ -1,3 +1,15 @@
+# LeetCode 605: Can Place Flowers
+# Explanation:
+# 1. Given a flowerbed array (0 = empty, 1 = planted), and n flowers to plant.
+# 2. Rule: flowers cannot be planted in adjacent plots.
+# 3. Approach:
+#    - Iterate over the array.
+#    - If current plot is 0 and neighbors (previous and next) are 0 or boundary, plant a flower.
+#    - Decrement n each time we plant.
+#    - Early exit if n <= 0.
+# 4. Time Complexity: O(len(flowerbed))
+# 5. Space Complexity: O(1)
+
 from typing import List
 
 class Solution:
