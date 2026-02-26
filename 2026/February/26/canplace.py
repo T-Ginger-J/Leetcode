@@ -26,3 +26,25 @@ class Solution:
                     if n <= 0:
                         return True
         return n <= 0
+
+
+# -------------------------------------------------------
+# Examples & Edge Cases
+# -------------------------------------------------------
+
+sol = Solution()
+
+# Example 1
+print(sol.canPlaceFlowers([1,0,0,0,1], 1))  # True
+
+# Example 2
+print(sol.canPlaceFlowers([1,0,0,0,1], 2))  # False
+
+# Example 3: Empty flowerbed
+print(sol.canPlaceFlowers([0,0,0,0,0], 3))  # True
+
+# Example 4: Single plot
+print(sol.canPlaceFlowers([0], 1))  # True
+
+# Example 5: Single plot occupied
+print(sol.canPlaceFlowers([1], 1))  # False
