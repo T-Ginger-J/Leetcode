@@ -37,3 +37,29 @@ class Solution:
         else:
             return f"{root.val}"
 
+
+# -------------------------------------------------------
+# Examples & Edge Cases
+# -------------------------------------------------------
+
+sol = Solution()
+
+# Example 1
+root1 = TreeNode(1, TreeNode(2, TreeNode(4)), TreeNode(3))
+print(sol.tree2str(root1))  # "1(2(4))(3)"
+
+# Example 2
+root2 = TreeNode(1, TreeNode(2, None, TreeNode(4)), TreeNode(3))
+print(sol.tree2str(root2))  # "1(2()(4))(3)"
+
+# Example 3: Single node
+root3 = TreeNode(1)
+print(sol.tree2str(root3))  # "1"
+
+# Example 4: Only left child
+root4 = TreeNode(1, TreeNode(2))
+print(sol.tree2str(root4))  # "1(2)"
+
+# Example 5: Only right child
+root5 = TreeNode(1, None, TreeNode(3))
+print(sol.tree2str(root5))  # "1()(3)"
