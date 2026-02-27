@@ -1,3 +1,29 @@
+-- LeetCode 610: Triangle Judgement
+-- Explanation:
+-- 1. Three line segments (x, y, z) can form a triangle if:
+--    x + y > z AND x + z > y AND y + z > x
+-- 2. If all three conditions are satisfied, return "Yes".
+-- 3. Otherwise, return "No".
+-- 4. Use a CASE statement to evaluate the triangle inequality.
+--
+-- Method 1 (CASE with Direct Comparison):
+-- - Check all three triangle conditions in WHERE/CASE.
+--
+-- Time Complexity: O(N)
+--   N = number of rows in Triangle table.
+-- Space Complexity: O(1)
+--   No extra storage used.
+--
+-- Alternative Method 1 (Using LEAST/GREATEST):
+-- - A triangle is valid if:
+--   smallest + middle > largest.
+-- - Compute largest side using GREATEST.
+--
+-- Alternative Method 2 (Using Sorting via Expressions):
+-- - Reorder sides logically and apply one inequality.
+-- - Useful if extended to more sides.
+
+
 -- Main Solution: Direct Triangle Inequality Check
 SELECT
     x,
