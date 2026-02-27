@@ -65,3 +65,29 @@ SELECT
         ELSE 'No'
     END AS triangle
 FROM Triangle;
+
+
+-- -------------------------
+-- Examples (Not From LeetCode)
+-- -------------------------
+
+-- Example 1: All equal sides (valid)
+-- Input:
+-- | x | y | z |
+-- | 5 | 5 | 5 |
+-- Output:
+-- | 5 | 5 | 5 | Yes |
+
+-- Example 2: One side too long (invalid)
+-- Input:
+-- | x | y | z |
+-- | 2 | 3 | 6 |
+-- Output:
+-- | 2 | 3 | 6 | No |
+
+-- Example 3: Minimal valid triangle
+-- Input:
+-- | x | y | z |
+-- | 3 | 4 | 5 |
+-- Output:
+-- | 3 | 4 | 5 | Yes |
