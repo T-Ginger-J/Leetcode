@@ -53,3 +53,47 @@ class Solution:
         return [v for v in content_map.values() if len(v) > 1]
 
 
+    # Alternative Solution 1: Explicit defaultdict Version (Same Logic, Clearer Flow)
+    def findDuplicateAlt1(self, paths: List[str]) -> List[List[str]]:
+        groups = defaultdict(list)
+
+        for path in paths:
+            tokens = path.split(" ")
+            base = tokens[0]
+
+            for f in tokens[1:]:
+                idx = f.index("(")
+                name = f[:idx]
+                content = f[idx + 1:-1]
+
+                groups[content].append(base + "/" + name)
+
+        result = []
+
+        for files in groups.values():
+            if len(files) > 1:
+                result.append(files)
+
+        return result
+
+
+    # Alternative Solution 2: Regex-Based Parsing
+    def findDuplicateAlt2(self, paths: List[str]) -> List[List[str]]:
+        groups = defaultdict(list)
+        pattern = re.compile(r"(.+?)\((.+?)\)")
+
+        for path in paths:
+            tokens = path.split()
+            directory = tokens[0]
+
+            for token in tokens[1:]:
+                match = pattern.match(token)
+                if not match:
+                    continue
+
+                name, content = match.groups()
+                groups[content].append(directory + "/" + name)
+
+        return [g for g in groups.values() if len(g) > 1]
+
+
