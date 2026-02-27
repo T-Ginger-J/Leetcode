@@ -97,3 +97,43 @@ class Solution:
         return [g for g in groups.values() if len(g) > 1]
 
 
+# -------------------------
+# Examples (Not From LeetCode)
+# -------------------------
+
+# Example 1: Basic duplicate
+paths1 = [
+    "root/a a.txt(x) b.txt(y)",
+    "root/b c.txt(x)"
+]
+# Expected:
+# [["root/a/a.txt", "root/b/c.txt"]]
+print(Solution().findDuplicate(paths1))
+
+
+# Example 2: No duplicates
+paths2 = [
+    "dir1 a.txt(abc)",
+    "dir2 b.txt(def)",
+    "dir3 c.txt(ghi)"
+]
+# Expected:
+# []
+print(Solution().findDuplicate(paths2))
+
+
+# Example 3: Multiple duplicate groups
+paths3 = [
+    "p1 f1(a) f2(b) f3(c)",
+    "p2 f4(a) f5(b)",
+    "p3 f6(c) f7(d)",
+    "p4 f8(d)"
+]
+# Expected (order may vary):
+# [
+#   ["p1/f1", "p2/f4"],
+#   ["p1/f2", "p2/f5"],
+#   ["p1/f3", "p3/f6"],
+#   ["p3/f7", "p4/f8"]
+# ]
+print(Solution().findDuplicate(paths3))
