@@ -38,3 +38,30 @@ SELECT
     END AS triangle
 FROM Triangle;
 
+
+-- Alternative Solution 1: Using GREATEST
+SELECT
+    x,
+    y,
+    z,
+    CASE
+        WHEN (x + y + z) - GREATEST(x, y, z) > GREATEST(x, y, z)
+        THEN 'Yes'
+        ELSE 'No'
+    END AS triangle
+FROM Triangle;
+
+
+-- Alternative Solution 2: Using LEAST and GREATEST
+SELECT
+    x,
+    y,
+    z,
+    CASE
+        WHEN LEAST(x, y, z)
+           + (x + y + z - LEAST(x, y, z) - GREATEST(x, y, z))
+           > GREATEST(x, y, z)
+        THEN 'Yes'
+        ELSE 'No'
+    END AS triangle
+FROM Triangle;
