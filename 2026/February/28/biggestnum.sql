@@ -32,3 +32,13 @@ FROM MyNumbers
 GROUP BY num
 HAVING COUNT(*) = 1;
 
+
+-- Alternative Solution 1: Subquery
+SELECT
+    MAX(num) AS num
+FROM (
+    SELECT num
+    FROM MyNumbers
+    GROUP BY num
+    HAVING COUNT(*) = 1
+) t;
