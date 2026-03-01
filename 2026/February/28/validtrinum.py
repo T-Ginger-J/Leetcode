@@ -83,3 +83,26 @@ class Solution:
 
         return count
 
+
+# -------------------------
+# Examples (Not From LeetCode)
+# -------------------------
+
+# Example 1: All zeros (cannot form triangle)
+nums1 = [0, 0, 0, 0]
+# Expected: 0
+print(Solution().triangleNumber(nums1))
+
+
+# Example 2: Small valid set
+nums2 = [2, 3, 4, 5]
+# Expected: 3
+# Valid: (2,3,4), (2,4,5), (3,4,5)
+print(Solution().triangleNumber(nums2))
+
+
+# Example 3: Repeated values
+nums3 = [4, 4, 4, 4]
+# Expected: 4
+# C(4,3) = 4
+print(Solution().triangleNumber(nums3))
