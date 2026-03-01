@@ -68,3 +68,18 @@ class Solution:
 
         return count
 
+
+    # Alternative Solution 2: Brute Force (Not Optimal)
+    def triangleNumberAlt2(self, nums: List[int]) -> int:
+        n = len(nums)
+        count = 0
+
+        for i in range(n):
+            for j in range(i + 1, n):
+                for k in range(j + 1, n):
+                    a, b, c = nums[i], nums[j], nums[k]
+                    if a + b > c and a + c > b and b + c > a:
+                        count += 1
+
+        return count
+
