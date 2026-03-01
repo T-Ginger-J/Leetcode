@@ -53,3 +53,18 @@ class Solution:
 
         return count
 
+
+    # Alternative Solution 1: Binary Search
+    def triangleNumberAlt1(self, nums: List[int]) -> int:
+        nums.sort()
+        n = len(nums)
+        count = 0
+
+        for i in range(n - 2):
+            for j in range(i + 1, n - 1):
+                target = nums[i] + nums[j]
+                k = bisect.bisect_left(nums, target, j + 1)
+                count += max(0, k - j - 1)
+
+        return count
+
