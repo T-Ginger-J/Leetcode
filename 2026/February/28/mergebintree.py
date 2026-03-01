@@ -58,3 +58,35 @@ class Solution:
         node.right = self.mergeTrees(root1.right, root2.right)
 
         return node
+
+
+    # Alternative Solution 1: Iterative BFS (In-Place on root1)
+    def mergeTreesAlt1(self, root1: Optional[TreeNode],
+                       root2: Optional[TreeNode]) -> Optional[TreeNode]:
+
+        if not root1:
+            return root2
+
+        if not root2:
+            return root1
+
+        queue = deque([(root1, root2)])
+
+        while queue:
+            n1, n2 = queue.popleft()
+
+            n1.val += n2.val
+
+            if n1.left and n2.left:
+                queue.append((n1.left, n2.left))
+            elif not n1.left:
+                n1.left = n2.left
+
+            if n1.right and n2.right:
+                queue.append((n1.right, n2.right))
+            elif not n1.right:
+                n1.right = n2.right
+
+        return root1
+
+
