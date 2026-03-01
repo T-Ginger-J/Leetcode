@@ -42,3 +42,17 @@ FROM (
     GROUP BY num
     HAVING COUNT(*) = 1
 ) t;
+
+
+-- Alternative Solution 2: Window Function
+SELECT
+    MAX(num) AS num
+FROM (
+    SELECT
+        num,
+        COUNT(*) OVER (PARTITION BY num) AS cnt
+    FROM MyNumbers
+) t
+WHERE cnt = 1;
+
+
