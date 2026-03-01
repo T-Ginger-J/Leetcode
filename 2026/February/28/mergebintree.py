@@ -1,5 +1,41 @@
+# LeetCode 617: Merge Two Binary Trees
+# Explanation:
+# 1. Given two binary trees root1 and root2.
+# 2. If both nodes exist, their values are summed.
+# 3. If only one node exists, use that node.
+# 4. If both are None, result is None.
+# 5. Recursively merge left and right subtrees.
+#
+# Method 1 (Recursive DFS):
+# - If one node is None, return the other.
+# - Otherwise, create new node with summed value.
+# - Recursively merge children.
+#
+# Time Complexity: O(N)
+#   N = total number of nodes in both trees.
+# Space Complexity: O(H)
+#   H = height of tree (recursion stack).
+#
+# Alternative Method 1 (Iterative BFS):
+# - Use a queue to traverse both trees simultaneously.
+# - Modify first tree in place.
+#
+# Alternative Method 2 (In-Place Recursive):
+# - Reuse nodes of root1 to save memory.
+# - No new tree allocation.
+
+
 from typing import Optional
 from collections import deque
+
+
+# Definition for a binary tree node.
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
 
 class Solution:
 
