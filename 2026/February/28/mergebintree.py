@@ -107,3 +107,55 @@ class Solution:
 
         return root1
 
+
+# -------------------------
+# Helper Functions for Testing
+# -------------------------
+
+def build_tree(arr):
+    if not arr:
+        return None
+
+    nodes = [None if v is None else TreeNode(v) for v in arr]
+    kids = nodes[::-1]
+    root = kids.pop()
+
+    for node in nodes:
+        if node:
+            if kids:
+                node.left = kids.pop()
+            if kids:
+                node.right = kids.pop()
+
+    return root
+
+
+def inorder(root):
+    if not root:
+        return []
+    return inorder(root.left) + [root.val] + inorder(root.right)
+
+
+# -------------------------
+# Examples (Not From LeetCode)
+# -------------------------
+
+# Example 1: Simple merge
+t1 = build_tree([1, 3, 2])
+t2 = build_tree([2, 1, 3])
+# Expected inorder: [4, 3, 5]
+print(inorder(Solution().mergeTrees(t1, t2)))
+
+
+# Example 2: One tree empty
+t3 = None
+t4 = build_tree([5, 2, 7])
+# Expected inorder: [2, 5, 7]
+print(inorder(Solution().mergeTrees(t3, t4)))
+
+
+# Example 3: Uneven trees
+t5 = build_tree([4, 1, None, 3])
+t6 = build_tree([2, None, 5])
+# Expected inorder: [3, 5, 5]
+print(inorder(Solution().mergeTrees(t5, t6)))
