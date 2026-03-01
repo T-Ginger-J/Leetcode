@@ -1,3 +1,33 @@
+# LeetCode 611: Valid Triangle Number
+# Explanation:
+# 1. Given an array nums of non-negative integers, count how many triplets
+#    (i, j, k) can form a triangle.
+# 2. Three sides form a valid triangle if:
+#    a + b > c (when a <= b <= c).
+# 3. Sort the array first.
+# 4. Fix the largest side c, then use two pointers to find pairs (a, b)
+#    such that a + b > c.
+# 5. If nums[left] + nums[right] > nums[i], then all elements between
+#    left and right form valid triangles with nums[i].
+#
+# Method 1 (Two Pointers After Sorting):
+# - Sort nums.
+# - Iterate i from n-1 to 2.
+# - Use left/right pointers for remaining two sides.
+#
+# Time Complexity: O(n^2)
+# Space Complexity: O(1) (excluding sort)
+#
+# Alternative Method 1 (Binary Search):
+# - Fix two sides i, j.
+# - Binary search largest k where nums[i] + nums[j] > nums[k].
+# - Slower in practice.
+#
+# Alternative Method 2 (Brute Force - Educational):
+# - Check all triplets.
+# - O(n^3), not optimal, only for understanding.
+
+
 from typing import List
 import bisect
 
