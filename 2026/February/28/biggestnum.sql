@@ -56,3 +56,37 @@ FROM (
 WHERE cnt = 1;
 
 
+-- -------------------------
+-- Examples (Not From LeetCode)
+-- -------------------------
+
+-- Example 1: One unique max
+-- Input:
+-- | num |
+-- | 1   |
+-- | 2   |
+-- | 2   |
+-- | 3   |
+-- Output:
+-- | 3 |
+
+-- Example 2: No single numbers
+-- Input:
+-- | num |
+-- | 4   |
+-- | 4   |
+-- | 5   |
+-- | 5   |
+-- Output:
+-- | NULL |
+
+-- Example 3: Multiple singles
+-- Input:
+-- | num |
+-- | 7   |
+-- | 3   |
+-- | 7   |
+-- | 9   |
+-- | 1   |
+-- Output:
+-- | 9 |
